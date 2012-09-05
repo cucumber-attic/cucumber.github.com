@@ -1,4 +1,4 @@
 # Github overrides
 safe: true
 lsi: false
-pygments: true
+pygments: false

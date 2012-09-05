@@ -41,11 +41,11 @@
           <div id="sticky_navigation">
               <div class="demo_container">
                   <ul>
-                      <li><a href="index.html"{% if page.title == 'Cucumber' %} class="selected"{% endif %}>Home</a></li>
-                      <li><a href="install.html"{% if page.title == 'Install' %} class="selected"{% endif %}>Install</a></li>
-                      <li><a href="tutorials.html"{% if page.title == 'Tutorials' %} class="selected"{% endif %}>Tutorials</a></li>
-                      <li><a href="documentation.html"{% if page.title == 'Documentation' %} class="selected"{% endif %}>Documentation</a></li>
-                      <li><a href="community.html"{% if page.title == 'Community' %} class="selected"{% endif %}>Community</a></li>
+                      <li><a href="/index.html"{% if page.url == '/index.html' %} class="selected"{% endif %}>Home</a></li>
+                      <li><a href="/install.html"{% if page.url == '/install.html' %} class="selected"{% endif %}>Install</a></li>
+                      <li><a href="/tutorials.html"{% if page.url == '/tutorials.html' %} class="selected"{% endif %}>Tutorials</a></li>
+                      <li><a href="/documentation.html"{% if page.url == '/documentation.html' %} class="selected"{% endif %}>Documentation</a></li>
+                      <li><a href="/community.html"{% if page.url == '/community.html' %} class="selected"{% endif %}>Community</a></li>
                   </ul>
               </div>
           </div>
