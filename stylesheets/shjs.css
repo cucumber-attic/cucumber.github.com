@@ -1,0 +1,50 @@
+/* https://github.com/ChrisKempson/Tomorrow-Theme */
+pre.sh_sourceCode {
+  background-color: #2d2d2d;
+  color: #cccccc;
+}
+pre.sh_sourceCode .sh_keyword {
+  color: #cc99cc;
+}
+pre.sh_sourceCode .sh_type {
+  color: #ffcc66;
+}
+pre.sh_sourceCode .sh_string {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_symbol {
+  color: #cccccc;
+}
+pre.sh_sourceCode .sh_regexp {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_specialchar {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_comment {
+  color: #999999;
+}
+pre.sh_sourceCode .sh_number {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_preproc {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_function {
+  color: #66cccc;
+}
+pre.sh_sourceCode .sh_name {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_variable {
+  color: #99cc99;
+}
+pre.sh_sourceCode .sh_oldfile {
+  color: #999999;
+}
+pre.sh_sourceCode .sh_newfile {
+  color: #ffcc66;
+}
+pre.sh_sourceCode .sh_value {
+  color: #99cc99;
+}
