@@ -58,8 +58,7 @@ You can browse your way to the modules you need in the [Sonatype](https://oss.so
 
 Installing the various `cucumber-*` modules in a Maven project is just a matter of adding them to your `pom.xml` file. Here is the minimal recommended setup:
 
-{% highlight xml %}
-<dependencies>
+<pre class="sh_xml"><code>{% capture code %}<dependencies>
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-picocontaine</artifactId>
@@ -79,7 +78,7 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
         <scope>test</scope>
     </dependency>
 </dependencies>
-{% endhighlight %}
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 You don't have to explicitly add a dependency on `cucumber-core` as all the other packages depend on it.
 

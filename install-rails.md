@@ -6,42 +6,36 @@ title: Cucumber-Rails Installation
 
 Before you can use the generator, add the gem to your project's Gemfile as follows:
 
-{% highlight ruby %}
-group :test do
+<pre class="sh_ruby"><code>{% capture code %}group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
-{% endhighlight %}
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 Then install it by running:
 
-{% highlight bash %}
-bundle install
-{% endhighlight %}
+<pre class="sh_sh"><code>{% capture code %}bundle install
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 Learn about the various options:
 
-{% highlight bash %}
-rails generate cucumber:install --help
-{% endhighlight %}
+<pre class="sh_sh"><code>{% capture code %}rails generate cucumber:install --help
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 Finally, bootstrap your Rails app, for example:
 
-{% highlight bash %}
-rails generate cucumber:install
-{% endhighlight %}
+<pre class="sh_sh"><code>{% capture code %}rails generate cucumber:install
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 ## Running Cucumber
 
 With Rake:
 
-{% highlight bash %}
-rake cucumber
-{% endhighlight %}
+<pre class="sh_sh"><code>{% capture code %}rake cucumber
+{% endcapture %}{{ code | xml_escape }}</code></pre>
 
 Without Rake:
 
-{% highlight bash %}
-[bundle exec] cucumber
-{% endhighlight %}
+<pre class="sh_sh"><code>{% capture code %}[bundle exec] cucumber
+{% endcapture %}{{ code | xml_escape }}</code></pre>

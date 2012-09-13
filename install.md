@@ -7,7 +7,7 @@ Cucumber runs on many different [platforms](platforms.html), and the installatio
 
 Please see the platform-specific installation instructions:
 
-* [Cucumber-Ruby](install-ruby.html)
-* [Cucumber-Rails](install-rails.html)
-* [Cucumber-JVM](install-jvm.html)
-* [Cucumber-JavaScript](install-js.html)
+* [Cucumber-Ruby](/install-ruby.html)
+* [Cucumber-Rails](/install-rails.html)
+* [Cucumber-JVM](/install-jvm.html)
+* [Cucumber-JavaScript](/install-js.html)

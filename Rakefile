@@ -2,7 +2,12 @@ require 'rake/clean'
 require 'less'
 require 'jsmin'
 
-
+file 'submodules/gherkin-syntax-highlighters' do
+  mkdir_p 'submodules/gherkin-syntax-highlighters'
+  Dir.chdir 'submodules' do
+    sh `git clone git://github.com/cucumber/gherkin-syntax-highlighters.git`
+  end
+end
 
 shjs = (
   Dir['submodules/gherkin-syntax-highlighters/shjs/shjs-0.6-src/sh_main.min.js'] +
@@ -10,6 +15,10 @@ shjs = (
   Dir['submodules/gherkin-syntax-highlighters/shjs/sh_{clojure,lua}.js'] +
   Dir['submodules/gherkin-syntax-highlighters/shjs/sh_gherkin_{en}.js']
 )
+
+task :list_shjs do
+  puts shjs.to_a.flatten.map{|js| File.basename(js).match(/([^\.]+).*/)[1] }
+end
 
 CLEAN.include('javascripts/shjs.js')
 file 'javascripts/shjs.js' => shjs do

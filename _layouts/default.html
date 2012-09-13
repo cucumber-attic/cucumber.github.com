@@ -1,80 +1,77 @@
 <!DOCTYPE html>
+
 <html>
+<head>
+	<!--
+	*****************************************************************
+	Fluid Baseline Grid v1.0.0
+	Designed & Built by Josh Hopkins and 40 Horse, http://40horse.com
+	Licensed under Unlicense, http://unlicense.org/
+	*****************************************************************
+	-->
+	<title>Fluid Baseline Grid - A sensible HTML5 and CSS3 development kit</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="description" content="" />
+	<meta name="author" content="">
+	<meta name="keywords" content="" />
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Cucumber : Executable Specifications" />
+	<!-- Optimized mobile viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Place favicon.ico and apple-touch-icon.png in root directory -->
+		
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/fonts/ubuntu-mono-fontfacekit/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/fonts/brawler-fontfacekit/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/stylesheets/fbg.css" />
+  <link rel="stylesheet" type="text/css" charset="utf-8" href="/stylesheets/shjs.css">
+	<link rel="stylesheet" type="text/css" charset="utf-8" href="/stylesheets/styles.css"/>
+</head>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/shjs.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/sticky-navigation.css">
+<body>
+	<div id="content">
+		<div class="g1">
+			<h1>Cucumber</h1>
+			
+			<ul>
+			  <li><a href="/install.html">Install</a>
+  			  <ul>
+  			    <li><a href="/install-ruby.html">Cucumber-Ruby</a></li>
+  			    <li><a href="/install-rails.html">Cucumber-Rails</a></li>
+  			    <li><a href="/install-jvm.html">Cucumber-JVM</a></li>
+  			    <li><a href="/install-js.html">Cucumber-JavaScript</a></li>
+  			  </ul>
+			  </li>
+			  <li>Running</li>
+			  <li>Gherkin</li>
+			  <li>API</li>
+			  <li>Web Apps</li>
+			  <li>Databases</li>
+			  <li>Related Tools</li>
+			</ul>
+		</div>
+		<div class="g2">
+			{{content}}
+		</div>
+	</div>
+	<footer class="g3 cf">
+		<small>2011 <span class="license">Created by <a href="http://twitter.com/thedayhascome">Josh Hopkins</a> <span class="amp">&amp;</span> <a href="http://40horse.com">40 Horse</a></span>. Released under <a href="http://unlicense.org">Unlicense</a>. Text provided by <a href="http://slipsum.com/">Samuel L. Ipsum</a>.</small>
+	</footer>
 
-    <title>{{ page.title }}</title>
+	<!-- JavaScript at the bottom for fast page loading -->
 
-    <link rel="shortcut icon" href="/images/favicon.ico">
-    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
-    
-    <script src="javascripts/jquery-1.8.1.min.js"></script>
-    <script src="javascripts/sticky-navigation.js"></script>
-    <script src="javascripts/shjs.js"></script>
-  </head>
+	<script src="/javascripts/jquery-1.8.1.min.js"></script>
 
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/cucumber">View on GitHub</a>
-
-          <h1 id="project_title">Cucumber</h1>
-          <h2 id="project_tagline">Executable Specifications</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <div id="sticky_navigation_wrapper">
-          <div id="sticky_navigation">
-              <div class="demo_container">
-                  <ul>
-                      <li><a href="/index.html"{% if page.url == '/index.html' %} class="selected"{% endif %}>Home</a></li>
-                      <li><a href="/install.html"{% if page.url == '/install.html' %} class="selected"{% endif %}>Install</a></li>
-                      <li><a href="/tutorials.html"{% if page.url == '/tutorials.html' %} class="selected"{% endif %}>Tutorials</a></li>
-                      <li><a href="/documentation.html"{% if page.url == '/documentation.html' %} class="selected"{% endif %}>Documentation</a></li>
-                      <li><a href="/community.html"{% if page.url == '/community.html' %} class="selected"{% endif %}>Community</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-          <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-6729167-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-
-          <script>sh_highlightDocument();</script>
-
-  </body>
+	<!-- HTML5 IE Enabling Script -->
+	<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	
+	<!-- CSS3 Media Queries -->
+	<script src="/javascripts/respond.min.js"></script>
+  <script src="/javascripts/shjs.js"></script>
+  <script>sh_highlightDocument();</script>
+	<!-- Optimized Google Analytics. Change UA-XXXXX-X to your site ID -->
+	<script>var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
+	
+</body>
 </html>

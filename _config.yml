@@ -1,4 +1,19 @@
-# Github overrides
+navigation:
+- text: Install
+  url: /install.html
+- text: Install JVM
+  url: /install-jvm.html
+- text: Install Ruby
+  url: /install-ruby.html
+  navigation:
+  - text: Windows
+    url: /install-windows.html
+  - text: OS X
+    url: /install-osx.html
+- text: Install Rails
+  url: /install-rails.html
+
+# Github overrides with this
 safe: true
 lsi: false
 pygments: false
