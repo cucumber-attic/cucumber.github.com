@@ -34,22 +34,43 @@
 		<div class="g1">
 			<h1>Cucumber</h1>
 			
-			<ul>
-			  <li><a href="/install.html">Install</a>
-  			  <ul>
-  			    <li><a href="/install-ruby.html">Cucumber-Ruby</a></li>
-  			    <li><a href="/install-rails.html">Cucumber-Rails</a></li>
-  			    <li><a href="/install-jvm.html">Cucumber-JVM</a></li>
-  			    <li><a href="/install-js.html">Cucumber-JavaScript</a></li>
-  			  </ul>
-			  </li>
-			  <li>Running</li>
-			  <li>Gherkin</li>
-			  <li>API</li>
-			  <li>Web Apps</li>
-			  <li>Databases</li>
-			  <li>Related Tools</li>
-			</ul>
+      <ul class="navigation">
+        {% for link in site.navigation %}
+          {% assign selected = nil %}
+          {% if page.url == link.url or page.layout == link.layout %}
+            {% assign selected = 'selected' %}
+          {% endif %}
+          <li class="{% if forloop.first %}first{% endif %} {{ selected }} {% if forloop.last %}last{% endif %}">
+            <a class="{{ selected }}" href="{{ link.url }}">{{ link.text }}</a>
+            {% if link.navigation %}
+              <ul class="navigation">
+                {% for link in link.navigation %}
+                  {% assign selected = nil %}
+                  {% if page.url == link.url or page.layout == link.layout %}
+                    {% assign selected = 'selected' %}
+                  {% endif %}
+                  <li class="{% if forloop.first %}first{% endif %} {{ selected }} {% if forloop.last %}last{% endif %}">
+                    <a class="{{ selected }}" href="{{ link.url }}">{{ link.text }}</a>
+                    {% if link.navigation %}
+                      <ul class="navigation">
+                        {% for link in link.navigation %}
+                          {% assign selected = nil %}
+                          {% if page.url == link.url or page.layout == link.layout %}
+                            {% assign selected = 'selected' %}
+                          {% endif %}
+                          <li class="{% if forloop.first %}first{% endif %} {{ selected }} {% if forloop.last %}last{% endif %}">
+                            <a class="{{ selected }}" href="{{ link.url }}">{{ link.text }}</a>
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
 		</div>
 		<div class="g2">
 			{{content}}

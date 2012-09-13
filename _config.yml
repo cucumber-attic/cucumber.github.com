@@ -1,17 +1,34 @@
 navigation:
 - text: Install
   url: /install.html
-- text: Install JVM
-  url: /install-jvm.html
-- text: Install Ruby
-  url: /install-ruby.html
   navigation:
-  - text: Windows
-    url: /install-windows.html
-  - text: OS X
-    url: /install-osx.html
-- text: Install Rails
-  url: /install-rails.html
+  - text: Install JVM
+    url: /install-jvm.html
+  - text: Install Ruby
+    url: /install-ruby.html
+    navigation:
+    - text: Windows
+      url: /install-windows.html
+    - text: OS X
+      url: /install-osx.html
+  - text: Install Rails
+    url: /install-rails.html
+- text: Running
+  url: /running.html
+- text: Gherkin
+  url: /gherkin.html
+- text: API
+  url: /api.html
+- text: Tips
+  url: /tips.html
+  navigation:
+    - text: Web Apps
+      url: /tips-webapps.html
+    - text: Databases
+      url: /tips-databases.html    
+- text: Related Tools
+  url: /tips.html
+
 
 # Github overrides with this
 safe: true
