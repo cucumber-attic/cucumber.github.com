@@ -16,6 +16,7 @@ shjs = (
   Dir['submodules/gherkin-syntax-highlighters/shjs/sh_gherkin_{en}.js']
 )
 
+desc 'List available SHJS '
 task :list_shjs do
   puts shjs.to_a.flatten.map{|js| File.basename(js).match(/([^\.]+).*/)[1] }
 end
