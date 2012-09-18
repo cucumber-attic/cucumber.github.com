@@ -1,3 +1,4 @@
 _site/
 submodules/
 .DS_Store
+*.pyc
