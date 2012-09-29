@@ -23,7 +23,7 @@ In addition to `cucumber-core` you will also need a programming language-specifi
 
 ### Dependency Injection modules for cucumber-java
 
-If your programming language is Java you will be writing glue code ([Step Definitions](step-definitions.html) and [Hooks](hooks.html)) in plain old Java classes. Cucumber will create a new instance of each of your glue code classes before each [Scenario](gherkin.html#scenario). If all of your glue code classes have an empty constructor you don't need anything else. However, most projects will benefit from a [Dependency Injection](dependency-injection) module to organize your code better.
+If your programming language is Java you will be writing glue code ([Step Definitions](/step-definitions.html) and [Hooks](/hooks.html)) in plain old Java classes. Cucumber will create a new instance of each of your glue code classes before each [Scenario](/gherkin.html#scenario). If all of your glue code classes have an empty constructor you don't need anything else. However, most projects will benefit from a [Dependency Injection](/dependency-injection) module to organize your code better.
 
 The available Dependency Injection modules are:
 
