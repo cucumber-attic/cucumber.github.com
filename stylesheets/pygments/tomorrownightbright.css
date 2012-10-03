@@ -1,0 +1,42 @@
+.highlight .hll { background-color: #424242 }
+.highlight pre { background: #000000; color: #eaeaea }
+.highlight .c { color: #969896 } /* Comment */
+.highlight .k { color: #c397d8 } /* Keyword */
+.highlight .cm { color: #969896 } /* Comment.Multiline */
+.highlight .cp { color: #969896 } /* Comment.Preproc */
+.highlight .c1 { color: #969896 } /* Comment.Single */
+.highlight .cs { color: #969896 } /* Comment.Special */
+.highlight .gd { color: #d54e53 } /* Generic.Deleted */
+.highlight .gh { color: #eaeaea; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #b9ca4a } /* Generic.Inserted */
+.highlight .gp { color: #969896; font-weight: bold } /* Generic.Prompt */
+.highlight .gu { color: #70c0b1; font-weight: bold } /* Generic.Subheading */
+.highlight .kc { color: #c397d8 } /* Keyword.Constant */
+.highlight .kd { color: #c397d8 } /* Keyword.Declaration */
+.highlight .kn { color: #c397d8 } /* Keyword.Namespace */
+.highlight .kp { color: #c397d8 } /* Keyword.Pseudo */
+.highlight .kr { color: #c397d8 } /* Keyword.Reserved */
+.highlight .kt { color: #e7c547 } /* Keyword.Type */
+.highlight .s { color: #b9ca4a } /* Literal.String */
+.highlight .nb { color: #d54e53 } /* Name.Builtin */
+.highlight .nc { color: #e7c547 } /* Name.Class */
+.highlight .no { color: #b9ca4a } /* Name.Constant */
+.highlight .nd { color: #70c0b1 } /* Name.Decorator */
+.highlight .ne { color: #d54e53 } /* Name.Exception */
+.highlight .nf { color: #7aa6da } /* Name.Function */
+.highlight .nn { color: #e7c547 } /* Name.Namespace */
+.highlight .nt { color: #7aa6da } /* Name.Tag */
+.highlight .w { color: #eaeaea } /* Text.Whitespace */
+.highlight .sb { color: #b9ca4a } /* Literal.String.Backtick */
+.highlight .sc { color: #eaeaea } /* Literal.String.Char */
+.highlight .sd { color: #b9ca4a } /* Literal.String.Doc */
+.highlight .s2 { color: #b9ca4a } /* Literal.String.Double */
+.highlight .se { color: #b9ca4a } /* Literal.String.Escape */
+.highlight .sh { color: #b9ca4a } /* Literal.String.Heredoc */
+.highlight .si { color: #b9ca4a } /* Literal.String.Interpol */
+.highlight .sx { color: #b9ca4a } /* Literal.String.Other */
+.highlight .sr { color: #b9ca4a } /* Literal.String.Regex */
+.highlight .s1 { color: #b9ca4a } /* Literal.String.Single */
+.highlight .ss { color: #b9ca4a } /* Literal.String.Symbol */
+.highlight .bp { color: #d54e53 } /* Name.Builtin.Pseudo */
+.highlight .vi { color: #d54e53 } /* Name.Variable.Instance */

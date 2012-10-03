@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: bootstrap
 title: Cucumber-Rails Installation
 ---
 ## {{page.title}}

@@ -9,4 +9,18 @@ python vim2pygments.py native.vim > native.py
 python pygments2css.py > native.css
 ```
 
-Just change the name from 'native' to whatever else
+Just change the name from 'native' to whatever else. You also have to change this in `pygments2css.py`
+
+After generation, you may have to change the generated css on line 2 from:
+
+```
+.highlight { ... }
+```
+
+to
+
+```
+.highlight pre { ... }
+```
+
+This is to make the CSS play nice with Bootstrap CSS.
