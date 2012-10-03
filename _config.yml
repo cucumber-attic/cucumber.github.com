@@ -1,3 +1,7 @@
+# Set this to true to pick up non-minified bootstrap css files.
+# Useful in development
+bootstrap_min: false
+
 navigation:
 - text: Install
   url: /install.html
@@ -28,7 +32,6 @@ navigation:
       url: /tips-databases.html    
 - text: Related Tools
   url: /tips.html
-
 
 # Github overrides with this
 safe: true
