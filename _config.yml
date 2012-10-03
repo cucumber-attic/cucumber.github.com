@@ -1,6 +1,6 @@
-# Set this to true to pick up non-minified bootstrap css files.
-# Useful in development
-bootstrap_min: false
+# Set this to false to pick up non-minified bootstrap css files.
+# Useful in development. (Changes to this file requires restart of jekyll --server --auto)
+bootstrap_min: true
 
 navigation:
 - text: Install

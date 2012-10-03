@@ -32,9 +32,10 @@ If you make changes to Bootstrap you have to rebuild it. Standing in `vendor/boo
 
 ```
 # Check Bootstrap's README for detailed build instructions
-make build bootstrap
+make build clean bootstrap
 
 # Alternatively, you can build automatically when you save a .less file
+# in which case you should set bootstrap_min: false in _config.yml
 make watch
 ```
 
