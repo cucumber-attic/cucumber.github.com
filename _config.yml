@@ -4,17 +4,13 @@ bootstrap_min: false
 
 navigation:
 - text: Install
-  url: /install.html
-  navigation:
+  dropdown:
+  - text: General info
+    url: /install.html
   - text: Install JVM
     url: /install-jvm.html
   - text: Install Ruby
     url: /install-ruby.html
-    navigation:
-    - text: Windows
-      url: /install-windows.html
-    - text: OS X
-      url: /install-osx.html
   - text: Install Rails
     url: /install-rails.html
 - text: Running
@@ -25,7 +21,7 @@ navigation:
   url: /api.html
 - text: Tips
   url: /tips.html
-  navigation:
+  dropdown:
     - text: Web Apps
       url: /tips-webapps.html
     - text: Databases
