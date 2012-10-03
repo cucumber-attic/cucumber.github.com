@@ -33,4 +33,4 @@ navigation:
 # Github overrides with this
 safe: true
 lsi: false
-pygments: false
+pygments: true

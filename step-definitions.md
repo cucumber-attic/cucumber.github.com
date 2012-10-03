@@ -4,7 +4,7 @@ title: Step Definitions
 ---
 ## {{page.title}}
 
-When Cucumber executes a [Step](/gherkin.html#steps) [Scenario](/gherkin.html#scenario) it will look for a matching Step Definition to execute.
+When Cucumber executes a [Step](/gherkin.html#steps) in a [Scenario](/gherkin.html#scenario) it will look for a matching _Step Definition_ to execute.
 
 A Step Definition is a small piece of _code_ with a _pattern_ attached to it. The pattern is used to link the step definition to all the matching [Steps](/gherkin.html#steps), and the _code_ is what Cucumber will execute when it sees a Gherkin Step.
 
