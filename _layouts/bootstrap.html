@@ -63,7 +63,14 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ item.text }} <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                       {% for drop in item.dropdown %}
-                        <li><a href="{{ drop.url }}">{{ drop.text }}</a></li>
+                        {% if drop == 'divider' %}
+                          <li class="divider"></li>
+                        {% elsif drop.divider %}
+                          <li class="divider"></li>
+                          <li class="nav-header">{{ drop.divider }}</li>
+                        {% else %}
+                          <li><a href="{{ drop.url }}">{{ drop.text }}</a></li>
+                        {% endif %}
                       {% endfor %}
                     </ul>
                   </li>

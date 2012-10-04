@@ -5,8 +5,9 @@ bootstrap_min: false
 navigation:
 - text: Install
   dropdown:
-  - text: General info
+  - text: Choose your Cucumber
     url: /install.html
+  - divider
   - text: Install Cucumber-JVM
     url: /install-cucumber-jvm.html
   - text: Install Cucumber-Ruby
@@ -25,15 +26,25 @@ navigation:
     url: /step-definitions.html
   - text: Hooks
     url: /hooks.html
-  - text: Screenshots
-    url: /screenshots.html
+  - divider: Cucumber-JVM
+  - text: Dependency Injection
+    url: /dependency-injection.html
 - text: Learn more
   dropdown:
   - text: Browser Automation
     url: /browser-automation.html
+  - text: Screenshots
+    url: /screenshots.html
   - text: Databases
     url: /databases.html    
-- text: Related Tools
-  url: /tools.html
+- text: Ecosystem
+  dropdown:
+  - text: Community Help
+    url: /community-help.html
+  - text: Source code
+    url: /source-code.html
+  - text: Editors and IDEs
+    url: /editors-and-ides.html
+
 
 pygments: true
