@@ -1,6 +1,6 @@
 ---
 layout: bootstrap
-title: Cucumber-JavaScript Installation
+title: Browser Automation
 ---
 ## {{page.title}}
 

@@ -1,6 +1,6 @@
 ---
 layout: bootstrap
-title: Embedding
+title: Screenshots
 ---
 ## {{page.title}}
 
@@ -8,8 +8,8 @@ If you are using Cucumber with a GUI driver such as a [Browser Automation](/brow
 it can sometimes be useful to embed screenshots or videos of the user interface in Cucumber's [HTML](/reports.html#HTML) or [JSON](/reports.html#JSON) report.
 
 Cucumber itself doesn't provide an API to _take_ screenshots or videos, but it provides an API to _embed_ them
-into the report. For example, if you are using Selenium WebDriver, you can ask it to give you a screenshot, and
-then embed them into the report.
+into the report. For example, if you are using [Selenium WebDriver](http://seleniumhq.org/projects/webdriver/), 
+you can ask it to give you a screenshot, and then embed them into the report.
 
 {% highlight java %}
 @After

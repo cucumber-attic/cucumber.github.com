@@ -1,30 +1,38 @@
 # Set this to false to pick up non-minified bootstrap css files.
 # Useful in development. (Changes to this file requires restart of jekyll --server --auto)
-bootstrap_min: true
+bootstrap_min: false
 
 navigation:
 - text: Install
   dropdown:
   - text: General info
     url: /install.html
-  - text: Install JVM
-    url: /install-jvm.html
-  - text: Install Ruby
-    url: /install-ruby.html
-  - text: Install Rails
-    url: /install-rails.html
+  - text: Install Cucumber-JVM
+    url: /install-cucumber-jvm.html
+  - text: Install Cucumber-Ruby
+    url: /install-cucumber-ruby.html
+  - text: Install Cucumber-Rails
+    url: /install-cucumber-rails.html
+  - text: Install Cucumber-JavaScript
+    url: /install-cucumber-js.html
 - text: Running
   url: /running.html
 - text: Gherkin
   url: /gherkin.html
 - text: API
-  url: /api.html
-- text: Tips
   dropdown:
-  - text: Web Apps
-    url: /tips-webapps.html
+  - text: Step Definitions
+    url: /step-definitions.html
+  - text: Hooks
+    url: /hooks.html
+  - text: Screenshots
+    url: /screenshots.html
+- text: Learn more
+  dropdown:
+  - text: Browser Automation
+    url: /browser-automation.html
   - text: Databases
-    url: /tips-databases.html    
+    url: /databases.html    
 - text: Related Tools
   url: /tools.html
 

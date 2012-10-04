@@ -1,6 +1,6 @@
 ---
 layout: bootstrap
-title: Cucumber-JVM Installation
+title: Install Cucumber-JVM
 ---
 ## {{page.title}}
 
