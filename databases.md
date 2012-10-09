@@ -6,7 +6,7 @@ title: Databases
 
 Data stored in one scenario shouldn't be available to the next scenario. This just makes your scenarios brittle and impossible to run in isolation.
 
-There are two ways you can achieve this. Either by deleting all data in a [Before Hook](/hooks.html#before) or (if your database supports it) 
+This can be done either by deleting all data in a [Before Hook](/hooks.html#before) (running _before_ each Scenario) or to wrap a transaction (if your database supports it) _around_ each Scenario.
 
 ### Transactions
 
@@ -23,15 +23,20 @@ Feature: Let's write a lot of stuff to the DB
     Given I write to the DB
 {% endhighlight %}
 
-#### Cucumber-Rails
+<ul class="nav nav-tabs">
+  <li><a href="#txn-rails" data-toggle="tab" class="rails"><div>RAILS</div></a></li>
+  <li><a href="#txn-spring" data-toggle="tab" class="spring"><div>SPRING</div></a></li>
+</ul>
 
+<div class="tab-content">
+  <div class="tab-pane" id="txn-rails">
 Use DatabaseCleaner.
+  </div>
+  <div class="tab-pane" id="txn-spring">
+The <code>cucumber-spring</code> module contains <code>@txn</code> hooks in the <code>cucumber.runtime.java.spring.hooks</code> package.
+This package isn't on your <a href="/api.html#glue-code">Glue Path</a> by default, so you have to add it yourself in your <a href="/api.html#configuration">Configuration Options</a>.
 
-#### Spring-Tx (Cucumber-JVM)
-
-The `@txn` hooks aren't on your [Glue Code Path](/api.html#glue-code) by default, so you have to add it yourself. Just add `cucumber.runtime.java.spring.hooks` to your [Configuration Options](/api.html#configuration) and you're all set:
-
-##### Using JUnit
+<h5>Using JUnit</h5>
 
 {% highlight java %}
 @RunWith(Cucumber.class)
@@ -40,13 +45,20 @@ public class RunCukesTest {
 }
 {% endhighlight %}
 
-##### Using the CLI
+<h5>Using the CLI</h5>
 
 {% highlight text %}
 --glue cucumber.runtime.java.spring.hooks
 {% endhighlight %}
 
 
-Note that you must have the `cucumber-spring` module on your `CLASSPATH` in order for this to work.
+See the <a href="#">spring-txn</a> example in Cucumber-JVM for a minimal setup.
+  </div>
+</div>
 
-See the [spring-txn](#) example in Cucumber-JVM for a minimal setup.
+#### Browsers, beware
+
+If you're using a [Browser Automation](/browser-automation.html) tool that talks to your application over HTTP the transactional approach
+will not work if your Step Definitions and the web application serving HTTP request each have their own database connection.
+
+TODO: Write some more here.
