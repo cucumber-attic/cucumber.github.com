@@ -7,7 +7,7 @@ title: Install Cucumber-Rails
 Cucumber-Rails is a generator that will generate and modify files in a Rails project so it can be used with Cucumber.
 Before you can use the generator, add the gem to your project's Gemfile as follows:
 
-{% highlight text %}
+{% highlight ruby %}
 group :test do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
