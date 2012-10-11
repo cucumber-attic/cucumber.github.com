@@ -26,19 +26,19 @@ The table below should help you know which Cucumber implementation is right for 
     <tr>
       <td><a href="/install-ruby.html">Install Cucumber-Ruby</a></td>
       <td>Ruby, JRuby, Lua, C++</td>
-      <td><a href="http://travis-ci.org/cucumber/cucumber"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-jvm.png" ></a></td>
+      <td><a href="http://travis-ci.org/cucumber/cucumber"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber.png" ></a></td>
       <td><a href="https://github.com/cucumber/cucumber">Cucumber-Ruby on Github</a></td>
     </tr>
     <tr>
       <td><a href="/install-rails.html">Install Cucumber-Rails</a></td>
       <td>Ruby, Ruby on Rails</td>
-      <td><a href="http://travis-ci.org/cucumber/cucumber-rails"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-jvm.png" ></a></td>
+      <td><a href="http://travis-ci.org/cucumber/cucumber-rails"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-rails.png" ></a></td>
       <td><a href="https://github.com/cucumber/cucumber-rails">Cucumber-Rails on Github</a></td>
     </tr>
     <tr>
       <td><a href="/install-js.html">Install Cucumber-JavaScript</a></td>
       <td>Node.js, Browsers</td>
-      <td><a href="http://travis-ci.org/cucumber/cucumber-js"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-jvm.png" ></a></td>
+      <td><a href="http://travis-ci.org/cucumber/cucumber-js"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-js.png" ></a></td>
       <td><a href="https://github.com/cucumber/cucumber-js">Cucumber-JavaScript on Github</a></td>
     </tr>
     <tr>
