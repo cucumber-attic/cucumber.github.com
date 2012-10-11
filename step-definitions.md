@@ -69,7 +69,7 @@ Given(~'^I have (\\d+) cukes in my belly') { String cukes ->
   <div class="tab-pane" id="defs-java">
 {% highlight java %}
 @Given("I have (\\d+) cukes in my belly")
-public void cukesInTheBelly(String cukes) {
+public void I_have_cukes_in_my_belly(String cukes) {
     // Do something with the cukes
 }
 {% endhighlight %}
