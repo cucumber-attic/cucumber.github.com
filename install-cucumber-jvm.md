@@ -62,7 +62,7 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
 <dependencies>
     <dependency>
         <groupId>info.cukes</groupId>
-        <artifactId>cucumber-picocontaine</artifactId>
+        <artifactId>cucumber-picocontainer</artifactId>
         <version>1.0.14</version>
         <scope>test</scope>
     </dependency>
@@ -83,6 +83,6 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
 
 You don't have to explicitly add a dependency on `cucumber-core` as all the other packages depend on it.
 
-### Ant without Ivy
+### Ant
 
 You'd better take a look at the [java-helloworld build.xml file](https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-helloworld/build.xml)
