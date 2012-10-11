@@ -48,11 +48,10 @@ public class RunCukesTest {
 <h5>Using the CLI</h5>
 
 {% highlight text %}
---glue cucumber.runtime.java.spring.hooks
+--glue your.own.glue.code --glue cucumber.runtime.java.spring.hooks
 {% endhighlight %}
 
-
-See the <a href="#">spring-txn</a> example in Cucumber-JVM for a minimal setup.
+See the <a href="https://github.com/cucumber/cucumber-jvm/tree/master/examples/spring-txn">spring-txn</a> example in Cucumber-JVM for a minimal setup.
   </div>
 </div>
 

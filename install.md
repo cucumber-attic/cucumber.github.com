@@ -4,7 +4,7 @@ title: Install
 ---
 ## {{page.title}}
 
-Cucumber runs on many different platforms, and the installation procedure depends on what programming language you are using, and also what kind of build tool you are using.
+Cucumber runs on many different platforms, and the installation procedure depends on what programming language you are using, and also what kind of build tool and/or framework you are using.
 The table below should help you know which Cucumber implementation is right for you.
 
 <table>
@@ -31,7 +31,7 @@ The table below should help you know which Cucumber implementation is right for 
     </tr>
     <tr>
       <td><a href="/install-rails.html">Install Cucumber-Rails</a></td>
-      <td>Ruby, Ruby on Rails</td>
+      <td>Ruby on Rails</td>
       <td><a href="http://travis-ci.org/cucumber/cucumber-rails"><img alt="Build Status" src="https://secure.travis-ci.org/cucumber/cucumber-rails.png" ></a></td>
       <td><a href="https://github.com/cucumber/cucumber-rails">Cucumber-Rails on Github</a></td>
     </tr>
