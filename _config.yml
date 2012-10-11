@@ -26,6 +26,8 @@ navigation:
     url: /step-definitions.html
   - text: Hooks
     url: /hooks.html
+  - text: Transformation
+    url: /transformation.html
   - divider: Cucumber-JVM
   - text: Dependency Injection
     url: /dependency-injection.html

@@ -32,7 +32,7 @@ Scenario: Some cukes
   <div class="tab-pane" id="defs-clojure">
 {% highlight clojure %}
 (Given #"^I have (\d+) cukes in my belly$" [cukes]
-  (eat (Float. cuke-count)))
+  (eat (Integer. cukes)))
 {% endhighlight %}
   </div>
   <div class="tab-pane" id="defs-cplusplus">
@@ -47,7 +47,7 @@ GIVEN("^I have (\\d+) cukes in my belly$") {
   <div class="tab-pane" id="defs-csharp">
 {% highlight csharp %}
 [When(@"^I have (\d+) cukes in my belly$")]
-public void CukesInTheBelly(int cukes)
+public void CukesInTheBelly(string cukes)
 {
     // Do something with the cukes
 }
@@ -55,13 +55,13 @@ public void CukesInTheBelly(int cukes)
   </div>
   <div class="tab-pane" id="defs-fsharp">
 {% highlight fsharp %}
-let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) = 
+let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:string) = 
   Belly.Push(cukes)
 {% endhighlight %}
   </div>
   <div class="tab-pane" id="defs-groovy">
 {% highlight groovy %}
-Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
+Given(~'^I have (\\d+) cukes in my belly') { String cukes ->
     // Do something with the cukes
 }
 {% endhighlight %}
@@ -69,7 +69,7 @@ Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
   <div class="tab-pane" id="defs-java">
 {% highlight java %}
 @Given("I have (\\d+) cukes in my belly")
-public void cukesInTheBelly(int cukes) {
+public void cukesInTheBelly(String cukes) {
     // Do something with the cukes
 }
 {% endhighlight %}
@@ -105,7 +105,7 @@ end
   </div>
   <div class="tab-pane" id="defs-scala">
 {% highlight fsharp %}
-Given("""^I have (\d+) cukes in my belly$"""){ (cukes:Int) =>
+Given("""^I have (\d+) cukes in my belly$"""){ (cukes:String) =>
   // Do something with the cukes
 }
 {% endhighlight %}
