@@ -88,6 +88,23 @@ Cucumber itself doesn't provide an API to _take_ screenshots or videos, but it p
 into the report. For example, if you are using [Selenium WebDriver](http://seleniumhq.org/projects/webdriver/), 
 you can ask it to give you a screenshot, and then embed them into the report.
 
+<ul class="nav nav-tabs">
+  <li><a href="#screenshots-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+  <li><a href="#screenshots-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane" id="screenshots-ruby">
+{% highlight ruby %}
+After do |scenario|
+  if(scenario.failed?)
+    page.driver.browser.save_screenshot("html-report/#{scenario.__id__}.png")
+    embed("#{scenario.__id__}.png", "image/png", "SCREENSHOT")
+  end
+end
+{% endhighlight %}
+  </div>
+  <div class="tab-pane" id="screenshots-java">
 {% highlight java %}
 @After
 public void embedScreenshot(Scenario scenario) {
@@ -97,3 +114,5 @@ public void embedScreenshot(Scenario scenario) {
     }
 }
 {% endhighlight %}
+  </div>
+</div>
