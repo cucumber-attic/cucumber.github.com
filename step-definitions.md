@@ -122,3 +122,12 @@ It is up to you what you do with those arguments. You can use it to interact wit
 
 ## Transformations
 
+## FAQ
+
+### I want to scope a step definition to a scenario or feature
+
+TODO: Summarise info from:
+
+* https://groups.google.com/d/msg/cukes/53UKauIY28o/1nrdSCWAkLMJ
+* https://github.com/cucumber/cucumber/wiki/Feature-Coupled-Step-Definitions-(Antipattern)
+
