@@ -24,8 +24,8 @@ Feature: Let's write a lot of stuff to the DB
 {% endhighlight %}
 
 <ul class="nav nav-tabs">
-  <li><a href="#txn-rails" data-toggle="tab" class="rails"><div>RAILS</div></a></li>
-  <li><a href="#txn-spring" data-toggle="tab" class="spring"><div>SPRING</div></a></li>
+  <li><a href="#txn-rails" data-toggle="tab" class="rails"><div>&nbsp;</div></a></li>
+  <li><a href="#txn-spring" data-toggle="tab" class="spring"><div>&nbsp;</div></a></li>
 </ul>
 
 <div class="tab-content">

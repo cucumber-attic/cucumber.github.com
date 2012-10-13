@@ -26,6 +26,8 @@ navigation:
     url: /step-definitions.html
   - text: Hooks
     url: /hooks.html
+  - text: Reports
+    url: /reports.html
   - text: Transformation
     url: /transformation.html
   - divider: Cucumber-JVM
@@ -35,8 +37,8 @@ navigation:
   dropdown:
   - text: Browser Automation
     url: /browser-automation.html
-  - text: Screenshots
-    url: /screenshots.html
+  - text: Reports
+    url: /reports.html
   - text: Databases
     url: /databases.html    
 - text: Ecosystem

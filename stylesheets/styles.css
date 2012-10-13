@@ -68,3 +68,13 @@ body {
 	background-image: url(../images/languages/scala.png);
 	width: 85px;
 }
+
+.nav-tabs li .spring {
+	background-image: url(../images/languages/spring.png);
+	width: 81px;
+}
+
+.nav-tabs li .rails {
+	background-image: url(../images/languages/rails.png);
+	width: 85px;
+}
