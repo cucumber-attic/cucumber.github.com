@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Encoding
 ---
-## {{page.title}}
+# {{page.title}}
 
 By default, `.feature` files are in English, with `UTF-8` encoding. You can override this if you want:
 

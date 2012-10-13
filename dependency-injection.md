@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Dependency Injection
 ---
-## {{page.title}}
+# {{page.title}}
 
 _This is only relevant if you are using Cucumber-JVM with Java_.
 

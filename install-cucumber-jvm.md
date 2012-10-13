@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Install Cucumber-JVM
 ---
-## {{page.title}}
+# {{page.title}}
 
 Cucumber-JVM consists of several modules (jars). You will always need the `cucumber-core` module, which contains the main logic for parsing and executing your Gherkin feature files.
 
@@ -35,7 +35,7 @@ The available Dependency Injection modules are:
 | Spring                         | `cucumber-spring`        |
 | Weld                           | `cucumber-weld`          |
 
-### Runners
+## Runners
 
 There are two ways to run Gherkin Features with Cucumber-JVM:
 
@@ -54,7 +54,7 @@ This should help you pick the 2 or 3 modules you need. Let's install them:
 
 You can browse your way to the modules you need in the [Sonatype](https://oss.sonatype.org/content/repositories/releases/info/cukes/) repository. Or you can search for them in [Maven Central](https://search.maven.org/).
 
-### Maven
+## Maven
 
 Installing the various `cucumber-*` modules in a Maven project is just a matter of adding them to your `pom.xml` file. Here is the minimal recommended setup:
 
@@ -83,6 +83,6 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
 
 You don't have to explicitly add a dependency on `cucumber-core` as all the other packages depend on it.
 
-### Ant
+## Ant
 
 You'd better take a look at the [java-helloworld build.xml file](https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-helloworld/build.xml)

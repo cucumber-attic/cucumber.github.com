@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Install Cucumber-Rails
 ---
-## {{page.title}}
+# {{page.title}}
 
 Cucumber-Rails is a generator that will generate and modify files in a Rails project so it can be used with Cucumber.
 Before you can use the generator, add the gem to your project's Gemfile as follows:

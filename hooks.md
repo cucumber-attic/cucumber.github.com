@@ -2,6 +2,6 @@
 layout: bootstrap
 title: Hooks
 ---
-## {{page.title}}
+# {{page.title}}
 
 TODO: Write me

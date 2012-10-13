@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Install
 ---
-## {{page.title}}
+# {{page.title}}
 
 Cucumber runs on many different platforms, and the installation procedure depends on what programming language you are using, and also what kind of build tool and/or framework you are using.
 The table below should help you know which Cucumber implementation is right for you.

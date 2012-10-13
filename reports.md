@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Cucumber Reports
 ---
-## {{page.title}}
+# {{page.title}}
 
 Cucumber can report results in several different formats, using _formatters_. Formatters are specified either on the command line or in code. Some formatters generate files while others print to `STDOUT`. You can specify as many formatters as you like.
 

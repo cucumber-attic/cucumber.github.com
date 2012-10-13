@@ -2,18 +2,20 @@
 layout: bootstrap
 title: Step Definitions
 ---
-## {{page.title}}
+# {{page.title}}
 
 When Cucumber executes a [Step](/gherkin.html#steps) in a [Scenario](/gherkin.html#scenario) it will look for a matching _Step Definition_ to execute.
 
 A Step Definition is a small piece of _code_ with a _pattern_ attached to it. The pattern is used to link the step definition to all the matching [Steps](/gherkin.html#steps), and the _code_ is what Cucumber will execute when it sees a Gherkin Step.
 
-Consider the following Scenario. The `Given I have 48 cukes in my belly` step will match the Step Definition below. 
+Consider the following Scenario:
 
 {% highlight gherkin %}
 Scenario: Some cukes
   Given I have 48 cukes in my belly
 {% endhighlight %}
+
+The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the Step Definition below. 
 
 <ul class="nav nav-tabs">
   <li><a href="#defs-clojure" data-toggle="tab" class="clojure"><div>&nbsp;</div></a></li>
@@ -47,7 +49,7 @@ GIVEN("^I have (\\d+) cukes in my belly$") {
   <div class="tab-pane" id="defs-csharp">
 {% highlight csharp %}
 [When(@"^I have (\d+) cukes in my belly$")]
-public void CukesInTheBelly(string cukes)
+public void CukesInTheBelly(int cukes)
 {
     // Do something with the cukes
 }
@@ -55,13 +57,13 @@ public void CukesInTheBelly(string cukes)
   </div>
   <div class="tab-pane" id="defs-fsharp">
 {% highlight fsharp %}
-let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:string) = 
-  Belly.Push(cukes)
+let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) = 
+  (* Do something with the cukes *)
 {% endhighlight %}
   </div>
   <div class="tab-pane" id="defs-groovy">
 {% highlight groovy %}
-Given(~'^I have (\\d+) cukes in my belly') { String cukes ->
+Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
     // Do something with the cukes
 }
 {% endhighlight %}
@@ -69,8 +71,21 @@ Given(~'^I have (\\d+) cukes in my belly') { String cukes ->
   <div class="tab-pane" id="defs-java">
 {% highlight java %}
 @Given("I have (\\d+) cukes in my belly")
-public void I_have_cukes_in_my_belly(String cukes) {
+public void I_have_cukes_in_my_belly(int cukes) {
     // Do something with the cukes
+}
+{% endhighlight %}
+
+Lists can also be specified:
+
+{% highlight gherkin %}
+Given I am available on "Tuesday,Friday,Sunday"
+{% endhighlight %}
+
+{% highlight java %}
+@Given("I am available on \"(.+)\"")
+public void I_have_cukes_in_my_belly(List<String> days) {
+    // Do something with the days
 }
 {% endhighlight %}
   </div>
@@ -104,23 +119,244 @@ end
 {% endhighlight %}
   </div>
   <div class="tab-pane" id="defs-scala">
-{% highlight fsharp %}
-Given("""^I have (\d+) cukes in my belly$"""){ (cukes:String) =>
+{% highlight scala %}
+Given("""^I have (\d+) cukes in my belly$"""){ (cukes:Int) =>
   // Do something with the cukes
 }
 {% endhighlight %}
   </div>
 </div>
 
-Cucumber will pass the values of the [Capture Arguments](#) to the Step Definition's code as arguments.
+When Cucumber matches a Step against a regular expression in a Step Definition, it passes the value of all the capture groups to the Step Definition's arguments. Capture groups are strings (even when they match digits like `\d+`). For statically typed languages, 
+Cucumber will automatically transform those strings into the appropriate type. For dynamically typed languages, no transformation happens by default, as there is no type information.
 
-It is up to you what you do with those arguments. You can use it to interact with a Web Page using a [Browser Automation Tool](#) or you can invoke methods/functions directly in your application code.
+Cucumber does not differentiate between `Given`, `When` and `Then`. It is up to you what you do inside the Step Definition's body.
 
 ## Doc Strings
 
+Doc Strings are handy for specifying a larger piece of text. This is inspired from Python's [Docstring](http://www.python.org/dev/peps/pep-0257/) syntax.
+
+The text should be offset by delimiters consisting of three double-quote marks on lines of their own:
+
+{% highlight gherkin %}
+Given a blog post named "Random" with Markdown body
+  """
+  Some Title, Eh?
+  ==============
+  Here is the first paragraph of my blog post. Lorem ipsum dolor sit amet,
+  consectetur adipiscing elit.
+  """
+{% endhighlight %}
+
+In your step definition, there’s no need to find this text and match it in your Regexp. It will automatically be passed as the last parameter in the step definition. For example:
+
+<ul class="nav nav-tabs">
+  <li><a href="#docstrings-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+  <li><a href="#docstrings-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane" id="docstrings-java">
+{% highlight java %}
+@Given("^a blog post named \"([^\"]*)\" with Markdown body$")
+public void a_blog_post_named_something_with_markdown_body(String title, String markdown) {
+    // Save it in the database
+}
+{% endhighlight %}
+  </div>
+
+  <div class="tab-pane" id="docstrings-ruby">
+{% highlight ruby %}
+Given /^a blog post named "([^"]*)" with Markdown body$/ do |title, markdown|
+  Post.create!(:title => title, :body => markdown)
+end
+{% endhighlight %}
+  </div>
+</div>
+
+Indentation of the opening `"""` is unimportant, although common practice is two spaces in from the enclosing step. The indentation inside the triple quotes, however, _is_ significant. Each line of the string passed to the step definition’s block will be de-indented according to the opening `"""`. Indentation beyond the column of the opening `"""` will therefore be preserved.
+
 ## Data Tables
 
-## Transformations
+Data Tables are handy for specifying a larger piece of data:
+
+{% highlight gherkin %}
+Given the following users exist:
+  | name  | email           | phone |
+  | Aslak | aslak@email.com | 123   |
+  | Matt  | matt@email.com  | 234   |
+  | Joe   | joe@email.org   | 456   | 
+{% endhighlight %}
+
+Just like Doc Strings, they will be passed to the Step Definition as the last argument:
+
+<ul class="nav nav-tabs">
+  <li><a href="#datatables-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+  <li><a href="#datatables-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane" id="datatables-java">
+{% highlight java %}
+@Given("^the following users exist$")
+public void the_following_users_exist(DataTable users) {
+    // Save them in the database
+}
+{% endhighlight %}
+
+    See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
+  </div>
+
+  <div class="tab-pane" id="datatables-ruby">
+{% highlight ruby %}
+Given /^the following users exist$/ do |users|
+  User.create!(users.hashes)
+end
+{% endhighlight %}
+
+    See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
+  </div>
+</div>
+
+## String Transformations
+
+Cucumber provides an API that lets you take control over how strings are converted to other types. This is useful especially for dynamically typed languages, but also for statically typed languages when you need more control over the transformation.
+
+Let's consider a common example - turning a string into a date:
+
+{% highlight gherkin %}
+Given today's date is "10-03-1971"
+{% endhighlight %}
+
+First of all, this might mean the 10th of March in some countries, and the 3rd of October in others. It's best to be explicit about how we want this converted.
+
+<ul class="nav nav-tabs">
+  <li><a href="#transform-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+  <li><a href="#transform-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane" id="transform-java">    
+    Cucumber-JVM knows how to convert strings into both <code>java.util.Date</code> and <code>java.util.Calendar</code> without any further ado, as long as the
+    strings follows one of the predefined formats in <code>java.util.DateFormat</code>: <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code>. It turns out <code>10-03-1971</code>
+    doesn't match any of them, so we have to give Cucumber a hint:
+
+{% highlight java %}
+@Given("today's date is \"(.*)\"")
+public void todays_date_is(@Format("dd-MM-yyyy") Date today) {
+}
+{% endhighlight %}
+
+    Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but it knows how to instantiate any class that has a single-argument constructor that is either a <code>String</code> or an <code>Object</code>. Joda's '<code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor. However, in this case it wouldn't also know how to pass the format string, so you would get an exception when Cucumber instantiates it with <code>new LocalDate("10-03-1971")</code>.
+    
+    A custom formatter gives you full control:
+
+{% highlight java %}
+@Given("today's date is \"(.*)\"")
+public void todays_date_is(
+  @Format("dd-MM-yyyy") 
+  @Transform(JodaTransformer.class) 
+  LocalDate today) {
+}
+{% endhighlight %}
+
+    The custom transformer looks like this:
+
+{% highlight java %}
+public class JodaTransformer extends Transformer<LocalDate> {
+    @Override
+    public LocalDate transform(String value) {
+        String format = getParameterInfo().getFormat();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormat.forStyle(format);
+        dateTimeFormatter = dateTimeFormatter.withLocale(getLocale());
+        return dateTimeFormatter.parseLocalDate(value);
+    }
+}
+{% endhighlight %}
+
+      Of course, you can write transformers for anything, not just dates.
+
+  </div>
+  <div class="tab-pane" id="transform-ruby">
+    TODO
+  </div>
+</div>
+
+## Data Table Transformations
+
+*This applies to Cucumber-JVM only*
+
+Data Tables can be transformed to a `List` of various types.
+We'll see how the table in the following Scenario can be transformed to different kinds of lists.
+
+{% highlight gherkin %}
+Scenario: Some vegetables
+  Given I have these vegetables:
+    | name     | color |
+    | Cucumber | Green |
+    | Tomato   | Red   |
+{% endhighlight %}
+
+### List of YourType
+
+The table can be transformed into a list of vegetables:
+
+{% highlight java %}
+public class Vegetable {
+    public String name;
+    public Color color; // Color is an enum
+}
+{% endhighlight %}
+
+The Step Definition:
+
+{% highlight java %}
+@Given("I have these vegetables:")
+public void I_have_these_vegetables(List<Vegetable> vegetables) {
+    // Do something with the vegetables
+}
+{% endhighlight %}
+
+The header row is used to name fields in the generic List type. 
+
+*IMPORTANT*: If the generic List type (`Vegetable` in this case) has a `String` or `Object` constructor, the header will *not* be used to name fields in the class. Instead you would get a List that has one `Vegetable` for *each cell* (6 in this case). See [List of Scalar](#list_of_scalar) below.
+
+### List of Map
+
+You can also transform a DataTable to a list of maps:
+
+{% highlight java %}
+@Given("I have these vegetables:")
+public void I_have_these_vegetables(List<Map<String, String> vegetables) {
+    // Do something with the vegetables
+}
+{% endhighlight %}
+
+The `Key` and `Value` generic types of the `Map` can be any kind of scalar type (`enum`, `String`, `Integer`, `Date`, etc). Beware that a class with a single-argument `String` or `Object` constructor will be treated as a scalar type!
+
+### List of List of scalar
+
+You can also convert it to a list of list scalar:
+
+{% highlight java %}
+@Given("I have these vegetables:")
+public void I_have_these_vegetables(List<List<String>> vegetables) {
+    // Do something with the vegetables
+}
+{% endhighlight %}
+
+This will convert it to a flattened list like this: `[["name", "color"], ["Cucumber", "Green"], ["Tomato", "Red"]]`
+You can also convert it to a list of scalar:
+
+### List of scalar
+
+{% highlight java %}
+@Given("I have these vegetables:")
+public void I_have_these_vegetables(List<String> vegetables) {
+    // Do something with the vegetables
+}
+{% endhighlight %}
+
+This will convert it to a flattened list like this: `["name", "color", "Cucumber", "Green", "Tomato", "Red"]`
 
 ## FAQ
 

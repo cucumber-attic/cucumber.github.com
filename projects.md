@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Cucumber Projects
 ---
-## {{page.title}}
+# {{page.title}}
 
 Cucumber consists of several projects on Github.
 

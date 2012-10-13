@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Gherkin
 ---
-## {{page.title}}
+# {{page.title}}
 
 Gherkin is the format for Cucumber Specifications. Technically speaking it is a [small computer language](http://www.martinfowler.com/bliki/BusinessReadableDSL.html) with a well-defined syntax, but
 it's so simple that you don't have to know how to program in order to use it. Here is a simple Gherkin document:

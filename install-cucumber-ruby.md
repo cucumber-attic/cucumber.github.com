@@ -2,7 +2,7 @@
 layout: bootstrap
 title: Install Cucumber-Ruby
 ---
-## {{page.title}}
+# {{page.title}}
 
 Note: If you are using [Ruby on Rails](http://rubyonrails.org/), see [Install Cucumber-Rails](/install-cucumber-rails.html).
 

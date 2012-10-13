@@ -2,13 +2,13 @@
 layout: bootstrap
 title: Databases
 ---
-## {{page.title}}
+# {{page.title}}
 
 Data stored in one scenario shouldn't be available to the next scenario. This just makes your scenarios brittle and impossible to run in isolation.
 
 This can be done either by deleting all data in a [Before Hook](/hooks.html#before) (running _before_ each Scenario) or to wrap a transaction (if your database supports it) _around_ each Scenario.
 
-### Transactions
+## Transactions
 
 If your database supports transactions, you can tell Cucumber to start a transaction in a [Before Hook](/hooks.html#before) and roll it back 
 in an [After Hook](/hooks.html#after). This is such a common thing to do that several Cucumber extensions provide ready-to-use
@@ -55,7 +55,7 @@ See the <a href="https://github.com/cucumber/cucumber-jvm/tree/master/examples/s
   </div>
 </div>
 
-#### Browsers, beware
+### Browsers, beware
 
 If you're using a [Browser Automation](/browser-automation.html) tool that talks to your application over HTTP the transactional approach
 will not work if your Step Definitions and the web application serving HTTP request each have their own database connection.

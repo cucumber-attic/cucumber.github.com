@@ -28,8 +28,6 @@ navigation:
     url: /hooks.html
   - text: Reports
     url: /reports.html
-  - text: Transformation
-    url: /transformation.html
   - divider: Cucumber-JVM
   - text: Dependency Injection
     url: /dependency-injection.html
