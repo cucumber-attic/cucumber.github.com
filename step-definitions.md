@@ -18,19 +18,63 @@ Scenario: Some cukes
 The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the Step Definition below. 
 
 <ul class="nav nav-tabs">
+  <li><a href="#defs-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+  <li><a href="#defs-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+  <li><a href="#defs-groovy" data-toggle="tab" class="groovy"><div>&nbsp;</div></a></li>
+  <li><a href="#defs-js" data-toggle="tab" class="js"><div>&nbsp;</div></a></li>
   <li><a href="#defs-clojure" data-toggle="tab" class="clojure"><div>&nbsp;</div></a></li>
   <li><a href="#defs-cplusplus" data-toggle="tab" class="cplusplus"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-csharp" data-toggle="tab" class="csharp"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-fsharp" data-toggle="tab" class="fsharp"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-groovy" data-toggle="tab" class="groovy"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-js" data-toggle="tab" class="js"><div>&nbsp;</div></a></li>
   <li><a href="#defs-lua" data-toggle="tab" class="lua"><div>&nbsp;</div></a></li>
   <li><a href="#defs-python" data-toggle="tab" class="python"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
   <li><a href="#defs-scala" data-toggle="tab" class="scala"><div>&nbsp;</div></a></li>
+  <li><a href="#defs-csharp" data-toggle="tab" class="csharp"><div>&nbsp;</div></a></li>
+  <li><a href="#defs-fsharp" data-toggle="tab" class="fsharp"><div>&nbsp;</div></a></li>
 </ul>
 <div class="tab-content">
+  <div class="tab-pane" id="defs-java">
+{% highlight java %}
+@Given("I have (\\d+) cukes in my belly")
+public void I_have_cukes_in_my_belly(int cukes) {
+    // Do something with the cukes
+}
+{% endhighlight %}
+
+<p>
+Lists can also be specified:
+</p>
+
+{% highlight gherkin %}
+Given I am available on "Tuesday,Friday,Sunday"
+{% endhighlight %}
+
+{% highlight java %}
+@Given("I am available on \"(.+)\"")
+public void I_have_cukes_in_my_belly(List<String> days) {
+    // Do something with the days
+}
+{% endhighlight %}
+  </div>
+  <div class="tab-pane" id="defs-ruby">
+{% highlight ruby %}
+Given(/I have (\d+) cukes in my belly/) do |cukes|
+  # Do something with the cukes
+end
+{% endhighlight %}
+  </div>
+  <div class="tab-pane" id="defs-groovy">
+{% highlight groovy %}
+Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
+    // Do something with the cukes
+}
+{% endhighlight %}
+  </div>
+  <div class="tab-pane" id="defs-js">
+{% highlight js %}
+Given(/^I have (\d+) cukes in my belly$/, function (cukes) {
+    // Do something with the cukes
+});
+{% endhighlight %}
+  </div>
   <div class="tab-pane" id="defs-clojure">
 {% highlight clojure %}
 (Given #"^I have (\d+) cukes in my belly$" [cukes]
@@ -61,41 +105,6 @@ let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) =
   (* Do something with the cukes *)
 {% endhighlight %}
   </div>
-  <div class="tab-pane" id="defs-groovy">
-{% highlight groovy %}
-Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
-    // Do something with the cukes
-}
-{% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-java">
-{% highlight java %}
-@Given("I have (\\d+) cukes in my belly")
-public void I_have_cukes_in_my_belly(int cukes) {
-    // Do something with the cukes
-}
-{% endhighlight %}
-
-Lists can also be specified:
-
-{% highlight gherkin %}
-Given I am available on "Tuesday,Friday,Sunday"
-{% endhighlight %}
-
-{% highlight java %}
-@Given("I am available on \"(.+)\"")
-public void I_have_cukes_in_my_belly(List<String> days) {
-    // Do something with the days
-}
-{% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-js">
-{% highlight js %}
-Given(/^I have (\d+) cukes in my belly$/, function (cukes) {
-    // Do something with the cukes
-});
-{% endhighlight %}
-  </div>
   <div class="tab-pane" id="defs-lua">
 {% highlight lua %}
 Given("^I have (%d+) cukes in my belly$", function (cukes)
@@ -109,13 +118,6 @@ end)
 def I_have_cukes_in_my_belly(self, cukes):
   # Do something with the cukes
   pass
-{% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-ruby">
-{% highlight ruby %}
-Given(/I have (\d+) cukes in my belly/) do |cukes|
-  # Do something with the cukes
-end
 {% endhighlight %}
   </div>
   <div class="tab-pane" id="defs-scala">
@@ -235,10 +237,23 @@ First of all, this might mean the 10th of March in some countries, and the 3rd o
   <li><a href="#transform-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
 </ul>
 <div class="tab-content">
-  <div class="tab-pane" id="transform-java">    
-    Cucumber-JVM knows how to convert strings into both <code>java.util.Date</code> and <code>java.util.Calendar</code> without any further ado, as long as the
-    strings follows one of the predefined formats in <code>java.util.DateFormat</code>: <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code>. It turns out <code>10-03-1971</code>
-    doesn't match any of them, so we have to give Cucumber a hint:
+  <div class="tab-pane" id="transform-java">
+    <p>
+    Cucumber-JVM knows how to convert strings into various <em>scalar</em> types. A scalar type is a type that can be derived from a single 
+    string value. Cucumber-JVM's built-in scalar types are <em>numbers</em>, <em>enums</em>, <code>java.util.Date</code>, 
+    <code>java.util.Calendar</code> and arbitrary types that have a single-argument constructor that is either a 
+    <code>String</code> or an <code>Object</code>.
+    </p>
+    
+    <p>
+    Transformation to <code>java.util.Date</code> and <code>java.util.Calendar</code> will work out-of-the-box as long as the
+    string value matches one of the <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code> formats 
+    defined by <a href="http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html"><code>java.util.DateFormat</code></a>.
+    </p>
+    
+    <p>
+    It turns out that <code>10-03-1971</code> from our example doesn't match any of those formats, so we have to give Cucumber a hint:
+    </p>
 
 {% highlight java %}
 @Given("today's date is \"(.*)\"")
@@ -246,9 +261,18 @@ public void todays_date_is(@Format("dd-MM-yyyy") Date today) {
 }
 {% endhighlight %}
 
-    Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but it knows how to instantiate any class that has a single-argument constructor that is either a <code>String</code> or an <code>Object</code>. Joda's '<code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor. However, in this case it wouldn't also know how to pass the format string, so you would get an exception when Cucumber instantiates it with <code>new LocalDate("10-03-1971")</code>.
+    <p>
+    Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but since Joda's <code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor it is considered a scalar by default.
+    </p>
     
+    <p>
+    However, in this case it wouldn't also know how to pass the _format_ string, so you would get an exception when Cucumber instantiates it
+    with <code>new LocalDate("10-03-1971")</code>.
+    </p>
+    
+    <p>
     A custom formatter gives you full control:
+    </p>
 
 {% highlight java %}
 @Given("today's date is \"(.*)\"")
@@ -259,7 +283,9 @@ public void todays_date_is(
 }
 {% endhighlight %}
 
+    <p>
     The custom transformer looks like this:
+    </p>
 
 {% highlight java %}
 public class JodaTransformer extends Transformer<LocalDate> {
@@ -273,11 +299,15 @@ public class JodaTransformer extends Transformer<LocalDate> {
 }
 {% endhighlight %}
 
+      <p>
       Of course, you can write transformers for anything, not just dates.
+      </p>
 
   </div>
   <div class="tab-pane" id="transform-ruby">
+    <p>
     TODO
+    </p>
   </div>
 </div>
 
@@ -318,7 +348,9 @@ public void I_have_these_vegetables(List<Vegetable> vegetables) {
 
 The header row is used to name fields in the generic List type. 
 
-*IMPORTANT*: If the generic List type (`Vegetable` in this case) has a `String` or `Object` constructor, the header will *not* be used to name fields in the class. Instead you would get a List that has one `Vegetable` for *each cell* (6 in this case). See [List of Scalar](#list_of_scalar) below.
+*IMPORTANT*: If the generic List type (`Vegetable` in this case) is a <em>scalar</em> (i.e. it has a `String` or `Object` constructor), 
+the header will *not* be used to name fields in the class. Instead you would get a List that has one `Vegetable` for *each cell* 
+(6 in this case). See [List of Scalar](#list_of_scalar) below.
 
 ### List of Map
 
@@ -331,7 +363,7 @@ public void I_have_these_vegetables(List<Map<String, String> vegetables) {
 }
 {% endhighlight %}
 
-The `Key` and `Value` generic types of the `Map` can be any kind of scalar type (`enum`, `String`, `Integer`, `Date`, etc). Beware that a class with a single-argument `String` or `Object` constructor will be treated as a scalar type!
+The `Key` and `Value` generic types of the `Map` can be any kind of scalar type.
 
 ### List of List of scalar
 
@@ -344,7 +376,10 @@ public void I_have_these_vegetables(List<List<String>> vegetables) {
 }
 {% endhighlight %}
 
-This will convert it to a flattened list like this: `[["name", "color"], ["Cucumber", "Green"], ["Tomato", "Red"]]`
+This will convert it to a flattened list like this: 
+
+`[["name", "color"], ["Cucumber", "Green"], ["Tomato", "Red"]]`
+
 You can also convert it to a list of scalar:
 
 ### List of scalar
