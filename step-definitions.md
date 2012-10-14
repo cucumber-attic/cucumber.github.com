@@ -395,14 +395,22 @@ public class JodaTransformer extends Transformer<LocalDate> {
 }
 {% endhighlight %}
 
-      <p>
-      Of course, you can write transformers for anything, not just dates.
-      </p>
+    <p>
+    Of course, you can write transformers for anything, not just dates.
+    </p>
 
   </div>
   <div class="tab-pane" id="transform-ruby">
     <p>
-    TODO
+    Let's `Transform` anything that looks like a date into an instance of `Time`:
+
+{% highlight java %}
+require 'time'
+
+Transform(/^(\d\d-\d\d-\d\d\d\d)$/) do |arg| 
+  Time.parse(arg)
+end
+{% endhighlight %}
     </p>
   </div>
 </div>
