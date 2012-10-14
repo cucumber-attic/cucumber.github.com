@@ -330,7 +330,7 @@ Let's consider a common example - turning a string into a date:
 Given today's date is "10-03-1971"
 {% endhighlight %}
 
-First of all, this might mean the 10th of March in some countries, and the 3rd of October in others. It's best to be explicit about how we want this converted.
+First of all, this might mean the 10th of March in some countries, and the 3rd of October in others. It's best to be explicit about how we want this converted. We'll try to convert it to _10th of March 1971_.
 
 <ul class="nav nav-tabs">
   <li><a href="#transform-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
@@ -406,13 +406,13 @@ public class JodaTransformer extends Transformer<LocalDate> {
   </div>
   <div class="tab-pane" id="transform-ruby">
     <p>
-    Let's `Transform` anything that looks like a date into an instance of `Time`:
+    Let's <code>Transform</code> anything that looks like a date into an instance of <code>Date</code>:
 
-{% highlight java %}
-require 'time'
+{% highlight ruby %}
+require 'date'
 
-Transform(/^(\d\d-\d\d-\d\d\d\d)$/) do |arg| 
-  Time.parse(arg)
+Transform(/^(\d\d-\d\d-\d\d\d\d)$/) do |arg|
+  Date.strptime(arg, '%d-%m-%Y')
 end
 {% endhighlight %}
     </p>
