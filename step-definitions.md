@@ -220,6 +220,102 @@ end
   </div>
 </div>
 
+### Substitution in Scenario Outlines
+
+If you use a DocString or DataTable argument in steps in [Scenario Outlines](/gherkin.html#scenario_outlines), any `< >` 
+delimited tokens will be substituted with values from the example tables. For example:
+
+{% highlight gherkin %}
+Scenario Outline: Email confirmation
+  Given I have a user account with my name "Jojo Binks"
+  When an Admin grants me <Role> rights
+  Then I should receive an email with the body:
+    """
+    Dear Jojo Binks,
+    You have been granted <Role> rights.  You are <details>. Please be responsible.
+    -The Admins
+    """
+  Examples:
+    |  Role     | details                                         |
+    |  Manager  | now able to manage your employee accounts       |
+    |  Admin    | able to manage any user account on the system   |
+{% endhighlight %}
+
+### Data Table diffing
+
+One very powerful feature in Cucumber is comparison of tables. You can compare a table argument to another table that you provide within your step definition. This is something you would typically do in a `Then` step, and the other table would typically be constructed programmatically from your application’s data.
+
+Beware that the diffing algorithm expects your data to be column-oriented, and that the first row of both tables represents column names. If your tables don’t have some similarity in the first row you will not get very useful results. The column names must be unique for each column – and they must match.
+
+Here is an example of a Data Table that wi want to diff against actual results:
+
+{% highlight gherkin %}
+Then I should see the following cukes:
+  | Latin           | English      |
+  | Cucumis sativus | Cucumber     |
+  | Cucumis anguria | Burr Gherkin |
+{% endhighlight %}
+
+A Step Definition can diff the DataTable with data pulled out of your application, for example from a Web page or a Database:
+
+<ul class="nav nav-tabs">
+  <li><a href="#diff-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
+  <li><a href="#diff-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane" id="diff-java">
+{% highlight java %}
+@Then("^I should see the following cukes:$")
+public void the_following_users_exist(DataTable expectedCukesTable) {
+    // We'd typically pull this out of a database or a web page...
+    List<Cuke> actualCukes = new ArrayList();
+    actualCukes.add(new Cuke("Cucumis sativus", "Concombre"));
+    actualCukes.add(new Cuke("Cucumis anguria", "Burr Gherkin")); 
+    
+    expectedCukesTable.diff(actualCukes)
+}
+{% endhighlight %}
+
+    <p>
+      The list passed to <code>diff</code> can be a <code>DataTable</code>, <code>List&lt;YourType&gt;</code>,
+      <code>List&lt;Map&gt;</code> or a <code>List&lt;List&lt;ScalarType&gt;&gt;</code>.
+    </p>
+  </div>
+  <div class="tab-pane" id="diff-ruby">
+{% highlight ruby %}
+Then /^I should see the following cukes:$/ do |expected_cukes_table|
+  # We'd typically pull this out of a database or a web page...
+  actual_cukes = [
+    ['Latin', 'English'],
+    ['Cucumis sativus', 'Concombre'],
+    ['Cucumis anguria', 'Burr Gherkin']
+  ]
+
+  expected_cukes_table.diff!(actual_cukes)
+end
+{% endhighlight %}
+
+    <p>
+      The list passed to <code>diff!</code> can be a <code>Cucumber::Ast::Table</code>,
+      <code>Array</code> of <code>Map</code> or an <code>Array</code> of <code>Array</code> of <code>String</code>.
+    </p>
+
+    <p>
+      If you are using [Capybara](http://jnicklas.github.com/capybara/) and you want to compare a Gherkin DataTable with a 
+      HTML table rendered in a Web page you can construct an Array like so:
+    </p>
+
+{% highlight ruby %}
+rows = find("table#selector").all('tr')
+table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+expected_table.diff!(table)
+{% endhighlight %}
+  </div>
+</div>
+
+If the tables are different, an exception is thrown, and the diff of the two tables are reported in the [Report](/reports.html).
+
 ## String Transformations
 
 Cucumber provides an API that lets you take control over how strings are converted to other types. This is useful especially for dynamically typed languages, but also for statically typed languages when you need more control over the transformation.
