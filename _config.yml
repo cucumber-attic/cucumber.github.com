@@ -22,6 +22,8 @@ navigation:
   url: /gherkin.html
 - text: API
   dropdown:
+  - text: Glue Code
+    url: /glue-code.html
   - text: Step Definitions
     url: /step-definitions.html
   - text: Hooks

@@ -4,11 +4,15 @@ title: Step Definitions
 ---
 # {{page.title}}
 
+*TODO* Migrate docs from https://github.com/cucumber/cucumber/wiki/Step-Definitions, especially states (successful, undefined etc.)
+
 When Cucumber executes a [Step](/gherkin.html#steps) in a [Scenario](/gherkin.html#scenario) it will look for a matching _Step Definition_ to execute.
 
 A Step Definition is a small piece of _code_ with a _pattern_ attached to it. The pattern is used to link the step definition to all the matching [Steps](/gherkin.html#steps), and the _code_ is what Cucumber will execute when it sees a Gherkin Step.
 
-Consider the following Scenario:
+Step Definitions sources must be placed in a file where Cucumber can find them. The location depends on what Cucumber implementation you are using. See [Glue Code](/glue-code.html) for details.
+
+To understand how Step Definitions work, consider the following Scenario:
 
 {% highlight gherkin %}
 Scenario: Some cukes
