@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Gherkin::Formatter::TagCountFormatter
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Gherkin 2.11.5</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Gherkin.html" title="Gherkin (module)">Gherkin</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Formatter.html" title="Gherkin::Formatter (module)">Formatter</a></span></span>
+     &raquo; 
+    <span class="title">TagCountFormatter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Gherkin::Formatter::TagCountFormatter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Gherkin::Formatter::TagCountFormatter</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/gherkin/formatter/tag_count_formatter.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#examples-instance_method" title="#examples (instance method)">- (Object) <strong>examples</strong>(examples) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#feature-instance_method" title="#feature (instance method)">- (Object) <strong>feature</strong>(feature) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TagCountFormatter) <strong>initialize</strong>(formatter, tag_counts) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of TagCountFormatter.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scenario-instance_method" title="#scenario (instance method)">- (Object) <strong>scenario</strong>(scenario) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scenario_outline-instance_method" title="#scenario_outline (instance method)">- (Object) <strong>scenario_outline</strong>(scenario_outline) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#uri-instance_method" title="#uri (instance method)">- (Object) <strong>uri</strong>(uri) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Gherkin::Formatter::TagCountFormatter (class)">TagCountFormatter</a></span></tt>) <strong>initialize</strong>(formatter, tag_counts) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of TagCountFormatter</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6
+7</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='comma'>,</span> <span class='id identifier rubyid_tag_counts'>tag_counts</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span> <span class='op'>=</span> <span class='id identifier rubyid_formatter'>formatter</span>
+  <span class='ivar'>@tag_counts</span> <span class='op'>=</span> <span class='id identifier rubyid_tag_counts'>tag_counts</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+<div id="method_missing_details" class="method_details_list">
+  <h2>Dynamic Method Handling</h2>
+  <p class="notice this">
+    This class handles dynamic methods through the <tt>method_missing</tt> method
+    
+  </p>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="method_missing-instance_method">
+  
+    - (<tt>Object</tt>) <strong>method_missing</strong>(*args)  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid___send__'>__send__</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="examples-instance_method">
+  
+    - (<tt>Object</tt>) <strong>examples</strong>(examples) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_examples'>examples</span><span class='lparen'>(</span><span class='id identifier rubyid_examples'>examples</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_tags'>record_tags</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@feature_tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='ivar'>@scenario_outline_tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='id identifier rubyid_examples'>examples</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='comma'>,</span> <span class='id identifier rubyid_examples'>examples</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_examples'>examples</span><span class='lparen'>(</span><span class='id identifier rubyid_examples'>examples</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="feature-instance_method">
+  
+    - (<tt>Object</tt>) <strong>feature</strong>(feature) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+13
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 13</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_feature'>feature</span><span class='lparen'>(</span><span class='id identifier rubyid_feature'>feature</span><span class='rparen'>)</span>
+  <span class='ivar'>@feature_tags</span> <span class='op'>=</span> <span class='id identifier rubyid_feature'>feature</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_feature'>feature</span><span class='lparen'>(</span><span class='id identifier rubyid_feature'>feature</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scenario-instance_method">
+  
+    - (<tt>Object</tt>) <strong>scenario</strong>(scenario) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_record_tags'>record_tags</span><span class='lparen'>(</span><span class='lparen'>(</span><span class='ivar'>@feature_tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span><span class='comma'>,</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_scenario'>scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scenario_outline-instance_method">
+  
+    - (<tt>Object</tt>) <strong>scenario_outline</strong>(scenario_outline) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25
+26</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='rparen'>)</span>
+  <span class='ivar'>@scenario_outline_tags</span> <span class='op'>=</span> <span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="uri-instance_method">
+  
+    - (<tt>Object</tt>) <strong>uri</strong>(uri) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+9
+10
+11</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/tag_count_formatter.rb', line 9</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_uri'>uri</span><span class='lparen'>(</span><span class='id identifier rubyid_uri'>uri</span><span class='rparen'>)</span>
+  <span class='ivar'>@uri</span> <span class='op'>=</span> <span class='id identifier rubyid_uri'>uri</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Oct 14 19:29:45 2012 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.2.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
