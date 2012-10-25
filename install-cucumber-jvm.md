@@ -4,7 +4,13 @@ title: Install Cucumber-JVM
 ---
 # {{page.title}}
 
-Cucumber-JVM consists of several modules (jars). You will always need the `cucumber-core` module, which contains the main logic for parsing and executing your Gherkin feature files.
+Cucumber-JVM consists of several modules (jars) that you can download from [here](http://repo1.maven.org/maven2/info/cukes/). 
+
+You will always need the `cucumber-core` module, which contains the main logic for parsing and executing your Gherkin feature files.
+
+If you're wondering what the latest Cucumber-JVM release is, check out the [tags on Github](https://github.com/cucumber/cucumber-jvm/tags).
+
+The easiest is to grab the jars you need with [Maven](#maven) or [Ant](#ant)
 
 ### Programming Language modules
 
@@ -63,13 +69,13 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-picocontainer</artifactId>
-        <version>1.0.14</version>
+        <version>1.1.1</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-junit</artifactId>
-        <version>1.0.14</version>
+        <version>1.1.1</version>
         <scope>test</scope>
     </dependency>
     <dependency>
