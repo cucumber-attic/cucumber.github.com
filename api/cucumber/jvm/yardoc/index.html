@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.8.3
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="/images/logos/cucumber-32x32.png"></img> Cucumber-JRuby 1.1.2-SNAPSHOT</h3>
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h2 id="using-jruby">Using JRuby</h2>
+
+<p>Run the features:</p>
+
+<pre class="code ruby"><code>jruby bin/cucumber-jvm --glue src/test/resources src/test/resources
+</code></pre>
+
+<h3 id="cucumber-jrubyproperties-resource-bundle">cucumber-jruby.properties resource bundle</h3>
+
+<p>There is a resource bundle available to override a few environment variables for jruby.
+Specifically, the ability to set the GEM_PATH and to specify whether to run jruby in 1.8, 1.9 or 2.0 mode (1.9 is default).</p>
+
+<p>If the properties file is not present in the root of the classpath, any environment variables will operate
+as intended, otherwise the properties file will override the environment. This makes it much easier to run the features
+from within the IDE, and it encapsulates the settings in the project source tree easily.</p>
+
+<p>Example cucumber-jruby.properties file</p>
+
+<pre class="code ruby"><code>GEM_PATH=${basedir}/src/test/gems
+</code></pre>
+
+<p>When filtered by the maven properties file, it will set JRuby&#8217;s GEM_PATH to src/test/gems (expanded out to the full file
+system) so that JRuby can find any Gems you might be using.</p>
+
+<p>The constructor of <code>JRubyBackend.java</code> has the currently supported properties.</p>
+
+<p>Handy!</p>
+</div></div>
+    
+    <div id="footer">
+  Generated on Thu Oct 25 22:49:45 2012.
+</div>
+
+  </body>
+</html>
