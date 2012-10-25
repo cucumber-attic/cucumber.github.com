@@ -5,8 +5,8 @@ bootstrap_min: false
 navigation:
 - text: Install
   dropdown:
-  - text: Choose your Cucumber
-    url: /install.html
+  - text: Platforms
+    url: /platforms.html
   - divider
   - text: Install Cucumber-JVM
     url: /install-cucumber-jvm.html
@@ -22,6 +22,8 @@ navigation:
   url: /gherkin.html
 - text: API
   dropdown:
+  - text: API Overview
+    url: /api-overview.html
   - text: Glue Code
     url: /glue-code.html
   - text: Step Definitions

@@ -1,5 +1,19 @@
 This is the source of the new http://cukes.info site
 
+## Building locally
+
+Static site:
+
+```
+jekyll
+open _site/install.html
+```
+
+```
+jekyll --server --auto
+open http://localhost:4000/install.html
+```
+
 ## Contributing
 
 There are two ways you can contribute: By improving content or by improving design. Both happen via [pull requests](https://help.github.com/articles/using-pull-requests).
