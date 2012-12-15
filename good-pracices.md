@@ -27,7 +27,7 @@ For more details read [Ben Mabey's article](http://benmabey.com/2008/05/19/imper
 * When writing Then, ask questions “Is there anyting else that would happen?”
 * If you need additional tests, put them into separate file (main file should exist for communication and sharing understanding)
 
-##Concrete examples vs Classes of equivalence##
+### Concrete examples vs Classes of equivalence##
 
 Pluses of concrete examples:
 * Illustrate how feature works
