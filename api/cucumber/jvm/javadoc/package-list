@@ -24,6 +24,7 @@ cucumber.api.java.fa
 cucumber.api.java.fi
 cucumber.api.java.fr
 cucumber.api.java.he
+cucumber.api.java.hi
 cucumber.api.java.hr
 cucumber.api.java.hu
 cucumber.api.java.id
@@ -44,7 +45,9 @@ cucumber.api.java.sk
 cucumber.api.java.sr_cyrl
 cucumber.api.java.sr_latn
 cucumber.api.java.sv
+cucumber.api.java.tl
 cucumber.api.java.tr
+cucumber.api.java.tt
 cucumber.api.java.uk
 cucumber.api.java.uz
 cucumber.api.java.vi
