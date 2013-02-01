@@ -5,14 +5,14 @@ title: Team
 # {{page.title}}
 
 ## Cucumber-Ruby and Gherkin3/Ruby
-* Matt Wynne
+* [Matt Wynne](https://github.com/mattwynne)
 * Walt Wyckoff
-* Seb Rose
+* [Seb Rose](https://github.com/sebrose)
 
 ## Cucumber-JVM and Gherkin3/Java
-* Aslak Hellesøy
-* Seb Rose
-* Ilan Pillemer
+* [Aslak Hellesøy](https://github.com/aslakhellesoy)
+* [Seb Rose](https://github.com/sebrose)
+* [Ilan Pillemer](https://github.com/ilanpillemer)
 
 ## Cucumber-JS and Gherkin3/JavaScript
-* Julien Biezemans
+* [Julien Biezemans](https://github.com/jbpros)
