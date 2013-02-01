@@ -12,6 +12,7 @@ title: Team
 ## Cucumber-JVM and Gherkin3/Java
 * Aslak Hellesøy
 * Seb Rose
+* Ilan Pillemer
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * Julien Biezemans
