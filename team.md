@@ -6,7 +6,7 @@ title: Team
 
 ## Cucumber-Ruby and Gherkin3/Ruby
 * [Matt Wynne](https://github.com/mattwynne)
-* Walt Wyckoff
+* [Walt Wyckoff] (https://github.com/wwwyckoff)
 * [Seb Rose](https://github.com/sebrose)
 
 ## Cucumber-JVM and Gherkin3/Java
