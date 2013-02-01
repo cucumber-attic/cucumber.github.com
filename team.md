@@ -8,6 +8,7 @@ title: Team
 * [Matt Wynne](https://github.com/mattwynne)
 * [Walt Wyckoff] (https://github.com/wwwyckoff)
 * [Seb Rose](https://github.com/sebrose)
+* [Oleg Sukhodolsky](https://github.com/os97673)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
