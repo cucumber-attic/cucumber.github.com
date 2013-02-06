@@ -11,6 +11,7 @@ title: Team
 * [David Kowis](https://github.com/dkowis)
 * [Oscar Rieken] (https://github.com/orieken)
 * [David Troyer](https://github.com/dmtroyer)
+* [Oleg Sukhodolsky](https://github.com/os97673)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
