@@ -16,6 +16,7 @@ title: Team
 * [Seb Rose](https://github.com/sebrose)
 * [Ilan Pillemer](https://github.com/ilanpillemer)
 * [David Kowis](https://github.com/dkowis)
+* [Paolo Ambrosio](https://github.com/paoloambrosio)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
@@ -28,6 +29,7 @@ title: Team
 * [Seb Rose](https://github.com/sebrose) 
 * [Oscar Rieken] (https://github.com/orieken)
 
-## Gherkin3/C++
+## Cucumber-Cpp and Gherkin3/C++
+* [Paolo Ambrosio](https://github.com/paoloambrosio)
 
 ## Gherkin3/PHP
