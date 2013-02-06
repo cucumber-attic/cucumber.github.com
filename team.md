@@ -10,6 +10,7 @@ title: Team
 * [Seb Rose](https://github.com/sebrose) 
 * [David Kowis](https://github.com/dkowis)
 * [Oscar Rieken] (https://github.com/orieken)
+* [David Troyer](https://github.com/dmtroyer)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
