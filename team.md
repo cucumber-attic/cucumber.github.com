@@ -25,7 +25,7 @@ title: Team
 ## Gherkin3/.NET
 * [Matt Wynne](https://github.com/mattwynne)
 * 😃 [Seb Rose](https://github.com/sebrose) 
-* 
+
 ## Gherkin3/C++
 
 ## Gherkin3/PHP
