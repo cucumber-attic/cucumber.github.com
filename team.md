@@ -27,6 +27,7 @@ title: Team
 * [Matt Wynne](https://github.com/mattwynne)
 * [Seb Rose](https://github.com/sebrose) 
 * [Oscar Rieken] (https://github.com/orieken)
+* [Gaspar Nagy] (https://github.com/gasparnagy)n
 
 ## Gherkin3/C++
 
