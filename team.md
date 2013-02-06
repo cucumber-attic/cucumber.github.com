@@ -28,6 +28,7 @@ title: Team
 * [Matt Wynne](https://github.com/mattwynne)
 * [Seb Rose](https://github.com/sebrose) 
 * [Oscar Rieken] (https://github.com/orieken)
+* [Gaspar Nagy] (https://github.com/gasparnagy)n
 
 ## Cucumber-Cpp and Gherkin3/C++
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
