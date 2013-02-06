@@ -20,6 +20,7 @@ title: Team
 * [Julien Biezemans](https://github.com/jbpros)
 
 ## Cucumber-Rails
+* 😃 [Kosmas Chatzimichalis](https://github.com/Kosmas)
 
 ## Gherkin3/.NET
 
