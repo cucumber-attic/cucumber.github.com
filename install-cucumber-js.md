@@ -8,18 +8,17 @@ Cucumber.js is available as an npm module.
 
 Install globally with:
 
-``` shell
+```shell
 $ npm install -g cucumber
 ```
 
 OR
 
-You may also define cucumber.js as a development dependency of your application by including it in a package.json file.
+You may also define cucumber.js as a development dependency of your application by including it in your `package.json` file.
 
-``` json
-// package.json
-
-{ "devDependencies" : {
+```json
+{
+  "devDependencies": {
     "cucumber": "latest"
   }
 }
