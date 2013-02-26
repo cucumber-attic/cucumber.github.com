@@ -1,6 +1,6 @@
 ---
 layout: bootstrap
-title: Constribute
+title: Contribute
 ---
 # {{page.title}}
 
