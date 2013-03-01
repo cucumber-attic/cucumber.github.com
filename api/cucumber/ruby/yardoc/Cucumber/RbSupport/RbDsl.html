@@ -1,0 +1,1083 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Cucumber::RbSupport::RbDsl
+  
+    &mdash; Documentation by YARD 0.8.4.1
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.2</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (R)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../RbSupport.html" title="Cucumber::RbSupport (module)">RbSupport</a></span></span>
+     &raquo; 
+    <span class="title">RbDsl</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Cucumber::RbSupport::RbDsl
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/cucumber/rb_support/rb_dsl.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This module defines the methods you can use to define pure Ruby Step
+Definitions and Hooks. This module is mixed into the toplevel object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div>
+
+
+
+  <h2>Class Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rb_language%3D-class_method" title="rb_language= (class method)">+ (Object) <strong>rb_language</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+    
+      <span class="note title writeonly">writeonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Sets the attribute rb_language.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alias_adverb-class_method" title="alias_adverb (class method)">+ (Object) <strong>alias_adverb</strong>(adverb) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#build_rb_world_factory-class_method" title="build_rb_world_factory (class method)">+ (Object) <strong>build_rb_world_factory</strong>(world_modules, proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_rb_hook-class_method" title="register_rb_hook (class method)">+ (Object) <strong>register_rb_hook</strong>(phase, tag_names, proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_rb_step_definition-class_method" title="register_rb_step_definition (class method)">+ (Object) <strong>register_rb_step_definition</strong>(regexp, proc_or_sym, options = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_rb_transform-class_method" title="register_rb_transform (class method)">+ (Object) <strong>register_rb_transform</strong>(regexp, proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#After-instance_method" title="#After (instance method)">- (Object) <strong>After</strong>(*tag_expressions, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will run after each Scenario.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#AfterConfiguration-instance_method" title="#AfterConfiguration (instance method)">- (Object) <strong>AfterConfiguration</strong>(&amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will run after Cucumber is configured.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#AfterStep-instance_method" title="#AfterStep (instance method)">- (Object) <strong>AfterStep</strong>(*tag_expressions, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will run after each Step.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Around-instance_method" title="#Around (instance method)">- (Object) <strong>Around</strong>(*tag_expressions, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will be wrapped around each scenario.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Before-instance_method" title="#Before (instance method)">- (Object) <strong>Before</strong>(*tag_expressions, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will run before each Scenario.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#register_rb_step_definition-instance_method" title="#register_rb_step_definition (instance method)">- (Object) <strong>register_rb_step_definition</strong>(regexp, symbol = nil, options = {}, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a new Ruby StepDefinition.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#Transform-instance_method" title="#Transform (instance method)">- (Object) <strong>Transform</strong>(regexp, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers a proc that will be called with a step definition argument if it
+matches the pattern passed as the first argument to Transform.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#World-instance_method" title="#World (instance method)">- (Object) <strong>World</strong>(*world_modules, &amp;proc) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Registers any number of <tt>world_modules</tt> (Ruby Modules) and/or a
+Proc.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="class_attr_details" class="attr_details">
+    <h2>Class Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="rb_language=-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>rb_language=</strong>(value)  <span class="extras">(writeonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Sets the attribute rb_language</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>value</span>
+      
+      
+        <span class='type'></span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the value to set the attribute rb_language to.</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9
+10</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rb_language='>rb_language=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@rb_language</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="alias_adverb-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>alias_adverb</strong>(adverb) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_alias_adverb'>alias_adverb</span><span class='lparen'>(</span><span class='id identifier rubyid_adverb'>adverb</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_alias_method'>alias_method</span> <span class='id identifier rubyid_adverb'>adverb</span><span class='comma'>,</span> <span class='symbol'>:register_rb_step_definition</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_rb_world_factory-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>build_rb_world_factory</strong>(world_modules, proc) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+14
+15
+16</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 14</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_rb_world_factory'>build_rb_world_factory</span><span class='lparen'>(</span><span class='id identifier rubyid_world_modules'>world_modules</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='ivar'>@rb_language</span><span class='period'>.</span><span class='id identifier rubyid_build_rb_world_factory'>build_rb_world_factory</span><span class='lparen'>(</span><span class='id identifier rubyid_world_modules'>world_modules</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_rb_hook-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_rb_hook</strong>(phase, tag_names, proc) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='id identifier rubyid_phase'>phase</span><span class='comma'>,</span> <span class='id identifier rubyid_tag_names'>tag_names</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='ivar'>@rb_language</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='id identifier rubyid_phase'>phase</span><span class='comma'>,</span> <span class='id identifier rubyid_tag_names'>tag_names</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_rb_step_definition-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_rb_step_definition</strong>(regexp, proc_or_sym, options = {}) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+26
+27
+28</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 26</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_rb_step_definition'>register_rb_step_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc_or_sym'>proc_or_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@rb_language</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_step_definition'>register_rb_step_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc_or_sym'>proc_or_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_rb_transform-class_method">
+  
+    + (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_rb_transform</strong>(regexp, proc) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_rb_transform'>register_rb_transform</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='ivar'>@rb_language</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_transform'>register_rb_transform</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="After-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>After</strong>(*tag_expressions, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will run after each Scenario. You can register as
+many as you want (typically from ruby scripts under
+<tt>support/hooks.rb</tt>).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 61</span>
+
+<span class='kw'>def</span> <span class='const'>After</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="AfterConfiguration-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>AfterConfiguration</strong>(&amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will run after Cucumber is configured. You can
+register as as you want (typically from ruby scripts under
+<tt>support/hooks.rb</tt>). TODO: Deprecate this</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+92
+93
+94</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 92</span>
+
+<span class='kw'>def</span> <span class='const'>AfterConfiguration</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after_configuration</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="AfterStep-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>AfterStep</strong>(*tag_expressions, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will run after each Step. You can register as as you
+want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 76</span>
+
+<span class='kw'>def</span> <span class='const'>AfterStep</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after_step</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Around-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>Around</strong>(*tag_expressions, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will be wrapped around each scenario. The proc should
+accept two arguments: two arguments: the scenario and a "block" argument
+(but passed as a regular argument, since blocks cannot accept blocks in
+1.8), on which it should call the .call method. You can register as many 
+as you want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='const'>Around</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>around</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Before-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>Before</strong>(*tag_expressions, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will run before each Scenario. You can register as
+many as you want (typically from ruby scripts under
+<tt>support/hooks.rb</tt>).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='const'>Before</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>before</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="register_rb_step_definition-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>register_rb_step_definition</strong>(regexp, symbol = nil, options = {}, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a new Ruby StepDefinition. This method is aliased to
+<tt>Given</tt>, <tt>When</tt> and <tt>Then</tt>, and also to the i18n
+translations whenever a feature of a new language is loaded.</p>
+
+<p>If provided, the <tt>symbol</tt> is sent to the <tt>World</tt> object as
+defined by #World. A new <tt>World</tt> object is created for each scenario
+and is shared across step definitions within that scenario. If the
+<tt>options</tt> hash contains an <tt>:on</tt> key, the value for this is
+assumed to be a proc. This proc will be executed in the context of the
+<tt>World</tt> object and then sent the <tt>symbol</tt>.</p>
+
+<p>If no <tt>symbol</tt> if provided then the <tt>&amp;amp;proc</tt> gets executed in the
+context of the <tt>World</tt> object.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_register_rb_step_definition'>register_rb_step_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_symbol'>symbol</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_proc_or_sym'>proc_or_sym</span> <span class='op'>=</span> <span class='id identifier rubyid_symbol'>symbol</span> <span class='op'>||</span> <span class='id identifier rubyid_proc'>proc</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_step_definition'>register_rb_step_definition</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc_or_sym'>proc_or_sym</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="Transform-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>Transform</strong>(regexp, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers a proc that will be called with a step definition argument if it
+matches the pattern passed as the first argument to Transform.
+Alternatively, if the pattern contains captures then they will be yielded
+as arguments to the provided proc. The return value of the proc is
+consequently yielded to the step definition.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+85
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 85</span>
+
+<span class='kw'>def</span> <span class='const'>Transform</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_transform'>register_rb_transform</span><span class='lparen'>(</span><span class='id identifier rubyid_regexp'>regexp</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="World-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>World</strong>(*world_modules, &amp;proc) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Registers any number of <tt>world_modules</tt> (Ruby Modules) and/or a
+Proc. The <tt>proc</tt> will be executed once before each scenario to
+create an Object that the scenario's steps will run within. Any
+<tt>world_modules</tt> will be mixed into this Object (via Object#extend).</p>
+
+<p>This method is typically called from one or more Ruby scripts under
+<tt>features/support</tt>. You can call this method as many times as you
+like (to register more modules), but if you try to register more than one
+Proc you will get an error.</p>
+
+<p>Cucumber will not yield anything to the <tt>proc</tt>. Examples:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'>World</span> <span class='kw'>do</span>
+  <span class='const'>MyClass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span>
+
+<span class='const'>World</span><span class='lparen'>(</span><span class='const'>MyModule</span><span class='rparen'>)</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+49
+50
+51</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 49</span>
+
+<span class='kw'>def</span> <span class='const'>World</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_world_modules'>world_modules</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_build_rb_world_factory'>build_rb_world_factory</span><span class='lparen'>(</span><span class='id identifier rubyid_world_modules'>world_modules</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Mar  1 20:48:49 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.4.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Cucumber::LanguageSupport
+  
+    &mdash; Documentation by YARD 0.8.4.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.2.2</h3>
+      <div id="menu">
+  
+    <a href="../_index.html">Index (L)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span>
+     &raquo; 
+    <span class="title">LanguageSupport</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Cucumber::LanguageSupport
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/cucumber/language_support.rb<span class="defines">,<br />
+  lib/cucumber/language_support/language_methods.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>This module defines the API for programming language support in Cucumber.
+While Cucumber itself is written in Ruby, any programming language can be
+supported by implementing this API.</p>
+
+<p>For the sake of illustration we'll consider an imaginary language called
+_why. _why files have the .why extension, so we need to put support for
+this language in the <tt>Cucumber::WhySupport::WhyLanguage</tt>. This class
+must be defined in a file called
+<tt>cucumber/why_support/why_language.rb</tt> and be available on Ruby's
+<tt>$LOAD_PATH</tt>:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='kw'>module</span> <span class='const'>Cucumber</span>
+  <span class='kw'>module</span> <span class='const'>WhySupport</span>
+    <span class='kw'>class</span> <span class='const'>WhyLanguage</span>
+
+      <span class='comment'># Uses whatever available language bridge to load
+</span>      <span class='comment'># +why_file+ and returns an Array of StepDefinition.
+</span>      <span class='kw'>def</span> <span class='id identifier rubyid_load_code_file'>load_code_file</span><span class='lparen'>(</span><span class='id identifier rubyid_why_file'>why_file</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
+
+<p>Each language implementation manages its own hooks, and must execute them
+at appropriate times.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="LanguageSupport/LanguageMethods.html" title="Cucumber::LanguageSupport::LanguageMethods (module)">LanguageMethods</a></span>
+    
+  
+    
+  
+</p>
+
+
+
+
+
+
+
+
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Mar  1 20:48:49 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.4.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

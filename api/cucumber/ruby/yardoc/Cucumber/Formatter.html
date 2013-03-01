@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Cucumber::Formatter
+  
+    &mdash; Documentation by YARD 0.8.4.1
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../';
+  framesUrl = "../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.2.2</h3>
+      <div id="menu">
+  
+    <a href="../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span>
+     &raquo; 
+    <span class="title">Formatter</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Cucumber::Formatter
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/cucumber/formatter/io.rb<span class="defines">,<br />
+  lib/cucumber/formatter/html.rb,<br /> lib/cucumber/formatter/json.rb,<br /> lib/cucumber/formatter/steps.rb,<br /> lib/cucumber/formatter/usage.rb,<br /> lib/cucumber/formatter/rerun.rb,<br /> lib/cucumber/formatter/junit.rb,<br /> lib/cucumber/formatter/debug.rb,<br /> lib/cucumber/formatter/pretty.rb,<br /> lib/cucumber/formatter/gpretty.rb,<br /> lib/cucumber/formatter/console.rb,<br /> lib/cucumber/formatter/summary.rb,<br /> lib/cucumber/formatter/stepdefs.rb,<br /> lib/cucumber/formatter/progress.rb,<br /> lib/cucumber/formatter/duration.rb,<br /> lib/cucumber/formatter/ansicolor.rb,<br /> lib/cucumber/formatter/interceptor.rb,<br /> lib/cucumber/formatter/json_pretty.rb,<br /> lib/cucumber/formatter/ordered_xml_markup.rb,<br /> lib/cucumber/formatter/gherkin_formatter_adapter.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Formatter/ANSIColor.html" title="Cucumber::Formatter::ANSIColor (module)">ANSIColor</a></span>, <span class='object_link'><a href="Formatter/Console.html" title="Cucumber::Formatter::Console (module)">Console</a></span>, <span class='object_link'><a href="Formatter/Duration.html" title="Cucumber::Formatter::Duration (module)">Duration</a></span>, <span class='object_link'><a href="Formatter/Interceptor.html" title="Cucumber::Formatter::Interceptor (module)">Interceptor</a></span>, <span class='object_link'><a href="Formatter/Io.html" title="Cucumber::Formatter::Io (module)">Io</a></span>, <span class='object_link'><a href="Formatter/Summary.html" title="Cucumber::Formatter::Summary (module)">Summary</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Formatter/Debug.html" title="Cucumber::Formatter::Debug (class)">Debug</a></span>, <span class='object_link'><a href="Formatter/GherkinFormatterAdapter.html" title="Cucumber::Formatter::GherkinFormatterAdapter (class)">GherkinFormatterAdapter</a></span>, <span class='object_link'><a href="Formatter/Gpretty.html" title="Cucumber::Formatter::Gpretty (class)">Gpretty</a></span>, <span class='object_link'><a href="Formatter/Html.html" title="Cucumber::Formatter::Html (class)">Html</a></span>, <span class='object_link'><a href="Formatter/Json.html" title="Cucumber::Formatter::Json (class)">Json</a></span>, <span class='object_link'><a href="Formatter/JsonPretty.html" title="Cucumber::Formatter::JsonPretty (class)">JsonPretty</a></span>, <span class='object_link'><a href="Formatter/Junit.html" title="Cucumber::Formatter::Junit (class)">Junit</a></span>, <span class='object_link'><a href="Formatter/OrderedXmlMarkup.html" title="Cucumber::Formatter::OrderedXmlMarkup (class)">OrderedXmlMarkup</a></span>, <span class='object_link'><a href="Formatter/Pretty.html" title="Cucumber::Formatter::Pretty (class)">Pretty</a></span>, <span class='object_link'><a href="Formatter/Progress.html" title="Cucumber::Formatter::Progress (class)">Progress</a></span>, <span class='object_link'><a href="Formatter/Rerun.html" title="Cucumber::Formatter::Rerun (class)">Rerun</a></span>, <span class='object_link'><a href="Formatter/Stepdefs.html" title="Cucumber::Formatter::Stepdefs (class)">Stepdefs</a></span>, <span class='object_link'><a href="Formatter/Steps.html" title="Cucumber::Formatter::Steps (class)">Steps</a></span>, <span class='object_link'><a href="Formatter/Usage.html" title="Cucumber::Formatter::Usage (class)">Usage</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Mar  1 20:48:49 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.4.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
