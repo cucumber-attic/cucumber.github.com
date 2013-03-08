@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.2</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (W)</a> &raquo;
@@ -366,7 +366,7 @@ language API.</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_code_file'>load_code_file</span><span class='lparen'>(</span><span class='id identifier rubyid_wire_file'>wire_file</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_wire_file'>wire_file</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_from_file'>from_file</span><span class='lparen'>(</span><span class='id identifier rubyid_wire_file'>wire_file</span><span class='rparen'>)</span>
   <span class='ivar'>@connections</span> <span class='op'>&lt;&lt;</span> <span class='const'>Connection</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_config'>config</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -445,7 +445,7 @@ language API.</p>
 </div>
     
     <div id="footer">
-  Generated on Sat Mar  2 11:38:38 2013 by 
+  Generated on Fri Mar  8 10:00:32 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.5.2 (ruby-1.9.3).
 </div>
