@@ -1,0 +1,65 @@
+@import "compass/css3/border-radius";
+/* Check out http://tmtheme-editor.herokuapp.com/#/Bespin 
+Birds of Paradise
+Boron
+Ciapre
+CiapreBlack
+krTheme
+Clean! http://wekeroad.com/2013/03/06/ember-confuses-me
+*/
+.highlight {
+  margin-bottom: 1.25em;
+  
+  pre {
+    background: #2d2d2d; 
+    color: #cccccc !important;
+    padding: 0.8em 1em !important;
+    @include border-radius(4px, 4px);
+    
+    code {
+      span { color: #cccccc }
+      .hll { background-color: #515151 }
+
+      .c { color: #999999 } /* Comment */
+      .k { color: #cc99cc } /* Keyword */
+      .cm { color: #999999 } /* Comment.Multiline */
+      .cp { color: #999999 } /* Comment.Preproc */
+      .c1 { color: #999999 } /* Comment.Single */
+      .cs { color: #999999 } /* Comment.Special */
+      .gd { color: #f2777a } /* Generic.Deleted */
+      .gh { color: #cccccc; font-weight: bold } /* Generic.Heading */
+      .gi { color: #99cc99 } /* Generic.Inserted */
+      .gp { color: #999999; font-weight: bold } /* Generic.Prompt */
+      .gu { color: #66cccc; font-weight: bold } /* Generic.Subheading */
+      .kc { color: #cc99cc } /* Keyword.Constant */
+      .kd { color: #cc99cc } /* Keyword.Declaration */
+      .kn { color: #cc99cc } /* Keyword.Namespace */
+      .kp { color: #cc99cc } /* Keyword.Pseudo */
+      .kr { color: #cc99cc } /* Keyword.Reserved */
+      .kt { color: #ffcc66 } /* Keyword.Type */
+      .s { color: #99cc99 } /* Literal.String */
+      .nb { color: #f2777a } /* Name.Builtin */
+      .nc { color: #ffcc66 } /* Name.Class */
+      .no { color: #99cc99 } /* Name.Constant */
+      .nd { color: #66cccc } /* Name.Decorator */
+      .ne { color: #f2777a } /* Name.Exception */
+      .nf { color: #6699cc } /* Name.Function */
+      .nn { color: #ffcc66 } /* Name.Namespace */
+      .nt { color: #6699cc } /* Name.Tag */
+      .w { color: #cccccc } /* Text.Whitespace */
+      .sb { color: #99cc99 } /* Literal.String.Backtick */
+      .sc { color: #cccccc } /* Literal.String.Char */
+      .sd { color: #99cc99 } /* Literal.String.Doc */
+      .s2 { color: #99cc99 } /* Literal.String.Double */
+      .se { color: #99cc99 } /* Literal.String.Escape */
+      .sh { color: #99cc99 } /* Literal.String.Heredoc */
+      .si { color: #99cc99 } /* Literal.String.Interpol */
+      .sx { color: #99cc99 } /* Literal.String.Other */
+      .sr { color: #99cc99 } /* Literal.String.Regex */
+      .s1 { color: #99cc99 } /* Literal.String.Single */
+      .ss { color: #99cc99 } /* Literal.String.Symbol */
+      .bp { color: #f2777a } /* Name.Builtin.Pseudo */
+      .vi { color: #f2777a } /* Name.Variable.Instance */
+    }
+  }
+}

@@ -2,3 +2,4 @@ _site/
 submodules/
 .DS_Store
 *.pyc
+.sass-cache/

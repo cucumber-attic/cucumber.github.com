@@ -17,6 +17,8 @@ The landing page doesn't need a top menu. It should feature:
 
 I really like http://git-scm.com/
 
+* http://stackoverflow.com/questions/4086107/html-positionfixed-page-header-and-in-page-anchors
+
 TAGLINE
 
 Are you tired of outdated specification documents and tedious manual testing?
@@ -27,3 +29,4 @@ Cucumber executes these specifications and verifies that the software behaves co
 
 Cucumber supports many different programming languages and plays nice with many software frameworks,
 other testing tools and build tools.
+

@@ -1,0 +1,22 @@
+@import "normalize";
+@import "./foundation_overrides";
+@import "foundation";
+
+@import "./pygments";
+
+header.frontpage {
+  /* http://bg.siteorigin.com/ */
+  background: -webkit-radial-gradient(top left, ellipse cover, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%), url('/images/new/cucumber-skin.png');
+  
+  color: #cee18a;
+  h3 {
+    color: #cee18a;
+  }
+}
+
+h1:before, h2:before, h3:before {
+  content: "";
+  display: block;
+  height: 40px; /* fixed header height*/
+  margin: -40px 0 0; /* negative fixed header height */
+}

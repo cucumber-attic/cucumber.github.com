@@ -1,5 +1,5 @@
 ---
-layout: bootstrap
+layout: foundation
 title: Step Definitions
 ---
 # {{page.title}}
@@ -21,21 +21,10 @@ Scenario: Some cukes
 
 The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the Step Definition below. 
 
-<ul class="nav nav-tabs">
-  <li><a href="#defs-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-groovy" data-toggle="tab" class="groovy"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-js" data-toggle="tab" class="js"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-clojure" data-toggle="tab" class="clojure"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-cplusplus" data-toggle="tab" class="cplusplus"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-lua" data-toggle="tab" class="lua"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-python" data-toggle="tab" class="python"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-scala" data-toggle="tab" class="scala"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-csharp" data-toggle="tab" class="csharp"><div>&nbsp;</div></a></li>
-  <li><a href="#defs-fsharp" data-toggle="tab" class="fsharp"><div>&nbsp;</div></a></li>
-</ul>
-<div class="tab-content">
-  <div class="tab-pane" id="defs-java">
+<div class="section-container tabs" data-section="data-section">
+  <section class="section">
+    <p class="title"><a href="#defs-java">Java</a></p>
+    <div class="content">
 {% highlight java %}
 @Given("I have (\\d+) cukes in my belly")
 public void I_have_cukes_in_my_belly(int cukes) {
@@ -46,7 +35,6 @@ public void I_have_cukes_in_my_belly(int cukes) {
 <p>
 Lists can also be specified:
 </p>
-
 {% highlight gherkin %}
 Given I am available on "Tuesday,Friday,Sunday"
 {% endhighlight %}
@@ -57,35 +45,50 @@ public void I_have_cukes_in_my_belly(List<String> days) {
     // Do something with the days
 }
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-ruby">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-ruby">Ruby</a></p>
+    <div class="content">
 {% highlight ruby %}
 Given(/I have (\d+) cukes in my belly/) do |cukes|
   # Do something with the cukes
 end
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-groovy">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-groovy">Groovy</a></p>
+    <div class="content">
 {% highlight groovy %}
 Given(~'^I have (\\d+) cukes in my belly') { int cukes ->
     // Do something with the cukes
 }
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-js">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-js">JavaScript</a></p>
+    <div class="content">
 {% highlight js %}
 Given(/^I have (\d+) cukes in my belly$/, function (cukes) {
     // Do something with the cukes
 });
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-clojure">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-clojure">Clojure</a></p>
+    <div class="content">
 {% highlight clojure %}
 (Given #"^I have (\d+) cukes in my belly$" [cukes]
   (eat (Integer. cukes)))
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-cplusplus">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-cplusplus">C++</a></p>
+    <div class="content">
 {% highlight cpp %}
 GIVEN("^I have (\\d+) cukes in my belly$") {
     REGEX_PARAM(int, cukes);
@@ -93,8 +96,42 @@ GIVEN("^I have (\\d+) cukes in my belly$") {
     // Do something with the cukes
 }
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-csharp">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-lua">Lua</a></p>
+    <div class="content">
+{% highlight lua %}
+Given("^I have (%d+) cukes in my belly$", function (cukes)
+    -- Do something with the cukes
+end)
+{% endhighlight %}
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-python">Python</a></p>
+    <div class="content">
+{% highlight python %}
+@Given('^I have (\d+) cukes in my belly$')
+def I_have_cukes_in_my_belly(self, cukes):
+  # Do something with the cukes
+  pass
+{% endhighlight %}
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-scala">Scala</a></p>
+    <div class="content">
+{% highlight scala %}
+Given("""^I have (\d+) cukes in my belly$"""){ (cukes:Int) =>
+  // Do something with the cukes
+}
+{% endhighlight %}
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-csharp">C#</a></p>
+    <div class="content">
 {% highlight csharp %}
 [When(@"^I have (\d+) cukes in my belly$")]
 public void CukesInTheBelly(int cukes)
@@ -102,35 +139,17 @@ public void CukesInTheBelly(int cukes)
     // Do something with the cukes
 }
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-fsharp">
+    </div>
+  </section>
+  <section class="section">
+    <p class="title"><a href="#defs-fsharp">F#</a></p>
+    <div class="content">
 {% highlight fsharp %}
 let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) = 
   (* Do something with the cukes *)
 {% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-lua">
-{% highlight lua %}
-Given("^I have (%d+) cukes in my belly$", function (cukes)
-    -- Do something with the cukes
-end)
-{% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-python">
-{% highlight python %}
-@Given('^I have (\d+) cukes in my belly$')
-def I_have_cukes_in_my_belly(self, cukes):
-  # Do something with the cukes
-  pass
-{% endhighlight %}
-  </div>
-  <div class="tab-pane" id="defs-scala">
-{% highlight scala %}
-Given("""^I have (\d+) cukes in my belly$"""){ (cukes:Int) =>
-  // Do something with the cukes
-}
-{% endhighlight %}
-  </div>
+    </div>
+  </section>
 </div>
 
 When Cucumber matches a Step against a regular expression in a Step Definition, it passes the value of all the capture groups to the Step Definition's arguments. Capture groups are strings (even when they match digits like `\d+`). For statically typed languages, 
@@ -156,28 +175,29 @@ Given a blog post named "Random" with Markdown body
 
 In your step definition, there’s no need to find this text and match it in your Regexp. It will automatically be passed as the last parameter in the step definition. For example:
 
-<ul class="nav nav-tabs">
-  <li><a href="#docstrings-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#docstrings-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane" id="docstrings-java">
+<div class="section-container tabs" data-section="data-section">
+  <section class="section">
+    <p class="title"><a href="#docstrings-java">Java</a></p>
+    <div class="content">
 {% highlight java %}
 @Given("^a blog post named \"([^\"]*)\" with Markdown body$")
 public void a_blog_post_named_something_with_markdown_body(String title, String markdown) {
     // Save it in the database
 }
 {% endhighlight %}
-  </div>
+    </div>
+  </section>
 
-  <div class="tab-pane" id="docstrings-ruby">
+  <section class="section">
+    <p class="title"><a href="#docstrings-ruby">Ruby</a></p>
+    <div class="content">
 {% highlight ruby %}
 Given /^a blog post named "([^"]*)" with Markdown body$/ do |title, markdown|
   Post.create!(:title => title, :body => markdown)
 end
 {% endhighlight %}
-  </div>
+    </div>
+  </section>
 </div>
 
 Indentation of the opening `"""` is unimportant, although common practice is two spaces in from the enclosing step. The indentation inside the triple quotes, however, _is_ significant. Each line of the string passed to the step definition’s block will be de-indented according to the opening `"""`. Indentation beyond the column of the opening `"""` will therefore be preserved.
@@ -194,34 +214,38 @@ Given the following users exist:
   | Joe   | joe@email.org   | 456   | 
 {% endhighlight %}
 
-Just like Doc Strings, they will be passed to the Step Definition as the last argument:
+Just like Doc Strings, a Data Table will be passed to the Step Definition as the last argument:
 
-<ul class="nav nav-tabs">
-  <li><a href="#datatables-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#datatables-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane" id="datatables-java">
+<div class="section-container tabs" data-section="data-section">
+  <section class="section">
+    <p class="title"><a href="#datatables-java">Java</a></p>
+    <div class="content">
 {% highlight java %}
-@Given("^the following users exist$")
+@Given("^the following users exist:$")
 public void the_following_users_exist(DataTable users) {
-    // Save them in the database
+    // Save it in the database
 }
 {% endhighlight %}
+      <p>
+      See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
+      Also see <a href="#data_table_transformations">Data Table Transformations</a> for details about how to
+      receive the table as various different types.
+      </p>
+    </div>
+  </section>
 
-    See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
-  </div>
-
-  <div class="tab-pane" id="datatables-ruby">
+  <section class="section">
+    <p class="title"><a href="#datatables-ruby">Ruby</a></p>
+    <div class="content">
 {% highlight ruby %}
-Given /^the following users exist$/ do |users|
+Given /^the following users exist:$/ do |users|
   User.create!(users.hashes)
 end
 {% endhighlight %}
 
-    See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
-  </div>
+      See the <a href="#">DataTable</a> API docs for details about how to access data in the table.
+    </div>
+  </section>
 </div>
 
 ### Substitution in Scenario Outlines
@@ -251,7 +275,7 @@ One very powerful feature in Cucumber is comparison of tables. You can compare a
 
 Beware that the diffing algorithm expects your data to be column-oriented, and that the first row of both tables represents column names. If your tables don’t have some similarity in the first row you will not get very useful results. The column names must be unique for each column – and they must match.
 
-Here is an example of a Data Table that wi want to diff against actual results:
+Here is an example of a Data Table that we want to diff against actual results:
 
 {% highlight gherkin %}
 Then I should see the following cukes:
@@ -262,22 +286,19 @@ Then I should see the following cukes:
 
 A Step Definition can diff the DataTable with data pulled out of your application, for example from a Web page or a Database:
 
-<ul class="nav nav-tabs">
-  <li><a href="#diff-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#diff-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
-</ul>
-
-<div class="tab-content">
-  <div class="tab-pane" id="diff-java">
+<div class="section-container tabs" data-section="data-section">
+  <section class="section">
+    <p class="title"><a href="#diff-java">Java</a></p>
+    <div class="content">
 {% highlight java %}
 @Then("^I should see the following cukes:$")
-public void the_following_users_exist(DataTable expectedCukesTable) {
+public void the_following_users_exist(DataTable expected) {
     // We'd typically pull this out of a database or a web page...
-    List<Cuke> actualCukes = new ArrayList();
-    actualCukes.add(new Cuke("Cucumis sativus", "Concombre"));
-    actualCukes.add(new Cuke("Cucumis anguria", "Burr Gherkin")); 
-    
-    expectedCukesTable.diff(actualCukes)
+    List<Cuke> actual = new ArrayList<Cuke>();
+    actual.add(new Cuke("Cucumis sativus", "Concombre"));
+    actual.add(new Cuke("Cucumis anguria", "Burr Gherkin")); 
+
+    expected.diff(actualCukes)
 }
 {% endhighlight %}
 
@@ -285,18 +306,22 @@ public void the_following_users_exist(DataTable expectedCukesTable) {
       The list passed to <code>diff</code> can be a <code>DataTable</code>, <code>List&lt;YourType&gt;</code>,
       <code>List&lt;Map&gt;</code> or a <code>List&lt;List&lt;ScalarType&gt;&gt;</code>.
     </p>
-  </div>
-  <div class="tab-pane" id="diff-ruby">
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="title"><a href="#diff-ruby">Ruby</a></p>
+    <div class="content">
 {% highlight ruby %}
-Then /^I should see the following cukes:$/ do |expected_cukes_table|
+Then /^I should see the following cukes:$/ do |expected|
   # We'd typically pull this out of a database or a web page...
-  actual_cukes = [
+  actual = [
     ['Latin', 'English'],
     ['Cucumis sativus', 'Concombre'],
     ['Cucumis anguria', 'Burr Gherkin']
   ]
 
-  expected_cukes_table.diff!(actual_cukes)
+  expected.diff!(actual)
 end
 {% endhighlight %}
 
@@ -306,16 +331,17 @@ end
     </p>
 
     <p>
-      If you are using [Capybara](http://jnicklas.github.com/capybara/) and you want to compare a Gherkin DataTable with a 
+      If you are using <a href="http://jnicklas.github.com/capybara/">Capybara</a> and you want to compare a Gherkin DataTable with a 
       HTML table rendered in a Web page you can construct an Array like so:
     </p>
 
 {% highlight ruby %}
 rows = find("table#selector").all('tr')
-table = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
-expected_table.diff!(table)
+actual = rows.map { |r| r.all('th,td').map { |c| c.text.strip } }
+expected.diff!(actual)
 {% endhighlight %}
-  </div>
+    </div>
+  </section>
 </div>
 
 If the tables are different, an exception is thrown, and the diff of the two tables are reported in the [Report](/reports.html).
@@ -332,28 +358,26 @@ Given today's date is "10-03-1971"
 
 First of all, this might mean the 10th of March in some countries, and the 3rd of October in others. It's best to be explicit about how we want this converted. We'll try to convert it to _10th of March 1971_.
 
-<ul class="nav nav-tabs">
-  <li><a href="#transform-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
-  <li><a href="#transform-ruby" data-toggle="tab" class="ruby"><div>&nbsp;</div></a></li>
-</ul>
-<div class="tab-content">
-  <div class="tab-pane" id="transform-java">
-    <p>
-    Cucumber-JVM knows how to convert strings into various <em>scalar</em> types. A scalar type is a type that can be derived from a single 
-    string value. Cucumber-JVM's built-in scalar types are <em>numbers</em>, <em>enums</em>, <code>java.util.Date</code>, 
-    <code>java.util.Calendar</code> and arbitrary types that have a single-argument constructor that is either a 
-    <code>String</code> or an <code>Object</code>.
-    </p>
-    
-    <p>
-    Transformation to <code>java.util.Date</code> and <code>java.util.Calendar</code> will work out-of-the-box as long as the
-    string value matches one of the <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code> formats 
-    defined by <a href="http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html"><code>java.util.DateFormat</code></a>.
-    </p>
-    
-    <p>
-    It turns out that <code>10-03-1971</code> from our example doesn't match any of those formats, so we have to give Cucumber a hint:
-    </p>
+<div class="section-container tabs" data-section="data-section">
+  <section class="section">
+    <p class="title"><a href="#transform-java">Java</a></p>
+    <div class="content">
+      <p>
+      Cucumber-JVM knows how to convert strings into various <em>scalar</em> types. A scalar type is a type that can be derived from a single 
+      string value. Cucumber-JVM's built-in scalar types are <em>numbers</em>, <em>enums</em>, <code>java.util.Date</code>, 
+      <code>java.util.Calendar</code> and arbitrary types that have a single-argument constructor that is either a 
+      <code>String</code> or an <code>Object</code>.
+      </p>
+
+      <p>
+      Transformation to <code>java.util.Date</code> and <code>java.util.Calendar</code> will work out-of-the-box as long as the
+      string value matches one of the <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code> formats 
+      defined by <a href="http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html"><code>java.util.DateFormat</code></a>.
+      </p>
+
+      <p>
+      It turns out that <code>10-03-1971</code> from our example doesn't match any of those formats, so we have to give Cucumber a hint:
+      </p>
 
 {% highlight java %}
 @Given("today's date is \"(.*)\"")
@@ -361,18 +385,18 @@ public void todays_date_is(@Format("dd-MM-yyyy") Date today) {
 }
 {% endhighlight %}
 
-    <p>
-    Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but since Joda's <code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor it is considered a scalar by default.
-    </p>
-    
-    <p>
-    However, in this case it wouldn't also know how to pass the _format_ string, so you would get an exception when Cucumber instantiates it
-    with <code>new LocalDate("10-03-1971")</code>.
-    </p>
-    
-    <p>
-    A custom formatter gives you full control:
-    </p>
+      <p>
+      Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but since Joda's <code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor it is considered a scalar by default.
+      </p>
+
+      <p>
+      However, in this case it wouldn't also know how to pass the _format_ string, so you would get an exception when Cucumber instantiates it
+      with <code>new LocalDate("10-03-1971")</code>.
+      </p>
+
+      <p>
+      A custom formatter gives you full control:
+      </p>
 
 {% highlight java %}
 @Given("today's date is \"(.*)\"")
@@ -383,9 +407,9 @@ public void todays_date_is(
 }
 {% endhighlight %}
 
-    <p>
-    The custom transformer looks like this:
-    </p>
+      <p>
+      The custom transformer looks like this:
+      </p>
 
 {% highlight java %}
 public class JodaTransformer extends Transformer<LocalDate> {
@@ -399,14 +423,17 @@ public class JodaTransformer extends Transformer<LocalDate> {
 }
 {% endhighlight %}
 
-    <p>
-    Of course, you can write transformers for anything, not just dates.
-    </p>
+      <p>
+      Of course, you can write transformers for anything, not just dates.
+      </p>
+    </div>
+  </section>
 
-  </div>
-  <div class="tab-pane" id="transform-ruby">
-    <p>
-    Let's <code>Transform</code> anything that looks like a date into an instance of <code>Date</code>:
+  <section class="section">
+    <p class="title"><a href="#transform-ruby">Ruby</a></p>
+    <div class="content">
+      <p>
+      Let's <code>Transform</code> anything that looks like a date into an instance of <code>Date</code>:
 
 {% highlight ruby %}
 require 'date'
@@ -415,8 +442,9 @@ Transform(/^(\d\d-\d\d-\d\d\d\d)$/) do |arg|
   Date.strptime(arg, '%d-%m-%Y')
 end
 {% endhighlight %}
-    </p>
-  </div>
+      </p>
+    </div>
+  </section>
 </div>
 
 ## Data Table Transformations
