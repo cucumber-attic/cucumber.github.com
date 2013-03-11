@@ -6,12 +6,12 @@ title: Team
 
 ## Cucumber-Ruby and Gherkin3/Ruby
 * [Matt Wynne](https://github.com/mattwynne)
+* [Oleg Sukhodolsky](https://github.com/os97673)
 * [Walt Wyckoff] (https://github.com/wwwyckoff)
 * [Seb Rose](https://github.com/sebrose) 
 * [David Kowis](https://github.com/dkowis)
 * [Oscar Rieken] (https://github.com/orieken)
 * [David Troyer](https://github.com/dmtroyer)
-* [Oleg Sukhodolsky](https://github.com/os97673)
 * [Liam Wilkins](https://github.com/lwilkins)
 
 ## Cucumber-JVM and Gherkin3/Java
