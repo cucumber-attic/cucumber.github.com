@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="/images/logos/cucumber-32x32.png"></img> Cucumber-JRuby 1.1.2</h3>
+      <h3><img src="/images/logos/cucumber-32x32.png"></img> Cucumber-JRuby 1.1.3</h3>
       <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
@@ -70,33 +70,33 @@
 
 <p>Run the features:</p>
 
-<pre class="code ruby"><code>jruby bin/cucumber-jvm --glue src/test/resources src/test/resources
-</code></pre>
+<p><code>
+jruby bin/cucumber-jvm --glue src/test/resources src/test/resources
+</code></p>
 
-<h3 id="cucumber-jrubyproperties-resource-bundle">cucumber-jruby.properties resource bundle</h3>
+<h3 id="customizing-jruby">Customizing JRuby</h3>
 
-<p>There is a resource bundle available to override a few environment variables for jruby.
-Specifically, the ability to set the GEM_PATH and to specify whether to run jruby in 1.8, 1.9 or 2.0 mode (1.9 is default).</p>
+<p>You can define <code>GEM_PATH</code> to tell JRuby where to load gems from.
+You can also define <code>RUBY_VERSION</code> to tell JRuby to run in <code>1.8</code>, <code>1.9</code> or <code>2.0</code> mode.
+Consult the JRuby documentation to see what the default mode is.</p>
 
-<p>If the properties file is not present in the root of the classpath, any environment variables will operate
-as intended, otherwise the properties file will override the environment. This makes it much easier to run the features
-from within the IDE, and it encapsulates the settings in the project source tree easily.</p>
+<p>These values can be defined in any of the three places:</p>
 
-<p>Example cucumber-jruby.properties file</p>
+<ul>
+  <li>In an Environment variable</li>
+  <li>In a System property (for example <code>-DRUBY_VERSION=1.9</code></li>
+  <li>In a <code>cucumber-jruby.properties</code> resource bundle on your <code>CLASSPATH</code>.</li>
+</ul>
 
-<pre class="code ruby"><code>GEM_PATH=${basedir}/src/test/gems
-</code></pre>
+<p>Sample cucumber-jruby.properties file:</p>
 
-<p>When filtered by the maven properties file, it will set JRuby&#8217;s GEM_PATH to src/test/gems (expanded out to the full file
-system) so that JRuby can find any Gems you might be using.</p>
-
-<p>The constructor of <code>JRubyBackend.java</code> has the currently supported properties.</p>
-
-<p>Handy!</p>
+<p><code>
+GEM_PATH=${basedir}/src/test/gems
+</code></p>
 </div></div>
     
     <div id="footer">
-  Generated on Wed Jan 30 09:49:06 2013.
+  Generated on Mon Mar 11 07:12:10 2013.
 </div>
 
   </body>
