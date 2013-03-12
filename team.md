@@ -13,6 +13,7 @@ title: Team
 * [Oscar Rieken] (https://github.com/orieken)
 * [David Troyer](https://github.com/dmtroyer)
 * [Liam Wilkins](https://github.com/lwilkins)
+* [Sean Miller](https://github.com/smiller)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
