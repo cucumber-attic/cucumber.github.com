@@ -1,0 +1,1012 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Cucumber::Ast::Scenario
+  
+    &mdash; Documentation by YARD 0.8.5.2
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Ast.html" title="Cucumber::Ast (module)">Ast</a></span></span>
+     &raquo; 
+    <span class="title">Scenario</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Cucumber::Ast::Scenario
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Cucumber::Ast::Scenario</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span>, <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/cucumber/ast/scenario.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Scenario/EmptyBackground.html" title="Cucumber::Ast::Scenario::EmptyBackground (class)">EmptyBackground</a></span>
+    
+  
+</p>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#line-instance_method" title="#line (instance method)">- (Object) <strong>line</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute line.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Names.html#description-instance_method" title="Cucumber::Ast::Names#description (method)">#description</a></span>, <span class='object_link'><a href="Names.html#title-instance_method" title="Cucumber::Ast::Names#title (method)">#title</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes included from <span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="HasSteps.html#description-instance_method" title="Cucumber::Ast::HasSteps#description (method)">#description</a></span>, <span class='object_link'><a href="HasSteps.html#feature-instance_method" title="Cucumber::Ast::HasSteps#feature (method)">#feature</a></span>, <span class='object_link'><a href="HasSteps.html#gherkin_statement-instance_method" title="Cucumber::Ast::HasSteps#gherkin_statement (method)">#gherkin_statement</a></span>, <span class='object_link'><a href="HasSteps.html#raw_steps-instance_method" title="Cucumber::Ast::HasSteps#raw_steps (method)">#raw_steps</a></span>, <span class='object_link'><a href="HasSteps.html#title-instance_method" title="Cucumber::Ast::HasSteps#title (method)">#title</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accept-instance_method" title="#accept (instance method)">- (Object) <strong>accept</strong>(visitor) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#exception-instance_method" title="#exception (instance method)">- (Object) <strong>exception</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the first exception (if any).</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fail%21-instance_method" title="#fail! (instance method)">- (Object) <strong>fail!</strong>(exception) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#failed%3F-instance_method" title="#failed? (instance method)">- (Boolean) <strong>failed?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if one or more steps failed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init-instance_method" title="#init (instance method)">- (Object) <strong>init</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Scenario) <strong>initialize</strong>(background, comment, tags, line, keyword, title, description, raw_steps) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Scenario.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#passed%3F-instance_method" title="#passed? (instance method)">- (Boolean) <strong>passed?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns true if all steps passed.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#skip_invoke%21-instance_method" title="#skip_invoke! (instance method)">- (Object) <strong>skip_invoke!</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#status-instance_method" title="#status (instance method)">- (Object) <strong>status</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the status.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#to_sexp-instance_method" title="#to_sexp (instance method)">- (Object) <strong>to_sexp</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#with_visitor-instance_method" title="#with_visitor (instance method)">- (Object) <strong>with_visitor</strong>(visitor) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Names.html#name-instance_method" title="Cucumber::Ast::Names#name (method)">#name</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="HasSteps.html#accept_hook%3F-instance_method" title="Cucumber::Ast::HasSteps#accept_hook? (method)">#accept_hook?</a></span>, <span class='object_link'><a href="HasSteps.html#add_step-instance_method" title="Cucumber::Ast::HasSteps#add_step (method)">#add_step</a></span>, <span class='object_link'><a href="HasSteps.html#attach_steps-instance_method" title="Cucumber::Ast::HasSteps#attach_steps (method)">#attach_steps</a></span>, <span class='object_link'><a href="HasSteps.html#backtrace_line-instance_method" title="Cucumber::Ast::HasSteps#backtrace_line (method)">#backtrace_line</a></span>, <span class='object_link'><a href="HasSteps.html#file_colon_line-instance_method" title="Cucumber::Ast::HasSteps#file_colon_line (method)">#file_colon_line</a></span>, <span class='object_link'><a href="HasSteps.html#first_line_length-instance_method" title="Cucumber::Ast::HasSteps#first_line_length (method)">#first_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#language-instance_method" title="Cucumber::Ast::HasSteps#language (method)">#language</a></span>, <span class='object_link'><a href="HasSteps.html#matches_scenario_names%3F-instance_method" title="Cucumber::Ast::HasSteps#matches_scenario_names? (method)">#matches_scenario_names?</a></span>, <span class='object_link'><a href="HasSteps.html#max_line_length-instance_method" title="Cucumber::Ast::HasSteps#max_line_length (method)">#max_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#name_line_lengths-instance_method" title="Cucumber::Ast::HasSteps#name_line_lengths (method)">#name_line_lengths</a></span>, <span class='object_link'><a href="HasSteps.html#source_indent-instance_method" title="Cucumber::Ast::HasSteps#source_indent (method)">#source_indent</a></span>, <span class='object_link'><a href="HasSteps.html#source_tag_names-instance_method" title="Cucumber::Ast::HasSteps#source_tag_names (method)">#source_tag_names</a></span>, <span class='object_link'><a href="HasSteps.html#source_tags-instance_method" title="Cucumber::Ast::HasSteps#source_tags (method)">#source_tags</a></span>, <span class='object_link'><a href="HasSteps.html#text_length-instance_method" title="Cucumber::Ast::HasSteps#text_length (method)">#text_length</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Ast::Scenario (class)">Scenario</a></span></tt>) <strong>initialize</strong>(background, comment, tags, line, keyword, title, description, raw_steps) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of Scenario</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span><span class='rparen'>)</span>
+  <span class='ivar'>@background</span> <span class='op'>=</span> <span class='id identifier rubyid_background'>background</span> <span class='op'>||</span> <span class='const'>EmptyBackground</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@comment</span><span class='comma'>,</span> <span class='ivar'>@tags</span><span class='comma'>,</span> <span class='ivar'>@line</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='ivar'>@title</span><span class='comma'>,</span> <span class='ivar'>@description</span><span class='comma'>,</span> <span class='ivar'>@raw_steps</span> <span class='op'>=</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span>
+  <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='ivar'>@executed</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="line-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>line</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute line</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_line'>line</span>
+  <span class='ivar'>@line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="accept-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>accept</strong>(visitor) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='const'>Cucumber</span><span class='period'>.</span><span class='id identifier rubyid_wants_to_quit'>wants_to_quit</span>
+
+  <span class='id identifier rubyid_with_visitor'>with_visitor</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_comment'>visit_comment</span><span class='lparen'>(</span><span class='ivar'>@comment</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_tags'>visit_tags</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='lparen'>(</span><span class='ivar'>@line</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_first_line_length'>first_line_length</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='kw'>if</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_with_hooks'>with_hooks</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks?'>skip_hooks?</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='kw'>if</span> <span class='id identifier rubyid_failed?'>failed?</span>
+      <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_steps'>visit_steps</span><span class='lparen'>(</span><span class='ivar'>@steps</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@executed</span> <span class='op'>=</span> <span class='kw'>true</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="exception-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>exception</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the first exception (if any)</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_exception'>exception</span>
+  <span class='ivar'>@exception</span> <span class='op'>||</span> <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fail!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>fail!</strong>(exception) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 66</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
+  <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='id identifier rubyid_exception'>exception</span>
+  <span class='ivar'>@current_visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_exception'>visit_exception</span><span class='lparen'>(</span><span class='ivar'>@exception</span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="failed?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>failed?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if one or more steps failed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_failed?'>failed?</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span> <span class='op'>||</span> <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@exception</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init'>init</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@steps</span>
+  <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+  <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_feature_elements'>feature_elements</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
+  <span class='id identifier rubyid_attach_steps'>attach_steps</span><span class='lparen'>(</span><span class='ivar'>@raw_steps</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_step_invocations'>step_invocations</span> <span class='op'>=</span> <span class='ivar'>@raw_steps</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_step'>step</span><span class='op'>|</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='rbrace'>}</span>
+  <span class='ivar'>@steps</span> <span class='op'>=</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_step_collection'>step_collection</span><span class='lparen'>(</span><span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="passed?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>passed?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns true if all steps passed</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 72</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
+  <span class='op'>!</span><span class='id identifier rubyid_failed?'>failed?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="skip_invoke!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>skip_invoke!</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='op'>|</span> <span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='period'>.</span><span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="status-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>status</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the status</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
+  <span class='kw'>return</span> <span class='symbol'>:failed</span> <span class='kw'>if</span> <span class='ivar'>@exception</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="to_sexp-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_sexp</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 91</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_to_sexp'>to_sexp</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:scenario</span><span class='comma'>,</span> <span class='ivar'>@line</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_comment'>comment</span> <span class='op'>=</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_comment'>comment</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_comment'>comment</span>
+  <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='ivar'>@tags</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='id identifier rubyid_tags'>tags</span> <span class='kw'>if</span> <span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='id identifier rubyid_steps'>steps</span> <span class='op'>=</span> <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='id identifier rubyid_steps'>steps</span> <span class='kw'>if</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='id identifier rubyid_sexp'>sexp</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="with_visitor-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>with_visitor</strong>(visitor) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+103
+104
+105
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 103</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_with_visitor'>with_visitor</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span>
+  <span class='ivar'>@current_visitor</span> <span class='op'>=</span> <span class='id identifier rubyid_visitor'>visitor</span>
+  <span class='kw'>yield</span>
+  <span class='ivar'>@current_visitor</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Mar  8 10:00:29 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

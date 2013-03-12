@@ -1,0 +1,1081 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Cucumber::Runtime::SupportCode
+  
+    &mdash; Documentation by YARD 0.8.5.2
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (S)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Cucumber.html" title="Cucumber (module)">Cucumber</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Runtime.html" title="Cucumber::Runtime (class)">Runtime</a></span></span>
+     &raquo; 
+    <span class="title">SupportCode</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Cucumber::Runtime::SupportCode
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></span>
+      
+        <ul class="fullTree">
+          <li><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></li>
+          
+            <li class="next">Cucumber::Runtime::SupportCode</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+      <dt class="r2">Includes:</dt>
+      <dd class="r2"><span class='object_link'><a href="../Constantize.html" title="Cucumber::Constantize (module)">Constantize</a></span></dd>
+      
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/cucumber/runtime/support_code.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="SupportCode/StepInvoker.html" title="Cucumber::Runtime::SupportCode::StepInvoker (class)">StepInvoker</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#around-instance_method" title="#around (instance method)">- (Object) <strong>around</strong>(scenario, block) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#configure-instance_method" title="#configure (instance method)">- (Object) <strong>configure</strong>(new_configuration) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fire_hook-instance_method" title="#fire_hook (instance method)">- (Object) <strong>fire_hook</strong>(name, *args) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (SupportCode) <strong>initialize</strong>(user_interface, configuration = {}) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of SupportCode.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invoke-instance_method" title="#invoke (instance method)">- (Object) <strong>invoke</strong>(step_name, multiline_argument = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invoke_steps-instance_method" title="#invoke_steps (instance method)">- (Object) <strong>invoke_steps</strong>(steps_text, i18n, file_colon_line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Invokes a series of steps <tt>steps_text</tt>.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_files%21-instance_method" title="#load_files! (instance method)">- (Object) <strong>load_files!</strong>(files) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_files_from_paths-instance_method" title="#load_files_from_paths (instance method)">- (Object) <strong>load_files_from_paths</strong>(paths) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#load_programming_language-instance_method" title="#load_programming_language (instance method)">- (Object) <strong>load_programming_language</strong>(ext) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Loads and registers programming language implementation.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#snippet_text-instance_method" title="#snippet_text (instance method)">- (Object) <strong>snippet_text</strong>(step_keyword, step_name, multiline_arg_class) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step_definitions-instance_method" title="#step_definitions (instance method)">- (Object) <strong>step_definitions</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step_match-instance_method" title="#step_match (instance method)">- (Object) <strong>step_match</strong>(step_name, name_to_report = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>:nodoc:.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unknown_programming_language%3F-instance_method" title="#unknown_programming_language? (instance method)">- (Boolean) <strong>unknown_programming_language?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#unmatched_step_definitions-instance_method" title="#unmatched_step_definitions (instance method)">- (Object) <strong>unmatched_step_definitions</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="../Constantize.html" title="Cucumber::Constantize (module)">Constantize</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Constantize.html#constantize-instance_method" title="Cucumber::Constantize#constantize (method)">#constantize</a></span>, <span class='object_link'><a href="../Constantize.html#underscore-instance_method" title="Cucumber::Constantize#underscore (method)">#underscore</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Runtime::SupportCode (class)">SupportCode</a></span></tt>) <strong>initialize</strong>(user_interface, configuration = {}) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of SupportCode</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33
+34
+35
+36
+37
+38</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_user_interface'>user_interface</span><span class='comma'>,</span> <span class='id identifier rubyid_configuration'>configuration</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='ivar'>@configuration</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
+  <span class='ivar'>@runtime_facade</span> <span class='op'>=</span> <span class='const'>Runtime</span><span class='op'>::</span><span class='const'>ForProgrammingLanguages</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_user_interface'>user_interface</span><span class='rparen'>)</span>
+  <span class='ivar'>@unsupported_programming_languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@programming_languages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@language_map</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="around-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>around</strong>(scenario, block) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+116
+117
+118
+119
+120
+121
+122
+123
+124</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 116</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_around'>around</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_reverse'>reverse</span><span class='period'>.</span><span class='id identifier rubyid_inject'>inject</span><span class='lparen'>(</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_blk'>blk</span><span class='comma'>,</span> <span class='id identifier rubyid_programming_language'>programming_language</span><span class='op'>|</span>
+    <span class='id identifier rubyid_proc'>proc</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_programming_language'>programming_language</span><span class='period'>.</span><span class='id identifier rubyid_around'>around</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='id identifier rubyid_blk'>blk</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="configure-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>configure</strong>(new_configuration) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='id identifier rubyid_new_configuration'>new_configuration</span><span class='rparen'>)</span>
+  <span class='ivar'>@configuration</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_new_configuration'>new_configuration</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fire_hook-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>fire_hook</strong>(name, *args) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112
+113
+114</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fire_hook'>fire_hook</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_programming_language'>programming_language</span><span class='op'>|</span>
+    <span class='id identifier rubyid_programming_language'>programming_language</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invoke-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>invoke</strong>(step_name, multiline_argument = nil) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_argument'>multiline_argument</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_multiline_argument'>multiline_argument</span> <span class='op'>=</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_argument'>multiline_argument</span><span class='rparen'>)</span>
+  <span class='comment'># It is very important to leave multiline_argument=nil as a vararg. Cuke4Duke needs it that way.
+</span>  <span class='kw'>begin</span>
+    <span class='id identifier rubyid_step_match'>step_match</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_argument'>multiline_argument</span><span class='rparen'>)</span>
+  <span class='kw'>rescue</span> <span class='const'>Exception</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_nested!'>nested!</span> <span class='kw'>if</span> <span class='const'>Undefined</span> <span class='op'>===</span> <span class='id identifier rubyid_e'>e</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='id identifier rubyid_e'>e</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="invoke_steps-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>invoke_steps</strong>(steps_text, i18n, file_colon_line) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Invokes a series of steps <tt>steps_text</tt>. Example:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>%Q{</span><span class='tstring_content'>
+  Given I have 8 cukes in my belly
+  Then I should not be thirsty
+</span><span class='tstring_end'>}</span></span><span class='rparen'>)</span></code></pre>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+50
+51
+52
+53
+54</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 50</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invoke_steps'>invoke_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps_text'>steps_text</span><span class='comma'>,</span> <span class='id identifier rubyid_i18n'>i18n</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>Parser</span><span class='op'>::</span><span class='const'>Parser</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>StepInvoker</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>steps</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_steps_text'>steps_text</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_files!-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_files!</strong>(files) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_files!'>load_files!</span><span class='lparen'>(</span><span class='id identifier rubyid_files'>files</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_log'>log</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Code:\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_files'>files</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_file'>file</span><span class='op'>|</span>
+    <span class='id identifier rubyid_load_file'>load_file</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+  <span class='id identifier rubyid_log'>log</span><span class='period'>.</span><span class='id identifier rubyid_debug'>debug</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_files_from_paths-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_files_from_paths</strong>(paths) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+88
+89
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 88</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_files_from_paths'>load_files_from_paths</span><span class='lparen'>(</span><span class='id identifier rubyid_paths'>paths</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_files'>files</span> <span class='op'>=</span> <span class='id identifier rubyid_paths'>paths</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='op'>|</span> <span class='const'>Dir</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path'>path</span><span class='rbrace'>}</span><span class='tstring_content'>/**/*</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+  <span class='id identifier rubyid_load_files!'>load_files!</span> <span class='id identifier rubyid_files'>files</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="load_programming_language-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>load_programming_language</strong>(ext) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Loads and registers programming language implementation. Instances are
+cached, so calling with the same argument twice will return the same
+instance.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_load_programming_language'>load_programming_language</span><span class='lparen'>(</span><span class='id identifier rubyid_ext'>ext</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='ivar'>@language_map</span><span class='lbracket'>[</span><span class='id identifier rubyid_ext'>ext</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='ivar'>@language_map</span><span class='lbracket'>[</span><span class='id identifier rubyid_ext'>ext</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_programming_language_class'>programming_language_class</span> <span class='op'>=</span> <span class='id identifier rubyid_constantize'>constantize</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Cucumber::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ext'>ext</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'>capitalize</span><span class='rbrace'>}</span><span class='tstring_content'>Support::</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_ext'>ext</span><span class='period'>.</span><span class='id identifier rubyid_capitalize'>capitalize</span><span class='rbrace'>}</span><span class='tstring_content'>Language</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_programming_language'>programming_language</span> <span class='op'>=</span> <span class='id identifier rubyid_programming_language_class'>programming_language_class</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@runtime_facade</span><span class='rparen'>)</span>
+  <span class='ivar'>@programming_languages</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_programming_language'>programming_language</span>
+  <span class='ivar'>@language_map</span><span class='lbracket'>[</span><span class='id identifier rubyid_ext'>ext</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_programming_language'>programming_language</span>
+  <span class='id identifier rubyid_programming_language'>programming_language</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="snippet_text-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>snippet_text</strong>(step_keyword, step_name, multiline_arg_class) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+99
+100
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 99</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_step_keyword'>step_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='id identifier rubyid_load_programming_language'>load_programming_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rb</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_unknown_programming_language?'>unknown_programming_language?</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_programming_language'>programming_language</span><span class='op'>|</span>
+    <span class='id identifier rubyid_programming_language'>programming_language</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_step_keyword'>step_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='rparen'>)</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="step_definitions-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step_definitions</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+126
+127
+128
+129
+130</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 126</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_step_definitions'>step_definitions</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_programming_language'>programming_language</span><span class='op'>|</span>
+    <span class='id identifier rubyid_programming_language'>programming_language</span><span class='period'>.</span><span class='id identifier rubyid_step_definitions'>step_definitions</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="step_match-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step_match</strong>(step_name, name_to_report = nil) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>:nodoc:</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+132
+133
+134
+135
+136
+137
+138
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 132</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='ivar'>@match_cache</span> <span class='op'>||=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+
+  <span class='id identifier rubyid_match'>match</span> <span class='op'>=</span> <span class='ivar'>@match_cache</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='rbracket'>]</span><span class='rbracket'>]</span>
+  <span class='kw'>return</span> <span class='id identifier rubyid_match'>match</span> <span class='kw'>if</span> <span class='id identifier rubyid_match'>match</span>
+
+  <span class='ivar'>@match_cache</span><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='rbracket'>]</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_step_match_without_cache'>step_match_without_cache</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unknown_programming_language?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>unknown_programming_language?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unknown_programming_language?'>unknown_programming_language?</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="unmatched_step_definitions-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>unmatched_step_definitions</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+93
+94
+95
+96
+97</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 93</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_unmatched_step_definitions'>unmatched_step_definitions</span>
+  <span class='ivar'>@programming_languages</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_programming_language'>programming_language</span><span class='op'>|</span>
+    <span class='id identifier rubyid_programming_language'>programming_language</span><span class='period'>.</span><span class='id identifier rubyid_unmatched_step_definitions'>unmatched_step_definitions</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Mar  8 10:00:31 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
