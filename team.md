@@ -24,6 +24,7 @@ title: Team
 * [Francisco Urquijo] (https://github.com/fkoner)
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
 * [Chris Turner](https://github.com/skipoleschris) (Scala)
+* [Matt Lucas](https://github.com/lucas1000001)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
