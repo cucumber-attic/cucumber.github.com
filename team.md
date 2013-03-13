@@ -23,6 +23,7 @@ title: Team
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
 * [Francisco Urquijo] (https://github.com/fkoner)
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
+* [Chris Turner](https://github.com/skipoleschris) (Scala)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
