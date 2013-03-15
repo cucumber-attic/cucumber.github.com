@@ -14,6 +14,7 @@ title: Team
 * [David Troyer](https://github.com/dmtroyer)
 * [Liam Wilkins](https://github.com/lwilkins)
 * [Sean Miller](https://github.com/smiller)
+* [Steve Tooke](https://github.com/tooky)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
