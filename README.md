@@ -72,3 +72,15 @@ git push YOURUSER master
 ```
 
 And it's time to send a pull request!
+
+### Bootstrap
+
+Upgrading it:
+
+```
+rm -Rf vendor/bootstrap
+mkdir -p vendor/bootstrap
+pushd vendor/bootstrap
+  curl --silent --location https://github.com/twitter/bootstrap/archive/v2.3.1.tar.gz | tar xvf
+popd
+```
