@@ -11,7 +11,7 @@ open _site/install.html
 
 ```
 jekyll --server --auto
-open http://localhost:4000/install.html
+open http://localhost:4000/step-definitions.html
 ```
 
 ## Contributing
