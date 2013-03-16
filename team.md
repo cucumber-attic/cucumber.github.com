@@ -13,6 +13,8 @@ title: Team
 * [Oscar Rieken] (https://github.com/orieken)
 * [David Troyer](https://github.com/dmtroyer)
 * [Liam Wilkins](https://github.com/lwilkins)
+* [Sean Miller](https://github.com/smiller)
+* [Steve Tooke](https://github.com/tooky)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
@@ -21,7 +23,9 @@ title: Team
 * [David Kowis](https://github.com/dkowis)
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
 * [Francisco Urquijo] (https://github.com/fkoner)
-* [Nils Wloka](https://github.com/nilswloka)
+* [Nils Wloka](https://github.com/nilswloka) (Clojure)
+* [Chris Turner](https://github.com/skipoleschris) (Scala)
+* [Matt Lucas](https://github.com/lucas1000001)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
