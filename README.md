@@ -78,9 +78,13 @@ And it's time to send a pull request!
 Upgrading it:
 
 ```
-rm -Rf vendor/bootstrap
-mkdir -p vendor/bootstrap
-pushd vendor/bootstrap
-  curl --silent --location https://github.com/twitter/bootstrap/archive/v2.3.1.tar.gz | tar xvf
+rm -Rf vendor/bootstrap*
+pushd vendor
+  curl --silent --location https://github.com/twitter/bootstrap/archive/v2.3.1.tar.gz | tar xvz
 popd
+
+npm install less
+
+# Use --compress instead of --compile for copmpression
+node_modules/.bin/recess --compile vendor/bootstrap-2.3.1/less/bootstrap.less > stylesheets/bootstrap.css
 ```

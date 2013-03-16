@@ -1,7 +1,3 @@
-# Set this to false to pick up non-minified bootstrap css files.
-# Useful in development. (Changes to this file requires restart of jekyll --server --auto)
-bootstrap_min: false
-
 navigation:
 - text: Install
   dropdown:
