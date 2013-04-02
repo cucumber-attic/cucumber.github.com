@@ -41,5 +41,10 @@ title: Team
 
 ## Cucumber-Cpp and Gherkin3/C++
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
+* [Jarl Friis](https://github.com/jarl-dk)
+
+## Aruba
+* [Jarl Friis](https://github.com/jarl-dk)
+
 
 ## Gherkin3/PHP
