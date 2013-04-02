@@ -7,12 +7,9 @@ title: Team
 ## Cucumber-Ruby and Gherkin3/Ruby
 * [Matt Wynne](https://github.com/mattwynne)
 * [Oleg Sukhodolsky](https://github.com/os97673)
-* [Walt Wyckoff] (https://github.com/wwwyckoff)
 * [Seb Rose](https://github.com/sebrose) 
 * [David Kowis](https://github.com/dkowis)
-* [Oscar Rieken] (https://github.com/orieken)
-* [David Troyer](https://github.com/dmtroyer)
-* [Liam Wilkins](https://github.com/lwilkins)
+* [Oscar Rieken](https://github.com/orieken)
 * [Sean Miller](https://github.com/smiller)
 * [Steve Tooke](https://github.com/tooky)
 
@@ -22,7 +19,6 @@ title: Team
 * [Ilan Pillemer](https://github.com/ilanpillemer)
 * [David Kowis](https://github.com/dkowis)
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
-* [Francisco Urquijo] (https://github.com/fkoner)
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
 * [Chris Turner](https://github.com/skipoleschris) (Scala)
 * [Matt Lucas](https://github.com/lucas1000001)
