@@ -1,0 +1,900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Gherkin::Listener::FormatterListener
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Gherkin 2.11.7</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (F)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Gherkin.html" title="Gherkin (module)">Gherkin</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Listener.html" title="Gherkin::Listener (module)">Listener</a></span></span>
+     &raquo; 
+    <span class="title">FormatterListener</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Gherkin::Listener::FormatterListener
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Gherkin::Listener::FormatterListener</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/gherkin/listener/formatter_listener.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Adapter from the "raw" Gherkin <tt>Listener</tt> API to the slightly more
+high-level <tt>Formatter</tt> API, which is easier to implement (less state
+to keep track of).</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="FormatterListener/Stash.html" title="Gherkin::Listener::FormatterListener::Stash (class)">Stash</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#background-instance_method" title="#background (instance method)">- (Object) <strong>background</strong>(keyword, name, description, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#comment-instance_method" title="#comment (instance method)">- (Object) <strong>comment</strong>(value, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#doc_string-instance_method" title="#doc_string (instance method)">- (Object) <strong>doc_string</strong>(content_type, value, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#eof-instance_method" title="#eof (instance method)">- (Object) <strong>eof</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#examples-instance_method" title="#examples (instance method)">- (Object) <strong>examples</strong>(keyword, name, description, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#feature-instance_method" title="#feature (instance method)">- (Object) <strong>feature</strong>(keyword, name, description, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (FormatterListener) <strong>initialize</strong>(formatter) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of FormatterListener.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#row-instance_method" title="#row (instance method)">- (Object) <strong>row</strong>(cells, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scenario-instance_method" title="#scenario (instance method)">- (Object) <strong>scenario</strong>(keyword, name, description, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#scenario_outline-instance_method" title="#scenario_outline (instance method)">- (Object) <strong>scenario_outline</strong>(keyword, name, description, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step-instance_method" title="#step (instance method)">- (Object) <strong>step</strong>(keyword, name, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#syntax_error-instance_method" title="#syntax_error (instance method)">- (Object) <strong>syntax_error</strong>(state, ev, legal_events, uri, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tag-instance_method" title="#tag (instance method)">- (Object) <strong>tag</strong>(name, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Gherkin::Listener::FormatterListener (class)">FormatterListener</a></span></tt>) <strong>initialize</strong>(formatter) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of FormatterListener</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13
+14
+15</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span> <span class='op'>=</span> <span class='id identifier rubyid_formatter'>formatter</span>
+  <span class='ivar'>@stash</span> <span class='op'>=</span> <span class='const'>Stash</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="background-instance_method">
+  
+    - (<tt>Object</tt>) <strong>background</strong>(keyword, name, description, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 31</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_background'>background</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_replay'>replay</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Background</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="comment-instance_method">
+  
+    - (<tt>Object</tt>) <strong>comment</strong>(value, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_comment'>comment</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_comment'>comment</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Comment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="doc_string-instance_method">
+  
+    - (<tt>Object</tt>) <strong>doc_string</strong>(content_type, value, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@current_builder</span><span class='period'>.</span><span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="eof-instance_method">
+  
+    - (<tt>Object</tt>) <strong>eof</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77
+78</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_eof'>eof</span>
+  <span class='id identifier rubyid_replay_step_or_examples'>replay_step_or_examples</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_eof'>eof</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="examples-instance_method">
+  
+    - (<tt>Object</tt>) <strong>examples</strong>(keyword, name, description, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_examples'>examples</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_replay_step_or_examples'>replay_step_or_examples</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_examples'>examples</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='ivar'>@current_builder</span> <span class='op'>=</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Examples</span><span class='op'>::</span><span class='const'>Builder</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="feature-instance_method">
+  
+    - (<tt>Object</tt>) <strong>feature</strong>(keyword, name, description, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_feature'>feature</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_feature'>feature</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_replay'>replay</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Feature</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="row-instance_method">
+  
+    - (<tt>Object</tt>) <strong>row</strong>(cells, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 65</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_row'>row</span><span class='lparen'>(</span><span class='id identifier rubyid_cells'>cells</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_basic_statement'>basic_statement</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='ivar'>@current_builder</span><span class='period'>.</span><span class='id identifier rubyid_row'>row</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_cells'>cells</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scenario-instance_method">
+  
+    - (<tt>Object</tt>) <strong>scenario</strong>(keyword, name, description, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 37</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_replay_step_or_examples'>replay_step_or_examples</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_replay'>replay</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Scenario</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="scenario_outline-instance_method">
+  
+    - (<tt>Object</tt>) <strong>scenario_outline</strong>(keyword, name, description, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+44
+45
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 44</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_scenario_outline'>scenario_outline</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_replay_step_or_examples'>replay_step_or_examples</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='id identifier rubyid_replay'>replay</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>ScenarioOutline</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="step-instance_method">
+  
+    - (<tt>Object</tt>) <strong>step</strong>(keyword, name, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_replay_step_or_examples'>replay_step_or_examples</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_basic_statement'>basic_statement</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='op'>|</span>
+    <span class='ivar'>@current_builder</span> <span class='op'>=</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Step</span><span class='op'>::</span><span class='const'>Builder</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="syntax_error-instance_method">
+  
+    - (<tt>Object</tt>) <strong>syntax_error</strong>(state, ev, legal_events, uri, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+80
+81
+82</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 80</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_syntax_error'>syntax_error</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_legal_events'>legal_events</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_syntax_error'>syntax_error</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_legal_events'>legal_events</span><span class='comma'>,</span> <span class='id identifier rubyid_uri'>uri</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="tag-instance_method">
+  
+    - (<tt>Object</tt>) <strong>tag</strong>(name, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/listener/formatter_listener.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tag'>tag</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@stash</span><span class='period'>.</span><span class='id identifier rubyid_tag'>tag</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Model</span><span class='op'>::</span><span class='const'>Tag</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sat Apr  6 00:53:24 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
