@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (H)</a> &raquo;
@@ -135,33 +135,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Returns the value of attribute description.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#feature-instance_method" title="#feature (instance method)">- (Object) <strong>feature</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute feature.</p>
 </div></span>
   
 </li>
@@ -292,28 +265,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#add_step-instance_method" title="#add_step (instance method)">- (Object) <strong>add_step</strong>(step) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#attach_steps-instance_method" title="#attach_steps (instance method)">- (Object) <strong>attach_steps</strong>(steps) </a>
     
 
@@ -336,29 +287,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#backtrace_line-instance_method" title="#backtrace_line (instance method)">- (Object) <strong>backtrace_line</strong>(name = &quot;#{@keyword}: #{name}&quot;, line = @line) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#file_colon_line-instance_method" title="#file_colon_line (instance method)">- (Object) <strong>file_colon_line</strong>(line = @line) </a>
+      <a href="#backtrace_line-instance_method" title="#backtrace_line (instance method)">- (Object) <strong>backtrace_line</strong>(step_name = &quot;#{@keyword}: #{name}&quot;, line = self.line) </a>
     
 
     
@@ -610,49 +539,6 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 9</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
-  <span class='ivar'>@description</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="feature=-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="feature-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>feature</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute feature</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
 7
 8
 9</pre>
@@ -660,8 +546,8 @@
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 7</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_feature'>feature</span>
-  <span class='ivar'>@feature</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_description'>description</span>
+  <span class='ivar'>@description</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -696,12 +582,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_gherkin_statement'>gherkin_statement</span>
   <span class='ivar'>@gherkin_statement</span>
@@ -739,12 +625,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span>
   <span class='ivar'>@raw_steps</span>
@@ -782,12 +668,12 @@
       <pre class="lines">
 
 
-9
-10
-11</pre>
+7
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_title'>title</span>
   <span class='ivar'>@title</span>
@@ -841,45 +727,15 @@
       <pre class="lines">
 
 
-65
-66
-67</pre>
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 65</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 56</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept_hook?'>accept_hook?</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='rparen'>)</span>
-  <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>TagExpression</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='period'>.</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_source_tags'>source_tags</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="add_step-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>add_step</strong>(step) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-14
-15
-16</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 14</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_add_step'>add_step</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span>
-  <span class='ivar'>@raw_steps</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_step'>step</span>
+  <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>TagExpression</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='period'>.</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_evaluate'>evaluate</span><span class='lparen'>(</span><span class='id identifier rubyid_source_tags'>source_tags</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -901,15 +757,19 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+12
+13
+14
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 12</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_attach_steps'>attach_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps'>steps</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_step'>step</span><span class='op'>|</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_feature_element'>feature_element</span> <span class='op'>=</span> <span class='kw'>self</span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_step'>step</span><span class='op'>|</span> 
+    <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_feature_element'>feature_element</span> <span class='op'>=</span> <span class='kw'>self</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -919,7 +779,7 @@
       <div class="method_details ">
   <h3 class="signature " id="backtrace_line-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>backtrace_line</strong>(name = &quot;#{@keyword}: #{name}&quot;, line = @line) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>backtrace_line</strong>(step_name = &quot;#{@keyword}: #{name}&quot;, line = self.line) 
   
 
   
@@ -931,45 +791,15 @@
       <pre class="lines">
 
 
-52
-53
-54</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 52</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 44</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@keyword</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='ivar'>@line</span><span class='rparen'>)</span>
-  <span class='ivar'>@feature</span><span class='period'>.</span><span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@feature</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="file_colon_line-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>file_colon_line</strong>(line = @line) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-22
-23
-24</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 22</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='ivar'>@line</span><span class='rparen'>)</span>
-  <span class='ivar'>@feature</span><span class='period'>.</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@feature</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@keyword</span><span class='rbrace'>}</span><span class='tstring_content'>: </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_on_line'>on_line</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>:in `</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -991,12 +821,12 @@
       <pre class="lines">
 
 
-26
-27
-28</pre>
+18
+19
+20</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_first_line_length'>first_line_length</span>
   <span class='id identifier rubyid_name_line_lengths'>name_line_lengths</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
@@ -1021,15 +851,15 @@
       <pre class="lines">
 
 
-77
-78
-79</pre>
+68
+69
+70</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 77</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_language'>language</span>
-  <span class='ivar'>@feature</span><span class='period'>.</span><span class='id identifier rubyid_language'>language</span> <span class='kw'>if</span> <span class='ivar'>@feature</span>
+  <span class='ivar'>@language</span> <span class='op'>||</span> <span class='id identifier rubyid_raise'>raise</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Language is required for a </span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1073,12 +903,12 @@
       <pre class="lines">
 
 
-48
-49
-50</pre>
+40
+41
+42</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_matches_scenario_names?'>matches_scenario_names?</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario_name_regexps'>scenario_name_regexps</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_scenario_name_regexps'>scenario_name_regexps</span><span class='period'>.</span><span class='id identifier rubyid_detect'>detect</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_n'>n</span><span class='op'>|</span> <span class='id identifier rubyid_n'>n</span> <span class='op'>=~</span> <span class='id identifier rubyid_name'>name</span><span class='rbrace'>}</span>
@@ -1103,17 +933,15 @@
       <pre class="lines">
 
 
-60
-61
-62
-63</pre>
+52
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 52</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_max_line_length'>max_line_length</span>
-  <span class='id identifier rubyid_init'>init</span>
-  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_max_line_length'>max_line_length</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_max_line_length'>max_line_length</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1135,22 +963,22 @@
       <pre class="lines">
 
 
+26
+27
+28
+29
+30
+31
+32
+33
 34
 35
 36
 37
-38
-39
-40
-41
-42
-43
-44
-45
-46</pre>
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 34</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_name_line_lengths'>name_line_lengths</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -1185,12 +1013,12 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+48
+49
+50</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_text_length'>text_length</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_max_line_length'>max_line_length</span> <span class='op'>-</span> <span class='id identifier rubyid_text_length'>text_length</span>
@@ -1215,12 +1043,12 @@
       <pre class="lines">
 
 
-69
-70
-71</pre>
+60
+61
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 69</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_tag_names'>source_tag_names</span>
   <span class='id identifier rubyid_source_tags'>source_tags</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_tag'>tag</span><span class='op'>|</span> <span class='id identifier rubyid_tag'>tag</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='rbrace'>}</span>
@@ -1245,15 +1073,15 @@
       <pre class="lines">
 
 
-73
-74
-75</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_source_tags'>source_tags</span>
-  <span class='lparen'>(</span><span class='ivar'>@tags</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='ivar'>@feature</span> <span class='op'>?</span> <span class='ivar'>@feature</span><span class='period'>.</span><span class='id identifier rubyid_source_tags'>source_tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>:</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
+  <span class='ivar'>@tags</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span> <span class='op'>+</span> <span class='id identifier rubyid_feature_tags'>feature_tags</span><span class='period'>.</span><span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_to_a'>to_a</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1275,12 +1103,12 @@
       <pre class="lines">
 
 
-30
-31
-32</pre>
+22
+23
+24</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 30</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/has_steps.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_length'>text_length</span>
   <span class='id identifier rubyid_name_line_lengths'>name_line_lengths</span><span class='period'>.</span><span class='id identifier rubyid_max'>max</span>
@@ -1295,7 +1123,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Mar  8 10:00:27 2013 by 
+  Generated on Sun Apr  7 19:53:04 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.5.2 (ruby-1.9.3).
 </div>

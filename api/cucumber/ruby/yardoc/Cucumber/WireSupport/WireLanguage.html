@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (W)</a> &raquo;
@@ -208,7 +208,7 @@ language API.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snippet_text-instance_method" title="#snippet_text (instance method)">- (Object) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class) </a>
+      <a href="#snippet_text-instance_method" title="#snippet_text (instance method)">- (Object) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class, snippet_type) </a>
     
 
     
@@ -377,7 +377,7 @@ language API.</p>
       <div class="method_details ">
   <h3 class="signature " id="snippet_text-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class, snippet_type) 
   
 
   
@@ -399,7 +399,7 @@ language API.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='comma'>,</span> <span class='id identifier rubyid_snippet_type'>snippet_type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_snippets'>snippets</span> <span class='op'>=</span> <span class='ivar'>@connections</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_remote'>remote</span><span class='op'>|</span>
     <span class='id identifier rubyid_remote'>remote</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
@@ -445,7 +445,7 @@ language API.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Mar  8 10:00:32 2013 by 
+  Generated on Sun Apr  7 19:53:08 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.5.2 (ruby-1.9.3).
 </div>

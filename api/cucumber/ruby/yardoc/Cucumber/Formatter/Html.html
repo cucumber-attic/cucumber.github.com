@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (H)</a> &raquo;
@@ -1904,7 +1904,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_features'>before_features</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='rparen'>)</span>
-  <span class='ivar'>@step_count</span> <span class='op'>=</span> <span class='id identifier rubyid_get_step_count'>get_step_count</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='rparen'>)</span>
+  <span class='ivar'>@step_count</span> <span class='op'>=</span> <span class='id identifier rubyid_features'>features</span><span class='period'>.</span><span class='id identifier rubyid_step_count'>step_count</span>
 
   <span class='comment'># &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
 </span>  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_declare!'>declare!</span><span class='lparen'>(</span>
@@ -2787,7 +2787,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Mar  8 10:00:29 2013 by 
+  Generated on Sun Apr  7 19:53:06 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.5.2 (ruby-1.9.3).
 </div>

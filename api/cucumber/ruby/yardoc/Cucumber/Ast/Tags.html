@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (T)</a> &raquo;
@@ -439,7 +439,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/tags.rb', line 19</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept_hook?'>accept_hook?</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='rparen'>)</span>
-  <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>TagExpression</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='period'>.</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
+  <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>TagExpression</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_hook'>hook</span><span class='period'>.</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_evaluate'>evaluate</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -481,7 +481,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Mar  8 10:00:28 2013 by 
+  Generated on Sun Apr  7 19:53:04 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.5.2 (ruby-1.9.3).
 </div>
