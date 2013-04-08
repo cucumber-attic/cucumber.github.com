@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.5</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (S)</a> &raquo;
@@ -96,7 +96,7 @@
   
     
       <dt class="r2">Includes:</dt>
-      <dd class="r2"><span class='object_link'><a href="HasLocation.html" title="Cucumber::Ast::HasLocation (module)">HasLocation</a></span>, <span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span>, <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></dd>
+      <dd class="r2"><span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span>, <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></dd>
       
     
   
@@ -119,7 +119,17 @@
 <div class="tags">
   
 
-</div>
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Scenario/EmptyBackground.html" title="Cucumber::Ast::Scenario::EmptyBackground (class)">EmptyBackground</a></span>
+    
+  
+</p>
+
 
 
 
@@ -129,7 +139,7 @@
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#feature_tags-instance_method" title="#feature_tags (instance method)">- (Object) <strong>feature_tags</strong> </a>
+      <a href="#line-instance_method" title="#line (instance method)">- (Object) <strong>line</strong> </a>
     
 
     
@@ -149,7 +159,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute feature_tags.</p>
+<p>Returns the value of attribute line.</p>
 </div></span>
   
 </li>
@@ -167,7 +177,7 @@
   
   
   <h3 class="inherited">Attributes included from <span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="HasSteps.html#description-instance_method" title="Cucumber::Ast::HasSteps#description (method)">#description</a></span>, <span class='object_link'><a href="HasSteps.html#gherkin_statement-instance_method" title="Cucumber::Ast::HasSteps#gherkin_statement (method)">#gherkin_statement</a></span>, <span class='object_link'><a href="HasSteps.html#raw_steps-instance_method" title="Cucumber::Ast::HasSteps#raw_steps (method)">#raw_steps</a></span>, <span class='object_link'><a href="HasSteps.html#title-instance_method" title="Cucumber::Ast::HasSteps#title (method)">#title</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="HasSteps.html#description-instance_method" title="Cucumber::Ast::HasSteps#description (method)">#description</a></span>, <span class='object_link'><a href="HasSteps.html#feature-instance_method" title="Cucumber::Ast::HasSteps#feature (method)">#feature</a></span>, <span class='object_link'><a href="HasSteps.html#gherkin_statement-instance_method" title="Cucumber::Ast::HasSteps#gherkin_statement (method)">#gherkin_statement</a></span>, <span class='object_link'><a href="HasSteps.html#raw_steps-instance_method" title="Cucumber::Ast::HasSteps#raw_steps (method)">#raw_steps</a></span>, <span class='object_link'><a href="HasSteps.html#title-instance_method" title="Cucumber::Ast::HasSteps#title (method)">#title</a></span></p>
 
 
   
@@ -273,7 +283,29 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Scenario) <strong>initialize</strong>(language, location, background, comment, tags, feature_tags, keyword, title, description, raw_steps) </a>
+      <a href="#init-instance_method" title="#init (instance method)">- (Object) <strong>init</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Scenario) <strong>initialize</strong>(background, comment, tags, line, keyword, title, description, raw_steps) </a>
     
 
     
@@ -369,51 +401,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#steps-instance_method" title="#steps (instance method)">- (Object) <strong>steps</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#to_sexp-instance_method" title="#to_sexp (instance method)">- (Object) <strong>to_sexp</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#to_units-instance_method" title="#to_units (instance method)">- (Object) <strong>to_units</strong>(background) </a>
     
 
     
@@ -466,17 +454,6 @@
   
   
   
-  <h3 class="inherited">Methods included from <span class='object_link'><a href="HasLocation.html" title="Cucumber::Ast::HasLocation (module)">HasLocation</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="HasLocation.html#file-instance_method" title="Cucumber::Ast::HasLocation#file (method)">#file</a></span>, <span class='object_link'><a href="HasLocation.html#file_colon_line-instance_method" title="Cucumber::Ast::HasLocation#file_colon_line (method)">#file_colon_line</a></span>, <span class='object_link'><a href="HasLocation.html#line-instance_method" title="Cucumber::Ast::HasLocation#line (method)">#line</a></span>, <span class='object_link'><a href="HasLocation.html#location-instance_method" title="Cucumber::Ast::HasLocation#location (method)">#location</a></span></p>
-
-  
-  
-  
-  
-  
-  
-  
-  
   <h3 class="inherited">Methods included from <span class='object_link'><a href="Names.html" title="Cucumber::Ast::Names (module)">Names</a></span></h3>
   <p class="inherited"><span class='object_link'><a href="Names.html#name-instance_method" title="Cucumber::Ast::Names#name (method)">#name</a></span></p>
 
@@ -489,14 +466,14 @@
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="HasSteps.html#accept_hook%3F-instance_method" title="Cucumber::Ast::HasSteps#accept_hook? (method)">#accept_hook?</a></span>, <span class='object_link'><a href="HasSteps.html#attach_steps-instance_method" title="Cucumber::Ast::HasSteps#attach_steps (method)">#attach_steps</a></span>, <span class='object_link'><a href="HasSteps.html#backtrace_line-instance_method" title="Cucumber::Ast::HasSteps#backtrace_line (method)">#backtrace_line</a></span>, <span class='object_link'><a href="HasSteps.html#first_line_length-instance_method" title="Cucumber::Ast::HasSteps#first_line_length (method)">#first_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#language-instance_method" title="Cucumber::Ast::HasSteps#language (method)">#language</a></span>, <span class='object_link'><a href="HasSteps.html#matches_scenario_names%3F-instance_method" title="Cucumber::Ast::HasSteps#matches_scenario_names? (method)">#matches_scenario_names?</a></span>, <span class='object_link'><a href="HasSteps.html#max_line_length-instance_method" title="Cucumber::Ast::HasSteps#max_line_length (method)">#max_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#name_line_lengths-instance_method" title="Cucumber::Ast::HasSteps#name_line_lengths (method)">#name_line_lengths</a></span>, <span class='object_link'><a href="HasSteps.html#source_indent-instance_method" title="Cucumber::Ast::HasSteps#source_indent (method)">#source_indent</a></span>, <span class='object_link'><a href="HasSteps.html#source_tag_names-instance_method" title="Cucumber::Ast::HasSteps#source_tag_names (method)">#source_tag_names</a></span>, <span class='object_link'><a href="HasSteps.html#source_tags-instance_method" title="Cucumber::Ast::HasSteps#source_tags (method)">#source_tags</a></span>, <span class='object_link'><a href="HasSteps.html#text_length-instance_method" title="Cucumber::Ast::HasSteps#text_length (method)">#text_length</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="HasSteps.html#accept_hook%3F-instance_method" title="Cucumber::Ast::HasSteps#accept_hook? (method)">#accept_hook?</a></span>, <span class='object_link'><a href="HasSteps.html#add_step-instance_method" title="Cucumber::Ast::HasSteps#add_step (method)">#add_step</a></span>, <span class='object_link'><a href="HasSteps.html#attach_steps-instance_method" title="Cucumber::Ast::HasSteps#attach_steps (method)">#attach_steps</a></span>, <span class='object_link'><a href="HasSteps.html#backtrace_line-instance_method" title="Cucumber::Ast::HasSteps#backtrace_line (method)">#backtrace_line</a></span>, <span class='object_link'><a href="HasSteps.html#file_colon_line-instance_method" title="Cucumber::Ast::HasSteps#file_colon_line (method)">#file_colon_line</a></span>, <span class='object_link'><a href="HasSteps.html#first_line_length-instance_method" title="Cucumber::Ast::HasSteps#first_line_length (method)">#first_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#language-instance_method" title="Cucumber::Ast::HasSteps#language (method)">#language</a></span>, <span class='object_link'><a href="HasSteps.html#matches_scenario_names%3F-instance_method" title="Cucumber::Ast::HasSteps#matches_scenario_names? (method)">#matches_scenario_names?</a></span>, <span class='object_link'><a href="HasSteps.html#max_line_length-instance_method" title="Cucumber::Ast::HasSteps#max_line_length (method)">#max_line_length</a></span>, <span class='object_link'><a href="HasSteps.html#name_line_lengths-instance_method" title="Cucumber::Ast::HasSteps#name_line_lengths (method)">#name_line_lengths</a></span>, <span class='object_link'><a href="HasSteps.html#source_indent-instance_method" title="Cucumber::Ast::HasSteps#source_indent (method)">#source_indent</a></span>, <span class='object_link'><a href="HasSteps.html#source_tag_names-instance_method" title="Cucumber::Ast::HasSteps#source_tag_names (method)">#source_tag_names</a></span>, <span class='object_link'><a href="HasSteps.html#source_tags-instance_method" title="Cucumber::Ast::HasSteps#source_tags (method)">#source_tags</a></span>, <span class='object_link'><a href="HasSteps.html#text_length-instance_method" title="Cucumber::Ast::HasSteps#text_length (method)">#text_length</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Cucumber::Ast::Scenario (class)">Scenario</a></span></tt>) <strong>initialize</strong>(language, location, background, comment, tags, feature_tags, keyword, title, description, raw_steps) 
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Ast::Scenario (class)">Scenario</a></span></tt>) <strong>initialize</strong>(background, comment, tags, line, keyword, title, description, raw_steps) 
   
 
   
@@ -519,19 +496,19 @@
       <pre class="lines">
 
 
-16
-17
-18
-19
-20</pre>
+29
+30
+31
+32
+33</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 16</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_language'>language</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='comma'>,</span> <span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_tags'>feature_tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span><span class='rparen'>)</span>
-  <span class='ivar'>@language</span><span class='comma'>,</span> <span class='ivar'>@location</span><span class='comma'>,</span> <span class='ivar'>@background</span><span class='comma'>,</span> <span class='ivar'>@comment</span><span class='comma'>,</span> <span class='ivar'>@tags</span><span class='comma'>,</span> <span class='ivar'>@feature_tags</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='ivar'>@title</span><span class='comma'>,</span> <span class='ivar'>@description</span><span class='comma'>,</span> <span class='ivar'>@raw_steps</span> <span class='op'>=</span> <span class='id identifier rubyid_language'>language</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='comma'>,</span> <span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_tags'>feature_tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span><span class='rparen'>)</span>
+  <span class='ivar'>@background</span> <span class='op'>=</span> <span class='id identifier rubyid_background'>background</span> <span class='op'>||</span> <span class='const'>EmptyBackground</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+  <span class='ivar'>@comment</span><span class='comma'>,</span> <span class='ivar'>@tags</span><span class='comma'>,</span> <span class='ivar'>@line</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='ivar'>@title</span><span class='comma'>,</span> <span class='ivar'>@description</span><span class='comma'>,</span> <span class='ivar'>@raw_steps</span> <span class='op'>=</span> <span class='id identifier rubyid_comment'>comment</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_title'>title</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_steps'>raw_steps</span>
   <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='ivar'>@executed</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='id identifier rubyid_attach_steps'>attach_steps</span><span class='lparen'>(</span><span class='ivar'>@raw_steps</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -546,9 +523,9 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="feature_tags-instance_method">
+  <h3 class="signature first" id="line-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>feature_tags</strong>  <span class="extras">(readonly)</span>
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>line</strong>  <span class="extras">(readonly)</span>
   
 
   
@@ -557,7 +534,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Returns the value of attribute feature_tags</p>
+<p>Returns the value of attribute line</p>
 
 
   </div>
@@ -571,15 +548,15 @@
       <pre class="lines">
 
 
-14
-15
-16</pre>
+10
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 14</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 10</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_feature_tags'>feature_tags</span>
-  <span class='ivar'>@feature_tags</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_line'>line</span>
+  <span class='ivar'>@line</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -608,35 +585,41 @@
       <pre class="lines">
 
 
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34</pre>
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='const'>Cucumber</span><span class='period'>.</span><span class='id identifier rubyid_wants_to_quit'>wants_to_quit</span>
 
-  <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_comment'>visit_comment</span><span class='lparen'>(</span><span class='ivar'>@comment</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-  <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_tags'>visit_tags</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_first_line_length'>first_line_length</span><span class='rparen'>)</span><span class='rparen'>)</span>
-
-  <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='kw'>if</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span>
   <span class='id identifier rubyid_with_visitor'>with_visitor</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks?'>skip_hooks?</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_comment'>visit_comment</span><span class='lparen'>(</span><span class='ivar'>@comment</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_tags'>visit_tags</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='lparen'>(</span><span class='ivar'>@line</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_first_line_length'>first_line_length</span><span class='rparen'>)</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='kw'>if</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span>
+    <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_with_hooks'>with_hooks</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks?'>skip_hooks?</span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='kw'>if</span> <span class='id identifier rubyid_failed?'>failed?</span>
+      <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_steps'>visit_steps</span><span class='lparen'>(</span><span class='ivar'>@steps</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='ivar'>@executed</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@executed</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -669,15 +652,15 @@
       <pre class="lines">
 
 
-56
-57
-58</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 77</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception'>exception</span>
-  <span class='ivar'>@exception</span> <span class='op'>||</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span>
+  <span class='ivar'>@exception</span> <span class='op'>||</span> <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -699,13 +682,13 @@
       <pre class="lines">
 
 
-45
-46
-47
-48</pre>
+66
+67
+68
+69</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 45</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
   <span class='ivar'>@exception</span> <span class='op'>=</span> <span class='id identifier rubyid_exception'>exception</span>
@@ -755,15 +738,55 @@
       <pre class="lines">
 
 
-41
-42
-43</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 41</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failed?'>failed?</span>
-  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span> <span class='op'>||</span> <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@exception</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span> <span class='op'>||</span> <span class='op'>!</span><span class='op'>!</span><span class='ivar'>@exception</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>init</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+35
+36
+37
+38
+39
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 35</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init'>init</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@steps</span>
+  <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_init'>init</span>
+  <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_feature_elements'>feature_elements</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span>
+  <span class='id identifier rubyid_attach_steps'>attach_steps</span><span class='lparen'>(</span><span class='ivar'>@raw_steps</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_step_invocations'>step_invocations</span> <span class='op'>=</span> <span class='ivar'>@raw_steps</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_step'>step</span><span class='op'>|</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='rbrace'>}</span>
+  <span class='ivar'>@steps</span> <span class='op'>=</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_step_collection'>step_collection</span><span class='lparen'>(</span><span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -809,12 +832,12 @@
       <pre class="lines">
 
 
-51
-52
-53</pre>
+72
+73
+74</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 72</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_passed?'>passed?</span>
   <span class='op'>!</span><span class='id identifier rubyid_failed?'>failed?</span>
@@ -839,15 +862,15 @@
       <pre class="lines">
 
 
-82
-83
-84</pre>
+87
+88
+89</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 82</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 87</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span>
-  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='op'>|</span> <span class='id identifier rubyid_step_invocation'>step_invocation</span><span class='period'>.</span><span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span><span class='rbrace'>}</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -880,47 +903,17 @@
       <pre class="lines">
 
 
-61
-62
-63
-64</pre>
+82
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 61</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
   <span class='kw'>return</span> <span class='symbol'>:failed</span> <span class='kw'>if</span> <span class='ivar'>@exception</span>
-  <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="steps-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>steps</strong> 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-86
-87
-88</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 86</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_steps'>steps</span>
-  <span class='ivar'>@steps</span> <span class='op'>||=</span> <span class='ivar'>@background</span><span class='period'>.</span><span class='id identifier rubyid_step_collection'>step_collection</span><span class='lparen'>(</span><span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='rparen'>)</span>
+  <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -942,57 +935,29 @@
       <pre class="lines">
 
 
-66
-67
-68
-69
-70
-71
-72
-73
-74</pre>
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 66</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 91</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_sexp'>to_sexp</span>
-  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:scenario</span><span class='comma'>,</span> <span class='ivar'>@line</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_comment'>comment</span> <span class='op'>=</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
   <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='lbracket'>[</span><span class='id identifier rubyid_comment'>comment</span><span class='rbracket'>]</span> <span class='kw'>if</span> <span class='id identifier rubyid_comment'>comment</span>
   <span class='id identifier rubyid_tags'>tags</span> <span class='op'>=</span> <span class='ivar'>@tags</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
   <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='id identifier rubyid_tags'>tags</span> <span class='kw'>if</span> <span class='id identifier rubyid_tags'>tags</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
-  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span> <span class='kw'>if</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
+  <span class='id identifier rubyid_steps'>steps</span> <span class='op'>=</span> <span class='ivar'>@steps</span><span class='period'>.</span><span class='id identifier rubyid_to_sexp'>to_sexp</span>
+  <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>+=</span> <span class='id identifier rubyid_steps'>steps</span> <span class='kw'>if</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
   <span class='id identifier rubyid_sexp'>sexp</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="to_units-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>to_units</strong>(background) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-36
-37
-38</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 36</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_to_units'>to_units</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='rparen'>)</span>
-  <span class='lbracket'>[</span><span class='const'>Unit</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='period'>.</span><span class='id identifier rubyid_step_invocations'>step_invocations</span> <span class='op'>+</span> <span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='rparen'>)</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1014,14 +979,14 @@
       <pre class="lines">
 
 
-76
-77
-78
-79
-80</pre>
+103
+104
+105
+106
+107</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario.rb', line 103</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_with_visitor'>with_visitor</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span>
   <span class='ivar'>@current_visitor</span> <span class='op'>=</span> <span class='id identifier rubyid_visitor'>visitor</span>
@@ -1038,9 +1003,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Apr  7 19:53:06 2013 by 
+  Generated on Mon Apr  8 20:59:14 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.5.2 (ruby-1.9.3).
+  0.8.5.2 (ruby-2.0.0).
 </div>
 
   </body>

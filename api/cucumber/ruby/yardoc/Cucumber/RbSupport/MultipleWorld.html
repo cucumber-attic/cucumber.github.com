@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.4</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.2.5</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (M)</a> &raquo;
@@ -191,6 +191,7 @@
       <pre class="lines">
 
 
+31
 32
 33
 34
@@ -198,17 +199,16 @@
 36
 37
 38
-39
-40</pre>
+39</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_language.rb', line 32</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_language.rb', line 31</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_first_proc'>first_proc</span><span class='comma'>,</span> <span class='id identifier rubyid_second_proc'>second_proc</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You can only pass a proc to #World once, but it's happening\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You can only pass a proc to #World once, but it&#39;s happening\n</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>in 2 places:\n\n</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_first_proc'>first_proc</span><span class='period'>.</span><span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>World</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
-  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_second_proc'>second_proc</span><span class='period'>.</span><span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>World</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_first_proc'>first_proc</span><span class='period'>.</span><span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>World</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_second_proc'>second_proc</span><span class='period'>.</span><span class='id identifier rubyid_backtrace_line'>backtrace_line</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>World</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Use Ruby modules instead to extend your worlds. See the Cucumber::RbSupport::RbDsl#World RDoc\n</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_message'>message</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>or http://wiki.github.com/cucumber/cucumber/a-whole-new-world.\n\n</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -224,9 +224,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Apr  7 19:53:08 2013 by 
+  Generated on Mon Apr  8 20:59:27 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.5.2 (ruby-1.9.3).
+  0.8.5.2 (ruby-2.0.0).
 </div>
 
   </body>
