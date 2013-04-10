@@ -1,0 +1,1438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>
+  File: History
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="images/bubble_32x32.png"></img> Gherkin 2.11.8</h3>
+      <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: History</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><div id='filecontents'><h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.7...v2.11.8">2.11.8</a></h2>
+
+<ul>
+<li>[Core] Added Galician (gl) (<a href="https://github.com/cucumber/gherkin/pull/249">#249</a> son-cativo)</li>
+<li>[Java, JRuby] Set default i18n when create Parser (<a href="https://github.com/cucumber/gherkin/pull/229">#229</a> Tomohiko Himura)</li>
+<li>[Java, JRuby] Filter out code keywords starting with a number: <code>I18n.code_keywords</code>. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.6...v2.11.7">2.11.7</a></h2>
+
+<ul>
+<li>[Java, JRuby] Fix ArrayOutOfBoundException in JSONFormatter (<a href="https://github.com/cucumber/gherkin/issues/239">#239</a> Joseph Hughes)</li>
+<li>[Java, Ruby] JSONFormatter outputs prettyfied json (Oleg Sukhodolsky)</li>
+<li>[Java, JRuby] JSONFormatter.appendDuration(), TagExpression.isEmpty() added to match ruby versions (<a href="https://github.com/cucumber/gherkin/issues/234">#234</a> Oleg Sukhodolsky)</li>
+<li>[Core] New: Greek (<a href="https://github.com/cucumber/gherkin/issues/237">#237</a>, <a href="https://github.com/cucumber/gherkin/issues/244">#244</a> Konstantinos Rousis)</li>
+<li>[Core] New: Old English (Englisc) added (<a href="https://github.com/cucumber/gherkin/issues/240">#240</a>, <a href="https://github.com/cucumber/gherkin/issues/241">#241</a> Sean Miller)</li>
+<li>[JRuby] fixed problem with passing StringIO to PrettyFormatter (Oleg Sukhodolsky)</li>
+<li>[Ruby] MultiJson is used insted of JSon (<a href="https://github.com/cucumber/gherkin/issues/235">#235</a> Erik Michaels-Ober)</li>
+<li>[Ruby] TagExpression.eval() deprecated, TagExpression.evaluate() added to replace it. (<a href="https://github.com/cucumber/gherkin/issues/238">#238</a> Oleg Sukhodolsky)</li>
+<li>[Ruby] File name is displayed on parse error (<a href="https://github.com/cucumber/gherkin/issues/247">#247</a>, <a href="https://github.com/cucumber/gherkin/issues/248">#248</a> @lukaso)</li>
+<li>[Java, JRuby] Fix IndexOutOfBound exception in PrettyFormatter (<a href="https://github.com/cucumber/gherkin/issues/175">#175</a>, <a href="https://github.com/cucumber/gherkin/issues/242">#242</a> Matheus Neves, Oleg Sukhodolsky)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.5...v2.11.6">2.11.6</a></h2>
+
+<ul>
+<li>[JavaScript] Add duration value to json formatter (<a href="https://github.com/cucumber/gherkin/pull/204">#204</a> Rick Beyer)</li>
+<li>[JavaScript] Fix for JS Lexer (<a href="https://github.com/cucumber/gherkin/pull/215">#215</a> Alexis Hevia)</li>
+<li>[JavaScript] Failing JS Features (<a href="https://github.com/cucumber/gherkin/issues/228">#228</a> Aslak Hellesøy)</li>
+<li>[Core] Better Slovak (<a href="https://github.com/cucumber/gherkin/pull/208">#208</a> Michal Kvasnicak)</li>
+<li>[Core] New: Tatar (<a href="https://github.com/cucumber/gherkin/pull/213">#213</a> Valeriy Utyaganov)</li>
+<li>[Core] New: Telugu (<a href="https://github.com/cucumber/gherkin/pull/218">#218</a> srinivasvedantam)</li>
+<li>[Core] New: Hindi (<a href="https://github.com/cucumber/gherkin/pull/222">#222</a> Kumar Harsh)</li>
+<li>[Java] Fix JSON formatter (<a href="https://github.com/cucumber/gherkin/pull/216">#216</a>, <a href="https://github.com/cucumber/gherkin/pull/195">#195</a> Joseph Hughes, Rex Hoffman)</li>
+<li>[Ruby,Java] Gherkin does not seem to parse BOM when feature contains language specification. (<a href="https://github.com/cucumber/gherkin/issues/211">#211</a>, <a href="https://github.com/cucumber/gherkin/pull/212">#212</a> Rob Westgeest)</li>
+<li>[Java] Fixed a couple of build problems (<a href="https://github.com/cucumber/gherkin/pull/226">#226</a>, <a href="https://github.com/cucumber/gherkin/pull/227">#227</a> signed)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.4...v2.11.5">2.11.5</a></h2>
+
+<ul>
+<li>[Core] Czech translation cleaned a little bit up. (<a href="https://github.com/cucumber/gherkin/pull/202">#202</a> Jakub Linhart)</li>
+<li>[JavaScript] No lexer modules in 2.11.4 NPM package (<a href="https://github.com/cucumber/gherkin/issues/198">#198</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.3...v2.11.4">2.11.4</a></h2>
+
+<ul>
+<li>[Core] Support for file encodings different from UTF-8 in feature files. (<a href="https://github.com/cucumber/gherkin/issues/158">#158</a> Aslak Hellesøy)</li>
+<li>[Core] Added Persian/Farsi (Sam Naseri)</li>
+<li>[JavaScript] Fix lexer instantiation. (<a href="https://github.com/cucumber/gherkin/pull/197">#197</a> Julien Biezemans)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.2...v2.11.3">2.11.3</a></h2>
+
+<ul>
+<li>[.NET] Upgraded IKVM from 0.46.0.1 to 7.1.4532.2 - quite a version bump! (Aslak Hellesøy)</li>
+<li>[JavaScript] Added a README to prevent npm warnings. (Aslak Hellesøy)</li>
+<li>[Ruby] Don't use C++ style comments. (<a href="https://github.com/cucumber/gherkin/pull/191">#191</a> Sam Goldman)</li>
+<li>[Core] Fix for Australian language support (<a href="https://github.com/cucumber/gherkin/pull/196">#196</a> hogfish)</li>
+<li>[Ruby] Add encoding option to IO.read (<a href="https://github.com/cucumber/gherkin/pull/190">#190</a>, <a href="https://github.com/cucumber/gherkin/issues/192">#192</a> <a href="https://github.com/cucumber/gherkin/pull/194">#194</a> HUANG Wei, Levin Alexander)</li>
+<li>[JavaScript] Can't run on IE because of <code>const</code> keyword (<a href="https://github.com/cucumber/gherkin/issues/186">#186</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.1...v2.11.2">2.11.2</a></h2>
+
+<ul>
+<li>[Java] Depend on an external gherkin-jvm-deps jar with repackaged dependencies (Aslak Hellesøy, Rex Hoffman)</li>
+<li>[Core] Renamed i18n.yml to i18n.json, which simplifies the build system for Java. (Aslak Hellesøy)</li>
+<li>[Java Reporter should take embeddings as <code>byte[]</code> and not <code>InputStream</code> (<a href="https://github.com/cucumber/gherkin/issues/184">#184</a> Aslak Hellesøy)</li>
+<li>[Core] A little addition to russian translation (<a href="https://github.com/cucumber/gherkin/pull/183">#183</a> Sergey Sytsevich)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.11.0...v2.11.1">2.11.1</a></h2>
+
+<ul>
+<li>[JavaScript] Native implementation of JSONFormatter (Aslak Hellesøy)</li>
+<li>[Core] Add more accurate polish translations. (<a href="https://github.com/cucumber/gherkin/pull/181">#181</a> Adam Stankiewicz)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.10.0...v2.11.0">2.11.0</a></h2>
+
+<ul>
+<li>[Core] Alias Feature with Business Need and Ability. (<a href="https://github.com/cucumber/gherkin/issues/167">#167</a> Aslak Hellesøy)</li>
+<li>[Java] Better exception on bad filter mix. (<a href="https://github.com/cucumber/gherkin/issues/179">#179</a> Aslak Hellesøy)</li>
+<li>[Java, Ruby] Formatters don't deal well with things not associated with a step (<a href="https://github.com/cucumber/gherkin/issues/172">#172</a> David Kowis, Aslak Hellesøy)</li>
+<li>[Java] Make model classes implement <code>java.io.Serializable</code> (<a href="https://github.com/cucumber/gherkin/issues/180">#180</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.9.3...v2.10.0">2.10.0</a></h2>
+
+<ul>
+<li>[Core] Added Malay language support. (<a href="https://github.com/cucumber/gherkin/pull/176">#176</a> Choon Siong)</li>
+<li>[JRuby] Fixed <code>I18n.language_table</code> so that <code>cucumber --i18n help</code> works again on JRuby. (<a href="https://github.com/cucumber/cucumber/issues/272">cucumber #272</a> Aslak Hellesøy)</li>
+<li>[Java] Line numbers are Integer instead of int or Long (Aslak Hellesøy)</li>
+<li>[Java, Ruby] Fix for exception when an argument is missing. (<a href="https://github.com/cucumber/gherkin/pull/171">#171</a> Matt Nathan, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.9.2...v2.9.3">2.9.3</a></h2>
+
+<ul>
+<li>[Java] Fixed a bug in PrettyFormatter.setMonochrome(false) (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.9.1...v2.9.2">2.9.2</a></h2>
+
+<ul>
+<li>[Java] Ability to PrettyFormatter.setMonochrome(false) post construction (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.9.0...v2.9.1">2.9.1</a></h2>
+
+<ul>
+<li>[Java] Package gherkin.jar as OSGi bundle (<a href="https://github.com/cucumber/gherkin/pull/166">#166</a> Jan Stamer)</li>
+<li>The build system and instruction has been updated to work on OS X Lion. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.8.0...v2.9.0">2.9.0</a></h2>
+
+<ul>
+<li>Added output to Reporter API (Aslak Hellesøy)</li>
+<li>Reporter.embedding takes InputStream instead of byte[], which breaks API hence the minor bump. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.7...v2.8.0">2.8.0</a></h2>
+
+<ul>
+<li>[Ruby/Java] TagExpression.eval() now takes a list of Tag instead of a list of String. This slightly breaks the API (minor bump), but helps fix some bugs in Cucumber-JVM. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.6...v2.7.7">2.7.7</a></h2>
+
+<ul>
+<li>[C] Allow compilation with clang (datanoise)</li>
+<li>[Ruby] Expose AnsiEscapes methods on the class level as well, for easy calling without inclusion (<a href="https://github.com/cucumber/gherkin/pull/161">#161</a> Ben Woosley)</li>
+<li>[Ruby] Lexer load failure fix (<a href="https://github.com/cucumber/gherkin/pull/159">#159</a> Ben Woosley)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.5...v2.7.6">2.7.6</a></h2>
+
+<ul>
+<li>[Java] Previous release accidentally had pretty formatting for both JSONFormatter and JSONPrettyFormatter (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.4...v2.7.5">2.7.5</a></h2>
+
+<ul>
+<li>[Java] Added Formatter.close() so we can close underlying streams after a call to Formatter.done() (Aslak Hellesøy)</li>
+<li>[Java] Switched from JSON simple to GSON  (Aslak Hellesøy)</li>
+<li>[Java] Added a JSONPrettyFormatter  (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.3...v2.7.4">2.7.4</a></h2>
+
+<ul>
+<li>Declared json and base64 dependencies as provided so they don't get included in dependant projects (Aslak Hellesøy)</li>
+<li>Improved Chinese translations (<a href="https://github.com/cucumber/gherkin/pull/155">#155</a> Riceball LEE)</li>
+<li>Improved Czech translations (<a href="https://github.com/cucumber/gherkin/pull/154">#154</a> Konstantin Kudryashov)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.2...v2.7.3">2.7.3</a></h2>
+
+<ul>
+<li>[Java] Make sure Result constructed with a Throwable always has a JSON error_message (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.1...v2.7.2">2.7.2</a></h2>
+
+<ul>
+<li>[Java] Added gherkin.I18n.getAll() (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.7.0...v2.7.1">2.7.1</a></h2>
+
+<p>2.7.0 release got hosed</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.9...v2.7.0">2.7.0</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Formatter.close no longer closes streams. (Alan Parkinson)</li>
+<li>Formatter.close renamed to Formatter.done. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.8...v2.6.9">2.6.9</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Pretty formatter always uses \n for newlines, instead of using platform-specific newline. This makes cross-platform testing less fiddly. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.7...v2.6.8">2.6.8</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Steps can be empty. The main reason for this is to allow Cukepatch to show an autocomplete right after a keyword. (<a href="https://github.com/cucumber/gherkin/issues/149">#149</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.6...v2.6.7">2.6.7</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fix bad packaging of NuSpec package. (<a href="https://github.com/cucumber/gherkin/issues/148">#148</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.5...v2.6.6">2.6.6</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>.NET dll is released as a NuGet package instead of being uploaded to <a href="https://github.com/cucumber/gherkin/downloads">https://github.com/cucumber/gherkin/downloads</a> (<a href="https://github.com/cucumber/gherkin/issues/144">#144</a>, <a href="https://github.com/cucumber/gherkin/pull/147">#147</a> Jeffrey Cameron, Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>The lib/gherkin.jar that goes into the JRuby gem contains json-simple and base64 classes instead of separate jars (Aslak Hellesøy)</li>
+<li>.NET dll, which is based on lib/gherkin.jar also contains json-simple and base64 (Aslak Hellesøy)</li>
+<li>gherkin jars published to Maven repo do <em>not</em> bundle the json-simple and base64 jars. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Removed Features</h3>
+
+<ul>
+<li>IronRuby gems are no longer published. Nobody seems to be using it, and it's too much pain to test. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.4...v2.6.5">2.6.5</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Bad filtering when Scenario Outline+Examples followed by Scenario (<a href="#145">https://github.com/cucumber/gherkin/issues/145</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.3...v2.6.4">2.6.4</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>[Node.js] No more restrictions about what Node.js version this runs on. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.2...v2.6.3">2.6.3</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Windows gems are compiled against 1.9.3 instead of 1.9.2. Should still work on 1.9.3. (Aslak Hellesøy)</li>
+<li>NPM package contains UglifyJS-minified scripts (Aslak Hellesøy)</li>
+<li>NPM package no longer contains Ace (<a href="https://github.com/cucumber/gherkin/issues/109">#109</a> Aslak Hellesøy)</li>
+<li>JavaScript exports for require.js works in non-AMD mode (needed for Ace) (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.1...v2.6.2">2.6.2</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>[Java] Minor internal API changes needed for better arity mismatch reporting in Cucumber-JVM (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.6.0...v2.6.1">2.6.1</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fixed a regression on 1.8.7 (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.5.4...v2.6.0">2.6.0</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>JSON formatter must handle multiple features (<a href="https://github.com/cucumber/gherkin/issues/140">#140</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>New Features</h3>
+
+<ul>
+<li>Identifiers for Gherkin elements (<a href="https://github.com/cucumber/gherkin/issues/131">#131</a> Matt Wynne, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.5.3...v2.5.4">2.5.4</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] Rename/add constants in Match and Result. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.5.2...v2.5.3">2.5.3</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] AnsiEscapes can append to a NiceAppendable. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.5.1...v2.5.2">2.5.2</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Added synonyms for Portuguese. (Rodrigo Dumont)</li>
+<li>Added synonyms for Italian. (Alessandro Mencarini)</li>
+<li>Added synonyms for Spanish. (Nahuel Garbezza)</li>
+<li>Added synonyms for French. (Julien Biezemans)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.5.0...v2.5.1">2.5.1</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] Omit transient fields in toMap so we have more control over what goes into JSON. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.21...v2.5.0">2.5.0</a></h2>
+
+<h3>Changed Features</h3>
+
+<p>The JSON representation of features has changed. The difference lies in how Doc Strings and Data Tables are represented. Consider the following steps:</p>
+
+<pre class="code ruby"><code class="ruby">Given a Data Table:
+  | Hipster | Ipsum |
+  | Freegan | Vinyl |
+Given a Doc String:
+  &quot;&quot;&quot;
+  Hipster
+  Ipsum
+  &quot;&quot;&quot;
+</code></pre>
+
+<p>This is now represented in JSON as:</p>
+
+<pre class="code ruby"><code class="ruby">&quot;steps&quot;: [
+  {
+    &quot;keyword&quot;: &quot;Given &quot;,
+    &quot;name&quot;: &quot;a Data Table&quot;
+    &quot;line&quot;: 5,
+    &quot;rows&quot;: [
+      { &quot;cells&quot;: [&quot;Hipster&quot;, &quot;Ipsum&quot;], &quot;line&quot;: 6 },
+      { &quot;cells&quot;: [&quot;Freegan&quot;, &quot;Vinyl&quot;], &quot;line&quot;: 7 }
+    ]
+  },
+  {
+    &quot;keyword&quot;: &quot;Given &quot;,
+    &quot;name&quot;: &quot;a Doc String&quot;
+    &quot;line&quot;: 8,
+    &quot;doc_string&quot;: {
+      &quot;value&quot;: &quot;Hipster\nIpsum&quot;
+      &quot;line&quot;: 9,
+      &quot;content_type&quot;: &quot;plaintext&quot;,
+    }
+  }
+]
+</code></pre>
+
+<p>Previously it would be represented in JSON as:</p>
+
+<pre class="code ruby"><code class="ruby">&quot;steps&quot;: [
+  {
+    &quot;keyword&quot;: &quot;Given &quot;,
+    &quot;name&quot;: &quot;a Data Table&quot;
+    &quot;line&quot;: 5,
+    &quot;multiline_arg&quot;: {
+      &quot;type&quot;: &quot;table&quot;
+      &quot;value&quot;: [
+        { &quot;cells&quot;: [&quot;Hipster&quot;, &quot;Ipsum&quot;], &quot;line&quot;: 6 },
+        { &quot;cells&quot;: [&quot;Freegan&quot;, &quot;Vinyl&quot;], &quot;line&quot;: 7 }
+      ]
+    }
+  },
+  {
+    &quot;keyword&quot;: &quot;Given &quot;,
+    &quot;name&quot;: &quot;a Doc String&quot;
+    &quot;line&quot;: 8,
+    &quot;multiline_arg&quot;: {
+      &quot;type&quot;: &quot;doc_string&quot;
+      &quot;value&quot;: &quot;Hipster\nIpsum&quot;
+      &quot;line&quot;: 9,
+      &quot;content_type&quot;: &quot;plaintext&quot;,
+    }
+  }
+]
+</code></pre>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Java JSONFormatter produces invalid JSON (<a href="https://github.com/cucumber/gherkin/issues/128">#128</a> Aslak Hellesøy)</li>
+<li>Missing matches and results in JSONFormatter output (<a href="https://github.com/cucumber/gherkin/issues/129">#129</a> Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.20...v2.4.21">2.4.21</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Revert json dependency back to >= 1.4.6 since many apps still use old json. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.18...v2.4.20">2.4.20</a></h2>
+
+<p>(The 2.4.19 release got messed up).</p>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Filtering on Examples with 0 or 1 row now works (<a href="http://groups.google.com/group/cukes/browse_thread/thread/3e55777ee29c445c">from mailing list</a> Aslak Hellesøy)</li>
+<li>Exclude .gitignore files from packaged gem (<a href="https://github.com/cucumber/gherkin/pull/125">#125</a> John Hume)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.17...v2.4.18">2.4.18</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Fenced Code Blocks for DocStrings (<a href="https://github.com/cucumber/gherkin/issues/123">#123</a> Gregory Hnatiuk, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.16...v2.4.17">2.4.17</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Jar file is now deployed to Maven central, making installation a little easier (Aslak Hellesøy)</li>
+<li>Both Ruby and Java API docs are on cukes.info. See README for details. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.15...v2.4.16">2.4.16</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] TagExpression.eval() takes a Collection instead of List. That lets us pass a Set. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.14...v2.4.15">2.4.15</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] Pretty formatter knows how to print deleted (-) or inserted (+) table rows. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.13...v2.4.14">2.4.14</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] Publish source jars to Maven repo (Aslak Hellesøy)</li>
+<li>[Java] Made NiceAppendable public - it's handy for Cucumber-JVM too (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.12...v2.4.13">2.4.13</a></h2>
+
+<p>No changes, but previous release failed while pushing gems (rubygems.org bug?)</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.11...v2.4.12">2.4.12</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>[Java] Fixed Maven warnings. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>New Features</h3>
+
+<ul>
+<li>[Java] Fixed bug in Result.getErrorMessage() when it was created with a Throwable. (Aslak Hellesøy)</li>
+<li>[Java] PrettyFormatter and JSONFormatter take Appendable instead of OutputStream/Writer. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>[Java] PrettyFormatter and JSONFormatter no longer flush. Make sure you pass an OutputStream/Writer that autoflushes. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.10...v2.4.11">2.4.11</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Changed rake-compiler version from '~> 1.7.9' to '>= 1.7.9' since the fix in 2.4.10 seemed to have no effect. I hate the Ruby ecosystem today. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.9...v2.4.10">2.4.10</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Changed rake-compiler version from '1.7.9' to '~> 1.7.9' since the fix in 2.4.9 seemed to have no effect. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.8...v2.4.9">2.4.9</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Changed rake-compiler version from '= 1.7.9' to '1.7.9' to work around install problems caused by <a href="https://github.com/rubygems/rubygems/pull/121">https://github.com/rubygems/rubygems/pull/121</a> (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.7...v2.4.8">2.4.8</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Remove another awesome_print which was left over from 2.4.7. (Aslak Hellesøy)</li>
+<li>Make specs/features pass when LANG=C (or LC_CTYPE=C). (#118 Antonio Terceiro, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.6...v2.4.7">2.4.7</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Remove awesome_print (which was used for debuging). (Antonio Terceiro)</li>
+</ul>
+
+
+<h3>New Features</h3>
+
+<ul>
+<li>Added I18n.getLocale() to Java impl. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.5...v2.4.6">2.4.6</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Added Icelandic translation (Ægir Örn Símonarson)</li>
+<li>JavaScript: String prototype has no "trimRight" function. Fixes failure in Opera. (Julien Biezemans)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.4...v2.4.5">2.4.5</a></h2>
+
+<p>No changes, releasing again since the 2.4.4 release failed halfway through.</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.3...v2.4.4">2.4.4</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>JRuby fixes. Symbols and streams are now properly converted before passing from ruby to java. (Aslak Hellesøy)</li>
+<li>json-simple and base64 jar files (used by some of the java classes) are now embedded in the jruby gem (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.2...v2.4.3">2.4.3</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Added a small hack to the java Result class to work around <a href="https://github.com/cucumber/cucumber/issues/97">Cucumber bug #97</a> (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.1...v2.4.2">2.4.2</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Formatter and Reporter are now two distinct interfaces. JSONParser takes one of each in ctor. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.4.0...v2.4.1">2.4.1</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>None - just updated build system to the latest Cucumber (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.10...v2.4.0">2.4.0</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Don't use -Werror in production code (<a href="https://github.com/cucumber/gherkin/pull/106">#106</a> Hans de Graaff)</li>
+</ul>
+
+
+<h3>New Features</h3>
+
+<ul>
+<li>YARD based API docs at <a href="http://cukes.info/gherkin/api/ruby/latest/">http://cukes.info/gherkin/api/ruby/latest/</a> (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>py_string/PyString changed to doc_string/DocString, ref <a href="https://github.com/cucumber/cucumber/issues/74">https://github.com/cucumber/cucumber/issues/74</a> (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.9...v2.3.10">2.3.10</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Relax development dependency version on builder. (#105 Aslak Hellesøy).</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.8...v2.3.9">2.3.9</a></h2>
+
+<h3>New features</h3>
+
+<ul>
+<li>Javascript lexers support <a href="http://requirejs.org/">http://requirejs.org/</a> modules as well as node.js (Aslak Hellesøy).</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.7...v2.3.8">2.3.8</a></h2>
+
+<h3>Insignificant changes</h3>
+
+<ul>
+<li>Improve build system so we don't need to add generated js lexers to git.</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.6...v2.3.7">2.3.7</a></h2>
+
+<ul>
+<li>Removed incorrect (and unneeded) case statement that could blow up if V8 is installed. (Aslak Hellesøy, Niklas H)</li>
+<li>Added connect support for gherkin.js (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.5...v2.3.6">2.3.6</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Javascript implementation (#38 Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fix compilation error on Arch Linux (#98,#99 Ben Hamill)</li>
+<li>Corrected Russian translation (#97 Vagif Abilov)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.4...v2.3.5">2.3.5</a></h2>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Relaxed gem dependencies to use >=. (Rob Slifka, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.3...v2.3.4">2.3.4</a></h2>
+
+<h3>Changes</h3>
+
+<ul>
+<li>Fixing C90 errors on Ubuntu Natty (#92 Colin Dean)</li>
+<li>Romanian (ro) language update, extracted from a real-world project. (Iulian Dogariu)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.2...v2.3.3">2.3.3</a></h2>
+
+<h3>Changes</h3>
+
+<ul>
+<li>No more dependencies on external ANSI escape libraries (Ruby:term-ansicolor, Java:Jansi). DIY is better! (Aslak Hellesøy)</li>
+<li>Added duration (in millseconds) to Result. (Aslak Hellesøy)</li>
+<li>Additional Polish aliases (Mike Połtyn)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.3.0...v2.3.2">2.3.2</a></h2>
+
+<p>(Somehow 2.3.1 was released improperly shortly after 2.3.0 - not sure what fixes went into that!)</p>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Preserve whitespace in descriptions. Leading whitespace in descriptions are stripped upto preceding keyword + 2 spaces (#87 Matt Wynne, Gregory Hnatiuk, Aslak Hellesøy)</li>
+<li>Fix incorrect indentation of Examples descriptions (Gregory Hnatiuk)</li>
+<li>Can't define new line characters in Example Table Cell's Content. (#85 George Montana Harkin, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.9...v2.3.0">2.3.0</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>New aliases for Scenario Outline in Swedish, Norwegian and English. (Peter Krantz, Aslak Hellesøy)</li>
+<li>Improved build documentation for people who want to contribute. (Aslak Hellesøy)</li>
+<li>Results can now be outputted/parsed in JSON. (Aslak Hellesøy)</li>
+<li>JSON output now contains optional "match", "result" and "embeddings" elements underneath each step. (Aslak Hellesøy)</li>
+<li>Added support for Base64 encoded embeddings in JSON representation. Useful for screenshots etc. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.8...v2.2.9">2.2.9</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>PrettyFormatter can format features both with and without ANSI Colors. Using Jansi on Java. (Aslak Hellesøy)</li>
+<li>Extended Java Formatter API with a steps(List<Step>) method for better reporting in Java (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.7...v2.2.8">2.2.8</a></h2>
+
+<h3>Removed Features</h3>
+
+<ul>
+<li>Trollop based CLI - didn't find a good use for it yet. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.6...v2.2.7">2.2.7</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>I18n.getCodeKeywords() on Java didn't strip '!'. Not anymore. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.5...v2.2.6">2.2.6</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>I18n.getCodeKeywords() on Java included '*'. Not anymore. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.4...v2.2.5">2.2.5</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Gherkin will scan all top comments for the language comment. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.3...v2.2.4">2.2.4</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>C99 features used by gherkin code (#75 Graham Agnew)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.2...v2.2.3">2.2.3</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Add back missing development dependency on cucumber (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.1...v2.2.2">2.2.2</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Use json instead of json_pure (Aslak Hellesøy)</li>
+<li>JSON formatter and parser can now omit JSON serialization (for speed) and work directly on objects (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.2.0...v2.2.1">2.2.1</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Windows gems are now built against 1.8.6-p287 and 1.9.1-p243, on both mswin32 and mingw32, and should work on 1.8.6, 1.8.7, 1.9.1 and 1.9.2 versions of rubyinstaller.org as well as older windows rubies. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed features</h3>
+
+<ul>
+<li>Build system no longer uses Jeweler - only Rake, Bundler and Rubygems (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.5...v2.2.0">2.2.0</a></h2>
+
+<p>This release breaks some APIs since the previous 2.1.5 release. If you install gherkin 2.2.0 you must also upgrade to
+Cucumber 0.9.0.</p>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>I18nLexer doesn't recognise language header with \r\n on OS X. (#70 Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>New Features</h3>
+
+<ul>
+<li>Pure Java FilterFormatter. (Aslak Hellesøy)</li>
+<li>Pure Java JSONFormatter. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>All formatter events take exactly one argument. Each argument is a single object with all data. (Aslak Hellesøy)</li>
+<li>Several java classes have moved to a different package in order to improve separation of concerns. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.4...v2.1.5">2.1.5</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Line filter works on JRuby with Scenarios without steps. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>The JSON schema now puts background inside the "elements" Array. Makes parsing simpler. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.3...v2.1.4">2.1.4</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li><h1>steps fails on JRuby with 2.1.3 (#68 Aslak Hellesøy)</h1></li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.2...v2.1.3">2.1.3</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Examples are not cleared when an ignored Scenario Outline/Examples is followed by a Scenario. (#67 Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.1...v2.1.2">2.1.2</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fix some missing require statements that surfaced when gherkin was used outside Cucumber. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.1.0...v2.1.1">2.1.1</a></h2>
+
+<p>The previous release had a missing gherkin.jar in the jruby gem. This release fixes that. For good this time!</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.0.2...v2.1.0">2.1.0</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Pirate! (anteaya)</li>
+<li>Tag limits for negative tags (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>The formatter API has changed and the listener API is now only used internally. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Removed Features</h3>
+
+<ul>
+<li>FilterListener has been replaced with FilterFormatter. Currently only in Ruby (no Java impl yet). (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.0.1...v2.0.2">2.0.2</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>New JSON Lexer. (Gregory Hnatiuk)</li>
+</ul>
+
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fixed incorrect indentation for descriptions in Java. (Aslak Hellesøy)</li>
+<li>Fixed support for xx-yy languages and Hebrew and Indonesian (JDK bugs). (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Examples are now nested inside the Scenario Outline in the JSON format. (Gregory Hnatiuk)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v2.0.0...v2.0.1">2.0.1</a></h2>
+
+<p>The previous release had a missing gherkin.jar in the jruby gem. This release fixes that.</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.30...v2.0.0">2.0.0</a></h2>
+
+<p>We're breaking the old listener API in this release, and added a new JSON formatter,
+which calls for a new major version.</p>
+
+<h3>New Features</h3>
+
+<ul>
+<li>New JSON formatter. (Aslak Hellesøy, Joseph Wilk)</li>
+<li>New synonyms for Hungarian (Bence Golda)</li>
+<li>Upgraded to use RSpec 2.0.0 (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>undefined method `&lt;=>' on JRuby (#52 Aslak Hellesøy)</li>
+<li>Include link to explanation of LexingError (Mike Sassak)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>The formatter API has completely changed. There is a Gherkin Listener API and a Formatter API.
+The FormatterListener acts as an adapter between them. (Aslak Hellesøy)</li>
+<li>The listener API now has an additional argument for description (text following the first line of Feature:, Scenario: etc.) (Gregroy Hnatiuk, Matt Wynne)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.29...v1.0.30">1.0.30</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Native gems for IronRuby. Bundles IKVM OpenJDK dlls as well as ikvmc-compiled gherkin.dll. Experimental! (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.28...v1.0.29">1.0.29</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Use I18n.class' class loader instead of context class loader to load Java lexers. Hoping this fixes loading bug for good. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.27...v1.0.28">1.0.28</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Use context class loader instead of boot class loader to load Java lexers. (Aslak Hellesøy)</li>
+<li>Only add gcc flags when the compiler is gcc. (#60 Aslak Hellesøy, Christian Höltje)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.26...v1.0.27">1.0.27</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Table cells can now contain escaped bars - \| and escaped backslashes - \. (#48. Gregory Hnatiuk, Aslak Hellesøy)</li>
+<li>Luxemburgish (lu) added. (Christoph König)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.25...v1.0.26">1.0.26</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Ignore the BOM that many retarded Windows editors insist on sticking in the beginning of a file. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.24...v1.0.25">1.0.25</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Allow fallback to a slower ruby lexer if the C lexer can't be loaded for some reason.</li>
+<li>Can't run specs in gherkin 1.0.24 (#59 Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.23...v1.0.24">1.0.24</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>hard tabs crazy indentation for pystrings in formatter (#55 Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.22...v1.0.23">1.0.23</a></h2>
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Java API now uses camelCased method names instead of underscored (more Java-like) (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.21...v1.0.22">1.0.22</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Make prebuilt binaries work on both Ruby 1.8.x and 1.9.x on Windows (#54 Luis Lavena, Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.20...v1.0.21">1.0.21</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fix compile warning on ruby 1.9.2dev (2009-07-18 trunk 24186) (#53 Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.19...v1.0.20">1.0.20</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>The gherkin CLI is working again (Gregory Hnatiuk)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.18...v1.0.19">1.0.19</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Works with JRuby 1.5.0.RC1 (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>I18n.code_keywords now return And and But as well, making Cucumber StepDefs a little more flexible (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.17...v1.0.18">1.0.18</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Explicitly use UTF-8 encoding when scanning source with Java lexer. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.16...v1.0.17">1.0.17</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Gherkin::I18n.keyword_regexp was broken (used for 3rd party code generation). (#51 Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.15...v1.0.16">1.0.16</a></h2>
+
+<p>(Something went wrong when releasing 1.0.15)</p>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Reduced risk of halfway botched releases. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.14...v1.0.15">1.0.15</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Implemented more functionality in I18n.java. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Java methods are no longer throwing Exception (but RuntimeException). (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.13...v1.0.14">1.0.14</a></h2>
+
+<p>(Something went wrong when releasing 1.0.13)</p>
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.12...v1.0.13">1.0.13</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Filter on Background name. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.11...v1.0.12">1.0.12</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fixed incorrect filtering of pystring in Background. (Mike Sassak)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.10...v1.0.11">1.0.11</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fixed bad packaging (C files were not packaged in POSIX gem)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.09...v1.0.10">1.0.10</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Added Esperanto and added a Russian synonym for Feature. (Antono Vasiljev)</li>
+<li>Pure Java implementation of FilterListener and TagExpression (Mike Gaffney, Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>TagExpression takes array args instead of varargs. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.8...v1.0.9">1.0.9</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Triple escaped quotes (\"\"\") in PyStrings are unescaped to """. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.7...v1.0.8">1.0.8</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Removed illegal comma from Ukrainian synonym. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.6...v1.0.7">1.0.7</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Fixed problems with packaging of 1.0.6 release. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.5...v1.0.6">1.0.6</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>Fully automated release process. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Changed Features</h3>
+
+<ul>
+<li>Made generated classes use a more uniform naming convention. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Removed Features</h3>
+
+<ul>
+<li>Removed C# port, obsoleted by IKVM build from 1.0.5. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.4...v1.0.5">1.0.5</a></h2>
+
+<h3>New Features</h3>
+
+<ul>
+<li>New .NET build of gherkin - an ikvmc build of gherkin.jar to gherkin.dll. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Made parsers reusable so that the same instance can parse several features. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.3...v1.0.4">1.0.4</a></h2>
+
+<h3>New features</h3>
+
+<ul>
+<li>Pure java releases of Gherkin at <a href="http://cukes.info/maven">http://cukes.info/maven</a></li>
+<li>A FilterListener in Ruby that is the last missing piece to plug Gherkin into Cucumber. (Gregory Hnatiuk, Aslak Hellesøy, Matt Wynne, Mike Sassak)</li>
+</ul>
+
+
+<h3>Changed features</h3>
+
+<ul>
+<li>The Lexer now emits the '@' for tags. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.2...v1.0.3">1.0.3</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>The C lexer correctly instantiates a new array for each table, instead of reusing the old one. (Aslak Hellesøy)</li>
+<li>Emit keywords with space instead of stripping (&lt; keywords are emmitted without space) (Aslak Hellesøy)</li>
+<li>gherkin reformat now prints comments, and does it with proper indentation (Aslak Hellesøy)</li>
+<li>.NET resource files are now automatically copied into the .dll (#46 Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>New features</h3>
+
+<ul>
+<li>The Pure Java implementation now has a simple main method that pretty prints a feature. (#39 Aslak Hellesøy)</li>
+<li>Writing code generated i18n syntax highlighters for Gherkin is a lot easier thanks to several convenience methods in Gherkin::I18n. (Aslak Hellesøy)</li>
+<li>.NET (C#) port (#36, #37 Attila Sztupak)</li>
+<li>Tables parsed and sent by row rather than by table. (Mike Sassak)</li>
+</ul>
+
+
+<h3>Changed features</h3>
+
+<ul>
+<li>Switced to ISO 639-1 (language) and ISO 3166 alpha-2 (region - if applicable). Applies to Catalan,
+Swedish, Welsh, Romanian and Serbian. (Aslak Hellesøy)</li>
+</ul>
+
+
+<h2><a href="https://github.com/cucumber/gherkin/compare/v1.0.1...v1.0.2">1.0.2</a></h2>
+
+<h3>Bugfixes</h3>
+
+<ul>
+<li>Build passes on Ruby 1.9.2 (Aslak Hellesøy)</li>
+</ul>
+
+
+<h3>New features</h3>
+
+<ul>
+<li>New command line based on trollop. Commands: reformat, stats. (Aslak Hellesøy)</li>
+<li>I18nLexer#scan sets #language to the I18n for the language scanned (Mike Sassak)</li>
+<li>I18n#adverbs, brings I18n to parity with Cucumber::Parser::NaturalLanguage (Mike Sassak)</li>
+</ul>
+
+</div></div>
+    
+    <div id="footer">
+  Generated on Tue Apr  9 21:03:43 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

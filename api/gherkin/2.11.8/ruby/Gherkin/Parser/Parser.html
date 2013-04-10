@@ -1,0 +1,734 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Gherkin::Parser::Parser
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../';
+  framesUrl = "../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../images/bubble_32x32.png"></img> Gherkin 2.11.8</h3>
+      <div id="menu">
+  
+    <a href="../../_index.html">Index (P)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../Gherkin.html" title="Gherkin (module)">Gherkin</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Parser.html" title="Gherkin::Parser (module)">Parser</a></span></span>
+     &raquo; 
+    <span class="title">Parser</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Gherkin::Parser::Parser
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Gherkin::Parser::Parser</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/gherkin/parser/parser.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Parser/Machine.html" title="Gherkin::Parser::Parser::Machine (class)">Machine</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#errors-instance_method" title="#errors (instance method)">- (Object) <strong>errors</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#event-instance_method" title="#event (instance method)">- (Object) <strong>event</strong>(ev, line) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#expected-instance_method" title="#expected (instance method)">- (Object) <strong>expected</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#force_state-instance_method" title="#force_state (instance method)">- (Object) <strong>force_state</strong>(state) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#i18n_language-instance_method" title="#i18n_language (instance method)">- (Object) <strong>i18n_language</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Parser) <strong>initialize</strong>(formatter, raise_on_error = true, machine_name = 'root', force_ruby = false, iso_code = 'en') </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Initialize the parser.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#machine-instance_method" title="#machine (instance method)">- (Object) <strong>machine</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#parse-instance_method" title="#parse (instance method)">- (Object) <strong>parse</strong>(gherkin, feature_uri, line_offset) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#pop_machine-instance_method" title="#pop_machine (instance method)">- (Object) <strong>pop_machine</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#push_machine-instance_method" title="#push_machine (instance method)">- (Object) <strong>push_machine</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Gherkin::Parser::Parser (class)">Parser</a></span></tt>) <strong>initialize</strong>(formatter, raise_on_error = true, machine_name = 'root', force_ruby = false, iso_code = 'en') 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Initialize the parser. <tt>machine_name</tt> refers to a state machine
+table.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+18
+19
+20
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 18</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='comma'>,</span> <span class='id identifier rubyid_raise_on_error'>raise_on_error</span><span class='op'>=</span><span class='kw'>true</span><span class='comma'>,</span> <span class='id identifier rubyid_machine_name'>machine_name</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>root</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_force_ruby'>force_ruby</span><span class='op'>=</span><span class='kw'>false</span><span class='comma'>,</span> <span class='id identifier rubyid_iso_code'>iso_code</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>en</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span> <span class='op'>=</span> <span class='id identifier rubyid_formatter'>formatter</span>
+  <span class='ivar'>@listener</span> <span class='op'>=</span> <span class='const'>Listener</span><span class='op'>::</span><span class='const'>FormatterListener</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@formatter</span><span class='rparen'>)</span>
+  <span class='ivar'>@raise_on_error</span> <span class='op'>=</span> <span class='id identifier rubyid_raise_on_error'>raise_on_error</span>
+  <span class='ivar'>@machine_name</span> <span class='op'>=</span> <span class='id identifier rubyid_machine_name'>machine_name</span>
+  <span class='ivar'>@machines</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@lexer</span> <span class='op'>=</span> <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>Lexer</span><span class='op'>::</span><span class='const'>I18nLexer</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_force_ruby'>force_ruby</span><span class='comma'>,</span> <span class='id identifier rubyid_iso_code'>iso_code</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="errors-instance_method">
+  
+    - (<tt>Object</tt>) <strong>errors</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_errors'>errors</span>
+  <span class='ivar'>@lexer</span><span class='period'>.</span><span class='id identifier rubyid_errors'>errors</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="event-instance_method">
+  
+    - (<tt>Object</tt>) <strong>event</strong>(ev, line) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_l'>l</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>?</span> <span class='ivar'>@line_offset</span><span class='op'>+</span><span class='id identifier rubyid_line'>line</span> <span class='op'>:</span> <span class='kw'>nil</span>
+  <span class='id identifier rubyid_machine'>machine</span><span class='period'>.</span><span class='id identifier rubyid_event'>event</span><span class='lparen'>(</span><span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_l'>l</span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_legal_events'>legal_events</span><span class='op'>|</span>
+    <span class='kw'>if</span> <span class='ivar'>@raise_on_error</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ParseError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_legal_events'>legal_events</span><span class='comma'>,</span> <span class='ivar'>@feature_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_l'>l</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='comment'># Only used for testing
+</span>      <span class='ivar'>@listener</span><span class='period'>.</span><span class='id identifier rubyid_syntax_error'>syntax_error</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='comma'>,</span> <span class='id identifier rubyid_ev'>ev</span><span class='comma'>,</span> <span class='id identifier rubyid_legal_events'>legal_events</span><span class='comma'>,</span> <span class='ivar'>@feature_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_l'>l</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="expected-instance_method">
+  
+    - (<tt>Object</tt>) <strong>expected</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 79</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_expected'>expected</span>
+  <span class='id identifier rubyid_machine'>machine</span><span class='period'>.</span><span class='id identifier rubyid_expected'>expected</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="force_state-instance_method">
+  
+    - (<tt>Object</tt>) <strong>force_state</strong>(state) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_force_state'>force_state</span><span class='lparen'>(</span><span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_machine'>machine</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@state</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_state'>state</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="i18n_language-instance_method">
+  
+    - (<tt>Object</tt>) <strong>i18n_language</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+39
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 39</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_i18n_language'>i18n_language</span>
+  <span class='ivar'>@lexer</span><span class='period'>.</span><span class='id identifier rubyid_i18n_language'>i18n_language</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="machine-instance_method">
+  
+    - (<tt>Object</tt>) <strong>machine</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+75
+76
+77</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 75</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_machine'>machine</span>
+  <span class='ivar'>@machines</span><span class='lbracket'>[</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="parse-instance_method">
+  
+    - (<tt>Object</tt>) <strong>parse</strong>(gherkin, feature_uri, line_offset) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 27</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_gherkin'>gherkin</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_uri'>feature_uri</span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='rparen'>)</span>
+  <span class='ivar'>@formatter</span><span class='period'>.</span><span class='id identifier rubyid_uri'>uri</span><span class='lparen'>(</span><span class='id identifier rubyid_feature_uri'>feature_uri</span><span class='rparen'>)</span>
+  <span class='ivar'>@line_offset</span> <span class='op'>=</span> <span class='id identifier rubyid_line_offset'>line_offset</span>
+  <span class='ivar'>@feature_uri</span> <span class='op'>=</span> <span class='id identifier rubyid_feature_uri'>feature_uri</span>
+  <span class='id identifier rubyid_push_machine'>push_machine</span><span class='lparen'>(</span><span class='ivar'>@machine_name</span><span class='rparen'>)</span>
+  <span class='kw'>begin</span>
+    <span class='ivar'>@lexer</span><span class='period'>.</span><span class='id identifier rubyid_scan'>scan</span><span class='lparen'>(</span><span class='id identifier rubyid_gherkin'>gherkin</span><span class='rparen'>)</span>
+  <span class='kw'>ensure</span>
+    <span class='id identifier rubyid_pop_machine'>pop_machine</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="pop_machine-instance_method">
+  
+    - (<tt>Object</tt>) <strong>pop_machine</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_pop_machine'>pop_machine</span>
+  <span class='ivar'>@machines</span><span class='period'>.</span><span class='id identifier rubyid_pop'>pop</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="push_machine-instance_method">
+  
+    - (<tt>Object</tt>) <strong>push_machine</strong>(name) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/parser/parser.rb', line 67</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_push_machine'>push_machine</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
+  <span class='ivar'>@machines</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='const'>Machine</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Apr  9 21:04:02 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>

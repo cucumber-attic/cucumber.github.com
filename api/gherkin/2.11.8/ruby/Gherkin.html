@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Module: Gherkin
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="images/bubble_32x32.png"></img> Gherkin 2.11.8</h3>
+      <div id="menu">
+  
+    <a href="_index.html">Index (G)</a> &raquo;
+    
+    
+    <span class="title">Gherkin</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Module: Gherkin
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/gherkin/platform.rb<span class="defines">,<br />
+  lib/gherkin/i18n.rb,<br /> lib/gherkin/rubify.rb,<br /> lib/gherkin/c_lexer.rb,<br /> lib/gherkin/lexer/cs.rb,<br /> lib/gherkin/lexer/vi.rb,<br /> lib/gherkin/lexer/uz.rb,<br /> lib/gherkin/lexer/uk.rb,<br /> lib/gherkin/lexer/tt.rb,<br /> lib/gherkin/lexer/tr.rb,<br /> lib/gherkin/lexer/tl.rb,<br /> lib/gherkin/lexer/it.rb,<br /> lib/gherkin/lexer/sk.rb,<br /> lib/gherkin/lexer/ru.rb,<br /> lib/gherkin/lexer/ar.rb,<br /> lib/gherkin/lexer/bg.rb,<br /> lib/gherkin/lexer/bm.rb,<br /> lib/gherkin/lexer/ca.rb,<br /> lib/gherkin/lexer/ro.rb,<br /> lib/gherkin/lexer/pt.rb,<br /> lib/gherkin/lexer/da.rb,<br /> lib/gherkin/lexer/de.rb,<br /> lib/gherkin/lexer/el.rb,<br /> lib/gherkin/lexer/en.rb,<br /> lib/gherkin/lexer/pl.rb,<br /> lib/gherkin/lexer/no.rb,<br /> lib/gherkin/lexer/nl.rb,<br /> lib/gherkin/lexer/lv.rb,<br /> lib/gherkin/lexer/lu.rb,<br /> lib/gherkin/lexer/lt.rb,<br /> lib/gherkin/lexer/ko.rb,<br /> lib/gherkin/lexer/eo.rb,<br /> lib/gherkin/lexer/es.rb,<br /> lib/gherkin/lexer/et.rb,<br /> lib/gherkin/lexer/fa.rb,<br /> lib/gherkin/lexer/fi.rb,<br /> lib/gherkin/lexer/fr.rb,<br /> lib/gherkin/lexer/gl.rb,<br /> lib/gherkin/lexer/he.rb,<br /> lib/gherkin/lexer/hi.rb,<br /> lib/gherkin/lexer/hr.rb,<br /> lib/gherkin/lexer/hu.rb,<br /> lib/gherkin/lexer/ja.rb,<br /> lib/gherkin/lexer/id.rb,<br /> lib/gherkin/lexer/is.rb,<br /> lib/gherkin/lexer/sv.rb,<br /> lib/gherkin/lexer/zh_cn.rb,<br /> lib/gherkin/lexer/en_tx.rb,<br /> lib/gherkin/json_parser.rb,<br /> lib/gherkin/lexer/zh_tw.rb,<br /> lib/gherkin/lexer/cy_gb.rb,<br /> lib/gherkin/lexer/en_au.rb,<br /> lib/gherkin/lexer/en_lol.rb,<br /> lib/gherkin/lexer/en_old.rb,<br /> lib/gherkin/lexer/sr_latn.rb,<br /> lib/gherkin/lexer/sr_cyrl.rb,<br /> lib/gherkin/parser/parser.rb,<br /> lib/gherkin/listener/event.rb,<br /> lib/gherkin/lexer/encoding.rb,<br /> lib/gherkin/tag_expression.rb,<br /> lib/gherkin/formatter/model.rb,<br /> lib/gherkin/lexer/en_scouse.rb,<br /> lib/gherkin/lexer/en_pirate.rb,<br /> lib/gherkin/lexer/i18n_lexer.rb,<br /> lib/gherkin/formatter/escaping.rb,<br /> lib/gherkin/formatter/argument.rb,<br /> lib/gherkin/formatter/hashable.rb,<br /> lib/gherkin/formatter/tag_filter.rb,<br /> lib/gherkin/formatter/line_filter.rb,<br /> lib/gherkin/formatter/step_printer.rb,<br /> lib/gherkin/formatter/ansi_escapes.rb,<br /> lib/gherkin/formatter/regexp_filter.rb,<br /> lib/gherkin/formatter/json_formatter.rb,<br /> lib/gherkin/formatter/pretty_formatter.rb,<br /> lib/gherkin/formatter/filter_formatter.rb,<br /> lib/gherkin/listener/formatter_listener.rb,<br /> lib/gherkin/formatter/tag_count_formatter.rb</span>
+</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    
+<p>Detect the platform we're running and warn if it is not supported</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Gherkin/CLexer.html" title="Gherkin::CLexer (module)">CLexer</a></span>, <span class='object_link'><a href="Gherkin/Formatter.html" title="Gherkin::Formatter (module)">Formatter</a></span>, <span class='object_link'><a href="Gherkin/Lexer.html" title="Gherkin::Lexer (module)">Lexer</a></span>, <span class='object_link'><a href="Gherkin/Listener.html" title="Gherkin::Listener (module)">Listener</a></span>, <span class='object_link'><a href="Gherkin/Parser.html" title="Gherkin::Parser (module)">Parser</a></span>, <span class='object_link'><a href="Gherkin/Rubify.html" title="Gherkin::Rubify (module)">Rubify</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Gherkin/I18n.html" title="Gherkin::I18n (class)">I18n</a></span>, <span class='object_link'><a href="Gherkin/JSONParser.html" title="Gherkin::JSONParser (class)">JSONParser</a></span>, <span class='object_link'><a href="Gherkin/TagExpression.html" title="Gherkin::TagExpression (class)">TagExpression</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+
+
+</div>
+    
+    <div id="footer">
+  Generated on Tue Apr  9 21:03:43 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.5.2 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
