@@ -22,6 +22,7 @@ title: Team
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
 * [Chris Turner](https://github.com/skipoleschris) (Scala)
 * [Matt Lucas](https://github.com/lucas1000001)
+* [Pedro Viegas](https://github.com/pasviegas)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
