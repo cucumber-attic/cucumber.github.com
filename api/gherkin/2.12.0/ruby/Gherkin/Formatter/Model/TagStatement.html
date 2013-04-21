@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: Gherkin::Formatter::Model::TagStatement
+  
+    &mdash; Gherkin
+  
+</title>
+
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '../../../';
+  framesUrl = "../../../frames.html#!" + escape(window.location.href);
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../../../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <h3><img src="../../../images/bubble_32x32.png"></img> Gherkin 2.12.0</h3>
+      <div id="menu">
+  
+    <a href="../../../_index.html">Index (T)</a> &raquo;
+    <span class='title'><span class='object_link'><a href="../../../Gherkin.html" title="Gherkin (module)">Gherkin</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../../Formatter.html" title="Gherkin::Formatter (module)">Formatter</a></span></span> &raquo; <span class='title'><span class='object_link'><a href="../Model.html" title="Gherkin::Formatter::Model (module)">Model</a></span></span>
+     &raquo; 
+    <span class="title">TagStatement</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="../../../class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="../../../method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="../../../file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: Gherkin::Formatter::Model::TagStatement
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName"><span class='object_link'><a href="DescribedStatement.html" title="Gherkin::Formatter::Model::DescribedStatement (class)">DescribedStatement</a></span></span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next"><span class='object_link'><a href="../Hashable.html" title="Gherkin::Formatter::Hashable (class)">Hashable</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="BasicStatement.html" title="Gherkin::Formatter::Model::BasicStatement (class)">BasicStatement</a></span></li>
+          
+            <li class="next"><span class='object_link'><a href="DescribedStatement.html" title="Gherkin::Formatter::Model::DescribedStatement (class)">DescribedStatement</a></span></li>
+          
+            <li class="next">Gherkin::Formatter::Model::TagStatement</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/gherkin/formatter/model.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Examples.html" title="Gherkin::Formatter::Model::Examples (class)">Examples</a></span>, <span class='object_link'><a href="Feature.html" title="Gherkin::Formatter::Model::Feature (class)">Feature</a></span>, <span class='object_link'><a href="Scenario.html" title="Gherkin::Formatter::Model::Scenario (class)">Scenario</a></span>, <span class='object_link'><a href="ScenarioOutline.html" title="Gherkin::Formatter::Model::ScenarioOutline (class)">ScenarioOutline</a></span></p>
+</div>
+
+
+
+
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">- (Object) <strong>id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute id.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#tags-instance_method" title="#tags (instance method)">- (Object) <strong>tags</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute tags.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="DescribedStatement.html" title="Gherkin::Formatter::Model::DescribedStatement (class)">DescribedStatement</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="DescribedStatement.html#description-instance_method" title="Gherkin::Formatter::Model::DescribedStatement#description (method)">#description</a></span></p>
+
+  
+  
+  <h3 class="inherited">Attributes inherited from <span class='object_link'><a href="BasicStatement.html" title="Gherkin::Formatter::Model::BasicStatement (class)">BasicStatement</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="BasicStatement.html#comments-instance_method" title="Gherkin::Formatter::Model::BasicStatement#comments (method)">#comments</a></span>, <span class='object_link'><a href="BasicStatement.html#keyword-instance_method" title="Gherkin::Formatter::Model::BasicStatement#keyword (method)">#keyword</a></span>, <span class='object_link'><a href="BasicStatement.html#line-instance_method" title="Gherkin::Formatter::Model::BasicStatement#line (method)">#line</a></span>, <span class='object_link'><a href="BasicStatement.html#name-instance_method" title="Gherkin::Formatter::Model::BasicStatement#name (method)">#name</a></span></p>
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#first_non_comment_line-instance_method" title="#first_non_comment_line (instance method)">- (Object) <strong>first_non_comment_line</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (TagStatement) <strong>initialize</strong>(comments, tags, keyword, name, description, line, id) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of TagStatement.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="BasicStatement.html" title="Gherkin::Formatter::Model::BasicStatement (class)">BasicStatement</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="BasicStatement.html#line_range-instance_method" title="Gherkin::Formatter::Model::BasicStatement#line_range (method)">#line_range</a></span></p>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods inherited from <span class='object_link'><a href="../Hashable.html" title="Gherkin::Formatter::Hashable (class)">Hashable</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="../Hashable.html#to_hash-instance_method" title="Gherkin::Formatter::Hashable#to_hash (method)">#to_hash</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Gherkin::Formatter::Model::TagStatement (class)">TagStatement</a></span></tt>) <strong>initialize</strong>(comments, tags, keyword, name, description, line, id) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>A new instance of TagStatement</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37
+38
+39
+40</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/model.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_tags'>tags</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+  <span class='kw'>super</span><span class='lparen'>(</span><span class='id identifier rubyid_comments'>comments</span><span class='comma'>,</span> <span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_description'>description</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@tags</span> <span class='op'>=</span> <span class='id identifier rubyid_tags'>tags</span>
+  <span class='ivar'>@id</span> <span class='op'>=</span> <span class='id identifier rubyid_id'>id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>id</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute id</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/model.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_id'>id</span>
+  <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="tags-instance_method">
+  
+    - (<tt>Object</tt>) <strong>tags</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute tags</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/model.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_tags'>tags</span>
+  <span class='ivar'>@tags</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="first_non_comment_line-instance_method">
+  
+    - (<tt>Object</tt>) <strong>first_non_comment_line</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+42
+43
+44</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gherkin/formatter/model.rb', line 42</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_first_non_comment_line'>first_non_comment_line</span>
+  <span class='ivar'>@tags</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span> <span class='op'>?</span> <span class='ivar'>@tags</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span> <span class='op'>:</span> <span class='ivar'>@line</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Sun Apr 21 13:04:42 2013 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.6.1 (ruby-1.9.3).
+</div>
+
+  </body>
+</html>
