@@ -466,7 +466,7 @@ You can also transform a DataTable to a list of maps:
 
 {% highlight java %}
 @Given("I have these vegetables:")
-public void I_have_these_vegetables(List<Map<String, String> vegetables) {
+public void I_have_these_vegetables(List<Map<String, String>> vegetables) {
     // Do something with the vegetables
 }
 {% endhighlight %}
