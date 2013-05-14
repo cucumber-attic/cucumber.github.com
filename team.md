@@ -12,6 +12,7 @@ title: Team
 * [Oscar Rieken](https://github.com/orieken)
 * [Sean Miller](https://github.com/smiller)
 * [Steve Tooke](https://github.com/tooky)
+* [Chris Parsons](https://github.com/chrismdp)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
