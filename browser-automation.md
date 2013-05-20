@@ -14,6 +14,8 @@ Scenario: Page title should show search term
 	Then the page title starts with cheese
 {% endhighlight %}
 
+Here are the accompanying Step Definitions:
+
 <ul class="nav nav-tabs">
   <li><a href="#defs-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
 </ul>
@@ -72,7 +74,7 @@ public class exampleSteps {
 ### Re-using the browser window
 Closing and re-opening the browser window between your tests will slow them down. To re-use them you can use the [SharedDriver](https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java) wrapper rather than calling Webdriver directly.
 ### Embedding Screenshots
-See the [example code for embedding screenshots](report.html#embedding_screenshots).
+See the [example code for embedding screenshots](reports.html#embedding_screenshots).
 
 ## Examples
 * [java-webbit-websockets-selenium](https://github.com/cucumber/cucumber-jvm/tree/master/examples/java-webbit-websockets-selenium)
