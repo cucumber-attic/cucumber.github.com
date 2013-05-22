@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.1</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.2</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (S)</a> &raquo;
@@ -129,6 +129,9 @@
     
   
 </p>
+
+  <h2>Constant Summary</h2>
+  
 
 
 
@@ -653,13 +656,17 @@ elements:</p>
 41
 42
 43
-44</pre>
+44
+45
+46</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 35</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='const'>Cucumber</span><span class='period'>.</span><span class='id identifier rubyid_wants_to_quit'>wants_to_quit</span>
+  <span class='id identifier rubyid_raise_missing_examples_error'>raise_missing_examples_error</span> <span class='kw'>unless</span> <span class='ivar'>@example_sections</span>
+
   <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_comment'>visit_comment</span><span class='lparen'>(</span><span class='ivar'>@comment</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='ivar'>@comment</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_tags'>visit_tags</span><span class='lparen'>(</span><span class='ivar'>@tags</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_first_line_length'>first_line_length</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -688,14 +695,14 @@ elements:</p>
       <pre class="lines">
 
 
-73
-74
 75
 76
-77</pre>
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 73</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 75</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_each_example_row'>each_example_row</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_examples_array'>examples_array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_examples'>examples</span><span class='op'>|</span>
@@ -722,13 +729,13 @@ elements:</p>
       <pre class="lines">
 
 
-55
-56
 57
-58</pre>
+58
+59
+60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 55</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fail!'>fail!</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
   <span class='comment'># Just a hack for https://rspec.lighthouseapp.com/projects/16211/tickets/413-scenario-outlines-that-fail-with-exception-exit-process
@@ -776,12 +783,12 @@ elements:</p>
       <pre class="lines">
 
 
-88
-89
-90</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_failed?'>failed?</span>
   <span class='id identifier rubyid_examples_array'>examples_array</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_examples'>examples</span><span class='op'>|</span> <span class='id identifier rubyid_examples'>examples</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
@@ -806,12 +813,12 @@ elements:</p>
       <pre class="lines">
 
 
-60
-61
-62</pre>
+62
+63
+64</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 60</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 62</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span>
   <span class='id identifier rubyid_examples_array'>examples_array</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_examples'>examples</span><span class='op'>|</span> <span class='id identifier rubyid_examples'>examples</span><span class='period'>.</span><span class='id identifier rubyid_skip_invoke!'>skip_invoke!</span> <span class='rbrace'>}</span>
@@ -836,17 +843,17 @@ elements:</p>
       <pre class="lines">
 
 
-64
-65
 66
 67
 68
 69
 70
-71</pre>
+71
+72
+73</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 64</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 66</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='lparen'>(</span><span class='id identifier rubyid_cells'>cells</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_step_invocations'>step_invocations</span> <span class='op'>=</span> <span class='id identifier rubyid_steps'>steps</span><span class='period'>.</span><span class='id identifier rubyid_step_invocations_from_cells'>step_invocations_from_cells</span><span class='lparen'>(</span><span class='id identifier rubyid_cells'>cells</span><span class='rparen'>)</span>
@@ -876,8 +883,6 @@ elements:</p>
       <pre class="lines">
 
 
-92
-93
 94
 95
 96
@@ -885,10 +890,12 @@ elements:</p>
 98
 99
 100
-101</pre>
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 92</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_sexp'>to_sexp</span>
   <span class='id identifier rubyid_sexp'>sexp</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='symbol'>:scenario_outline</span><span class='comma'>,</span> <span class='ivar'>@keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span>
@@ -942,17 +949,17 @@ elements:</p>
       <pre class="lines">
 
 
-46
-47
 48
 49
 50
 51
 52
-53</pre>
+53
+54
+55</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 46</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_units'>to_units</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_background'>background</span><span class='rbrace'>}</span><span class='tstring_content'> != </span><span class='embexpr_beg'>#{</span><span class='ivar'>@background</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_background'>background</span> <span class='op'>==</span> <span class='ivar'>@background</span> <span class='comment'># maybe we don't need this argument, but it seems like the leaf AST nodes would be better not being aware of their parents. However step_invocations uses the ivar at the moment, so we'll just do this check to make sure its OK.
@@ -982,17 +989,17 @@ elements:</p>
       <pre class="lines">
 
 
-79
-80
 81
 82
 83
 84
 85
-86</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 79</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 81</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='comma'>,</span> <span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span>
@@ -1012,7 +1019,7 @@ elements:</p>
 </div>
     
     <div id="footer">
-  Generated on Sun Apr 21 13:29:35 2013 by 
+  Generated on Wed May 22 14:37:34 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.6.1 (ruby-1.9.3).
 </div>
