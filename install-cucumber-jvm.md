@@ -4,7 +4,19 @@ title: Install Cucumber-JVM
 ---
 # {{page.title}}
 
-Cucumber-JVM consists of several modules (jars) that you can download from [here](http://repo1.maven.org/maven2/info/cukes/). 
+Cucumber-JVM consists of several modules (jars) that you can download from the [public maven repo](http://repo1.maven.org/maven2/info/cukes/).
+
+If you like living dangerously you can also get SNAPSHOT builds from the [sonatype snapshot repo](https://oss.sonatype.org/content/repositories/snapshots/info/cukes/).
+
+```xml
+<repository>
+  <id>sonatype-snapshots</id>
+  <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>		
+</repository>
+```
 
 You will always need the `cucumber-core` module, which contains the main logic for parsing and executing your Gherkin feature files.
 
