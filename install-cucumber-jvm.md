@@ -8,7 +8,7 @@ Cucumber-JVM consists of several modules (jars) that you can download from the [
 
 If you like living dangerously you can also get SNAPSHOT builds from the [sonatype snapshot repo](https://oss.sonatype.org/content/repositories/snapshots/info/cukes/).
 
-```xml
+{% highlight xml %}
 <repository>
   <id>sonatype-snapshots</id>
   <url>https://oss.sonatype.org/content/repositories/snapshots</url>
@@ -16,7 +16,7 @@ If you like living dangerously you can also get SNAPSHOT builds from the [sonaty
     <enabled>true</enabled>
   </snapshots>		
 </repository>
-```
+{% endhighlight %}
 
 You will always need the `cucumber-core` module, which contains the main logic for parsing and executing your Gherkin feature files.
 
