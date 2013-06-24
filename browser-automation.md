@@ -23,7 +23,7 @@ Here are the accompanying Step Definitions:
 <div class="tab-content">
   <div class="tab-pane" id="defs-java">
 {% highlight java %}
-package com.example
+package com.example;
 
 public class ExampleSteps {
     private WebDriver driver;
