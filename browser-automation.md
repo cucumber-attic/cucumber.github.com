@@ -23,7 +23,9 @@ Here are the accompanying Step Definitions:
 <div class="tab-content">
   <div class="tab-pane" id="defs-java">
 {% highlight java %}
-public class exampleSteps {
+package com.example
+
+public class ExampleSteps {
     private WebDriver driver;
 
     @Before
@@ -70,13 +72,20 @@ public class exampleSteps {
 </div>
 </div>
 
+## Other tools and frameworks
+Other browser testing tools which work with the various language flavours of Cucumber include:
+* [Capybara](https://github.com/jnicklas/capybara) (Ruby Acceptance test framework for web applications)
+* [Zombie.js](http://zombie.labnotes.org/) (Javascript headless browser)
+* [SpookyJS](https://github.com/WaterfallEngineering/SpookyJS) (Javascript headless browser using CasperJS)
+
+
 ## Tips and Tricks
 ### Re-using the browser window
 Closing and re-opening the browser window between your tests will slow them down. To re-use them you can use the [SharedDriver](https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-webbit-websockets-selenium/src/test/java/cucumber/examples/java/websockets/SharedDriver.java) wrapper rather than calling Webdriver directly.
 ### Embedding Screenshots
 See the [example code for embedding screenshots](reports.html#embedding_screenshots).
 
-## Examples
+## Example Projects
 * [java-webbit-websockets-selenium](https://github.com/cucumber/cucumber-jvm/tree/master/examples/java-webbit-websockets-selenium)
 * [Guardian Frontend integration tests](https://github.com/guardian/frontend/tree/master/integration-tests)
 
