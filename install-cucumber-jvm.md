@@ -38,6 +38,7 @@ In addition to `cucumber-core` you will also need a programming language-specifi
 | Python (Jython interpreter)    | `cucumber-jython`   |
 | Ruby (JRuby interpreter)       | `cucumber-jruby`    |
 | Scala                          | `cucumber-scala`    |
+| Android                        | `cucumber-android`  |
 
 ### Dependency Injection modules for cucumber-java
 
