@@ -24,6 +24,7 @@ title: Team
 * [Chris Turner](https://github.com/skipoleschris) (Scala)
 * [Matt Lucas](https://github.com/lucas1000001)
 * [Dmytro Chyzhykov](https://github.com/ffbit)
+* [Maximilian Fellner](https://github.com/mfellner) (Android)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
@@ -43,8 +44,5 @@ title: Team
 
 ## Aruba
 * [Jarl Friis](https://github.com/jarl-dk)
-
-## Cucumber-Android
-* [Maximilian Fellner](https://github.com/mfellner)
 
 ## Gherkin3/PHP
