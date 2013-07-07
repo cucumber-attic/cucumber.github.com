@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::RbSupport::RbTransform
   
-    &mdash; Documentation by YARD 0.8.6.1
+    &mdash; Documentation by YARD 0.8.6.2
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.2</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.3</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
@@ -108,13 +108,14 @@
   <div class="discussion">
     
 <p>A Ruby Transform holds a Regexp and a Proc, and is created by calling
-<tt>Transform in the &lt;tt&gt;support</tt> ruby files. See also RbDsl.</p>
+<code>Transform in the &lt;tt&gt;support</code> ruby files. See also RbDsl.</p>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Transform</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^(\d+) cucumbers$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cucumbers_string'>cucumbers_string</span><span class='op'>|</span>
-  <span class='id identifier rubyid_cucumbers_string'>cucumbers_string</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-<span class='kw'>end</span></code></pre>
+<pre class="ruby"><span class="ruby-constant">Transform</span> <span class="ruby-regexp">/^(\d+) cucumbers$/</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cucumbers_string</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">cucumbers_string</span>.<span class="ruby-identifier">to_i</span>
+<span class="ruby-keyword">end</span>
+</pre>
 
 
   </div>
@@ -409,9 +410,9 @@
 </div>
     
     <div id="footer">
-  Generated on Wed May 22 14:40:00 2013 by 
+  Generated on Sun Jul  7 08:57:47 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.1 (ruby-1.9.3).
+  0.8.6.2 (ruby-2.0.0).
 </div>
 
   </body>
