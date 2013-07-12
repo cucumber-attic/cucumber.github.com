@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (H)</a> &raquo;
@@ -1205,7 +1205,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_background'>after_background</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='rparen'>)</span>
   <span class='ivar'>@in_background</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1235,7 +1235,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_comment'>after_comment</span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/pre&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/pre&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1265,7 +1265,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 194</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_examples'>after_examples</span><span class='lparen'>(</span><span class='id identifier rubyid_examples'>examples</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1295,7 +1295,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 93</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_feature'>after_feature</span><span class='lparen'>(</span><span class='id identifier rubyid_feature'>feature</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1326,7 +1326,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_feature_element'>after_feature_element</span><span class='lparen'>(</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>'</span></span>
   <span class='ivar'>@open_step_list</span> <span class='op'>=</span> <span class='kw'>true</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1361,9 +1361,9 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_features'>after_features</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_print_stats'>print_stats</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/body&gt;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/html&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/div&gt;</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/body&gt;</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/html&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1398,7 +1398,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_after_multiline_arg'>after_multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span> <span class='op'>||</span> <span class='ivar'>@skip_step</span>
   <span class='kw'>if</span> <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Table</span> <span class='op'>===</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span>
-    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/table&gt;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/table&gt;</span><span class='tstring_end'>'</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1430,7 +1430,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 185</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_outline_table'>after_outline_table</span><span class='lparen'>(</span><span class='id identifier rubyid_outline_table'>outline_table</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/table&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/table&gt;</span><span class='tstring_end'>'</span></span>
   <span class='ivar'>@outline_row</span> <span class='op'>=</span> <span class='kw'>nil</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1507,10 +1507,10 @@
     <span class='id identifier rubyid_keyword'>keyword</span> <span class='op'>=</span> <span class='ivar'>@step</span><span class='period'>.</span><span class='id identifier rubyid_actual_keyword'>actual_keyword</span> <span class='kw'>if</span> <span class='ivar'>@step</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='symbol'>:actual_keyword</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_step_multiline_class'>step_multiline_class</span> <span class='op'>=</span> <span class='ivar'>@step</span><span class='period'>.</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span> <span class='op'>?</span> <span class='ivar'>@step</span><span class='period'>.</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>:</span> <span class='kw'>nil</span>
     <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_pre'>pre</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
-      <span class='id identifier rubyid_pre'>pre</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@runtime</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span><span class='id identifier rubyid_step_match'>step_match</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='id identifier rubyid_step_multiline_class'>step_multiline_class</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_pre'>pre</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@runtime</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span><span class='id identifier rubyid_step_match'>step_match</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@name</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='op'>||</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='id identifier rubyid_step_multiline_class'>step_multiline_class</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/li&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/li&gt;</span><span class='tstring_end'>'</span></span>
   <span class='id identifier rubyid_print_messages'>print_messages</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1541,7 +1541,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 210</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_steps'>after_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps'>steps</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/ol&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/ol&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1594,10 +1594,10 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_after_table_row'>after_table_row</span><span class='lparen'>(</span><span class='id identifier rubyid_table_row'>table_row</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
   <span class='id identifier rubyid_print_table_row_messages'>print_table_row_messages</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;/tr&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;/tr&gt;</span><span class='tstring_end'>'</span></span>
   <span class='kw'>if</span> <span class='id identifier rubyid_table_row'>table_row</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span>
     <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_tr'>tr</span> <span class='kw'>do</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_td'>td</span><span class='lparen'>(</span><span class='symbol'>:colspan</span> <span class='op'>=&gt;</span> <span class='ivar'>@col_index</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>failed</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_td'>td</span><span class='lparen'>(</span><span class='symbol'>:colspan</span> <span class='op'>=&gt;</span> <span class='ivar'>@col_index</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>failed</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
         <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_pre'>pre</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
           <span class='id identifier rubyid_pre'>pre</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_format_exception'>format_exception</span><span class='lparen'>(</span><span class='id identifier rubyid_table_row'>table_row</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span><span class='rparen'>)</span>
         <span class='kw'>end</span>
@@ -1679,10 +1679,10 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_background_name'>background_name</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='rparen'>)</span>
   <span class='ivar'>@listing_background</span> <span class='op'>=</span> <span class='kw'>true</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h3'>h3</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>background_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@scenario_number</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h3'>h3</span><span class='op'>|</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keyword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>val</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h3'>h3</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>background_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@scenario_number</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h3'>h3</span><span class='op'>|</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>keyword</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>val</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1715,7 +1715,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_background'>before_background</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='rparen'>)</span>
   <span class='ivar'>@in_background</span> <span class='op'>=</span> <span class='kw'>true</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;div class=&quot;background&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;div class=&quot;background&quot;&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1745,7 +1745,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 97</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_comment'>before_comment</span><span class='lparen'>(</span><span class='id identifier rubyid_comment'>comment</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;pre class=&quot;comment&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;pre class=&quot;comment&quot;&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1775,7 +1775,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 190</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_examples'>before_examples</span><span class='lparen'>(</span><span class='id identifier rubyid_examples'>examples</span><span class='rparen'>)</span>
-   <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;div class=&quot;examples&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+   <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;div class=&quot;examples&quot;&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1807,7 +1807,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_feature'>before_feature</span><span class='lparen'>(</span><span class='id identifier rubyid_feature'>feature</span><span class='rparen'>)</span>
   <span class='ivar'>@exceptions</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;div class=&quot;feature&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;div class=&quot;feature&quot;&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1846,10 +1846,10 @@
   <span class='ivar'>@scenario_number</span><span class='op'>+=</span><span class='int'>1</span>
   <span class='ivar'>@scenario_red</span> <span class='op'>=</span> <span class='kw'>false</span>
   <span class='id identifier rubyid_css_class'>css_class</span> <span class='op'>=</span> <span class='lbrace'>{</span>
-    <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Scenario</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scenario</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='const'>Ast</span><span class='op'>::</span><span class='const'>ScenarioOutline</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scenario outline</span><span class='tstring_end'>&#39;</span></span>
+    <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Scenario</span>        <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>scenario</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='const'>Ast</span><span class='op'>::</span><span class='const'>ScenarioOutline</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>scenario outline</span><span class='tstring_end'>'</span></span>
   <span class='rbrace'>}</span><span class='lbracket'>[</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rbracket'>]</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;div class=&#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_css_class'>css_class</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;div class='</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_css_class'>css_class</span><span class='rbrace'>}</span><span class='tstring_content'>'&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1919,30 +1919,30 @@
     <span class='symbol'>:DOCTYPE</span><span class='comma'>,</span>
     <span class='symbol'>:html</span><span class='comma'>,</span>
     <span class='symbol'>:PUBLIC</span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-//W3C//DTD XHTML 1.0 Strict//EN</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</span><span class='tstring_end'>&#39;</span></span>
+    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-//W3C//DTD XHTML 1.0 Strict//EN</span><span class='tstring_end'>'</span></span><span class='comma'>,</span>
+    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</span><span class='tstring_end'>'</span></span>
   <span class='rparen'>)</span>
 
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;html xmlns =&quot;http://www.w3.org/1999/xhtml&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;html xmlns =&quot;http://www.w3.org/1999/xhtml&quot;&gt;</span><span class='tstring_end'>'</span></span>
     <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_head'>head</span> <span class='kw'>do</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_meta'>meta</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>http-equiv</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text/html;charset=utf-8</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Cucumber</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_meta'>meta</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>http-equiv</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Content-Type</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:content</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>text/html;charset=utf-8</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_title'>title</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cucumber</span><span class='tstring_end'>'</span></span>
     <span class='id identifier rubyid_inline_css'>inline_css</span>
     <span class='id identifier rubyid_inline_js'>inline_js</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;body&gt;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;!-- Step count </span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_count</span><span class='embexpr_end'>}</span><span class='tstring_content'>--&gt;</span><span class='tstring_end'>&quot;</span></span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;div class=&quot;cucumber&quot;&gt;</span><span class='tstring_end'>&#39;</span></span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber-header</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>label</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h1'>h1</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Cucumber Features</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;body&gt;</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;!-- Step count </span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_count</span><span class='rbrace'>}</span><span class='tstring_content'>--&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;div class=&quot;cucumber&quot;&gt;</span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cucumber-header</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>label</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h1'>h1</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Cucumber Features</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
     <span class='kw'>end</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>summary</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>totals</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>duration</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>expand-collapse</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-        <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Expand All</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>expander</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-        <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Collapse All</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>collapser</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>summary</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>totals</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>duration</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_div'>div</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>expand-collapse</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+        <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Expand All</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>expander</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+        <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Collapse All</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>collapser</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
   <span class='kw'>end</span>
@@ -1980,7 +1980,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_before_multiline_arg'>before_multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span> <span class='op'>||</span> <span class='ivar'>@skip_step</span>
   <span class='kw'>if</span> <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Table</span> <span class='op'>===</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span>
-    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;table&gt;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;table&gt;</span><span class='tstring_end'>'</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2013,7 +2013,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_outline_table'>before_outline_table</span><span class='lparen'>(</span><span class='id identifier rubyid_outline_table'>outline_table</span><span class='rparen'>)</span>
   <span class='ivar'>@outline_row</span> <span class='op'>=</span> <span class='int'>0</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;table&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;table&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2109,7 +2109,7 @@
   <span class='ivar'>@status</span> <span class='op'>=</span> <span class='id identifier rubyid_status'>status</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
   <span class='id identifier rubyid_set_scenario_color'>set_scenario_color</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;li id=&#39;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; class=&#39;step </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;li id='</span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_id</span><span class='rbrace'>}</span><span class='tstring_content'>' class='step </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='rbrace'>}</span><span class='tstring_content'>'&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2139,7 +2139,7 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 206</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_steps'>before_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps'>steps</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;ol&gt;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;ol&gt;</span><span class='tstring_end'>'</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2175,7 +2175,7 @@
   <span class='ivar'>@row_id</span> <span class='op'>=</span> <span class='id identifier rubyid_table_row'>table_row</span><span class='period'>.</span><span class='id identifier rubyid_dom_id'>dom_id</span>
   <span class='ivar'>@col_index</span> <span class='op'>=</span> <span class='int'>0</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
-  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;tr class=&#39;step&#39; id=&#39;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@row_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;tr class='step' id='</span><span class='embexpr_beg'>#{</span><span class='ivar'>@row_id</span><span class='rbrace'>}</span><span class='tstring_content'>'&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2241,8 +2241,8 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_pre'>pre</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>val</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
-    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&amp;#x000A;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_pre'>pre</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>val</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
+    <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_h'>h</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&amp;#x000A;</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2314,11 +2314,11 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 34</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed_image'>embed_image</span><span class='lparen'>(</span><span class='id identifier rubyid_src'>src</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>img_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@img_id</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>img_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@img_id</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='ivar'>@img_id</span> <span class='op'>+=</span> <span class='int'>1</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>embed</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
-    <span class='id identifier rubyid_pre'>pre</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>&lt;a href=&quot;&quot; onclick=&quot;img=document.getElementById(&#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;); img.style.display = (img.style.display == &#39;none&#39; ? &#39;block&#39; : &#39;none&#39;);return false&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_label'>label</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/a&gt;&lt;br&gt;&amp;nbsp;
-    &lt;img id=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot; style=&quot;display: none&quot; src=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_src'>src</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;/&gt;</span><span class='tstring_end'>}</span></span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>embed</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_pre'>pre</span><span class='op'>|</span>
+    <span class='id identifier rubyid_pre'>pre</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>&lt;a href=&quot;&quot; onclick=&quot;img=document.getElementById('</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='tstring_content'>'); img.style.display = (img.style.display == 'none' ? 'block' : 'none');return false&quot;&gt;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_label'>label</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/a&gt;&lt;br&gt;&amp;nbsp;
+    &lt;img id=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_id'>id</span><span class='rbrace'>}</span><span class='tstring_content'>&quot; style=&quot;display: none&quot; src=&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_src'>src</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;/&gt;</span><span class='tstring_end'>}</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2384,9 +2384,9 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_examples_name'>examples_name</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
   <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h4'>h4</span> <span class='kw'>do</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keyword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>val</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>keyword</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>val</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2449,7 +2449,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extra_failure_content'>extra_failure_content</span><span class='lparen'>(</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span>
   <span class='ivar'>@snippet_extractor</span> <span class='op'>||=</span> <span class='const'>SnippetExtractor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pre class=\&quot;ruby\&quot;&gt;&lt;code&gt;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@snippet_extractor</span><span class='period'>.</span><span class='id identifier rubyid_snippet'>snippet</span><span class='lparen'>(</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'>&lt;/code&gt;&lt;/pre&gt;</span><span class='tstring_end'>&quot;</span></span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>&lt;pre class=\&quot;ruby\&quot;&gt;&lt;code&gt;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@snippet_extractor</span><span class='period'>.</span><span class='id identifier rubyid_snippet'>snippet</span><span class='lparen'>(</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'>&lt;/code&gt;&lt;/pre&gt;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2492,9 +2492,9 @@
   <span class='id identifier rubyid_lines'>lines</span> <span class='op'>=</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\r?\n</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_lines'>lines</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h2'>h2</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_h2'>h2</span><span class='op'>|</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>: </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_lines'>lines</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>val</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>: </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_lines'>lines</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>val</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>narrative</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_p'>p</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>narrative</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_lines'>lines</span><span class='lbracket'>[</span><span class='int'>1</span><span class='op'>..</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_line'>line</span><span class='op'>|</span>
       <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='id identifier rubyid_line'>line</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span><span class='rparen'>)</span>
       <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_br'>br</span>
@@ -2542,7 +2542,7 @@
 
   <span class='comment'>#@builder.ol do
 </span>    <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ann'>ann</span><span class='op'>|</span>
-      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_li'>li</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>step message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+      <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_li'>li</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>step message</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
         <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_ann'>ann</span>
       <span class='kw'>end</span>
     <span class='kw'>end</span>
@@ -2584,7 +2584,7 @@
 <span class='kw'>def</span> <span class='id identifier rubyid_print_table_row_messages'>print_table_row_messages</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
 
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_td'>td</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>message</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_td'>td</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>message</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_empty_messages'>empty_messages</span>
@@ -2619,7 +2619,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@delayed_messages</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message'>message</span>
-  <span class='comment'>#@builder.pre(message, :class =&gt; &#39;message&#39;)
+  <span class='comment'>#@builder.pre(message, :class =&gt; 'message')
 </span><span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2657,14 +2657,14 @@
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 168</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scenario_name'>scenario_name</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='rparen'>)</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scenario_file</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>scenario_file</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='ivar'>@builder</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span>
   <span class='kw'>end</span>
   <span class='ivar'>@listing_background</span> <span class='op'>=</span> <span class='kw'>false</span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h3'>h3</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scenario_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@scenario_number</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>:</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>keyword</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>val</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_h3'>h3</span><span class='lparen'>(</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scenario_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@scenario_number</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>:</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>keyword</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>val</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2745,8 +2745,8 @@
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
 
   <span class='ivar'>@cell_type</span> <span class='op'>=</span> <span class='ivar'>@outline_row</span> <span class='op'>==</span> <span class='int'>0</span> <span class='op'>?</span> <span class='symbol'>:th</span> <span class='op'>:</span> <span class='symbol'>:td</span>
-  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@row_id</span><span class='embexpr_end'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@col_index</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>step</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
-  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:class</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_status'>status</span>
+  <span class='id identifier rubyid_attributes'>attributes</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:id</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='ivar'>@row_id</span><span class='rbrace'>}</span><span class='tstring_content'>_</span><span class='embexpr_beg'>#{</span><span class='ivar'>@col_index</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>step</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span>
+  <span class='id identifier rubyid_attributes'>attributes</span><span class='lbracket'>[</span><span class='symbol'>:class</span><span class='rbracket'>]</span> <span class='op'>+=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_status'>status</span>
   <span class='id identifier rubyid_build_cell'>build_cell</span><span class='lparen'>(</span><span class='ivar'>@cell_type</span><span class='comma'>,</span> <span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_attributes'>attributes</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_set_scenario_color'>set_scenario_color</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
   <span class='ivar'>@col_index</span> <span class='op'>+=</span> <span class='int'>1</span>
@@ -2782,8 +2782,8 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_tag_name'>tag_name</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='rparen'>)</span>
   <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_text!'>text!</span><span class='lparen'>(</span><span class='ivar'>@tag_spacer</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='ivar'>@tag_spacer</span>
-  <span class='ivar'>@tag_spacer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span>
-  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>tag</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@tag_spacer</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span>
+  <span class='ivar'>@builder</span><span class='period'>.</span><span class='id identifier rubyid_span'>span</span><span class='lparen'>(</span><span class='id identifier rubyid_tag_name'>tag_name</span><span class='comma'>,</span> <span class='symbol'>:class</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>tag</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2795,9 +2795,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Jul  7 08:57:45 2013 by 
+  Generated on Fri Jul 12 23:06:53 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.2 (ruby-2.0.0).
+  0.8.6.2 (ruby-1.9.3).
 </div>
 
   </body>
