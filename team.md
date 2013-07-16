@@ -25,6 +25,7 @@ title: Team
 * [Matt Lucas](https://github.com/lucas1000001)
 * [Dmytro Chyzhykov](https://github.com/ffbit)
 * [Maximilian Fellner](https://github.com/mfellner) (Android)
+* [Björn Rasmusson](https://github.com/brasmusson)
 
 ## Cucumber-JS and Gherkin3/JavaScript
 * [Julien Biezemans](https://github.com/jbpros)
