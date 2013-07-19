@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.4</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.5</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (S)</a> &raquo;
@@ -326,8 +326,8 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>The <tt>example_sections</tt> argument must be an Array where each element
-is another array representing an Examples section.</p>
+<p>The <code>example_sections</code> argument must be an Array where each
+element is another array representing an Examples section.</p>
 </div></span>
   
 </li>
@@ -494,8 +494,8 @@ is another array representing an Examples section.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>The <tt>example_sections</tt> argument must be an Array where each element
-is another array representing an Examples section. This array has 3
+<p>The <code>example_sections</code> argument must be an Array where each
+element is another array representing an Examples section. This array has 3
 elements:</p>
 <ul><li>
 <p>Examples keyword</p>
@@ -962,7 +962,7 @@ elements:</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/scenario_outline.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_units'>to_units</span><span class='lparen'>(</span><span class='id identifier rubyid_background'>background</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_background'>background</span><span class='rbrace'>}</span><span class='tstring_content'> != </span><span class='embexpr_beg'>#{</span><span class='ivar'>@background</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_background'>background</span> <span class='op'>==</span> <span class='ivar'>@background</span> <span class='comment'># maybe we don't need this argument, but it seems like the leaf AST nodes would be better not being aware of their parents. However step_invocations uses the ivar at the moment, so we'll just do this check to make sure its OK.
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_background'>background</span><span class='embexpr_end'>}</span><span class='tstring_content'> != </span><span class='embexpr_beg'>#{</span><span class='ivar'>@background</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_background'>background</span> <span class='op'>==</span> <span class='ivar'>@background</span> <span class='comment'># maybe we don&#39;t need this argument, but it seems like the leaf AST nodes would be better not being aware of their parents. However step_invocations uses the ivar at the moment, so we&#39;ll just do this check to make sure its OK.
 </span>  <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_each_example_row'>each_example_row</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_row'>row</span><span class='op'>|</span>
     <span class='id identifier rubyid_result'>result</span> <span class='op'>&lt;&lt;</span> <span class='const'>Unit</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_step_invocations'>step_invocations</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1003,7 +1003,7 @@ elements:</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span><span class='id identifier rubyid_visitor'>visitor</span><span class='comma'>,</span> <span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_visitor'>visitor</span><span class='period'>.</span><span class='id identifier rubyid_visit_scenario_name'>visit_scenario_name</span><span class='lparen'>(</span>
-    <span class='id identifier rubyid_language'>language</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>scenario</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='id identifier rubyid_language'>language</span><span class='period'>.</span><span class='id identifier rubyid_keywords'>keywords</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>scenario</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span>
     <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span>
     <span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='comma'>,</span>
     <span class='id identifier rubyid_source_indent'>source_indent</span><span class='lparen'>(</span><span class='id identifier rubyid_first_line_length'>first_line_length</span><span class='rparen'>)</span>
@@ -1019,9 +1019,9 @@ elements:</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Jul 12 23:06:55 2013 by 
+  Generated on Fri Jul 19 10:33:55 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.2 (ruby-1.9.3).
+  0.8.6.2 (ruby-2.0.0).
 </div>
 
   </body>
