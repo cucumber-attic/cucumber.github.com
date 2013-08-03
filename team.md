@@ -32,6 +32,7 @@ title: Team
 
 ## Cucumber-Rails
 * [Kosmas Chatzimichalis](https://github.com/Kosmas)
+* [Andy Waite](https://github.com/andyw8)
 
 ## Gherkin3/.NET
 * [Matt Wynne](https://github.com/mattwynne)
