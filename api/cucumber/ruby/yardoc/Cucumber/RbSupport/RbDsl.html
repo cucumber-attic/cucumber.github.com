@@ -6,7 +6,7 @@
 <title>
   Module: Cucumber::RbSupport::RbDsl
   
-    &mdash; Documentation by YARD 0.8.6.2
+    &mdash; Documentation by YARD 0.8.7
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.5</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.6</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
@@ -456,7 +456,7 @@ matches the pattern passed as the first argument to Transform.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Registers any number of <code>world_modules</code> (Ruby Modules) and/or a
+<p>Registers any number of <tt>world_modules</tt> (Ruby Modules) and/or a
 Proc.</p>
 </div></span>
   
@@ -710,7 +710,7 @@ Proc.</p>
     
 <p>Registers a proc that will run after each Scenario. You can register as
 many as you want (typically from ruby scripts under
-<code>support/hooks.rb</code>).</p>
+<tt>support/hooks.rb</tt>).</p>
 
 
   </div>
@@ -732,7 +732,7 @@ many as you want (typically from ruby scripts under
       <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 61</span>
 
 <span class='kw'>def</span> <span class='const'>After</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
-  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>after</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -753,7 +753,7 @@ many as you want (typically from ruby scripts under
     
 <p>Registers a proc that will run after Cucumber is configured. You can
 register as as you want (typically from ruby scripts under
-<code>support/hooks.rb</code>). TODO: Deprecate this</p>
+<tt>support/hooks.rb</tt>). TODO: Deprecate this</p>
 
 
   </div>
@@ -775,7 +775,7 @@ register as as you want (typically from ruby scripts under
       <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 92</span>
 
 <span class='kw'>def</span> <span class='const'>AfterConfiguration</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
-  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>after_configuration</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after_configuration</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -795,7 +795,7 @@ register as as you want (typically from ruby scripts under
   <div class="discussion">
     
 <p>Registers a proc that will run after each Step. You can register as as you
-want (typically from ruby scripts under <code>support/hooks.rb</code>).</p>
+want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
 
 
   </div>
@@ -817,7 +817,7 @@ want (typically from ruby scripts under <code>support/hooks.rb</code>).</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='const'>AfterStep</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
-  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>after_step</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>after_step</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -837,11 +837,10 @@ want (typically from ruby scripts under <code>support/hooks.rb</code>).</p>
   <div class="discussion">
     
 <p>Registers a proc that will be wrapped around each scenario. The proc should
-accept two arguments: two arguments: the scenario and a “block” argument
+accept two arguments: two arguments: the scenario and a "block" argument
 (but passed as a regular argument, since blocks cannot accept blocks in
 1.8), on which it should call the .call method. You can register as many 
-as you want (typically from ruby scripts under
-<code>support/hooks.rb</code>).</p>
+as you want (typically from ruby scripts under <tt>support/hooks.rb</tt>).</p>
 
 
   </div>
@@ -863,7 +862,7 @@ as you want (typically from ruby scripts under
       <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='const'>Around</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
-  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>around</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>around</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -884,7 +883,7 @@ as you want (typically from ruby scripts under
     
 <p>Registers a proc that will run before each Scenario. You can register as
 many as you want (typically from ruby scripts under
-<code>support/hooks.rb</code>).</p>
+<tt>support/hooks.rb</tt>).</p>
 
 
   </div>
@@ -906,7 +905,7 @@ many as you want (typically from ruby scripts under
       <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_dsl.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='const'>Before</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
-  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>before</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
+  <span class='const'>RbDsl</span><span class='period'>.</span><span class='id identifier rubyid_register_rb_hook'>register_rb_hook</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>before</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_tag_expressions'>tag_expressions</span><span class='comma'>,</span> <span class='id identifier rubyid_proc'>proc</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -926,19 +925,18 @@ many as you want (typically from ruby scripts under
   <div class="discussion">
     
 <p>Registers a new Ruby StepDefinition. This method is aliased to
-<code>Given</code>, <code>When</code> and <code>Then</code>, and also to
-the i18n translations whenever a feature of a new language is loaded.</p>
+<tt>Given</tt>, <tt>When</tt> and <tt>Then</tt>, and also to the i18n
+translations whenever a feature of a new language is loaded.</p>
 
-<p>If provided, the <code>symbol</code> is sent to the <code>World</code>
-object as defined by #World. A new <code>World</code> object is created for
-each scenario and is shared across step definitions within that scenario.
-If the <code>options</code> hash contains an <code>:on</code> key, the
-value for this is assumed to be a proc. This proc will be executed in the
-context of the <code>World</code> object and then sent the
-<code>symbol</code>.</p>
+<p>If provided, the <tt>symbol</tt> is sent to the <tt>World</tt> object as
+defined by #World. A new <tt>World</tt> object is created for each scenario
+and is shared across step definitions within that scenario. If the
+<tt>options</tt> hash contains an <tt>:on</tt> key, the value for this is
+assumed to be a proc. This proc will be executed in the context of the
+<tt>World</tt> object and then sent the <tt>symbol</tt>.</p>
 
-<p>If no <code>symbol</code> if provided then the <tt>&amp;proc</tt> gets executed in
-the context of the <code>World</code> object.</p>
+<p>If no <tt>symbol</tt> if provided then the <tt>&amp;proc</tt> gets executed in the
+context of the <tt>World</tt> object.</p>
 
 
   </div>
@@ -1026,18 +1024,17 @@ consequently yielded to the step definition.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Registers any number of <code>world_modules</code> (Ruby Modules) and/or a
-Proc. The <code>proc</code> will be executed once before each scenario to
-create an Object that the scenario&#39;s steps will run within. Any
-<code>world_modules</code> will be mixed into this Object (via
-Object#extend).</p>
+<p>Registers any number of <tt>world_modules</tt> (Ruby Modules) and/or a
+Proc. The <tt>proc</tt> will be executed once before each scenario to
+create an Object that the scenario's steps will run within. Any
+<tt>world_modules</tt> will be mixed into this Object (via Object#extend).</p>
 
 <p>This method is typically called from one or more Ruby scripts under
-<code>features/support</code>. You can call this method as many times as
-you like (to register more modules), but if you try to register more than
-one Proc you will get an error.</p>
+<tt>features/support</tt>. You can call this method as many times as you
+like (to register more modules), but if you try to register more than one
+Proc you will get an error.</p>
 
-<p>Cucumber will not yield anything to the <code>proc</code>. Examples:</p>
+<p>Cucumber will not yield anything to the <tt>proc</tt>. Examples:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='const'>World</span> <span class='kw'>do</span>
   <span class='const'>MyClass</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -1077,9 +1074,9 @@ one Proc you will get an error.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Jul 19 10:33:42 2013 by 
+  Generated on Fri Aug  9 17:13:08 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.6.2 (ruby-2.0.0).
+  0.8.7 (ruby-1.9.3).
 </div>
 
   </body>
