@@ -38,8 +38,8 @@ title: Team
 ## Gherkin3/.NET
 * [Matt Wynne](https://github.com/mattwynne)
 * [Seb Rose](https://github.com/sebrose) 
-* [Oscar Rieken] (https://github.com/orieken)
-* [Gaspar Nagy] (https://github.com/gasparnagy)
+* [Oscar Rieken](https://github.com/orieken)
+* [Gaspar Nagy](https://github.com/gasparnagy)
 
 ## Cucumber-Cpp and Gherkin3/C++
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
