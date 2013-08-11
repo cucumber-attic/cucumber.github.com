@@ -23,7 +23,7 @@ title: Team
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
 * [Chris Turner](https://github.com/skipoleschris) (Scala)
 * [Matt Lucas](https://github.com/lucas1000001)
-* [Dmytro Chyzhykov](https://github.com/ffbit)
+* [Dmytro Chyzhykov](https://github.com/ffbit) (Spring)
 * [Maximilian Fellner](https://github.com/mfellner) (Android)
 * [Björn Rasmusson](https://github.com/brasmusson)
 
