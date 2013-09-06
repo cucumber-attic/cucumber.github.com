@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.6</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.7</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (H)</a> &raquo;
@@ -1387,15 +1387,15 @@
       <pre class="lines">
 
 
-286
 287
 288
 289
 290
-291</pre>
+291
+292</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 286</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 287</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_multiline_arg'>after_multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span> <span class='op'>||</span> <span class='ivar'>@skip_step</span>
@@ -1567,7 +1567,6 @@
       <pre class="lines">
 
 
-308
 309
 310
 311
@@ -1590,10 +1589,11 @@
 328
 329
 330
-331</pre>
+331
+332</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 308</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 309</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_table_row'>after_table_row</span><span class='lparen'>(</span><span class='id identifier rubyid_table_row'>table_row</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
@@ -1971,15 +1971,15 @@
       <pre class="lines">
 
 
-279
 280
 281
 282
 283
-284</pre>
+284
+285</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 279</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 280</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_multiline_arg'>before_multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span> <span class='op'>||</span> <span class='ivar'>@skip_step</span>
@@ -2167,15 +2167,15 @@
       <pre class="lines">
 
 
-301
 302
 303
 304
 305
-306</pre>
+306
+307</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 301</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 302</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_table_row'>before_table_row</span><span class='lparen'>(</span><span class='id identifier rubyid_table_row'>table_row</span><span class='rparen'>)</span>
   <span class='ivar'>@row_id</span> <span class='op'>=</span> <span class='id identifier rubyid_table_row'>table_row</span><span class='period'>.</span><span class='id identifier rubyid_dom_id'>dom_id</span>
@@ -2235,15 +2235,15 @@
       <pre class="lines">
 
 
-293
 294
 295
 296
 297
-298</pre>
+298
+299</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 293</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 294</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
@@ -2347,12 +2347,12 @@
       <pre class="lines">
 
 
-371
 372
-373</pre>
+373
+374</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 371</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 372</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty_messages'>empty_messages</span>
   <span class='ivar'>@delayed_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -2417,12 +2417,14 @@
 
 270
 271
-272</pre>
+272
+273</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 270</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception'>exception</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
   <span class='id identifier rubyid_build_exception_detail'>build_exception_detail</span><span class='lparen'>(</span><span class='id identifier rubyid_exception'>exception</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2445,13 +2447,13 @@
       <pre class="lines">
 
 
-274
 275
 276
-277</pre>
+277
+278</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 274</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 275</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_extra_failure_content'>extra_failure_content</span><span class='lparen'>(</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span>
   <span class='ivar'>@snippet_extractor</span> <span class='op'>||=</span> <span class='const'>SnippetExtractor</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
@@ -2527,7 +2529,6 @@
       <pre class="lines">
 
 
-349
 350
 351
 352
@@ -2538,10 +2539,11 @@
 357
 358
 359
-360</pre>
+360
+361</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 349</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 350</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_messages'>print_messages</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2575,17 +2577,17 @@
       <pre class="lines">
 
 
-362
 363
 364
 365
 366
 367
 368
-369</pre>
+369
+370</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 362</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 363</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_table_row_messages'>print_table_row_messages</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
@@ -2615,13 +2617,13 @@
       <pre class="lines">
 
 
-344
 345
 346
-347</pre>
+347
+348</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 344</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 345</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@delayed_messages</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_message'>message</span>
@@ -2733,7 +2735,6 @@
       <pre class="lines">
 
 
-333
 334
 335
 336
@@ -2742,10 +2743,11 @@
 339
 340
 341
-342</pre>
+342
+343</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 333</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 334</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_table_cell_value'>table_cell_value</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@hide_this_step</span>
@@ -2801,7 +2803,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Aug  9 17:15:15 2013 by 
+  Generated on Fri Sep  6 22:35:45 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7 (ruby-1.9.3).
 </div>

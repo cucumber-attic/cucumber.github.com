@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 1.3.6</h3>
+      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 1.3.7</h3>
       <div id="menu">
   
     <a href="../../../_index.html">Index (S)</a> &raquo;
@@ -252,9 +252,6 @@
       <pre class="lines">
 
 
-596
-597
-598
 599
 600
 601
@@ -263,10 +260,13 @@
 604
 605
 606
-607</pre>
+607
+608
+609
+610</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 596</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 599</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_lines_around'>lines_around</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
@@ -300,18 +300,18 @@
       <pre class="lines">
 
 
-609
-610
-611
 612
 613
 614
 615
 616
-617</pre>
+617
+618
+619
+620</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 609</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 612</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_post_process'>post_process</span><span class='lparen'>(</span><span class='id identifier rubyid_highlighted'>highlighted</span><span class='comma'>,</span> <span class='id identifier rubyid_offending_line'>offending_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_new_lines'>new_lines</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -342,15 +342,15 @@
       <pre class="lines">
 
 
-579
-580
-581
 582
 583
-584</pre>
+584
+585
+586
+587</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 579</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 582</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_snippet'>snippet</span><span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw_code'>raw_code</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='id identifier rubyid_snippet_for'>snippet_for</span><span class='lparen'>(</span><span class='id identifier rubyid_error'>error</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -378,18 +378,18 @@
       <pre class="lines">
 
 
-586
-587
-588
 589
 590
 591
 592
 593
-594</pre>
+594
+595
+596
+597</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 586</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/html.rb', line 589</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_snippet_for'>snippet_for</span><span class='lparen'>(</span><span class='id identifier rubyid_error_line'>error_line</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_error_line'>error_line</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>(.*):(\d+)</span><span class='regexp_end'>/</span></span>
@@ -410,7 +410,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Aug  9 17:15:15 2013 by 
+  Generated on Fri Sep  6 22:35:45 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7 (ruby-1.9.3).
 </div>
