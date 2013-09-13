@@ -210,7 +210,7 @@ public void the_following_users_exist(DataTable users) {
 }
 {% endhighlight %}
 
-    See the <a href="http://cukes.info/api/cucumber/ruby/yardoc/Cucumber/Ast/Table.html">DataTable</a>
+    See the <a href="/api/cucumber/ruby/yardoc/Cucumber/Ast/Table.html">DataTable</a>
     API docs for details about how to access data in the table.
   </div>
 
@@ -221,7 +221,7 @@ Given /^the following users exist$/ do |users|
 end
 {% endhighlight %}
 
-    See the <a href="http://cukes.info/api/cucumber/ruby/yardoc/Cucumber/Ast/Table.html">DataTable</a>
+    See the <a href="/api/cucumber/ruby/yardoc/Cucumber/Ast/Table.html">DataTable</a>
     API docs for details about how to access data in the table.
   </div>
 </div>
