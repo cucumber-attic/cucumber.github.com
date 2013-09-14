@@ -53,15 +53,17 @@ The available Dependency Injection modules are:
 | OpenEJB                        | `cucumber-openejb`       |
 | Spring                         | `cucumber-spring`        |
 | Weld                           | `cucumber-weld`          |
+| Needle                         | `cucumber-needle`        |
 
 ## Runners
 
-There are two ways to run Gherkin Features with Cucumber-JVM:
+There are several ways to run Gherkin Features with Cucumber-JVM:
 
 | Runner                         | Jar file                 |
 | ------------------------------ | ------------------------ |
 | Command Line Interface         | `cucumber-core`          |
 | JUnit Runner                   | `cucumber-junit`         |
+| Android Runner                 | `cucumber-android`       |
 
 The JUnit Runner lets you run Cucumber from any tool that understands JUnit. This includes IDEs (such ash IntelliJ or Eclipse) and build tools (such as Ant, Maven or Gradle).
 
