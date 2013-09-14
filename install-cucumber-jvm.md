@@ -82,13 +82,13 @@ Installing the various `cucumber-*` modules in a Maven project is just a matter 
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-picocontainer</artifactId>
-        <version>1.1.3</version>
+        <version>1.1.5</version>
         <scope>test</scope>
     </dependency>
     <dependency>
         <groupId>info.cukes</groupId>
         <artifactId>cucumber-junit</artifactId>
-        <version>1.1.3</version>
+        <version>1.1.5</version>
         <scope>test</scope>
     </dependency>
     <dependency>
