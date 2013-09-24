@@ -110,7 +110,7 @@ end
 public void embedScreenshot(Scenario scenario) {
 	if (scenario.isFailed()) {
 		try {
-				final byte[] screenshot = ((InternetExplorerDriver) this.wd).getScreenshotAs(OutputType.BYTES);
+				final byte[] screenshot = webDriver.getScreenshotAs(OutputType.BYTES);
 			scenario.embed(screenshot, "image/png");
 		} catch (final WebDriverException somePlatformsDontSupportScreenshots) {
 			scenario.write("It appears screenshots aren't supported on your Platform.");
