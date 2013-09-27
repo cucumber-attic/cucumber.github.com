@@ -13,6 +13,7 @@ title: Team
 * [Sean Miller](https://github.com/smiller)
 * [Steve Tooke](https://github.com/tooky)
 * [Chris Parsons](https://github.com/chrismdp)
+* [Tom Brand](https://github.com/tom025)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
