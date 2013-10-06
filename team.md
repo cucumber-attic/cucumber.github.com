@@ -27,6 +27,7 @@ title: Team
 * [Dmytro Chyzhykov](https://github.com/ffbit) (Spring)
 * [Pedro Viegas](https://github.com/pasviegas) (Spring)
 * [Maximilian Fellner](https://github.com/mfellner) (Android)
+* [Sebastian Gröbler](https://github.com/sierragolf) (Android)
 * [Björn Rasmusson](https://github.com/brasmusson)
 
 ## Cucumber-JS and Gherkin3/JavaScript
