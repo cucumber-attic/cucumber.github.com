@@ -18,7 +18,6 @@ title: Team
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
 * [Seb Rose](https://github.com/sebrose)
-* [Ilan Pillemer](https://github.com/ilanpillemer)
 * [David Kowis](https://github.com/dkowis)
 * [Paolo Ambrosio](https://github.com/paoloambrosio)
 * [Nils Wloka](https://github.com/nilswloka) (Clojure)
