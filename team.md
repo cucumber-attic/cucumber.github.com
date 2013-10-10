@@ -48,4 +48,6 @@ title: Team
 ## Aruba
 * [Jarl Friis](https://github.com/jarl-dk)
 
-## Gherkin3/PHP
+## Cucumber-Eclipse
+
+[Ilan Pillemer](https://github.com/ilanpillemer)
