@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::StepMatch
   
-    &mdash; Documentation by YARD 0.8.7
+    &mdash; Documentation by YARD 0.8.7.3
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.8</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.9</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (S)</a> &raquo;
@@ -439,9 +439,9 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Creates a new StepMatch. The <tt>name_to_report</tt> argument is what's
-reported, unless it's is, in which case <tt>name_to_report</tt> is used
-instead.</p>
+<p>Creates a new StepMatch. The <code>name_to_report</code> argument is
+what&#39;s reported, unless it&#39;s is, in which case
+<code>name_to_report</code> is used instead.</p>
 
 
   </div>
@@ -465,8 +465,8 @@ instead.</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/step_match.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_step_definition'>step_definition</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_match'>name_to_match</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='comma'>,</span> <span class='id identifier rubyid_step_arguments'>step_arguments</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name_to_match can't be nil</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_name_to_match'>name_to_match</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>step_arguments can't be nil (but it can be an empty array)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_step_arguments'>step_arguments</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>name_to_match can&#39;t be nil</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_name_to_match'>name_to_match</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>step_arguments can&#39;t be nil (but it can be an empty array)</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_step_arguments'>step_arguments</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
   <span class='ivar'>@step_definition</span><span class='comma'>,</span> <span class='ivar'>@name_to_match</span><span class='comma'>,</span> <span class='ivar'>@name_to_report</span><span class='comma'>,</span> <span class='ivar'>@step_arguments</span> <span class='op'>=</span> <span class='id identifier rubyid_step_definition'>step_definition</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_match'>name_to_match</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='comma'>,</span> <span class='id identifier rubyid_step_arguments'>step_arguments</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -625,7 +625,7 @@ instead.</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/step_match.rb', line 51</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_backtrace_line'>backtrace_line</span>
-  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rbrace'>}</span><span class='tstring_content'>:in `</span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_definition</span><span class='period'>.</span><span class='id identifier rubyid_regexp_source'>regexp_source</span><span class='rbrace'>}</span><span class='tstring_content'>'</span><span class='tstring_end'>&quot;</span></span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='embexpr_end'>}</span><span class='tstring_content'>:in `</span><span class='embexpr_beg'>#{</span><span class='ivar'>@step_definition</span><span class='period'>.</span><span class='id identifier rubyid_regexp_source'>regexp_source</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39;</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -677,17 +677,18 @@ instead.</p>
 <p>Formats the matched arguments of the associated Step. This method is
 usually called from visitors, which render output.</p>
 
-<p>The <tt>format</tt> can either be a String or a Proc.</p>
+<p>The <code>format</code> can either be a String or a Proc.</p>
 
 <p>If it is a String it should be a format string according to
-<tt>Kernel#sprinf</tt>, for example:</p>
+<code>Kernel#sprinf</code>, for example:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>&lt;span class=&quot;param&quot;&gt;%s&lt;/span&gt;&lt;/tt&gt;</span><span class='tstring_end'>'</span></span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>&lt;span class=&quot;param&quot;&gt;%s&lt;/span&gt;&lt;/tt&gt;</span><span class='tstring_end'>&#39;</span></span></code></pre>
 
 <p>If it is a Proc, it should take one argument and return the formatted
 argument, for example:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_lambda'>lambda</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_param'>param</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>[</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_param'>param</span><span class='rbrace'>}</span><span class='tstring_content'>]</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">lambda</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">param</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;[#{param}]&quot;</span> }
+</pre>
 
 
   </div>
@@ -875,7 +876,7 @@ argument, for example:</p>
     <span class='kw'>end</span>
 
     <span class='id identifier rubyid_s'>s</span><span class='lbracket'>[</span><span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span> <span class='op'>+</span> <span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_replacement'>replacement</span>
-    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>+=</span> <span class='id identifier rubyid_replacement'>replacement</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>U*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>U*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+    <span class='id identifier rubyid_offset'>offset</span> <span class='op'>+=</span> <span class='id identifier rubyid_replacement'>replacement</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>-</span> <span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
     <span class='id identifier rubyid_past_offset'>past_offset</span> <span class='op'>=</span> <span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span> <span class='op'>+</span> <span class='id identifier rubyid_step_argument'>step_argument</span><span class='period'>.</span><span class='id identifier rubyid_val'>val</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_s'>s</span>
@@ -908,7 +909,7 @@ argument, for example:</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/step_match.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_text_length'>text_length</span>
-  <span class='ivar'>@step_definition</span><span class='period'>.</span><span class='id identifier rubyid_regexp_source'>regexp_source</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>U*</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
+  <span class='ivar'>@step_definition</span><span class='period'>.</span><span class='id identifier rubyid_regexp_source'>regexp_source</span><span class='period'>.</span><span class='id identifier rubyid_unpack'>unpack</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>U*</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -920,9 +921,9 @@ argument, for example:</p>
 </div>
     
     <div id="footer">
-  Generated on Tue Sep 10 22:40:08 2013 by 
+  Generated on Wed Nov  6 22:19:03 2013 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7 (ruby-1.9.3).
+  0.8.7.3 (ruby-2.0.0).
 </div>
 
   </body>
