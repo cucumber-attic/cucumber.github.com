@@ -18,10 +18,10 @@ you are using (if any).
 ### Command Line
 TODO
 ### JUnit
-Create one empty class with the ```@RunWith(Cucumber.class)``` annotation. 
+Create one empty class with the `@RunWith(Cucumber.class)` annotation. 
 Executing this class as any JUnit test class will run all features found on the classpath in the same package as this class.
-The options to be used are defined with the ```@CucumberOptions``` (```@Cucumber.Options``` is deprecated from version 1.1.5).
-```
+The options to be used are defined with the `@CucumberOptions` (`@Cucumber.Options` is deprecated from version 1.1.5).
+{% highlight java %}
 package somepackage;
 
 import cucumber.api.CucumberOptions;
@@ -32,7 +32,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(format = "pretty")
 public class RunCukesTest {
 }
-```
+{% endhighlight %}
 ### TestNG
 TODO
 ### Android
