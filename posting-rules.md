@@ -15,21 +15,28 @@ If you have been sent to this page, just resubmit your message according to the 
 Consider this discussion:
 
 > Because it messes up the order in which people normally read text.<br>
+> <br>
 > Why is top-posting such a bad thing?<br>
+> <br>
 > Top-posting.<br>
+> <br>
 > What is the most annoying thing in e-mail?<br>
 
-The style above is called top posting, and it is strongly discouraged on the Cucumber discussion forum.
+The style above is called top posting. The most recent posts are at the top. This style is _strongly_ discouraged
+on the Cucumber discussion forum because it makes it very hard to follow long conversations between multiple people.
+
 Instead, use interleaved answers:
 
-> What is the most annoying thing in e-mail?
->> Top-posting.
->>> Why is top-posting such a bad thing?
->>>> Because it messes up the order in which people normally read text.
+>>>> What is the most annoying thing in e-mail?
+>>> Top-posting.
+>> Why is top-posting such a bad thing?
+> Because it messes up the order in which people normally read text.
+
+This style also makes it easier to answer multiple questions, right underneath the question.
 
 ### 2) Prefix subjects
 
-The Cucumber discussion forum is used to discuss many things. To help other members quickly decide
+The Cucumber discussion forum is used to discuss many topics. To help group members quickly decide
 whether or not a post is of interest to them, please use a prefix in your subject. Here are some
 examples:
 
