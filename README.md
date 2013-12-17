@@ -5,12 +5,12 @@ This is the source of the new http://cukes.info site
 Static site:
 
 ```
-jekyll build
+bundle exec jekyll build
 open _site/install.html
 ```
 
 ```
-jekyll serve --watch
+bundle exec jekyll serve --watch
 open http://localhost:4000/step-definitions.html
 ```
 
