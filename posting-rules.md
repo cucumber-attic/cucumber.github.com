@@ -13,12 +13,9 @@ these rules, chances are high that your message will be ignored.
 Consider this discussion:
 
 > Because it messes up the order in which people normally read text.<br>
-> <br>
-> Why is top-posting such a bad thing?<br>
-> <br>
-> Top-posting.<br>
-> <br>
-> What is the most annoying thing in e-mail?<br>
+>> Why is top-posting such a bad thing?<br>
+>>> Top-posting.<br>
+>>>> What is the most annoying thing in e-mail?<br>
 
 The style above is called top posting. The most recent posts are at the top. This style is _strongly_ discouraged
 on the Cucumber discussion forum because it makes it very hard to follow long conversations between multiple people.
