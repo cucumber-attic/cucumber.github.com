@@ -15,19 +15,19 @@ Consider this discussion:
 > Because it messes up the order in which people normally read text.<br><br>
 >> Why is top-posting such a bad thing?<br><br>
 >>> Top-posting.<br><br>
->>>> What is the most annoying thing in e-mail?<br><br>
+>>>> What is the most annoying thing in e-mail?<br>
 
-The style above is called top posting. The most recent posts are at the top. This style is _strongly_ discouraged
-on the Cucumber discussion forum because it makes it very hard to follow long conversations between multiple people.
+If you make the effort to place your follow-up remarks *below* the most relevant section of the text you are replying to,
+then reading the conversation becomes a lot easier to read than the above. As a result,and more people are likely to join the conversation, and there will be less misunderstandings.
 
-Instead, use interleaved answers:
+So instead of "top posting", please use interleaved answers:
 
 >>>> What is the most annoying thing in e-mail?
 >>> Top-posting.
 >> Why is top-posting such a bad thing?
 > Because it messes up the order in which people normally read text.
 
-This style also makes it easier to answer multiple questions, right underneath the question.
+Now, go tell a friend and maybe we can get a discussion going on HN!
 
 ### 2) Prefix subjects
 
