@@ -8,8 +8,6 @@ The [Cucumber discussion forum](groups.google.com/group/cukes) has thousands of 
 effective communication there are a few rules you are asked to follow. If you fail to follow any of
 these rules, chances are high that your message will be ignored.
 
-If you have been sent to this page, just resubmit your message according to the posting rules.
-
 ### 1) Use interleaved answers
 
 Consider this discussion:
