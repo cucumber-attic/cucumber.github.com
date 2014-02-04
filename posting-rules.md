@@ -47,6 +47,9 @@ examples:
 
 If you have a question, don't reply to an existing (irrelevant) message. Start a new topic instead.
 
-### 5) Don't email people privately
+### 5) Don't ask individuals
 
-If you want to know why, read [this post](http://daniel.haxx.se/blog/2013/10/08/dont-email-me/).
+The forum has thousands of users, and demanding a reply from a particular person leads to inefficient communication.
+It is also considered rude. Never email people privately for help.
+
+For a more in-depth explanation of this rule, please read [this post](http://daniel.haxx.se/blog/2013/10/08/dont-email-me/).
