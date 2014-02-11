@@ -1,0 +1,13 @@
+.cukeup-logo {
+  font-family: 'Lobster', cursive;
+  font-size: 3.8em;
+  font-weight: normal;
+  color: white;
+  position: relative;
+  top: -30px;
+}
+
+.cukeup-logo-ribbon {
+  background-color: #164B2B;
+  padding: 5px;
+}
