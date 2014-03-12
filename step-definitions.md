@@ -19,7 +19,7 @@ Scenario: Some cukes
   Given I have 48 cukes in my belly
 {% endhighlight %}
 
-The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the Step Definition below. 
+The `I have 48 cukes in my belly` part of the step (the text following the `Given` keyword) will match the Step Definition below.
 
 <ul class="nav nav-tabs">
   <li><a href="#defs-java" data-toggle="tab" class="java"><div>&nbsp;</div></a></li>
@@ -105,7 +105,7 @@ public void CukesInTheBelly(int cukes)
   </div>
   <div class="tab-pane" id="defs-fsharp">
 {% highlight fsharp %}
-let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) = 
+let [<Given>] ``^I have (\d+) cukes in my belly$``(cukes:int) =
   (* Do something with the cukes *)
 {% endhighlight %}
   </div>
@@ -133,7 +133,7 @@ Given("""^I have (\d+) cukes in my belly$"""){ (cukes:Int) =>
   </div>
 </div>
 
-When Cucumber matches a Step against a regular expression in a Step Definition, it passes the value of all the capture groups to the Step Definition's arguments. Capture groups are strings (even when they match digits like `\d+`). For statically typed languages, 
+When Cucumber matches a Step against a regular expression in a Step Definition, it passes the value of all the capture groups to the Step Definition's arguments. Capture groups are strings (even when they match digits like `\d+`). For statically typed languages,
 Cucumber will automatically transform those strings into the appropriate type. For dynamically typed languages, no transformation happens by default, as there is no type information.
 
 Cucumber does not differentiate between `Given`, `When` and `Then`. It is up to you what you do inside the Step Definition's body.
@@ -191,7 +191,7 @@ Given the following users exist:
   | name  | email           | phone |
   | Aslak | aslak@email.com | 123   |
   | Matt  | matt@email.com  | 234   |
-  | Joe   | joe@email.org   | 456   | 
+  | Joe   | joe@email.org   | 456   |
 {% endhighlight %}
 
 Just like Doc Strings, they will be passed to the Step Definition as the last argument:
@@ -228,7 +228,7 @@ end
 
 ### Substitution in Scenario Outlines
 
-If you use a DocString or DataTable argument in steps in [Scenario Outlines](/gherkin.html#scenario_outlines), any `< >` 
+If you use a DocString or DataTable argument in steps in [Scenario Outlines](/gherkin.html#scenario_outlines), any `< >`
 delimited tokens will be substituted with values from the example tables. For example:
 
 {% highlight gherkin %}
@@ -277,8 +277,8 @@ public void the_following_users_exist(DataTable expectedCukesTable) {
     // We'd typically pull this out of a database or a web page...
     List<Cuke> actualCukes = new ArrayList();
     actualCukes.add(new Cuke("Cucumis sativus", "Concombre"));
-    actualCukes.add(new Cuke("Cucumis anguria", "Burr Gherkin")); 
-    
+    actualCukes.add(new Cuke("Cucumis anguria", "Burr Gherkin"));
+
     expectedCukesTable.diff(actualCukes)
 }
 {% endhighlight %}
@@ -308,7 +308,7 @@ end
     </p>
 
     <p>
-      If you are using [Capybara](http://jnicklas.github.com/capybara/) and you want to compare a Gherkin DataTable with a 
+      If you are using [Capybara](http://jnicklas.github.com/capybara/) and you want to compare a Gherkin DataTable with a
       HTML table rendered in a Web page you can construct an Array like so:
     </p>
 
@@ -341,18 +341,18 @@ First of all, this might mean the 10th of March in some countries, and the 3rd o
 <div class="tab-content">
   <div class="tab-pane" id="transform-java">
     <p>
-    Cucumber-JVM knows how to convert strings into various <em>scalar</em> types. A scalar type is a type that can be derived from a single 
-    string value. Cucumber-JVM's built-in scalar types are <em>numbers</em>, <em>enums</em>, <code>java.util.Date</code>, 
-    <code>java.util.Calendar</code> and arbitrary types that have a single-argument constructor that is either a 
+    Cucumber-JVM knows how to convert strings into various <em>scalar</em> types. A scalar type is a type that can be derived from a single
+    string value. Cucumber-JVM's built-in scalar types are <em>numbers</em>, <em>enums</em>, <code>java.util.Date</code>,
+    <code>java.util.Calendar</code> and arbitrary types that have a single-argument constructor that is either a
     <code>String</code> or an <code>Object</code>.
     </p>
-    
+
     <p>
     Transformation to <code>java.util.Date</code> and <code>java.util.Calendar</code> will work out-of-the-box as long as the
-    string value matches one of the <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code> formats 
+    string value matches one of the <code>SHORT</code>, <code>MEDIUM</code>, <code>FULL</code> or <code>LONG</code> formats
     defined by <a href="http://docs.oracle.com/javase/7/docs/api/java/text/DateFormat.html"><code>java.util.DateFormat</code></a>.
     </p>
-    
+
     <p>
     It turns out that <code>10-03-1971</code> from our example doesn't match any of those formats, so we have to give Cucumber a hint:
     </p>
@@ -366,12 +366,12 @@ public void todays_date_is(@Format("dd-MM-yyyy") Date today) {
     <p>
     Many Java programmers like to use <a href="http://joda-time.sourceforge.net/">Joda Time</a>. Cucumber-JVM doesn't have any special support for Joda Time, but since Joda's <code>LocalDate</code> has a <code>LocalDate(Object)</code> constructor it is considered a scalar by default.
     </p>
-    
+
     <p>
     However, in this case it wouldn't also know how to pass the _format_ string, so you would get an exception when Cucumber instantiates it
     with <code>new LocalDate("10-03-1971")</code>.
     </p>
-    
+
     <p>
     A custom formatter gives you full control:
     </p>
@@ -379,8 +379,8 @@ public void todays_date_is(@Format("dd-MM-yyyy") Date today) {
 {% highlight java %}
 @Given("today's date is \"(.*)\"")
 public void todays_date_is(
-  @Format("dd-MM-yyyy") 
-  @Transform(JodaTransformer.class) 
+  @Format("dd-MM-yyyy")
+  @Transform(JodaTransformer.class)
   LocalDate today) {
 }
 {% endhighlight %}
@@ -456,10 +456,10 @@ public void I_have_these_vegetables(List<Vegetable> vegetables) {
 }
 {% endhighlight %}
 
-The header row is used to name fields in the generic List type. 
+The header row is used to name fields in the generic List type.
 
-*IMPORTANT*: If the generic List type (`Vegetable` in this case) is a <em>scalar</em> (i.e. it has a `String` or `Object` constructor), 
-the header will *not* be used to name fields in the class. Instead you would get a List that has one `Vegetable` for *each cell* 
+*IMPORTANT*: If the generic List type (`Vegetable` in this case) is a <em>scalar</em> (i.e. it has a `String` or `Object` constructor),
+the header will *not* be used to name fields in the class. Instead you would get a List that has one `Vegetable` for *each cell*
 (6 in this case). See [List of Scalar](#list_of_scalar) below.
 
 ### List of Map
@@ -486,7 +486,7 @@ public void I_have_these_vegetables(List<List<String>> vegetables) {
 }
 {% endhighlight %}
 
-This will convert it to a flattened list like this: 
+This will convert it to a flattened list like this:
 
 `[["name", "color"], ["Cucumber", "Green"], ["Tomato", "Red"]]`
 
@@ -503,6 +503,20 @@ public void I_have_these_vegetables(List<String> vegetables) {
 
 This will convert it to a flattened list like this: `["name", "color", "Cucumber", "Green", "Tomato", "Red"]`
 
+### Map of scalar
+
+{% highlight java %}
+@Given("I have these vegetables:")
+public void I_have_these_vegetables(Map<String,String> vegetables) {
+    // Do something with the vegetables
+}
+{% endhighlight %}
+
+This will convert it to a map list like this: `{"name" => "color", "Cucumber" => "Green" => "Tomato", "Red"}`
+
+Note that this only works for tables with 2 columns. If you're converting into a `Map`
+it is usually adviseable that the Gherkin table doesn't have a top row naming the columns.
+
 ## FAQ
 
 ### I want to scope a step definition to a scenario or feature
@@ -511,4 +525,3 @@ TODO: Summarise info from:
 
 * https://groups.google.com/d/msg/cukes/53UKauIY28o/1nrdSCWAkLMJ
 * https://github.com/cucumber/cucumber/wiki/Feature-Coupled-Step-Definitions-(Antipattern)
-
