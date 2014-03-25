@@ -2,22 +2,22 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>
   File: README
   
-    &mdash; Documentation by YARD 0.8.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" media="screen" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
 
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '';
-  framesUrl = "frames.html#!" + escape(window.location.href);
+  framesUrl = "frames.html#!file.README.html";
 </script>
 
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="/images/logos/cucumber-32x32.png"></img> Cucumber-JRuby 1.1.3</h3>
+      <h3><img src="/images/logos/cucumber-32x32.png"></img> Cucumber-JRuby 1.1.6</h3>
       <div id="menu">
   
     <a href="_index.html">Index</a> &raquo; 
@@ -66,15 +66,14 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><div id='filecontents'><h2 id="using-jruby">Using JRuby</h2>
+    <div id="content"><div id='filecontents'><h2>Using JRuby</h2>
 
 <p>Run the features:</p>
 
-<p><code>
-jruby bin/cucumber-jvm --glue src/test/resources src/test/resources
-</code></p>
+<pre class="code ruby"><code class="ruby">jruby bin/cucumber-jvm --glue src/test/resources src/test/resources
+</code></pre>
 
-<h3 id="customizing-jruby">Customizing JRuby</h3>
+<h3>Customizing JRuby</h3>
 
 <p>You can define <code>GEM_PATH</code> to tell JRuby where to load gems from.
 You can also define <code>RUBY_VERSION</code> to tell JRuby to run in <code>1.8</code>, <code>1.9</code> or <code>2.0</code> mode.
@@ -83,20 +82,19 @@ Consult the JRuby documentation to see what the default mode is.</p>
 <p>These values can be defined in any of the three places:</p>
 
 <ul>
-  <li>In an Environment variable</li>
-  <li>In a System property (for example <code>-DRUBY_VERSION=1.9</code></li>
-  <li>In a <code>cucumber-jruby.properties</code> resource bundle on your <code>CLASSPATH</code>.</li>
+<li>In an Environment variable</li>
+<li>In a System property (for example <code>-DRUBY_VERSION=1.9</code></li>
+<li>In a <code>cucumber-jvm.properties</code> properties file on your <code>CLASSPATH</code>.</li>
 </ul>
 
-<p>Sample cucumber-jruby.properties file:</p>
+<p>Sample cucumber-jvm.properties file:</p>
 
-<p><code>
-GEM_PATH=${basedir}/src/test/gems
-</code></p>
+<pre class="code ruby"><code class="ruby">GEM_PATH=${basedir}/src/test/gems
+</code></pre>
 </div></div>
     
     <div id="footer">
-  Generated on Mon Mar 11 07:12:10 2013.
+  Generated on Tue Mar 25 21:36:39 2014.
 </div>
 
   </body>
