@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::Formatter::Rerun
   
-    &mdash; Documentation by YARD 0.8.7.3
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -17,7 +17,7 @@
 <script type="text/javascript" charset="utf-8">
   hasFrames = window.top.frames.main ? true : false;
   relpath = '../../';
-  framesUrl = "../../frames.html#!" + escape(window.location.href);
+  framesUrl = "../../frames.html#!Cucumber/Formatter/Rerun.html";
 </script>
 
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.12</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.13</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
@@ -556,7 +556,7 @@ to run the next time, simply passing the output string on the command line.</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/rerun.rb', line 48</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_feature_element'>after_feature_element</span><span class='lparen'>(</span><span class='id identifier rubyid_feature_element'>feature_element</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@rerun</span> <span class='op'>||</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>ScenarioOutline</span> <span class='op'>===</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='lparen'>(</span><span class='ivar'>@rerun</span> <span class='op'>||</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='period'>.</span><span class='id identifier rubyid_failed?'>failed?</span> <span class='op'>||</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>==</span> <span class='symbol'>:skipped</span><span class='rparen'>)</span> <span class='op'>&amp;&amp;</span> <span class='op'>!</span><span class='lparen'>(</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>ScenarioOutline</span> <span class='op'>===</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='rparen'>)</span>
     <span class='ivar'>@lines</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_feature_element'>feature_element</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -800,9 +800,9 @@ to run the next time, simply passing the output string on the command line.</p>
 </div>
     
     <div id="footer">
-  Generated on Sun Mar 16 12:43:57 2014 by 
+  Generated on Tue Mar 25 21:54:37 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.3 (ruby-1.9.3).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>
