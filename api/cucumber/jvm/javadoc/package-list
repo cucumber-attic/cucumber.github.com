@@ -11,9 +11,11 @@ cucumber.api.java.cs
 cucumber.api.java.cy_gb
 cucumber.api.java.da
 cucumber.api.java.de
+cucumber.api.java.el
 cucumber.api.java.en
 cucumber.api.java.en_au
 cucumber.api.java.en_lol
+cucumber.api.java.en_old
 cucumber.api.java.en_pirate
 cucumber.api.java.en_scouse
 cucumber.api.java.en_tx
@@ -23,6 +25,7 @@ cucumber.api.java.et
 cucumber.api.java.fa
 cucumber.api.java.fi
 cucumber.api.java.fr
+cucumber.api.java.gl
 cucumber.api.java.he
 cucumber.api.java.hi
 cucumber.api.java.hr
@@ -37,6 +40,7 @@ cucumber.api.java.lu
 cucumber.api.java.lv
 cucumber.api.java.nl
 cucumber.api.java.no
+cucumber.api.java.pa
 cucumber.api.java.pl
 cucumber.api.java.pt
 cucumber.api.java.ro
@@ -45,6 +49,7 @@ cucumber.api.java.sk
 cucumber.api.java.sr_cyrl
 cucumber.api.java.sr_latn
 cucumber.api.java.sv
+cucumber.api.java.th
 cucumber.api.java.tl
 cucumber.api.java.tr
 cucumber.api.java.tt
@@ -55,9 +60,10 @@ cucumber.api.java.zh_cn
 cucumber.api.java.zh_tw
 cucumber.api.jruby
 cucumber.api.junit
+cucumber.api.needle
 cucumber.api.openejb
 cucumber.api.picocontainer
 cucumber.api.rhino
-cucumber.api.scala
 cucumber.api.spring
+cucumber.api.testng
 cucumber.api.weld

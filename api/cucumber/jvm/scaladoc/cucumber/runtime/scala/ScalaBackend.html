@@ -2,18 +2,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html>
         <head>
-          <title>ScalaBackend - Cucumber-JVM: Scala 1.1.3 API - cucumber.runtime.scala.ScalaBackend</title>
-          <meta name="description" content="ScalaBackend - Cucumber - JVM Scala 1.1.3 API - cucumber.runtime.scala.ScalaBackend" />
-          <meta name="keywords" content="ScalaBackend Cucumber JVM Scala 1.1.3 API cucumber.runtime.scala.ScalaBackend" />
+          <title>ScalaBackend - Cucumber-JVM: Scala (2.10) 1.1.6 API - cucumber.runtime.scala.ScalaBackend</title>
+          <meta name="description" content="ScalaBackend - Cucumber - JVM Scala 2.10 1.1.6 API - cucumber.runtime.scala.ScalaBackend" />
+          <meta name="keywords" content="ScalaBackend Cucumber JVM Scala 2.10 1.1.6 API cucumber.runtime.scala.ScalaBackend" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
-      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
-      <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
-      
       <script type="text/javascript">
          if(top === self) {
             var url = '../../../index.html';
@@ -85,7 +80,7 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="cucumber.runtime.scala.ScalaBackend#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(ignore:cucumber.runtime.io.ResourceLoader):cucumber.runtime.scala.ScalaBackend"></a>
+      <a id="&lt;init&gt;(resourceLoader:cucumber.runtime.io.ResourceLoader):cucumber.runtime.scala.ScalaBackend"></a>
       <a id="&lt;init&gt;:ScalaBackend"></a>
       <h4 class="signature">
       <span class="modifier_kind">
@@ -93,7 +88,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ScalaBackend</span><span class="params">(<span name="ignore">ignore: <span class="extype" name="cucumber.runtime.io.ResourceLoader">ResourceLoader</span></span>)</span>
+        <span class="name">ScalaBackend</span><span class="params">(<span name="resourceLoader">resourceLoader: <span class="extype" name="cucumber.runtime.io.ResourceLoader">ResourceLoader</span></span>)</span>
       </span>
       </h4>
       
@@ -209,8 +204,11 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="cucumber.runtime.scala.ScalaBackend#disposeWorld" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -264,8 +262,11 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       </h4>
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">java.lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="cucumber.runtime.scala.ScalaBackend#getAfterHooks" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
@@ -308,15 +309,15 @@
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="cucumber.runtime.scala.ScalaBackend#getSnippet" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getSnippet(step:gherkin.formatter.model.Step):String"></a>
-      <a id="getSnippet(Step):String"></a>
+      <a id="getSnippet(step:gherkin.formatter.model.Step,functionNameGenerator:cucumber.runtime.snippets.FunctionNameGenerator):String"></a>
+      <a id="getSnippet(Step,FunctionNameGenerator):String"></a>
       <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getSnippet</span><span class="params">(<span name="step">step: <span class="extype" name="gherkin.formatter.model.Step">Step</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">getSnippet</span><span class="params">(<span name="step">step: <span class="extype" name="gherkin.formatter.model.Step">Step</span></span>, <span name="functionNameGenerator">functionNameGenerator: <span class="extype" name="cucumber.runtime.snippets.FunctionNameGenerator">FunctionNameGenerator</span></span>)</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="cucumber.runtime.scala.ScalaBackend">ScalaBackend</a> → Backend</dd></dl></div>
@@ -463,7 +464,10 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -479,7 +483,10 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -495,7 +502,10 @@
       </span>
       </h4>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@throws</span><span class="args">()</span>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
               
         </dd></dl></div>
     </li></ol>
@@ -529,7 +539,6 @@
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-
-
+      <script defer="defer" type="text/javascript" id="jquery-js" src="../../../lib/jquery.js"></script><script defer="defer" type="text/javascript" id="jquery-ui-js" src="../../../lib/jquery-ui.js"></script><script defer="defer" type="text/javascript" id="tools-tooltip-js" src="../../../lib/tools.tooltip.js"></script><script defer="defer" type="text/javascript" id="template-js" src="../../../lib/template.js"></script>
     </body>
       </html>
