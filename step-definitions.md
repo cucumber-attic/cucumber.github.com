@@ -253,7 +253,7 @@ One very powerful feature in Cucumber is comparison of tables. You can compare a
 
 Beware that the diffing algorithm expects your data to be column-oriented, and that the first row of both tables represents column names. If your tables don’t have some similarity in the first row you will not get very useful results. The column names must be unique for each column – and they must match.
 
-Here is an example of a Data Table that wi want to diff against actual results:
+Here is an example of a Data Table that we want to diff against actual results:
 
 {% highlight gherkin %}
 Then I should see the following cukes:
