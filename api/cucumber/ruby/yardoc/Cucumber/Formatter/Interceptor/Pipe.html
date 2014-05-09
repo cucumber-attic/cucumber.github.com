@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 1.3.14</h3>
+      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 1.3.15</h3>
       <div id="menu">
   
     <a href="../../../_index.html">Index (P)</a> &raquo;
@@ -110,35 +110,6 @@
 
   <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
   <ul class="summary">
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#buffer-instance_method" title="#buffer (instance method)">- (Object) <strong>buffer</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-      <span class="note title readonly">readonly</span>
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Returns the value of attribute buffer.</p>
-</div></span>
-  
-</li>
-
     
       <li class="public ">
   <span class="summary_signature">
@@ -256,6 +227,28 @@
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#buffer-instance_method" title="#buffer (instance method)">- (Object) <strong>buffer</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -403,14 +396,14 @@
       <pre class="lines">
 
 
-7
 8
 9
 10
-11</pre>
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_pipe'>pipe</span><span class='rparen'>)</span>
   <span class='ivar'>@pipe</span> <span class='op'>=</span> <span class='id identifier rubyid_pipe'>pipe</span>
@@ -445,12 +438,12 @@
       <pre class="lines">
 
 
-23
-24
-25</pre>
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 23</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 32</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
   <span class='ivar'>@pipe</span><span class='period'>.</span><span class='id identifier rubyid_send'>send</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_blk'>blk</span><span class='rparen'>)</span>
@@ -468,50 +461,7 @@
       
       <span id=""></span>
       <div class="method_details first">
-  <h3 class="signature first" id="buffer-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>buffer</strong>  <span class="extras">(readonly)</span>
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Returns the value of attribute buffer</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-6
-7
-8</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 6</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_buffer'>buffer</span>
-  <span class='ivar'>@buffer</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id=""></span>
-      <div class="method_details ">
-  <h3 class="signature " id="pipe-instance_method">
+  <h3 class="signature first" id="pipe-instance_method">
   
     - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>pipe</strong>  <span class="extras">(readonly)</span>
   
@@ -536,12 +486,12 @@
       <pre class="lines">
 
 
-6
 7
-8</pre>
+8
+9</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 6</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pipe'>pipe</span>
   <span class='ivar'>@pipe</span>
@@ -573,22 +523,22 @@
       <pre class="lines">
 
 
-37
-38
-39
-40
-41
-42
-43
-44
-45
 46
 47
 48
-49</pre>
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 37</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 46</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_unwrap!'>unwrap!</span><span class='lparen'>(</span><span class='id identifier rubyid_pipe'>pipe</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_validate_pipe'>validate_pipe</span> <span class='id identifier rubyid_pipe'>pipe</span>
@@ -623,14 +573,14 @@
       <pre class="lines">
 
 
-31
-32
-33
-34
-35</pre>
+40
+41
+42
+43
+44</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 40</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_validate_pipe'>validate_pipe</span><span class='lparen'>(</span><span class='id identifier rubyid_pipe'>pipe</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='lbracket'>[</span><span class='symbol'>:stdout</span><span class='comma'>,</span> <span class='symbol'>:stderr</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_pipe'>pipe</span>
@@ -657,21 +607,21 @@
       <pre class="lines">
 
 
-51
-52
-53
-54
-55
-56
-57
-58
-59
 60
 61
-62</pre>
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 60</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_wrap'>wrap</span><span class='lparen'>(</span><span class='id identifier rubyid_pipe'>pipe</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_validate_pipe'>validate_pipe</span> <span class='id identifier rubyid_pipe'>pipe</span>
@@ -697,7 +647,41 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="respond_to?-instance_method">
+  <h3 class="signature first" id="buffer-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>buffer</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+21
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 21</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_buffer'>buffer</span>
+  <span class='id identifier rubyid_lock'>lock</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span>
+    <span class='kw'>return</span> <span class='ivar'>@buffer</span><span class='period'>.</span><span class='id identifier rubyid_dup'>dup</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="respond_to?-instance_method">
   
     - (<tt>Boolean</tt>) <strong>respond_to?</strong>(method, include_private = false) 
   
@@ -733,12 +717,12 @@
       <pre class="lines">
 
 
-27
-28
-29</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
   <span class='kw'>super</span> <span class='op'>||</span> <span class='ivar'>@pipe</span><span class='period'>.</span><span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='id identifier rubyid_method'>method</span><span class='comma'>,</span> <span class='id identifier rubyid_include_private'>include_private</span><span class='rparen'>)</span>
@@ -763,13 +747,13 @@
       <pre class="lines">
 
 
-18
-19
-20
-21</pre>
+27
+28
+29
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 27</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unwrap!'>unwrap!</span>
   <span class='ivar'>@wrapped</span> <span class='op'>=</span> <span class='kw'>false</span>
@@ -795,17 +779,21 @@
       <pre class="lines">
 
 
-13
 14
 15
-16</pre>
+16
+17
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/interceptor.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
-  <span class='ivar'>@buffer</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_str'>str</span> <span class='kw'>if</span> <span class='ivar'>@wrapped</span>
-  <span class='kw'>return</span> <span class='ivar'>@pipe</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_lock'>lock</span><span class='period'>.</span><span class='id identifier rubyid_synchronize'>synchronize</span> <span class='kw'>do</span> 
+    <span class='ivar'>@buffer</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_str'>str</span> <span class='kw'>if</span> <span class='ivar'>@wrapped</span>
+    <span class='kw'>return</span> <span class='ivar'>@pipe</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_str'>str</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -817,7 +805,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Mar 28 11:29:12 2014 by 
+  Generated on Fri May  9 12:47:24 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-1.9.3).
 </div>
