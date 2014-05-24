@@ -53,7 +53,7 @@ Given I am available on "Tuesday,Friday,Sunday"
 
 {% highlight java %}
 @Given("I am available on \"(.+)\"")
-public void I_have_cukes_in_my_belly(List<String> days) {
+public void I_am_available_on(List<String> days) {
     // Do something with the days
 }
 {% endhighlight %}
