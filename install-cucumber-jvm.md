@@ -106,4 +106,4 @@ You don't have to explicitly add a dependency on `cucumber-core` as all the othe
 
 ## Ant
 
-You'd better take a look at the [java-helloworld build.xml file](https://github.com/cucumber/cucumber-jvm/blob/master/examples/java-helloworld/build.xml)
+Take a look at the cucumber-java-skeleton [build.xml](https://github.com/cucumber/cucumber-java-skeleton/blob/master/build.xml) file.
