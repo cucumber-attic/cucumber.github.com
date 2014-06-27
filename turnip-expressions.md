@@ -13,9 +13,6 @@ to Turnip Expressions and a specification to be used by implementors of Turnip E
 
 TODO: Add examples from the turnip/behat docs and tests.
 
-| Turnip               | RegExp          |
-| `This is :what`      | `This is (\w+)` |
-
 ## Automatic type conversion
 
 It's common in Cucumber to capture strings and numbers. In dynamic languages like Ruby, the value of a capture group `(\d+)` will always be a string, and the user has to call `to_i` to convert it to an int. Turnip Expressions could be smarter about this if we used a different token to denote type:
