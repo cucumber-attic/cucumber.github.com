@@ -38,7 +38,7 @@ navigation:
   - text: Reports
     url: /reports.html
   - text: Databases
-    url: /databases.html    
+    url: /databases.html
 - text: Ecosystem
   dropdown:
   - text: Community Help
