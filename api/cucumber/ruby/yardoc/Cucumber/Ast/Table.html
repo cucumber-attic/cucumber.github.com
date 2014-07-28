@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.15</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.16</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (T)</a> &raquo;
@@ -126,10 +126,11 @@ manipulate the data in different ways.</p>
 
 <pre class="code ruby"><code class="ruby"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>I have:</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
   <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span>
-<span class='kw'>end</span></code></pre>
+<span class='kw'>end</span>
+</code></pre>
 
-<p>This will store <tt>[['a', 'b'], ['c', 'd']]</tt> in the <tt>data</tt>
-variable.</p>
+<p>This will store <code>[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;,
+&#39;d&#39;]]</code> in the <code>data</code> variable.</p>
 
 
   </div>
@@ -427,7 +428,7 @@ variable.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Compares <tt>other_table</tt> to self.</p>
+<p>Compares <code>other_table</code> to self.</p>
 </div></span>
   
 </li>
@@ -743,7 +744,7 @@ the headers in the table.</p>
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Matches <tt>pattern</tt> against the header row of the table.</p>
+<p>Matches <code>pattern</code> against the header row of the table.</p>
 </div></span>
   
 </li>
@@ -1006,10 +1007,10 @@ the second column is used as values.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Creates a new instance. <tt>raw</tt> should be an Array of Array of String
-or an Array of Hash (similar to what #hashes returns). You don't typically
-create your own Table objects - Cucumber will do it internally and pass
-them to your Step Definitions.</p>
+<p>Creates a new instance. <code>raw</code> should be an Array of Array of
+String or an Array of Hash (similar to what #hashes returns). You don&#39;t
+typically create your own Table objects - Cucumber will do it internally
+and pass them to your Step Definitions.</p>
 
 
   </div>
@@ -1042,7 +1043,7 @@ them to your Step Definitions.</p>
   <span class='ivar'>@cells_class</span> <span class='op'>=</span> <span class='const'>Cells</span>
   <span class='ivar'>@cell_class</span> <span class='op'>=</span> <span class='const'>Cell</span>
   <span class='id identifier rubyid_raw'>raw</span> <span class='op'>=</span> <span class='id identifier rubyid_ensure_array_of_array'>ensure_array_of_array</span><span class='lparen'>(</span><span class='id identifier rubyid_rubify'>rubify</span><span class='lparen'>(</span><span class='id identifier rubyid_raw'>raw</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='comment'># Verify that it's square
+  <span class='comment'># Verify that it&#39;s square
 </span>  <span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_transpose'>transpose</span>
   <span class='id identifier rubyid_create_cell_matrix'>create_cell_matrix</span><span class='lparen'>(</span><span class='id identifier rubyid_raw'>raw</span><span class='rparen'>)</span>
   <span class='ivar'>@conversion_procs</span> <span class='op'>=</span> <span class='id identifier rubyid_conversion_procs'>conversion_procs</span>
@@ -1484,17 +1485,18 @@ them to your Step Definitions.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Compares <tt>other_table</tt> to self. If <tt>other_table</tt> contains
-columns and/or rows that are not in self, new columns/rows are added at the
-relevant positions, marking the cells in those rows/columns as
-<tt>surplus</tt>. Likewise, if <tt>other_table</tt> lacks columns and/or
-rows that are present in self, these are marked as <tt>missing</tt>.</p>
+<p>Compares <code>other_table</code> to self. If <code>other_table</code>
+contains columns and/or rows that are not in self, new columns/rows are
+added at the relevant positions, marking the cells in those rows/columns as
+<code>surplus</code>. Likewise, if <code>other_table</code> lacks columns
+and/or rows that are present in self, these are marked as
+<code>missing</code>.</p>
 
-<p><tt>surplus</tt> and <tt>missing</tt> cells are recognised by formatters
-and displayed so that it's easy to read the differences.</p>
+<p><code>surplus</code> and <code>missing</code> cells are recognised by
+formatters and displayed so that it&#39;s easy to read the differences.</p>
 
 <p>Cells that are different, but <em>look</em> identical (for example the
-boolean true and the string "true") are converted to their Object#inspect
+boolean true and the string “true”) are converted to their Object#inspect
 representation and preceded with (i) - to make it easier to identify where
 the difference actually is.</p>
 
@@ -1505,25 +1507,26 @@ objects in their cells, you may want to use #map_column! before calling
 <p>A Different error is raised if there are missing rows or columns, or
 surplus rows. An error is <em>not</em> raised for surplus columns. An error
 is <em>not</em> raised for misplaced (out of sequence) columns. Whether to
-raise or not raise can be changed by setting values in <tt>options</tt> to
-true or false:</p>
+raise or not raise can be changed by setting values in <code>options</code>
+to true or false:</p>
 <ul><li>
-<p><tt>missing_row</tt> : Raise on missing rows (defaults to true)</p>
+<p><code>missing_row</code> : Raise on missing rows (defaults to true)</p>
 </li><li>
-<p><tt>surplus_row</tt> : Raise on surplus rows (defaults to true)</p>
+<p><code>surplus_row</code> : Raise on surplus rows (defaults to true)</p>
 </li><li>
-<p><tt>missing_col</tt> : Raise on missing columns (defaults to true)</p>
+<p><code>missing_col</code> : Raise on missing columns (defaults to true)</p>
 </li><li>
-<p><tt>surplus_col</tt> : Raise on surplus columns (defaults to false)</p>
+<p><code>surplus_col</code> : Raise on surplus columns (defaults to false)</p>
 </li><li>
-<p><tt>misplaced_col</tt> : Raise on misplaced columns (defaults to false)</p>
+<p><code>misplaced_col</code> : Raise on misplaced columns (defaults to false)</p>
 </li></ul>
 
-<p>The <tt>other_table</tt> argument can be another Table, an Array of Array
-or an Array of Hash (similar to the structure returned by #hashes).</p>
+<p>The <code>other_table</code> argument can be another Table, an Array of
+Array or an Array of Hash (similar to the structure returned by #hashes).</p>
 
-<p>Calling this method is particularly useful in <tt>Then</tt> steps that take
-a Table argument, if you want to compare that table to some actual values.</p>
+<p>Calling this method is particularly useful in <code>Then</code> steps that
+take a Table argument, if you want to compare that table to some actual
+values.</p>
 
 
   </div>
@@ -1669,18 +1672,18 @@ a Table argument, if you want to compare that table to some actual values.</p>
   <span class='id identifier rubyid_insert_row_pos'>insert_row_pos</span>  <span class='op'>=</span> <span class='kw'>nil</span>
 
   <span class='id identifier rubyid_changes'>changes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_change'>change</span><span class='op'>|</span>
-    <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_change'>change</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+    <span class='kw'>if</span><span class='lparen'>(</span><span class='id identifier rubyid_change'>change</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
       <span class='id identifier rubyid_missing_row_pos'>missing_row_pos</span> <span class='op'>=</span> <span class='id identifier rubyid_change'>change</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span> <span class='op'>+</span> <span class='id identifier rubyid_inserted'>inserted</span>
       <span class='id identifier rubyid_cell_matrix'>cell_matrix</span><span class='lbracket'>[</span><span class='id identifier rubyid_missing_row_pos'>missing_row_pos</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_cell'>cell</span><span class='op'>|</span> <span class='id identifier rubyid_cell'>cell</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='symbol'>:undefined</span><span class='rbrace'>}</span>
       <span class='id identifier rubyid_row_indices'>row_indices</span><span class='period'>.</span><span class='id identifier rubyid_insert'>insert</span><span class='lparen'>(</span><span class='id identifier rubyid_missing_row_pos'>missing_row_pos</span><span class='comma'>,</span> <span class='kw'>nil</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_missing'>missing</span> <span class='op'>+=</span> <span class='int'>1</span>
-    <span class='kw'>else</span> <span class='comment'># '+'
+    <span class='kw'>else</span> <span class='comment'># &#39;+&#39;
 </span>      <span class='id identifier rubyid_insert_row_pos'>insert_row_pos</span> <span class='op'>=</span> <span class='id identifier rubyid_change'>change</span><span class='period'>.</span><span class='id identifier rubyid_position'>position</span> <span class='op'>+</span> <span class='id identifier rubyid_missing'>missing</span>
       <span class='id identifier rubyid_inserted_row'>inserted_row</span> <span class='op'>=</span> <span class='id identifier rubyid_change'>change</span><span class='period'>.</span><span class='id identifier rubyid_element'>element</span>
       <span class='id identifier rubyid_inserted_row'>inserted_row</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_cell'>cell</span><span class='op'>|</span> <span class='id identifier rubyid_cell'>cell</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='symbol'>:comment</span><span class='rbrace'>}</span>
       <span class='id identifier rubyid_cell_matrix'>cell_matrix</span><span class='period'>.</span><span class='id identifier rubyid_insert'>insert</span><span class='lparen'>(</span><span class='id identifier rubyid_insert_row_pos'>insert_row_pos</span><span class='comma'>,</span> <span class='id identifier rubyid_inserted_row'>inserted_row</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_row_indices'>row_indices</span><span class='lbracket'>[</span><span class='id identifier rubyid_insert_row_pos'>insert_row_pos</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
-      <span class='id identifier rubyid_inspect_rows'>inspect_rows</span><span class='lparen'>(</span><span class='id identifier rubyid_cell_matrix'>cell_matrix</span><span class='lbracket'>[</span><span class='id identifier rubyid_missing_row_pos'>missing_row_pos</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_inserted_row'>inserted_row</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_last_change'>last_change</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_last_change'>last_change</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>-</span><span class='tstring_end'>'</span></span>
+      <span class='id identifier rubyid_inspect_rows'>inspect_rows</span><span class='lparen'>(</span><span class='id identifier rubyid_cell_matrix'>cell_matrix</span><span class='lbracket'>[</span><span class='id identifier rubyid_missing_row_pos'>missing_row_pos</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_inserted_row'>inserted_row</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_last_change'>last_change</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_last_change'>last_change</span><span class='period'>.</span><span class='id identifier rubyid_action'>action</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>-</span><span class='tstring_end'>&#39;</span></span>
       <span class='id identifier rubyid_inserted'>inserted</span> <span class='op'>+=</span> <span class='int'>1</span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_last_change'>last_change</span> <span class='op'>=</span> <span class='id identifier rubyid_change'>change</span>
@@ -1870,7 +1873,8 @@ plain text:</p>
 
 <p>Gets converted into the following:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>3</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sum</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>5</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>7</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>9</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>sum</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>16</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>3</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sum</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>5</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>7</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>9</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sum</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>16</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span>
+</code></pre>
 
 <p>Use #map_column! to specify how values in a column are converted.</p>
 
@@ -2081,18 +2085,20 @@ plain text:</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Change how #hashes converts column values. The <tt>column_name</tt>
-argument identifies the column and <tt>conversion_proc</tt> performs the
-conversion for each cell in that column. If <tt>strict</tt> is true, an
-error will be raised if the column named <tt>column_name</tt> is not found.
-If <tt>strict</tt> is false, no error will be raised. Example:</p>
+<p>Change how #hashes converts column values. The <code>column_name</code>
+argument identifies the column and <code>conversion_proc</code> performs
+the conversion for each cell in that column. If <code>strict</code> is
+true, an error will be raised if the column named <code>column_name</code>
+is not found. If <code>strict</code> is false, no error will be raised.
+Example:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^an expense report for (.*) with the following posts:$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_posts_table'>posts_table</span><span class='period'>.</span><span class='id identifier rubyid_map_column!'>map_column!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>amount</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span>
+  <span class='id identifier rubyid_posts_table'>posts_table</span><span class='period'>.</span><span class='id identifier rubyid_map_column!'>map_column!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>amount</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span>
   <span class='id identifier rubyid_posts_table'>posts_table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_post'>post</span><span class='op'>|</span>
-    <span class='comment'># post['amount'] is a Fixnum, rather than a String
+    <span class='comment'># post[&#39;amount&#39;] is a Fixnum, rather than a String
 </span>  <span class='kw'>end</span>
-<span class='kw'>end</span></code></pre>
+<span class='kw'>end</span>
+</code></pre>
 
 
   </div>
@@ -2179,10 +2185,10 @@ If <tt>strict</tt> is false, no error will be raised. Example:</p>
   <div class="discussion">
     
 <p>Redefines the table headers. This makes it possible to use prettier and
-more flexible header names in the features.  The keys of <tt>mappings</tt>
-are Strings or regular expressions (anything that responds to #=== will
-work) that may match column headings in the table.  The values of
-<tt>mappings</tt> are desired names for the columns.</p>
+more flexible header names in the features.  The keys of
+<code>mappings</code> are Strings or regular expressions (anything that
+responds to #=== will work) that may match column headings in the table. 
+The values of <code>mappings</code> are desired names for the columns.</p>
 
 <p>Example:</p>
 
@@ -2193,22 +2199,25 @@ work) that may match column headings in the table.  The values of
 <p>A StepDefinition receiving this table can then map the columns with both
 Regexp and String:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>phone( number)?</span><span class='regexp_end'>/i</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:phone</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Address</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:address</span><span class='rparen'>)</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>phone( number)?</span><span class='regexp_end'>/i</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:phone</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Address</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:address</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span>
-<span class='comment'># =&gt; [{:phone =&gt; '123456', :address =&gt; 'xyz'}, {:phone =&gt; '345678', :address =&gt; 'abc'}]</span></code></pre>
+<span class='comment'># =&gt; [{:phone =&gt; &#39;123456&#39;, :address =&gt; &#39;xyz&#39;}, {:phone =&gt; &#39;345678&#39;, :address =&gt; &#39;abc&#39;}]
+</span></code></pre>
 
 <p>You may also pass in a block if you wish to convert all of the headers:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='op'>|</span> <span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span>
 <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-<span class='comment'># =&gt; ['phone number', 'address']</span></code></pre>
+<span class='comment'># =&gt; [&#39;phone number&#39;, &#39;address&#39;]
+</span></code></pre>
 
 <p>When a block is passed in along with a hash then the mappings in the hash
 take precendence:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Address</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ADDRESS</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='op'>|</span> <span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span>
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Address</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ADDRESS</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='op'>|</span> <span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span>
 <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-<span class='comment'># =&gt; ['phone number', 'ADDRESS']</span></code></pre>
+<span class='comment'># =&gt; [&#39;phone number&#39;, &#39;ADDRESS&#39;]
+</span></code></pre>
 
 
   </div>
@@ -2255,17 +2264,18 @@ take precendence:</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Matches <tt>pattern</tt> against the header row of the table. This is used
-especially for argument transforms.</p>
+<p>Matches <code>pattern</code> against the header row of the table. This is
+used especially for argument transforms.</p>
 
 <p>Example:</p>
 
 <pre class="code ruby"><code class="ruby">| column_1_name | column_2_name |
 | x             | y             |
 
-table.match(/table:column_1_name,column_2_name/) #=&gt; non-nil</code></pre>
+table.match(/table:column_1_name,column_2_name/) #=&gt; non-nil
+</code></pre>
 
-<p>Note: must use 'table:' prefix on match</p>
+<p>Note: must use &#39;table:&#39; prefix on match</p>
 
 
   </div>
@@ -2288,7 +2298,7 @@ table.match(/table:column_1_name,column_2_name/) #=&gt; non-nil</code></pre>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/table.rb', line 198</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_pattern'>pattern</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_header_to_match'>header_to_match</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>,</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='id identifier rubyid_header_to_match'>header_to_match</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>table:</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_headers'>headers</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>,</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_pattern'>pattern</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_header_to_match'>header_to_match</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -2316,7 +2326,7 @@ following plain text:</p>
 
 <p>gets converted into the following:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>c</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>d</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>c</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>d</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rbracket'>]</span></code></pre>
 
 
   </div>
@@ -2407,7 +2417,8 @@ the second column is used as values</p>
 
 <p>Gets converted into the following:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>a</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>2</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>b</span><span class='tstring_end'>'</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>3</span><span class='tstring_end'>'</span></span><span class='rbrace'>}</span></code></pre>
+<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>3</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
+</code></pre>
 
 <p>The table must be exactly two columns wide</p>
 
@@ -2542,14 +2553,14 @@ the second column is used as values</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/table.rb', line 453</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>cucumber/formatter/pretty</span><span class='tstring_end'>'</span></span>
+</span>  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber/formatter/pretty</span><span class='tstring_end'>&#39;</span></span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:color</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:indent</span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span> <span class='symbol'>:prefixes</span> <span class='op'>=&gt;</span> <span class='const'>TO_S_PREFIXES</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
   <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Term</span><span class='op'>::</span><span class='const'>ANSIColor</span><span class='period'>.</span><span class='id identifier rubyid_coloring?'>coloring?</span>
   <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Term</span><span class='op'>::</span><span class='const'>ANSIColor</span><span class='period'>.</span><span class='id identifier rubyid_coloring'>coloring</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Pretty</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>@indent</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:indent</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@indent</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:indent</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='const'>TreeWalker</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_visit_multiline_arg'>visit_multiline_arg</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
 
   <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Term</span><span class='op'>::</span><span class='const'>ANSIColor</span><span class='period'>.</span><span class='id identifier rubyid_coloring'>coloring</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span>
@@ -2717,7 +2728,7 @@ the second column is used as values</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/table.rb', line 404</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_verify_column'>verify_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>The column named &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rbrace'>}</span><span class='tstring_content'>&quot; does not exist</span><span class='tstring_end'>}</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>The column named &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_column_name'>column_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot; does not exist</span><span class='tstring_end'>}</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_column_name'>column_name</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2758,7 +2769,7 @@ the second column is used as values</p>
       <pre class="code"><span class="info file"># File 'lib/cucumber/ast/table.rb', line 408</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_verify_table_width'>verify_table_width</span><span class='lparen'>(</span><span class='id identifier rubyid_width'>width</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>The table must have exactly </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_width'>width</span><span class='rbrace'>}</span><span class='tstring_content'> columns</span><span class='tstring_end'>}</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='id identifier rubyid_width'>width</span>
+</span>  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>The table must have exactly </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_width'>width</span><span class='embexpr_end'>}</span><span class='tstring_content'> columns</span><span class='tstring_end'>}</span></span> <span class='kw'>unless</span> <span class='id identifier rubyid_raw'>raw</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='id identifier rubyid_width'>width</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -2770,9 +2781,9 @@ the second column is used as values</p>
 </div>
     
     <div id="footer">
-  Generated on Fri May  9 12:48:26 2014 by 
+  Generated on Mon Jul 28 12:06:29 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.1.1).
 </div>
 
   </body>
