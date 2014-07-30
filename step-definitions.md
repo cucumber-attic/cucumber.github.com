@@ -512,7 +512,7 @@ public void I_have_these_vegetables(Map<String,String> vegetables) {
 }
 {% endhighlight %}
 
-This will convert it to a map list like this: `{"name" => "color", "Cucumber" => "Green" => "Tomato", "Red"}`
+This will convert it to a map list like this: `{"name" => "color", "Cucumber" => "Green", "Tomato" => "Red"}`
 
 Note that this only works for tables with 2 columns. If you're converting into a `Map`
 it is usually adviseable that the Gherkin table doesn't have a top row naming the columns.
