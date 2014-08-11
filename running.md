@@ -17,6 +17,7 @@ you are using (if any).
 ## Running Cucumber-JVM
 ### Command Line
 TODO
+
 ### JUnit
 Create one empty class with the `@RunWith(Cucumber.class)` annotation. 
 Executing this class as any JUnit test class will run all features found on the classpath in the same package as this class.
@@ -35,14 +36,19 @@ public class RunCukesTest {
 {% endhighlight %}
 ### TestNG
 TODO
+
 ### Android
 TODO
+
 #### Android options
 TODO
+
 ### Maven
 TODO
+
 ### Ant
 TODO
+
 ### Gradle
 TODO
 
