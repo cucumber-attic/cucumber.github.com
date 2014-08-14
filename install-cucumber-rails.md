@@ -8,7 +8,7 @@ Cucumber-Rails is a generator that will generate and modify files in a Rails pro
 Before you can use the generator, add the gem to your project's Gemfile as follows:
 
 {% highlight ruby %}
-group :test do
+group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
@@ -24,7 +24,7 @@ bundle install
 Learn about the various options:
 
 {% highlight text %}
-rails generate cucumber:install --help
+cucumber --help
 {% endhighlight %}
 
 Finally, bootstrap your Rails app, for example:
