@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.16</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.1</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (T)</a> &raquo;
@@ -129,13 +129,6 @@ Cucumber features&#39;. It will use steps from
 <span class='kw'>end</span>
 </code></pre>
 
-<p>This task can also be configured to be run with RCov:</p>
-
-<pre class="code ruby"><code class="ruby"><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Rake</span><span class='op'>::</span><span class='const'>Task</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_t'>t</span><span class='op'>|</span>
-  <span class='id identifier rubyid_t'>t</span><span class='period'>.</span><span class='id identifier rubyid_rcov'>rcov</span> <span class='op'>=</span> <span class='kw'>true</span>
-<span class='kw'>end</span>
-</code></pre>
-
 <p>See the attributes for additional configuration possibilities.</p>
 
 
@@ -150,33 +143,10 @@ Cucumber features&#39;. It will use steps from
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Task/ForkedCucumberRunner.html" title="Cucumber::Rake::Task::ForkedCucumberRunner (class)">ForkedCucumberRunner</a></span>, <span class='object_link'><a href="Task/InProcessCucumberRunner.html" title="Cucumber::Rake::Task::InProcessCucumberRunner (class)">InProcessCucumberRunner</a></span>, <span class='object_link'><a href="Task/RCovCucumberRunner.html" title="Cucumber::Rake::Task::RCovCucumberRunner (class)">RCovCucumberRunner</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Task/ForkedCucumberRunner.html" title="Cucumber::Rake::Task::ForkedCucumberRunner (class)">ForkedCucumberRunner</a></span>, <span class='object_link'><a href="Task/InProcessCucumberRunner.html" title="Cucumber::Rake::Task::InProcessCucumberRunner (class)">InProcessCucumberRunner</a></span>
     
   
 </p>
-
-  <h2>Constant Summary</h2>
-  
-    <dl class="constants">
-      
-        <dt id="LIB-constant" class="">LIB =
-          <div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div>
-        </dt>
-        <dd><pre class="code"><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/../..</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></pre></dd>
-      
-    </dl>
-  
 
 
 
@@ -341,60 +311,6 @@ Cucumber features&#39;. It will use steps from
   
     <span class="summary_desc"><div class='inline'>
 <p>Define what profile to be used.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#rcov-instance_method" title="#rcov (instance method)">- (Object) <strong>rcov</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Run cucumber with RCov? Defaults to false.</p>
-</div></span>
-  
-</li>
-
-    
-      <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#rcov_opts-instance_method" title="#rcov_opts (instance method)">- (Object) <strong>rcov_opts</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-    
-    
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Extra options to pass to rcov.</p>
 </div></span>
   
 </li>
@@ -624,34 +540,26 @@ Cucumber features&#39;. It will use steps from
       <pre class="lines">
 
 
-174
-175
-176
-177
-178
-179
-180
-181
-182
-183
-184
-185
-186</pre>
+130
+131
+132
+133
+134
+135
+136
+137
+138</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 130</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_task_name'>task_name</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cucumber</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Run Cucumber features</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@task_name</span><span class='comma'>,</span> <span class='ivar'>@desc</span> <span class='op'>=</span> <span class='id identifier rubyid_task_name'>task_name</span><span class='comma'>,</span> <span class='id identifier rubyid_desc'>desc</span>
   <span class='ivar'>@fork</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='ivar'>@libs</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>lib</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
   <span class='ivar'>@rcov_opts</span> <span class='op'>=</span> <span class='qwords_beg'>%w{</span><span class='tstring_content'>--rails</span><span class='words_sep'> </span><span class='tstring_content'>--exclude</span><span class='words_sep'> </span><span class='tstring_content'>osx\/objc,gems\/</span><span class='words_sep'>}</span>
-
   <span class='kw'>yield</span> <span class='kw'>self</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
-
   <span class='ivar'>@binary</span> <span class='op'>=</span> <span class='id identifier rubyid_binary'>binary</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>?</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>BINARY</span> <span class='op'>:</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_expand_path'>expand_path</span><span class='lparen'>(</span><span class='id identifier rubyid_binary'>binary</span><span class='rparen'>)</span>
-  <span class='ivar'>@libs</span><span class='period'>.</span><span class='id identifier rubyid_insert'>insert</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='const'>LIB</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_binary'>binary</span> <span class='op'>==</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>BINARY</span>
-
   <span class='id identifier rubyid_define_task'>define_task</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -693,12 +601,12 @@ Cucumber::BINARY</p>
       <pre class="lines">
 
 
-131
-132
-133</pre>
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 131</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 104</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_binary'>binary</span>
   <span class='ivar'>@binary</span>
@@ -740,12 +648,12 @@ and you have a Gemfile, false otherwise.</p>
       <pre class="lines">
 
 
-171
-172
-173</pre>
+127
+128
+129</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 171</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 127</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_bundler'>bundler</span>
   <span class='ivar'>@bundler</span>
@@ -785,12 +693,12 @@ but if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-135
-136
-137</pre>
+108
+109
+110</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span>
   <span class='ivar'>@cucumber_opts</span>
@@ -830,12 +738,12 @@ issues with your load path and gems.</p>
       <pre class="lines">
 
 
-160
-161
-162</pre>
+116
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 116</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_fork'>fork</span>
   <span class='ivar'>@fork</span>
@@ -873,12 +781,12 @@ issues with your load path and gems.</p>
       <pre class="lines">
 
 
-128
-129
-130</pre>
+101
+102
+103</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 128</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 101</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_libs'>libs</span>
   <span class='ivar'>@libs</span>
@@ -917,103 +825,15 @@ appended to it. Will be ignored when CUCUMBER_OPTS is used.</p>
       <pre class="lines">
 
 
-164
-165
-166</pre>
+120
+121
+122</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 164</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_profile'>profile</span>
   <span class='ivar'>@profile</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="rcov=-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="rcov-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>rcov</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Run cucumber with RCov? Defaults to false. If you set this to true,
-<code>fork</code> is implicit.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-142
-143
-144</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 142</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_rcov'>rcov</span>
-  <span class='ivar'>@rcov</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      
-      <span id="rcov_opts=-instance_method"></span>
-      <div class="method_details ">
-  <h3 class="signature " id="rcov_opts-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>rcov_opts</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Extra options to pass to rcov. It&#39;s recommended to pass an Array, but
-if it&#39;s a String it will be #split by &#39; &#39;.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-152
-153
-154</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 152</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_rcov_opts'>rcov_opts</span>
-  <span class='ivar'>@rcov_opts</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1053,12 +873,12 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-206
-207
-208</pre>
+155
+156
+157</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 206</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 155</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cucumber_opts_with_profile'>cucumber_opts_with_profile</span> <span class='comment'>#:nodoc:
 </span>  <span class='ivar'>@profile</span> <span class='op'>?</span> <span class='lbracket'>[</span><span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>--profile</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='ivar'>@profile</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span>
@@ -1094,15 +914,15 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-188
-189
-190
-191
-192
-193</pre>
+140
+141
+142
+143
+144
+145</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 188</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_define_task'>define_task</span> <span class='comment'>#:nodoc:
 </span>  <span class='id identifier rubyid_desc'>desc</span> <span class='ivar'>@desc</span>
@@ -1141,12 +961,12 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-210
-211
-212</pre>
+159
+160
+161</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 210</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 159</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_feature_files'>feature_files</span> <span class='comment'>#:nodoc:
 </span>  <span class='id identifier rubyid_make_command_line_safe'>make_command_line_safe</span><span class='lparen'>(</span><span class='const'>FileList</span><span class='lbracket'>[</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>FEATURE</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='lbracket'>[</span><span class='rbracket'>]</span> <span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -1171,12 +991,12 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-214
-215
-216</pre>
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 214</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 163</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_command_line_safe'>make_command_line_safe</span><span class='lparen'>(</span><span class='id identifier rubyid_list'>list</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_list'>list</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_string'>string</span><span class='op'>|</span> <span class='id identifier rubyid_string'>string</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>\ </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -1212,29 +1032,23 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
       <pre class="lines">
 
 
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204</pre>
+147
+148
+149
+150
+151
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rake/task.rb', line 147</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_runner'>runner</span><span class='lparen'>(</span><span class='id identifier rubyid_task_args'>task_args</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
 </span>  <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='lparen'>(</span><span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CUCUMBER_OPTS</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CUCUMBER_OPTS</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\s+</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span> <span class='op'>:</span> <span class='kw'>nil</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_cucumber_opts_with_profile'>cucumber_opts_with_profile</span><span class='rbracket'>]</span>
-  <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@rcov</span><span class='rparen'>)</span>
-    <span class='const'>RCovCucumberRunner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_libs'>libs</span><span class='comma'>,</span> <span class='id identifier rubyid_binary'>binary</span><span class='comma'>,</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='id identifier rubyid_bundler'>bundler</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_files'>feature_files</span><span class='comma'>,</span> <span class='id identifier rubyid_rcov_opts'>rcov_opts</span><span class='rparen'>)</span>
-  <span class='kw'>elsif</span><span class='lparen'>(</span><span class='ivar'>@fork</span><span class='rparen'>)</span>
-    <span class='const'>ForkedCucumberRunner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_libs'>libs</span><span class='comma'>,</span> <span class='id identifier rubyid_binary'>binary</span><span class='comma'>,</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='id identifier rubyid_bundler'>bundler</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_files'>feature_files</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='const'>InProcessCucumberRunner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_libs'>libs</span><span class='comma'>,</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_files'>feature_files</span><span class='rparen'>)</span>
+  <span class='kw'>if</span><span class='lparen'>(</span><span class='ivar'>@fork</span><span class='rparen'>)</span>
+    <span class='kw'>return</span> <span class='const'>ForkedCucumberRunner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_libs'>libs</span><span class='comma'>,</span> <span class='id identifier rubyid_binary'>binary</span><span class='comma'>,</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='id identifier rubyid_bundler'>bundler</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_files'>feature_files</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
+  <span class='const'>InProcessCucumberRunner</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_libs'>libs</span><span class='comma'>,</span> <span class='id identifier rubyid_cucumber_opts'>cucumber_opts</span><span class='comma'>,</span> <span class='id identifier rubyid_feature_files'>feature_files</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1246,7 +1060,7 @@ if it&#39;s a String it will be #split by &#39; &#39;.</p>
 </div>
     
     <div id="footer">
-  Generated on Mon Jul 28 12:06:29 2014 by 
+  Generated on Fri Aug 22 16:12:20 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.1.1).
 </div>
