@@ -14,6 +14,7 @@ title: Team
 * [Steve Tooke](https://github.com/tooky)
 * [Chris Parsons](https://github.com/chrismdp)
 * [Tom Brand](https://github.com/tom025)
+* [Björn Rasmusson](https://github.com/brasmusson)
 
 ## Cucumber-JVM and Gherkin3/Java
 * [Aslak Hellesøy](https://github.com/aslakhellesoy)
