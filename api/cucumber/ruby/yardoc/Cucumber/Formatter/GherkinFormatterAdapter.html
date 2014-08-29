@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.1</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (G)</a> &raquo;
@@ -933,21 +933,31 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 155
 156
 157
-158</pre>
+158
+159
+160
+161
+162
+163</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 148</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
-  <span class='comment'># Only embed if file exists
-</span>  <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_exists?'>exists?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span> <span class='rbrace'>}</span>
-
-    <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>JRUBY_VERSION</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_java_bytes'>to_java_bytes</span>
+  <span class='kw'>else</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_mime_type'>mime_type</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>;base64$</span><span class='regexp_end'>/</span></span>
+      <span class='id identifier rubyid_mime_type'>mime_type</span> <span class='op'>=</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='op'>-</span><span class='int'>8</span><span class='rbracket'>]</span>
+      <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='const'>Base64</span><span class='period'>.</span><span class='id identifier rubyid_decode64'>decode64</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_file'>file</span>
     <span class='kw'>end</span>
-    <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_embedding'>embedding</span><span class='lparen'>(</span><span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
+  <span class='kw'>if</span> <span class='kw'>defined?</span><span class='lparen'>(</span><span class='const'>JRUBY_VERSION</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_to_java_bytes'>to_java_bytes</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_embedding'>embedding</span><span class='lparen'>(</span><span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_data'>data</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -969,12 +979,12 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
-160
-161
-162</pre>
+165
+166
+167</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 165</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_write'>write</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
@@ -1105,9 +1115,9 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 22 16:12:24 2014 by 
+  Generated on Fri Aug 29 15:23:59 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.1).
+  0.8.7.4 (ruby-2.0.0).
 </div>
 
   </body>

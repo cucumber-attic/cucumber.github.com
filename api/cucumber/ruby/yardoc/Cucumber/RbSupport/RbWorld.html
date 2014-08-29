@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.1</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
@@ -953,7 +953,7 @@ instead.</p>
   <span class='comment'># TODO: this argument parsing should move up out of core
 </span>  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>:</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_core_multiline_arg'>core_multiline_arg</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_multiline_arg'>raw_multiline_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
-  <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_core_multiline_arg'>core_multiline_arg</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_core_multiline_arg'>core_multiline_arg</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1200,9 +1200,9 @@ instead.</p>
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 22 16:12:20 2014 by 
+  Generated on Fri Aug 29 15:23:55 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.1.1).
+  0.8.7.4 (ruby-2.0.0).
 </div>
 
   </body>
