@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.17</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (A)</a> &raquo;
@@ -84,103 +84,59 @@
   
   
     <dt class="r1 last">Defined in:</dt>
-    <dd class="r1 last">lib/cucumber/ast.rb</dd>
+    <dd class="r1 last">lib/cucumber/ast.rb<span class="defines">,<br />
+  lib/cucumber/ast/step.rb,<br /> lib/cucumber/ast/tags.rb,<br /> lib/cucumber/ast/names.rb,<br /> lib/cucumber/ast/table.rb,<br /> lib/cucumber/ast/feature.rb,<br /> lib/cucumber/ast/comment.rb,<br /> lib/cucumber/ast/visitor.rb,<br /> lib/cucumber/ast/location.rb,<br /> lib/cucumber/ast/features.rb,<br /> lib/cucumber/ast/scenario.rb,<br /> lib/cucumber/ast/examples.rb,<br /> lib/cucumber/ast/has_steps.rb,<br /> lib/cucumber/ast/doc_string.rb,<br /> lib/cucumber/ast/background.rb,<br /> lib/cucumber/ast/tree_walker.rb,<br /> lib/cucumber/ast/outline_table.rb,<br /> lib/cucumber/ast/step_invocation.rb,<br /> lib/cucumber/ast/step_collection.rb,<br /> lib/cucumber/ast/empty_background.rb,<br /> lib/cucumber/ast/scenario_outline.rb,<br /> lib/cucumber/ast/multiline_argument.rb</span>
+</dd>
   
 </dl>
 <div class="clear"></div>
 
-
-
-
-
-
-
-
-  
-    <h2>
-      Class Method Summary
-      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
-    </h2>
-
-    <ul class="summary">
-      
-        <li class="public ">
-  <span class="summary_signature">
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
     
-      <a href="#const_missing-class_method" title="const_missing (class method)">+ (Object) <strong>const_missing</strong>(const_name) </a>
-    
+<p>Classes in this module represent the Abstract Syntax Tree (AST) that gets
+built when feature files are parsed.</p>
 
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
+<p>AST classes don't expose any internal data directly. This is in order to
+encourage a less coupled design in the classes that operate on the AST. The
+only public method is #accept.</p>
 
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-    </ul>
-  
+<p>The AST can be traversed with a visitor. See Cucumber::Format::Pretty for
+an example.</p>
 
 
-
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
-
-    
-      <div class="method_details first">
-  <h3 class="signature first" id="const_missing-class_method">
-  
-    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>const_missing</strong>(const_name) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-5
-6
-7
-8
-9
-10
-11</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/ast.rb', line 5</span>
-
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_const_missing'>const_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_const_name'>const_name</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_const_name'>const_name</span> <span class='op'>==</span> <span class='symbol'>:Table</span>
-    <span class='id identifier rubyid_warn'>warn</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`Cucumber::Ast::Table` has been deprecated. Use `Cucumber::MultilineArgument::DataTable` instead.</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>return</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>MultilineArgument</span><span class='op'>::</span><span class='const'>DataTable</span>
-  <span class='kw'>end</span>
-  <span class='id identifier rubyid_raise'>raise</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>`Cucumber::Ast` no longer exists. These classes have moved into the `Cucumber::Core::Ast` namespace, but may not have the same API.</span><span class='tstring_end'>&quot;</span></span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
   </div>
+</div>
+<div class="tags">
+  
+
+</div><h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Ast/HasLocation.html" title="Cucumber::Ast::HasLocation (module)">HasLocation</a></span>, <span class='object_link'><a href="Ast/HasSteps.html" title="Cucumber::Ast::HasSteps (module)">HasSteps</a></span>, <span class='object_link'><a href="Ast/MultilineArgument.html" title="Cucumber::Ast::MultilineArgument (module)">MultilineArgument</a></span>, <span class='object_link'><a href="Ast/Names.html" title="Cucumber::Ast::Names (module)">Names</a></span>
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Ast/Background.html" title="Cucumber::Ast::Background (class)">Background</a></span>, <span class='object_link'><a href="Ast/Comment.html" title="Cucumber::Ast::Comment (class)">Comment</a></span>, <span class='object_link'><a href="Ast/DocString.html" title="Cucumber::Ast::DocString (class)">DocString</a></span>, <span class='object_link'><a href="Ast/EmptyBackground.html" title="Cucumber::Ast::EmptyBackground (class)">EmptyBackground</a></span>, <span class='object_link'><a href="Ast/Examples.html" title="Cucumber::Ast::Examples (class)">Examples</a></span>, <span class='object_link'><a href="Ast/Feature.html" title="Cucumber::Ast::Feature (class)">Feature</a></span>, <span class='object_link'><a href="Ast/Features.html" title="Cucumber::Ast::Features (class)">Features</a></span>, <span class='object_link'><a href="Ast/Location.html" title="Cucumber::Ast::Location (class)">Location</a></span>, <span class='object_link'><a href="Ast/OutlineTable.html" title="Cucumber::Ast::OutlineTable (class)">OutlineTable</a></span>, <span class='object_link'><a href="Ast/Scenario.html" title="Cucumber::Ast::Scenario (class)">Scenario</a></span>, <span class='object_link'><a href="Ast/ScenarioOutline.html" title="Cucumber::Ast::ScenarioOutline (class)">ScenarioOutline</a></span>, <span class='object_link'><a href="Ast/Step.html" title="Cucumber::Ast::Step (class)">Step</a></span>, <span class='object_link'><a href="Ast/StepCollection.html" title="Cucumber::Ast::StepCollection (class)">StepCollection</a></span>, <span class='object_link'><a href="Ast/StepInvocation.html" title="Cucumber::Ast::StepInvocation (class)">StepInvocation</a></span>, <span class='object_link'><a href="Ast/Table.html" title="Cucumber::Ast::Table (class)">Table</a></span>, <span class='object_link'><a href="Ast/Tags.html" title="Cucumber::Ast::Tags (class)">Tags</a></span>, <span class='object_link'><a href="Ast/TreeWalker.html" title="Cucumber::Ast::TreeWalker (class)">TreeWalker</a></span>, <span class='object_link'><a href="Ast/Visitor.html" title="Cucumber::Ast::Visitor (class)">Visitor</a></span>
+    
+  
+</p>
+
+
+
+
+
+
+
+
 
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 29 15:23:55 2014 by 
+  Generated on Sat Sep 13 20:20:07 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>

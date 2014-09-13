@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>
-  Class: Cucumber::Undefined
+  Exception: Cucumber::Undefined
   
     &mdash; Documentation by YARD 0.8.7.4
   
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.17</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (U)</a> &raquo;
@@ -68,7 +68,7 @@
     
     <iframe id="search_frame"></iframe>
     
-    <div id="content"><h1>Class: Cucumber::Undefined
+    <div id="content"><h1>Exception: Cucumber::Undefined
   
   
   
@@ -78,12 +78,12 @@
   
     <dt class="r1">Inherits:</dt>
     <dd class="r1">
-      <span class="inheritName">Core::Test::Result::Undefined</span>
+      <span class="inheritName">StandardError</span>
       
         <ul class="fullTree">
           <li><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></li>
           
-            <li class="next">Core::Test::Result::Undefined</li>
+            <li class="next">StandardError</li>
           
             <li class="next">Cucumber::Undefined</li>
           
@@ -121,12 +121,46 @@
 
 
 
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step_name-instance_method" title="#step_name (instance method)">- (Object) <strong>step_name</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute step_name.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
 
 
 
   
     <h2>
-      Class Method Summary
+      Instance Method Summary
       <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
     </h2>
 
@@ -135,7 +169,33 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#from-class_method" title="from (class method)">+ (Object) <strong>from</strong>(result, step_name) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Undefined) <strong>initialize</strong>(step_name) </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of Undefined.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#nested%21-instance_method" title="#nested! (instance method)">- (Object) <strong>nested!</strong> </a>
     
 
     
@@ -157,7 +217,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#with_prefix-class_method" title="with_prefix (class method)">+ (Object) <strong>with_prefix</strong>(step_name) </a>
+      <a href="#nested%3F-instance_method" title="#nested? (instance method)">- (Boolean) <strong>nested?</strong> </a>
     
 
     
@@ -180,22 +240,30 @@
   
 
 
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Undefined (class)">Undefined</a></span></tt>) <strong>initialize</strong>(step_name) 
   
 
-  <div id="class_method_details" class="method_details_list">
-    <h2>Class Method Details</h2>
+  
 
+  
+</h3><div class="docstring">
+  <div class="discussion">
     
-      <div class="method_details first">
-  <h3 class="signature first" id="from-class_method">
-  
-    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>from</strong>(result, step_name) 
+<p>Returns a new instance of Undefined</p>
+
+
+  </div>
+</div>
+<div class="tags">
   
 
-  
-
-  
-</h3><table class="source_code">
+</div><table class="source_code">
   <tr>
     <td>
       <pre class="lines">
@@ -204,38 +272,79 @@
 6
 7
 8
-9
-10
-11
-12
-13
-14
-15
-16</pre>
+9</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/errors.rb', line 6</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_with_message'>with_message</span><span class='lparen'>(</span><span class='id identifier rubyid_with_prefix'>with_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rparen'>)</span>
+  <span class='kw'>super</span> <span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>Undefined step: &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>}</span></span>
+  <span class='ivar'>@step_name</span> <span class='op'>=</span> <span class='id identifier rubyid_step_name'>step_name</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
 
-  <span class='kw'>begin</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_with_prefix'>with_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>rescue</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_exception'>exception</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_exception'>exception</span>
-  <span class='kw'>end</span>
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="step_name-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step_name</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute step_name</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+4
+5
+6</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/errors.rb', line 4</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_step_name'>step_name</span>
+  <span class='ivar'>@step_name</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
 </table>
 </div>
     
-      <div class="method_details ">
-  <h3 class="signature " id="with_prefix-class_method">
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="nested!-instance_method">
   
-    + (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>with_prefix</strong>(step_name) 
+    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>nested!</strong> 
   
 
   
@@ -247,15 +356,67 @@
       <pre class="lines">
 
 
-18
-19
-20</pre>
+11
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/errors.rb', line 18</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/errors.rb', line 11</span>
 
-<span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_with_prefix'>with_prefix</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='rparen'>)</span>
-  <span class='tstring'><span class='tstring_beg'>%(</span><span class='tstring_content'>Undefined step: &quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_step_name'>step_name</span><span class='embexpr_end'>}</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>)</span></span>
+<span class='kw'>def</span> <span class='id identifier rubyid_nested!'>nested!</span>
+  <span class='ivar'>@nested</span> <span class='op'>=</span> <span class='kw'>true</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="nested?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>nested?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+15
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/errors.rb', line 15</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_nested?'>nested?</span>
+  <span class='ivar'>@nested</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -267,9 +428,9 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 29 15:23:55 2014 by 
+  Generated on Sat Sep 13 20:20:08 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>
