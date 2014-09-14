@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.17</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (R)</a> &raquo;
@@ -173,7 +173,7 @@ make sense in your domain. For more on that, see
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#doc_string-instance_method" title="#doc_string (instance method)">- (Object) <strong>doc_string</strong>(string_without_triple_quotes, content_type = '', line_offset = 0) </a>
+      <a href="#doc_string-instance_method" title="#doc_string (instance method)">- (Object) <strong>doc_string</strong>(string_without_triple_quotes, content_type = &#39;&#39;, line_offset = 0) </a>
     
 
     
@@ -188,7 +188,7 @@ make sense in your domain. For more on that, see
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Create an <span class='object_link'><a href="../Ast/DocString.html" title="Cucumber::Ast::DocString (class)">Ast::DocString</a></span> object.</p>
+<p>Create an Ast::DocString object.</p>
 </div></span>
   
 </li>
@@ -197,7 +197,7 @@ make sense in your domain. For more on that, see
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#embed-instance_method" title="#embed (instance method)">- (Object) <strong>embed</strong>(file, mime_type, label = 'Screenshot') </a>
+      <a href="#embed-instance_method" title="#embed (instance method)">- (Object) <strong>embed</strong>(file, mime_type, label = &#39;Screenshot&#39;) </a>
     
 
     
@@ -293,7 +293,31 @@ make sense in your domain. For more on that, see
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#step-instance_method" title="#step (instance method)">- (Object) <strong>step</strong>(name, multiline_argument = nil) </a>
+      <a href="#skip_this_scenario-instance_method" title="#skip_this_scenario (instance method)">- (Object) <strong>skip_this_scenario</strong>(message = &quot;Scenario skipped&quot;) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Skips this step and the remaining steps in the scenario.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#step-instance_method" title="#step (instance method)">- (Object) <strong>step</strong>(name, raw_multiline_arg = nil) </a>
     
 
     
@@ -356,7 +380,7 @@ make sense in your domain. For more on that, see
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Parse Gherkin into a <span class='object_link'><a href="../Ast/Table.html" title="Cucumber::Ast::Table (class)">Ast::Table</a></span> object.</p>
+<p>Parse Gherkin into a Ast::Table object.</p>
 </div></span>
   
 </li>
@@ -446,13 +470,13 @@ make sense in your domain. For more on that, see
       <pre class="lines">
 
 
-94
-95
-96
-97</pre>
+82
+83
+84
+85</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_announce'>announce</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
   <span class='const'>STDERR</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='const'>AnsiEscapes</span><span class='period'>.</span><span class='id identifier rubyid_failed'>failed</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>WARNING: #announce is deprecated. Use #puts instead:</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span> <span class='op'>+</span> <span class='const'>AnsiEscapes</span><span class='period'>.</span><span class='id identifier rubyid_reset'>reset</span>
@@ -489,12 +513,12 @@ make sense in your domain. For more on that, see
       <pre class="lines">
 
 
-111
-112
-113</pre>
+99
+100
+101</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 111</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 99</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_ask'>ask</span><span class='lparen'>(</span><span class='id identifier rubyid_question'>question</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout_seconds'>timeout_seconds</span><span class='op'>=</span><span class='int'>60</span><span class='rparen'>)</span>
   <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_ask'>ask</span><span class='lparen'>(</span><span class='id identifier rubyid_question'>question</span><span class='comma'>,</span> <span class='id identifier rubyid_timeout_seconds'>timeout_seconds</span><span class='rparen'>)</span>
@@ -507,7 +531,7 @@ make sense in your domain. For more on that, see
       <div class="method_details ">
   <h3 class="signature " id="doc_string-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>doc_string</strong>(string_without_triple_quotes, content_type = '', line_offset = 0) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>doc_string</strong>(string_without_triple_quotes, content_type = &#39;&#39;, line_offset = 0) 
   
 
   
@@ -516,7 +540,7 @@ make sense in your domain. For more on that, see
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Create an <span class='object_link'><a href="../Ast/DocString.html" title="Cucumber::Ast::DocString (class)">Ast::DocString</a></span> object</p>
+<p>Create an Ast::DocString object</p>
 
 <p>Useful in conjunction with the #step method, when want to specify a content
 type.</p>
@@ -536,7 +560,7 @@ type.</p>
       
       <pre class="example code"><code><span class='id identifier rubyid_code'>code</span> <span class='op'>=</span> <span class='id identifier rubyid_multiline_string'>multiline_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>%{</span><span class='tstring_content'>
   puts &quot;this is ruby code&quot;
-%</span><span class='tstring_end'>}</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>ruby</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span></code></pre>
+%</span><span class='tstring_end'>}</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ruby</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span></code></pre>
     
   </div>
 
@@ -547,15 +571,15 @@ type.</p>
       <pre class="lines">
 
 
-88
-89
-90
-91</pre>
+76
+77
+78
+79</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 88</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 76</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string_without_triple_quotes'>string_without_triple_quotes</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string_without_triple_quotes'>string_without_triple_quotes</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
   <span class='comment'># TODO: rename this method to multiline_string
 </span>  <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string_without_triple_quotes'>string_without_triple_quotes</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -567,7 +591,7 @@ type.</p>
       <div class="method_details ">
   <h3 class="signature " id="embed-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>embed</strong>(file, mime_type, label = 'Screenshot') 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>embed</strong>(file, mime_type, label = &#39;Screenshot&#39;) 
   
 
   
@@ -590,14 +614,14 @@ type.</p>
       <pre class="lines">
 
 
-116
-117
-118</pre>
+104
+105
+106</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 104</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>Screenshot</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Screenshot</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -631,23 +655,23 @@ type.</p>
       <pre class="lines">
 
 
-135
-136
-137
-138
-139
-140
-141</pre>
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 135</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 128</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_inspect'>inspect</span>
   <span class='id identifier rubyid_modules'>modules</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rbracket'>]</span>
   <span class='lparen'>(</span><span class='kw'>class</span> <span class='op'>&lt;&lt;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>self</span><span class='semicolon'>;</span> <span class='kw'>end</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_instance_eval'>instance_eval</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_modules'>modules</span> <span class='op'>+=</span> <span class='id identifier rubyid_included_modules'>included_modules</span>
   <span class='kw'>end</span>
-  <span class='id identifier rubyid_sprintf'>sprintf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;%s:0x%x&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>+</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_sprintf'>sprintf</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;%s:0x%x&gt;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_modules'>modules</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>+</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_object_id'>object_id</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -680,32 +704,32 @@ type.</p>
       <pre class="lines">
 
 
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132</pre>
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 109</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_pending'>pending</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>TODO</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
     <span class='kw'>begin</span>
       <span class='kw'>yield</span>
     <span class='kw'>rescue</span> <span class='const'>Exception</span>
-      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span>
     <span class='kw'>end</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Expected pending '</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'>' to fail. No Error was raised. No longer pending?</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Expected pending &#39;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'>&#39; to fail. No Error was raised. No longer pending?</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Pending</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -732,7 +756,8 @@ type.</p>
 sending the output directly to STDOUT, Cucumber will intercept and cache
 the message until the current step has finished, and then display it.</p>
 
-<p>If you’d prefer to see the message immediately, call Kernel#puts instead.</p>
+<p>If you&#39;d prefer to see the message immediately, call Kernel.puts
+instead.</p>
 </div>
   </div>
 
@@ -751,12 +776,12 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-106
-107
-108</pre>
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 106</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
   <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
@@ -767,9 +792,63 @@ the message until the current step has finished, and then display it.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="skip_this_scenario-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>skip_this_scenario</strong>(message = &quot;Scenario skipped&quot;) 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Skips this step and the remaining steps in the scenario</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Raises:</p>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Core::Test::Result::Skipped</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+123
+124
+125</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 123</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_skip_this_scenario'>skip_this_scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Scenario skipped</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_raise'>raise</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Test</span><span class='op'>::</span><span class='const'>Result</span><span class='op'>::</span><span class='const'>Skipped</span><span class='comma'>,</span> <span class='id identifier rubyid_message'>message</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="step-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step</strong>(name, multiline_argument = nil) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step</strong>(name, raw_multiline_arg = nil) 
   
 
   
@@ -818,7 +897,7 @@ the message until the current step has finished, and then display it.</p>
 <p>Passing a multiline string</p>
 </div></p>
       
-      <pre class="example code"><code><span class='id identifier rubyid_step'>step</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the email should contain:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dear sir,\nYou've won a prize!\n</span><span class='tstring_end'>&quot;</span></span></code></pre>
+      <pre class="example code"><code><span class='id identifier rubyid_step'>step</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>the email should contain:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Dear sir,\nYou&#39;ve won a prize!\n</span><span class='tstring_end'>&quot;</span></span></code></pre>
     
   </div>
 <p class="tag_title">Parameters:</p>
@@ -845,10 +924,8 @@ the message until the current step has finished, and then display it.</p>
         <span class='name'>multiline_argument</span>
       
       
-        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt><span class='object_link'><a href="../Ast/DocString.html" title="Cucumber::Ast::DocString (class)">Cucumber::Ast::DocString</a></span></tt>, <tt><span class='object_link'><a href="../Ast/Table.html" title="Cucumber::Ast::Table (class)">Cucumber::Ast::Table</a></span></tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../String.html" title="String (class)">String</a></span></tt>, <tt>Cucumber::Ast::DocString</tt>, <tt>Cucumber::Ast::Table</tt>)</span>
       
-      
-        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
     </li>
@@ -862,15 +939,17 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-51
-52
-53</pre>
+38
+39
+40
+41</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 51</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 38</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_argument'>multiline_argument</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
-  <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_argument'>multiline_argument</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_raw_multiline_arg'>raw_multiline_arg</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_of_caller'>of_caller</span>
+  <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_raw_multiline_arg'>raw_multiline_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -934,12 +1013,12 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-62
-63
-64</pre>
+50
+51
+52</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 62</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_steps'>steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps_text'>steps_text</span><span class='rparen'>)</span>
   <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_invoke_steps'>invoke_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_steps_text'>steps_text</span><span class='comma'>,</span> <span class='ivar'>@__natural_language</span><span class='comma'>,</span> <span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
@@ -961,7 +1040,7 @@ the message until the current step has finished, and then display it.</p>
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Parse Gherkin into a <span class='object_link'><a href="../Ast/Table.html" title="Cucumber::Ast::Table (class)">Ast::Table</a></span> object.</p>
+<p>Parse Gherkin into a Ast::Table object.</p>
 
 <p>Useful in conjunction with the #step method.</p>
 
@@ -1013,12 +1092,12 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-76
-77
-78</pre>
+64
+65
+66</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 76</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 64</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_table'>table</span><span class='lparen'>(</span><span class='id identifier rubyid_text_or_table'>text_or_table</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='op'>=</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
   <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_table'>table</span><span class='lparen'>(</span><span class='id identifier rubyid_text_or_table'>text_or_table</span><span class='comma'>,</span> <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='rparen'>)</span>
@@ -1054,12 +1133,12 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-144
-145
-146</pre>
+137
+138
+139</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 144</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 137</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span>
   <span class='id identifier rubyid_inspect'>inspect</span>
@@ -1095,16 +1174,16 @@ the message until the current step has finished, and then display it.</p>
       <pre class="lines">
 
 
-22
-23
-24
-25</pre>
+15
+16
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/rb_support/rb_world.rb', line 15</span>
 
 <span class='kw'>def</span> <span class='const'>Transform</span><span class='lparen'>(</span><span class='id identifier rubyid_arg'>arg</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_rb'>rb</span> <span class='op'>=</span> <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_load_programming_language'>load_programming_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>rb</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_rb'>rb</span> <span class='op'>=</span> <span class='ivar'>@__cucumber_runtime</span><span class='period'>.</span><span class='id identifier rubyid_load_programming_language'>load_programming_language</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>rb</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
   <span class='id identifier rubyid_rb'>rb</span><span class='period'>.</span><span class='id identifier rubyid_execute_transforms'>execute_transforms</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_arg'>arg</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1117,9 +1196,9 @@ the message until the current step has finished, and then display it.</p>
 </div>
     
     <div id="footer">
-  Generated on Sat Sep 13 20:20:07 2014 by 
+  Generated on Sun Sep 14 09:47:33 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.0.0).
 </div>
 
   </body>

@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.17</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (C)</a> &raquo;
@@ -107,9 +107,9 @@
 <p>This module contains helper methods that are used by formatters that print
 output to the terminal.</p>
 
-<p>FORMAT is a hash of Proc objects, keyed by step-definition types, e.g. "<a
-href="http://:passed">FORMAT</a>".  The Proc is called for each line of the
-step's output.</p>
+<p>FORMAT is a hash of Proc objects, keyed by step-definition types, e.g. “<a
+href="http://:passed">FORMAT</a>”.  The Proc is called for each line of the
+step&#39;s output.</p>
 
 <p>format_step calls format_string, format_string calls format_for to obtain
 the formatting Proc.</p>
@@ -117,9 +117,9 @@ the formatting Proc.</p>
 <p>Example:</p>
 
 <p>The ANSI color console formatter defines a map of step-type to output color
-(e.g. "passed" to "green"), then builds methods named for the step-types
-(e.g. "def passed"), which themselves wrap the corresponding color-named
-methods provided by Term::ANSIColor (e.g. "def red").</p>
+(e.g. “passed” to “green”), then builds methods named for the step-types
+(e.g. “def passed”), which themselves wrap the corresponding color-named
+methods provided by Term::ANSIColor (e.g. “def red”).</p>
 
 <p>During output, each line is processed by passing it to the formatter Proc
 which returns the formatted (e.g. colored) string.</p>
@@ -159,6 +159,28 @@ which returns the formatted (e.g. colored) string.</p>
     </h2>
 
     <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#collect_failing_scenarios-instance_method" title="#collect_failing_scenarios (instance method)">- (Object) <strong>collect_failing_scenarios</strong>(runtime) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
       
         <li class="public ">
   <span class="summary_signature">
@@ -299,6 +321,28 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
   <span class="summary_signature">
     
       <a href="#print_exception-instance_method" title="#print_exception (instance method)">- (Object) <strong>print_exception</strong>(e, status, indent) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#print_failing_scenarios-instance_method" title="#print_failing_scenarios (instance method)">- (Object) <strong>print_failing_scenarios</strong>(failures, custom_profiles, given_source) </a>
     
 
     
@@ -572,7 +616,53 @@ this feature.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="embed-instance_method">
+  <h3 class="signature first" id="collect_failing_scenarios-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>collect_failing_scenarios</strong>(runtime) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collect_failing_scenarios'>collect_failing_scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='rparen'>)</span>
+  <span class='comment'># TODO: brittle - stop coupling to types
+</span>  <span class='id identifier rubyid_scenario_class'>scenario_class</span> <span class='op'>=</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Reports</span><span class='op'>::</span><span class='const'>Legacy</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Scenario</span>
+  <span class='id identifier rubyid_example_table_class'>example_table_class</span> <span class='op'>=</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>ExamplesTable</span>
+
+  <span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_scenarios'>scenarios</span><span class='lparen'>(</span><span class='symbol'>:failed</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='lbracket'>[</span><span class='id identifier rubyid_scenario_class'>scenario_class</span><span class='comma'>,</span> <span class='id identifier rubyid_example_table_class'>example_table_class</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rparen'>)</span>
+  <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span>
+    <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='id identifier rubyid_example_table_class'>example_table_class</span><span class='rparen'>)</span><span class='op'>?</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scenario_outline'>scenario_outline</span> <span class='op'>:</span> <span class='id identifier rubyid_s'>s</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="embed-instance_method">
   
     - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>embed</strong>(file, mime_type, label) 
   
@@ -586,12 +676,12 @@ this feature.</p>
       <pre class="lines">
 
 
-154
-155
-156</pre>
+167
+168
+169</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 154</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 167</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
   <span class='comment'># no-op
@@ -616,12 +706,12 @@ this feature.</p>
       <pre class="lines">
 
 
-191
-192
-193</pre>
+204
+205
+206</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 191</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 204</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_empty_messages'>empty_messages</span>
   <span class='ivar'>@delayed_messages</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
@@ -664,10 +754,10 @@ this feature.</p>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_format_step'>format_step</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_comment'>comment</span> <span class='op'>=</span> <span class='kw'>if</span> <span class='id identifier rubyid_source_indent'>source_indent</span>
-    <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> # </span><span class='tstring_end'>'</span></span> <span class='op'>+</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='period'>.</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='id identifier rubyid_source_indent'>source_indent</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'># </span><span class='tstring_end'>&#39;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='period'>.</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='id identifier rubyid_source_indent'>source_indent</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_c'>c</span><span class='comma'>,</span> <span class='symbol'>:comment</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+    <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='kw'>end</span>
 
   <span class='id identifier rubyid_format'>format</span> <span class='op'>=</span> <span class='id identifier rubyid_format_for'>format_for</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='symbol'>:param</span><span class='rparen'>)</span>
@@ -750,15 +840,15 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-112
-113
-114</pre>
+131
+132
+133</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 112</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 131</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_linebreaks'>linebreaks</span><span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='comma'>,</span> <span class='id identifier rubyid_max'>max</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.{1,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_max'>max</span><span class='rbrace'>}</span><span class='tstring_content'>}(?:\s|\Z)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='lparen'>(</span><span class='backref'>$&amp;</span> <span class='op'>+</span> <span class='int'>5</span><span class='period'>.</span><span class='id identifier rubyid_chr'>chr</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n\005</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\005</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_rstrip'>rstrip</span>
+  <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>.{1,</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_max'>max</span><span class='embexpr_end'>}</span><span class='tstring_content'>}(?:\s|\Z)</span><span class='regexp_end'>/</span></span><span class='rparen'>)</span><span class='lbrace'>{</span><span class='lparen'>(</span><span class='backref'>$&amp;</span> <span class='op'>+</span> <span class='int'>5</span><span class='period'>.</span><span class='id identifier rubyid_chr'>chr</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\n\005</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_gsub'>gsub</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>\005</span><span class='regexp_end'>/</span></span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_rstrip'>rstrip</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -803,7 +893,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_elements'>print_elements</span><span class='lparen'>(</span><span class='id identifier rubyid_elements'>elements</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_kind'>kind</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_elements'>elements</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
-    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(::) </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_kind'>kind</span><span class='rbrace'>}</span><span class='tstring_content'> (::)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>(::) </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_status'>status</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_kind'>kind</span><span class='embexpr_end'>}</span><span class='tstring_content'> (::)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rparen'>)</span>
     <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span>
     <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
   <span class='kw'>end</span>
@@ -838,27 +928,69 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-101
-102
-103
-104
-105
-106
-107
-108
-109</pre>
+120
+121
+122
+123
+124
+125
+126
+127
+128</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 101</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 120</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_exception'>print_exception</span><span class='lparen'>(</span><span class='id identifier rubyid_e'>e</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_indent'>indent</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='rbrace'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>if</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CUCUMBER_TRUNCATE_OUTPUT</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_linebreaks'>linebreaks</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>CUCUMBER_TRUNCATE_OUTPUT</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'> (</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span><span class='embexpr_end'>}</span><span class='tstring_content'>)</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>if</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CUCUMBER_TRUNCATE_OUTPUT</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_message'>message</span> <span class='op'>=</span> <span class='id identifier rubyid_linebreaks'>linebreaks</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>CUCUMBER_TRUNCATE_OUTPUT</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='rbrace'>}</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='id identifier rubyid_indent'>indent</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_string'>string</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_message'>message</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_backtrace'>backtrace</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='id identifier rubyid_indent'>indent</span><span class='rparen'>)</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string'>string</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="print_failing_scenarios-instance_method">
+  
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>print_failing_scenarios</strong>(failures, custom_profiles, given_source) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112
+113
+114
+115
+116
+117
+118</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_print_failing_scenarios'>print_failing_scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='comma'>,</span> <span class='id identifier rubyid_given_source'>given_source</span><span class='rparen'>)</span>
+  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failing Scenarios:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_failure'>failure</span><span class='op'>|</span>
+    <span class='id identifier rubyid_profiles_string'>profiles_string</span> <span class='op'>=</span> <span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_profile'>profile</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-p </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profile'>profile</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_given_source'>given_source</span> <span class='op'>?</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> # </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:comment</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cucumber </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles_string'>profiles_string</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_location'>location</span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_source'>source</span>
+  <span class='kw'>end</span>
+  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -880,13 +1012,13 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-186
-187
-188
-189</pre>
+199
+200
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 186</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 199</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_message'>print_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='symbol'>:tag</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='ivar'>@indent</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -912,13 +1044,13 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-174
-175
-176
-177</pre>
+187
+188
+189
+190</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 174</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 187</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_messages'>print_messages</span>
   <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_print_message'>print_message</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -944,25 +1076,25 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-143
-144
-145
-146
-147
-148
-149
-150
-151
-152</pre>
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 143</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 156</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_passing_wip'>print_passing_wip</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:wip</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_passed'>passed</span> <span class='op'>=</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_scenarios'>scenarios</span><span class='lparen'>(</span><span class='symbol'>:passed</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_passed'>passed</span><span class='period'>.</span><span class='id identifier rubyid_any?'>any?</span>
-    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nThe --wip switch was used, so I didn't expect anything to pass. These scenarios passed:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
+    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nThe --wip switch was used, so I didn&#39;t expect anything to pass. These scenarios passed:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_print_elements'>print_elements</span><span class='lparen'>(</span><span class='id identifier rubyid_passed'>passed</span><span class='comma'>,</span> <span class='symbol'>:passed</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>scenarios</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>else</span>
     <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nThe --wip switch was used, so the failures were expected. All is good.\n</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:passed</span><span class='rparen'>)</span>
@@ -988,27 +1120,27 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-195
-196
-197
-198
-199
-200
-201
-202
-203</pre>
+208
+209
+210
+211
+212
+213
+214
+215
+216</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 195</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 208</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_profile_information'>print_profile_information</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:skip_profile_information</span><span class='rbracket'>]</span> <span class='op'>||</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:profiles</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span> <span class='op'>||</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:profiles</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
   <span class='id identifier rubyid_profiles'>profiles</span> <span class='op'>=</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:profiles</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_profiles_sentence'>profiles_sentence</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
+  <span class='id identifier rubyid_profiles_sentence'>profiles_sentence</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
   <span class='id identifier rubyid_profiles_sentence'>profiles_sentence</span> <span class='op'>=</span> <span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span> <span class='op'>==</span> <span class='int'>1</span> <span class='op'>?</span> <span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span> <span class='op'>:</span>
-    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles'>profiles</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
+    <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles'>profiles</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>...</span><span class='op'>-</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='embexpr_end'>}</span><span class='tstring_content'> and </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_last'>last</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
 
-  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Using the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles_sentence'>profiles_sentence</span><span class='rbrace'>}</span><span class='tstring_content'> profile</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>s</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='op'>&gt;</span> <span class='int'>1</span><span class='rbrace'>}</span><span class='tstring_content'>...</span><span class='tstring_end'>&quot;</span></span>
+  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Using the </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles_sentence'>profiles_sentence</span><span class='embexpr_end'>}</span><span class='tstring_content'> profile</span><span class='embexpr_beg'>#{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>s</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_profiles'>profiles</span><span class='period'>.</span><span class='id identifier rubyid_size'>size</span><span class='op'>&gt;</span> <span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_content'>...</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1030,35 +1162,29 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
 135
 136
 137
 138
 139
 140
-141</pre>
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 116</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 135</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_snippets'>print_snippets</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:snippets</span><span class='rbracket'>]</span>
@@ -1067,21 +1193,15 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
 
   <span class='id identifier rubyid_unknown_programming_language'>unknown_programming_language</span> <span class='op'>=</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_unknown_programming_language?'>unknown_programming_language?</span>
   <span class='id identifier rubyid_snippets'>snippets</span> <span class='op'>=</span> <span class='id identifier rubyid_undefined'>undefined</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_step'>step</span><span class='op'>|</span>
-    <span class='id identifier rubyid_step_name'>step_name</span> <span class='op'>=</span> <span class='const'>Undefined</span> <span class='op'>===</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span> <span class='op'>?</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_exception'>exception</span><span class='period'>.</span><span class='id identifier rubyid_step_name'>step_name</span> <span class='op'>:</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
-    <span class='id identifier rubyid_step_multiline_class'>step_multiline_class</span> <span class='op'>=</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span> <span class='op'>?</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='period'>.</span><span class='id identifier rubyid_class'>class</span> <span class='op'>:</span> <span class='kw'>nil</span>
-    <span class='id identifier rubyid_snippet'>snippet</span> <span class='op'>=</span> <span class='ivar'>@runtime</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_actual_keyword'>actual_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_step_multiline_class'>step_multiline_class</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_snippet'>snippet</span>
+    <span class='comment'># step_name = Undefined === step.exception ? step.exception.step_name : step.name
+</span>    <span class='comment'># TODO: This probably won&#39;t work for nested steps :( See above for old code. 
+</span>    <span class='id identifier rubyid_step_name'>step_name</span> <span class='op'>=</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span>
+    <span class='ivar'>@runtime</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_actual_keyword'>actual_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
   <span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_compact'>compact</span><span class='period'>.</span><span class='id identifier rubyid_uniq'>uniq</span>
 
   <span class='id identifier rubyid_text'>text</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nYou can implement step definitions for undefined steps with these snippets:\n\n</span><span class='tstring_end'>&quot;</span></span>
   <span class='id identifier rubyid_text'>text</span> <span class='op'>+=</span> <span class='id identifier rubyid_snippets'>snippets</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_text'>text</span><span class='comma'>,</span> <span class='symbol'>:undefined</span><span class='rparen'>)</span>
-
-  <span class='kw'>if</span> <span class='id identifier rubyid_unknown_programming_language'>unknown_programming_language</span>
-    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nIf you want snippets in a different programming language,</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-                           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\njust make sure a file with the appropriate file extension</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span>
-                           <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\nexists where cucumber looks for step definitions.</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
 
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
@@ -1123,32 +1243,26 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
 93
 94
 95
-96
-97
-98
-99</pre>
+96</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 79</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_stats'>print_stats</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='ivar'>@failures</span> <span class='op'>=</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_scenarios'>scenarios</span><span class='lparen'>(</span><span class='symbol'>:failed</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Scenario</span><span class='rparen'>)</span> <span class='op'>||</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>OutlineTable</span><span class='op'>::</span><span class='const'>ExampleRow</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
-  <span class='ivar'>@failures</span><span class='period'>.</span><span class='id identifier rubyid_collect!'>collect!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_s'>s</span><span class='op'>|</span> <span class='lparen'>(</span><span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_is_a?'>is_a?</span><span class='lparen'>(</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>OutlineTable</span><span class='op'>::</span><span class='const'>ExampleRow</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='op'>?</span> <span class='id identifier rubyid_s'>s</span><span class='period'>.</span><span class='id identifier rubyid_scenario_outline'>scenario_outline</span> <span class='op'>:</span> <span class='id identifier rubyid_s'>s</span> <span class='rbrace'>}</span>
-
-  <span class='kw'>if</span> <span class='op'>!</span><span class='ivar'>@failures</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Failing Scenarios:</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span>
-    <span class='ivar'>@failures</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_failure'>failure</span><span class='op'>|</span>
-      <span class='id identifier rubyid_profiles_string'>profiles_string</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='op'>:</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_profile'>profile</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>-p </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profile'>profile</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span>
-      <span class='id identifier rubyid_source'>source</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:source</span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> # Scenario: </span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='symbol'>:comment</span><span class='rparen'>)</span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
-      <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>cucumber </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_profiles_string'>profiles_string</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_failure'>failure</span><span class='period'>.</span><span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='comma'>,</span> <span class='symbol'>:failed</span><span class='rparen'>)</span> <span class='op'>+</span> <span class='id identifier rubyid_source'>source</span>
-    <span class='kw'>end</span>
-    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span>
+  <span class='id identifier rubyid_failures'>failures</span> <span class='op'>=</span> <span class='id identifier rubyid_collect_failing_scenarios'>collect_failing_scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='op'>!</span><span class='id identifier rubyid_failures'>failures</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+    <span class='id identifier rubyid_print_failing_scenarios'>print_failing_scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_failures'>failures</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_custom_profiles'>custom_profiles</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:source</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
 
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_scenario_summary'>scenario_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_status_count'>status_count</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='op'>|</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_status_count'>status_count</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rbrace'>}</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_step_summary'>step_summary</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='rparen'>)</span> <span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_status_count'>status_count</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='op'>|</span> <span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='id identifier rubyid_status_count'>status_count</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='rbrace'>}</span>
 
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_format_duration'>format_duration</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='period'>.</span><span class='id identifier rubyid_duration'>duration</span><span class='rparen'>)</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_features'>features</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_features'>features</span><span class='period'>.</span><span class='id identifier rubyid_duration'>duration</span>
+
+  <span class='kw'>if</span> <span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_randomize?'>randomize?</span>
+    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span>
+    <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Randomized with seed </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_configuration'>configuration</span><span class='period'>.</span><span class='id identifier rubyid_seed'>seed</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
 
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
 <span class='kw'>end</span></pre>
@@ -1180,7 +1294,7 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_steps'>print_steps</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_print_elements'>print_elements</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_steps'>steps</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>steps</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_print_elements'>print_elements</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='period'>.</span><span class='id identifier rubyid_steps'>steps</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>steps</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1202,19 +1316,19 @@ href="http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/10655">blade.n
       <pre class="lines">
 
 
-179
-180
-181
-182
-183
-184</pre>
+192
+193
+194
+195
+196
+197</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 179</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 192</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_print_table_row_messages'>print_table_row_messages</span>
   <span class='kw'>return</span> <span class='kw'>if</span> <span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
-  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>, </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:tag</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='id identifier rubyid_format_string'>format_string</span><span class='lparen'>(</span><span class='ivar'>@delayed_messages</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>, </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='comma'>,</span> <span class='symbol'>:tag</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_indent'>indent</span><span class='lparen'>(</span><span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='ivar'>@io</span><span class='period'>.</span><span class='id identifier rubyid_flush'>flush</span>
   <span class='id identifier rubyid_empty_messages'>empty_messages</span>
 <span class='kw'>end</span></pre>
@@ -1250,22 +1364,22 @@ this feature</p>
       <pre class="lines">
 
 
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172</pre>
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 160</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/console.rb', line 173</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_messages'>messages</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@delayed_messages</span>
@@ -1290,9 +1404,9 @@ this feature</p>
 </div>
     
     <div id="footer">
-  Generated on Sat Sep 13 20:20:07 2014 by 
+  Generated on Sun Sep 14 09:47:32 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-1.9.3).
+  0.8.7.4 (ruby-2.0.0).
 </div>
 
   </body>

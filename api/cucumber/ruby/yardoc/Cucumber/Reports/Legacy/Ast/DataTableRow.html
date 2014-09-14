@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
+      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
       <div id="menu">
   
     <a href="../../../../_index.html">Index (D)</a> &raquo;
@@ -104,6 +104,10 @@
 </dl>
 <div class="clear"></div>
 
+<div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="LegacyTableRow.html" title="Cucumber::Reports::Legacy::Ast::LegacyTableRow (class)">LegacyTableRow</a></span></p>
+</div>
 
 
 
@@ -188,7 +192,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DataTableRow) <strong>initialize</strong>(row) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (DataTableRow) <strong>initialize</strong>(row, line) </a>
     
 
     
@@ -242,7 +246,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Cucumber::Reports::Legacy::Ast::DataTableRow (class)">DataTableRow</a></span></tt>) <strong>initialize</strong>(row) 
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Reports::Legacy::Ast::DataTableRow (class)">DataTableRow</a></span></tt>) <strong>initialize</strong>(row, line) 
   
 
   
@@ -265,17 +269,17 @@
       <pre class="lines">
 
 
-1182
-1183
-1184
-1185</pre>
+1198
+1199
+1200
+1201</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1182</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1198</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='rparen'>)</span>
-  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:value</span><span class='rparen'>)</span>
-  <span class='ivar'>@line</span> <span class='op'>=</span> <span class='id identifier rubyid_row'>row</span><span class='period'>.</span><span class='id identifier rubyid_line'>line</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_row'>row</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='ivar'>@values</span> <span class='op'>=</span> <span class='id identifier rubyid_row'>row</span>
+  <span class='ivar'>@line</span> <span class='op'>=</span> <span class='id identifier rubyid_line'>line</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -304,18 +308,18 @@
       <pre class="lines">
 
 
-1191
-1192
-1193
-1194
-1195
-1196
-1197
-1198
-1199</pre>
+1207
+1208
+1209
+1210
+1211
+1212
+1213
+1214
+1215</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1191</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1207</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_before_table_row'>before_table_row</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span>
@@ -346,12 +350,12 @@
       <pre class="lines">
 
 
-1187
-1188
-1189</pre>
+1203
+1204
+1205</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1187</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1203</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dom_id'>dom_id</span>
   <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>row_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_line'>line</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
@@ -376,12 +380,12 @@
       <pre class="lines">
 
 
-1205
-1206
-1207</pre>
+1221
+1222
+1223</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1205</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1221</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_exception'>exception</span>
   <span class='kw'>nil</span>
@@ -406,12 +410,12 @@
       <pre class="lines">
 
 
-1201
-1202
-1203</pre>
+1217
+1218
+1219</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1201</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1217</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_status'>status</span>
   <span class='symbol'>:skipped</span>
@@ -426,7 +430,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 29 15:23:58 2014 by 
+  Generated on Sun Sep 14 09:47:36 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.0.0).
 </div>

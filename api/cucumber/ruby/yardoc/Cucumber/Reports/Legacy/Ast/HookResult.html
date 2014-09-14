@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.2</h3>
+      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
       <div id="menu">
   
     <a href="../../../../_index.html">Index (H)</a> &raquo;
@@ -144,7 +144,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HookResult) <strong>initialize</strong>(result) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (HookResult) <strong>initialize</strong>(result, messages, embeddings) </a>
     
 
     
@@ -176,7 +176,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Cucumber::Reports::Legacy::Ast::HookResult (class)">HookResult</a></span></tt>) <strong>initialize</strong>(result) 
+    - (<tt><span class='object_link'><a href="" title="Cucumber::Reports::Legacy::Ast::HookResult (class)">HookResult</a></span></tt>) <strong>initialize</strong>(result, messages, embeddings) 
   
 
   
@@ -199,16 +199,16 @@
       <pre class="lines">
 
 
-1060
-1061
-1062
-1063</pre>
+1074
+1075
+1076
+1077</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1060</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1074</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span>
-  <span class='ivar'>@result</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='id identifier rubyid_embeddings'>embeddings</span><span class='rparen'>)</span>
+  <span class='ivar'>@result</span><span class='comma'>,</span> <span class='ivar'>@messages</span><span class='comma'>,</span> <span class='ivar'>@embeddings</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span><span class='comma'>,</span> <span class='id identifier rubyid_messages'>messages</span><span class='comma'>,</span> <span class='id identifier rubyid_embeddings'>embeddings</span>
   <span class='ivar'>@already_accepted</span> <span class='op'>=</span> <span class='kw'>false</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -238,19 +238,23 @@
       <pre class="lines">
 
 
-1065
-1066
-1067
-1068
-1069
-1070
-1071</pre>
+1079
+1080
+1081
+1082
+1083
+1084
+1085
+1086
+1087</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1065</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/reports/legacy_formatter.rb', line 1079</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='ivar'>@already_accepted</span>
+    <span class='ivar'>@messages</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_message'>message</span><span class='op'>|</span> <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+    <span class='ivar'>@embeddings</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_embedding'>embedding</span><span class='op'>|</span> <span class='id identifier rubyid_embedding'>embedding</span><span class='period'>.</span><span class='id identifier rubyid_send_to_formatter'>send_to_formatter</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
     <span class='ivar'>@result</span><span class='period'>.</span><span class='id identifier rubyid_describe_exception_to'>describe_exception_to</span><span class='lparen'>(</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rparen'>)</span>
     <span class='ivar'>@already_accepted</span> <span class='op'>=</span> <span class='kw'>true</span>
   <span class='kw'>end</span>
@@ -266,7 +270,7 @@
 </div>
     
     <div id="footer">
-  Generated on Fri Aug 29 15:23:58 2014 by 
+  Generated on Sun Sep 14 09:47:36 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.0.0).
 </div>
