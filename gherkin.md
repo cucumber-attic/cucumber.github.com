@@ -17,7 +17,7 @@ Feature: Password management
 
 The only syntax here is the colored keywords at the beginning of each line. The rest is entirely up to you.
 Gherkin documents are stored in regular text files with a `.feature` file extension. The file above could
-be stored in a `password_mamagement.feature` file.
+be stored in a `password_management.feature` file.
 
 When you [run Cucumber](/running.html), it will generate a report that verifies whether or not the software
 behaves the way the Gherkin document says.
