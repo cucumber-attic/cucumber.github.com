@@ -1,9 +1,9 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <title>StepBody - Cucumber-JVM: Scala (2.11) 1.1.8 API - cucumber.api.scala.ScalaDsl.StepBody</title>
-          <meta name="description" content="StepBody - Cucumber - JVM Scala 2.11 1.1.8 API - cucumber.api.scala.ScalaDsl.StepBody" />
-          <meta name="keywords" content="StepBody Cucumber JVM Scala 2.11 1.1.8 API cucumber.api.scala.ScalaDsl.StepBody" />
+          <title>StepBody - Cucumber-JVM: Scala (2.11) 1.2.0 API - cucumber.api.scala.ScalaDsl.StepBody</title>
+          <meta name="description" content="StepBody - Cucumber - JVM Scala 2.11 1.2.0 API - cucumber.api.scala.ScalaDsl.StepBody" />
+          <meta name="keywords" content="StepBody Cucumber JVM Scala 2.11 1.2.0 API cucumber.api.scala.ScalaDsl.StepBody" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
@@ -538,9 +538,9 @@
       </a>
     </span>
       <p class="shortcomment cmt">Concerning the type handling in all apply methods below.</p><div class="fullcomment"><div class="comment cmt"><p>Concerning the type handling in all apply methods below.</p><p>Unfortunately the obvious approach (as follows) doesn't work as expected in all scenarios :</p><pre><span class="kw">def</span> apply[T1](f: (T1) <span class="kw">=&gt;</span> <span class="std">Any</span>)(<span class="kw">implicit</span> m1:<span class="std">Manifest</span>[T1]) = {
-register(<span class="std">List</span>(m1)) {
-  <span class="kw">case</span> <span class="std">List</span>(a1:T1) <span class="kw">=&gt;</span> f(a1)
-}
+  register(<span class="std">List</span>(m1)) {
+    <span class="kw">case</span> <span class="std">List</span>(a1:T1) <span class="kw">=&gt;</span> f(a1)
+  }
 }</pre><p>This is due to the Scala 'Value Classes' being boxed when moving into the Java world,
 and then returned into the Scala layer as these boxed types, which causes the following use case.</p><p>- Step definition is defined with expected argument of scala type 'Int'
 - Step is 'registered' passing the Scala Int type into the Java layer
