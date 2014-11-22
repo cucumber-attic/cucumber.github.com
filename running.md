@@ -16,7 +16,7 @@ you are using (if any).
  
 ## Running Cucumber-JVM
 ### Command Line
-cucumber.api.cli.Main --format pretty --format json:directorypath/filename.json --glue packagename /pathtogeneratedtestclasses/
+>java -classpath "cucumber-core-x.x.x.jar;gherkin-x.x.x.jar;cucumber-java-x.x.x.jar;cucumber-jvm-deps-x.x.x.jar" cucumber.api.cli.Main location_of_feature_files/*.feature -f pretty  -f json:output_folder/filename.json -t @specific_tag_to_be_run -g path_to_compiled_classes_with_step_definitions 
 
 ### JUnit
 Create one empty class with the `@RunWith(Cucumber.class)` annotation. 
