@@ -16,7 +16,7 @@ you are using (if any).
  
 ## Running Cucumber-JVM
 ### Command Line
-TODO
+cucumber.api.cli.Main --format pretty --format json:directorypath/filename.json --glue packagename /pathtogeneratedtestclasses/
 
 ### JUnit
 Create one empty class with the `@RunWith(Cucumber.class)` annotation. 
