@@ -8,7 +8,7 @@ TODO: Write me
 
 There are several types of hooks, but first lets talk about the most basic.
 
-There are @before and @after hooks.
+There are @Before and @After hooks.
 
 These are called by JUnit before and after each test. 
 
