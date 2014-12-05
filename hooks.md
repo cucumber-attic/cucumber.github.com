@@ -42,7 +42,5 @@ public void afterCucumber(){
 
 You can pass in a Scenario object in any hook by just adding them to the parameters. Scenario objects can be used for supplementing the default cucumber reports. See the "embedding text and screen shots" section at http://cukes.info/reports.html for more details
 
-See http://cukes.info/api/cucumber/jvm/javadoc/cucumber/api/java/Before.html for more options on what can be used with @Before and @After hooks.
-
 See https://github.com/cucumber/cucumber/wiki/Hooks for Ruby hooks.
 
