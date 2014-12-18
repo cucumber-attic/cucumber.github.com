@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::Runtime
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.4</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (R)</a> &raquo;
@@ -104,7 +104,7 @@
   
     <dt class="r1 last">Defined in:</dt>
     <dd class="r1 last">lib/cucumber/runtime.rb<span class="defines">,<br />
-  lib/cucumber/runtime/results.rb,<br /> lib/cucumber/runtime/tag_limits.rb,<br /> lib/cucumber/runtime/support_code.rb,<br /> lib/cucumber/runtime/gated_receiver.rb,<br /> lib/cucumber/runtime/user_interface.rb,<br /> lib/cucumber/runtime/tag_limits/filter.rb,<br /> lib/cucumber/runtime/tag_limits/verifier.rb,<br /> lib/cucumber/runtime/for_programming_languages.rb,<br /> lib/cucumber/runtime/tag_limits/test_case_index.rb</span>
+  lib/cucumber/runtime/support_code.rb,<br /> lib/cucumber/runtime/user_interface.rb,<br /> lib/cucumber/runtime/for_programming_languages.rb</span>
 </dd>
   
 </dl>
@@ -114,11 +114,11 @@
 <p class="children">
   
     
-      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Runtime/TagLimits.html" title="Cucumber::Runtime::TagLimits (module)">TagLimits</a></span>, <span class='object_link'><a href="Runtime/UserInterface.html" title="Cucumber::Runtime::UserInterface (module)">UserInterface</a></span>
+      <strong class="modules">Modules:</strong> <span class='object_link'><a href="Runtime/UserInterface.html" title="Cucumber::Runtime::UserInterface (module)">UserInterface</a></span>
     
   
     
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Runtime/ForProgrammingLanguages.html" title="Cucumber::Runtime::ForProgrammingLanguages (class)">ForProgrammingLanguages</a></span>, <span class='object_link'><a href="Runtime/GatedReceiver.html" title="Cucumber::Runtime::GatedReceiver (class)">GatedReceiver</a></span>, <span class='object_link'><a href="Runtime/NormalisedEncodingFile.html" title="Cucumber::Runtime::NormalisedEncodingFile (class)">NormalisedEncodingFile</a></span>, <span class='object_link'><a href="Runtime/Quit.html" title="Cucumber::Runtime::Quit (class)">Quit</a></span>, <span class='object_link'><a href="Runtime/Randomizer.html" title="Cucumber::Runtime::Randomizer (class)">Randomizer</a></span>, <span class='object_link'><a href="Runtime/Results.html" title="Cucumber::Runtime::Results (class)">Results</a></span>, <span class='object_link'><a href="Runtime/SupportCode.html" title="Cucumber::Runtime::SupportCode (class)">SupportCode</a></span>
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="Runtime/ForProgrammingLanguages.html" title="Cucumber::Runtime::ForProgrammingLanguages (class)">ForProgrammingLanguages</a></span>, <span class='object_link'><a href="Runtime/NormalisedEncodingFile.html" title="Cucumber::Runtime::NormalisedEncodingFile (class)">NormalisedEncodingFile</a></span>, <span class='object_link'><a href="Runtime/SupportCode.html" title="Cucumber::Runtime::SupportCode (class)">SupportCode</a></span>
     
   
 </p>
@@ -237,126 +237,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#after-instance_method" title="#after (instance method)">- (Object) <strong>after</strong>(scenario) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#after_step-instance_method" title="#after_step (instance method)">- (Object) <strong>after_step</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#around-instance_method" title="#around (instance method)">- (Object) <strong>around</strong>(scenario, skip_hooks = false, &amp;block) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#before-instance_method" title="#before (instance method)">- (Object) <strong>before</strong>(scenario) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#before_and_after-instance_method" title="#before_and_after (instance method)">- (Object) <strong>before_and_after</strong>(scenario, skip_hooks = false) {|scenario| ... }</a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#begin_scenario-instance_method" title="#begin_scenario (instance method)">- (Object) <strong>begin_scenario</strong>(scenario) </a>
     
 
@@ -394,7 +274,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Allows you to take an existing runtime and change it&#39;s configuration.</p>
+<p>Allows you to take an existing runtime and change its configuration.</p>
 </div></span>
   
 </li>
@@ -428,6 +308,28 @@
   <span class="summary_signature">
     
       <a href="#dry_run%3F-instance_method" title="#dry_run? (instance method)">- (Boolean) <strong>dry_run?</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#failure%3F-instance_method" title="#failure? (instance method)">- (Boolean) <strong>failure?</strong> </a>
     
 
     
@@ -498,28 +400,6 @@
   <span class="summary_signature">
     
       <a href="#load_programming_language-instance_method" title="#load_programming_language (instance method)">- (Object) <strong>load_programming_language</strong>(language) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#record_result-instance_method" title="#record_result (instance method)">- (Object) <strong>record_result</strong>(scenario) </a>
     
 
     
@@ -633,30 +513,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#step_visited-instance_method" title="#step_visited (instance method)">- (Object) <strong>step_visited</strong>(step) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>:nodoc:.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#steps-instance_method" title="#steps (instance method)">- (Object) <strong>steps</strong>(status = nil) </a>
     
 
@@ -702,28 +558,6 @@
   <span class="summary_signature">
     
       <a href="#unmatched_step_definitions-instance_method" title="#unmatched_step_definitions (instance method)">- (Object) <strong>unmatched_step_definitions</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#with_hooks-instance_method" title="#with_hooks (instance method)">- (Object) <strong>with_hooks</strong>(scenario, skip_hooks = false) </a>
     
 
     
@@ -797,21 +631,19 @@
       <pre class="lines">
 
 
-48
-49
 50
 51
 52
-53</pre>
+53
+54</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 48</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 50</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_default'>default</span><span class='rparen'>)</span>
-  <span class='ivar'>@current_scenario</span> <span class='op'>=</span> <span class='kw'>nil</span>
   <span class='ivar'>@configuration</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_configuration'>configuration</span><span class='rparen'>)</span>
   <span class='ivar'>@support_code</span> <span class='op'>=</span> <span class='const'>SupportCode</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>self</span><span class='comma'>,</span> <span class='ivar'>@configuration</span><span class='rparen'>)</span>
-  <span class='ivar'>@results</span> <span class='op'>=</span> <span class='const'>Results</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='ivar'>@configuration</span><span class='rparen'>)</span>
+  <span class='ivar'>@results</span> <span class='op'>=</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>LegacyApi</span><span class='op'>::</span><span class='const'>Results</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -851,12 +683,12 @@
       <pre class="lines">
 
 
-42
-43
-44</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_configuration'>configuration</span>
   <span class='ivar'>@configuration</span>
@@ -894,12 +726,12 @@
       <pre class="lines">
 
 
-42
-43
-44</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_results'>results</span>
   <span class='ivar'>@results</span>
@@ -937,12 +769,12 @@
       <pre class="lines">
 
 
-42
-43
-44</pre>
+44
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 44</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_support_code'>support_code</span>
   <span class='ivar'>@support_code</span>
@@ -960,251 +792,7 @@
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="after-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>after</strong>(scenario) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-144
-145
-146
-147
-148</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 144</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_after'>after</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='ivar'>@current_scenario</span> <span class='op'>=</span> <span class='kw'>nil</span>
-  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_dry_run?'>dry_run?</span>
-  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_fire_hook'>fire_hook</span><span class='lparen'>(</span><span class='symbol'>:after</span><span class='comma'>,</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="after_step-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>after_step</strong> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-150
-151
-152
-153</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 150</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_after_step'>after_step</span> <span class='comment'>#:nodoc:
-</span>  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_dry_run?'>dry_run?</span>
-  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_fire_hook'>fire_hook</span><span class='lparen'>(</span><span class='symbol'>:execute_after_step</span><span class='comma'>,</span> <span class='ivar'>@current_scenario</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="around-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>around</strong>(scenario, skip_hooks = false, &amp;block) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-114
-115
-116
-117
-118
-119
-120
-121</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 114</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_around'>around</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span><span class='op'>=</span><span class='kw'>false</span><span class='comma'>,</span> <span class='op'>&amp;</span><span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='kw'>if</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span>
-    <span class='kw'>yield</span>
-    <span class='kw'>return</span>
-  <span class='kw'>end</span>
-
-  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_around'>around</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_block'>block</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="before-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>before</strong>(scenario) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-138
-139
-140
-141
-142</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 138</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_before'>before</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_dry_run?'>dry_run?</span> <span class='op'>||</span> <span class='ivar'>@current_scenario</span>
-  <span class='ivar'>@current_scenario</span> <span class='op'>=</span> <span class='id identifier rubyid_scenario'>scenario</span>
-  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_fire_hook'>fire_hook</span><span class='lparen'>(</span><span class='symbol'>:before</span><span class='comma'>,</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="before_and_after-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>before_and_after</strong>(scenario, skip_hooks = false) {|scenario| ... }
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-<p class="tag_title">Yields:</p>
-<ul class="yield">
-  
-    <li>
-      
-      
-        <span class='type'>(<tt>scenario</tt>)</span>
-      
-      
-      
-    </li>
-  
-</ul>
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-123
-124
-125
-126
-127
-128</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 123</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_before_and_after'>before_and_after</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='id identifier rubyid_before'>before</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span>
-  <span class='kw'>yield</span> <span class='id identifier rubyid_scenario'>scenario</span>
-  <span class='id identifier rubyid_after'>after</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='kw'>unless</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span>
-  <span class='id identifier rubyid_record_result'>record_result</span> <span class='id identifier rubyid_scenario'>scenario</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="begin_scenario-instance_method">
+  <h3 class="signature first" id="begin_scenario-instance_method">
   
     - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin_scenario</strong>(scenario) 
   
@@ -1218,12 +806,12 @@
       <pre class="lines">
 
 
-134
-135
-136</pre>
+102
+103
+104</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 134</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 102</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_begin_scenario'>begin_scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
   <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_fire_hook'>fire_hook</span><span class='lparen'>(</span><span class='symbol'>:begin_scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
@@ -1245,7 +833,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Allows you to take an existing runtime and change it&#39;s configuration</p>
+<p>Allows you to take an existing runtime and change its configuration</p>
 
 
   </div>
@@ -1259,19 +847,17 @@
       <pre class="lines">
 
 
-56
 57
 58
 59
 60</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 56</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 57</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='id identifier rubyid_new_configuration'>new_configuration</span><span class='rparen'>)</span>
   <span class='ivar'>@configuration</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span><span class='lparen'>(</span><span class='id identifier rubyid_new_configuration'>new_configuration</span><span class='rparen'>)</span>
   <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='ivar'>@configuration</span><span class='rparen'>)</span>
-  <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_configure'>configure</span><span class='lparen'>(</span><span class='ivar'>@configuration</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1304,18 +890,16 @@
       <pre class="lines">
 
 
-161
-162
-163
-164
-165</pre>
+112
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 161</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 112</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_string_without_triple_quotes'>string_without_triple_quotes</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_line_offset'>line_offset</span><span class='op'>=</span><span class='int'>0</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='op'>*</span><span class='id identifier rubyid_caller'>caller</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_split'>split</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>:</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>1</span><span class='rbracket'>]</span>
-  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_line'>line</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_of_caller'>of_caller</span>
   <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>DocString</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_string_without_triple_quotes'>string_without_triple_quotes</span><span class='comma'>,</span> <span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1369,6 +953,68 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_dry_run?'>dry_run?</span>
   <span class='ivar'>@configuration</span><span class='period'>.</span><span class='id identifier rubyid_dry_run?'>dry_run?</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="failure?-instance_method">
+  
+    - (<tt>Boolean</tt>) <strong>failure?</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Boolean</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+205
+206
+207
+208
+209
+210
+211
+212</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 205</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_failure?'>failure?</span>
+  <span class='kw'>if</span> <span class='ivar'>@configuration</span><span class='period'>.</span><span class='id identifier rubyid_wip?'>wip?</span>
+    <span class='id identifier rubyid_summary_report'>summary_report</span><span class='period'>.</span><span class='id identifier rubyid_test_cases'>test_cases</span><span class='period'>.</span><span class='id identifier rubyid_total_passed'>total_passed</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_summary_report'>summary_report</span><span class='period'>.</span><span class='id identifier rubyid_test_cases'>test_cases</span><span class='period'>.</span><span class='id identifier rubyid_total_failed'>total_failed</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>||</span> <span class='id identifier rubyid_summary_report'>summary_report</span><span class='period'>.</span><span class='id identifier rubyid_test_steps'>test_steps</span><span class='period'>.</span><span class='id identifier rubyid_total_failed'>total_failed</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>||</span>
+      <span class='lparen'>(</span><span class='ivar'>@configuration</span><span class='period'>.</span><span class='id identifier rubyid_strict?'>strict?</span> <span class='op'>&amp;&amp;</span> <span class='lparen'>(</span><span class='id identifier rubyid_summary_report'>summary_report</span><span class='period'>.</span><span class='id identifier rubyid_test_steps'>test_steps</span><span class='period'>.</span><span class='id identifier rubyid_total_undefined'>total_undefined</span> <span class='op'>&gt;</span> <span class='int'>0</span> <span class='op'>||</span> <span class='id identifier rubyid_summary_report'>summary_report</span><span class='period'>.</span><span class='id identifier rubyid_test_steps'>test_steps</span><span class='period'>.</span><span class='id identifier rubyid_total_skipped'>total_skipped</span> <span class='op'>&gt;</span> <span class='int'>0</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1436,36 +1082,6 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="record_result-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>record_result</strong>(scenario) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-130
-131
-132</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 130</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_record_result'>record_result</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
-  <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_scenario_visited'>scenario_visited</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
   <h3 class="signature " id="run!-instance_method">
   
     - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>run!</strong> 
@@ -1518,12 +1134,12 @@
       <pre class="lines">
 
 
-86
-87
-88</pre>
+82
+83
+84</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 86</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 82</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_scenarios'>scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_scenarios'>scenarios</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
@@ -1559,12 +1175,12 @@
       <pre class="lines">
 
 
-102
-103
-104</pre>
+98
+99
+100</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 102</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 98</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_step_keyword'>step_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
 </span>  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='op'>::</span><span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>I18n</span><span class='period'>.</span><span class='id identifier rubyid_code_keyword_for'>code_keyword_for</span><span class='lparen'>(</span><span class='id identifier rubyid_step_keyword'>step_keyword</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span>
@@ -1600,56 +1216,15 @@
       <pre class="lines">
 
 
-94
-95
-96</pre>
+90
+91
+92</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 94</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 90</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
 </span>  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_step_match'>step_match</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_name_to_report'>name_to_report</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="step_visited-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>step_visited</strong>(step) 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>:nodoc:</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-82
-83
-84</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 82</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_step_visited'>step_visited</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
-</span>  <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_step_visited'>step_visited</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1671,12 +1246,12 @@
       <pre class="lines">
 
 
-90
-91
-92</pre>
+86
+87
+88</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 86</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_steps'>steps</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
   <span class='ivar'>@results</span><span class='period'>.</span><span class='id identifier rubyid_steps'>steps</span><span class='lparen'>(</span><span class='id identifier rubyid_status'>status</span><span class='rparen'>)</span>
@@ -1723,12 +1298,12 @@
       <pre class="lines">
 
 
-155
-156
-157</pre>
+106
+107
+108</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 155</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 106</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unknown_programming_language?'>unknown_programming_language?</span>
   <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_unknown_programming_language?'>unknown_programming_language?</span>
@@ -1753,53 +1328,15 @@
       <pre class="lines">
 
 
-98
-99
-100</pre>
+94
+95
+96</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 98</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 94</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_unmatched_step_definitions'>unmatched_step_definitions</span>
   <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_unmatched_step_definitions'>unmatched_step_definitions</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="with_hooks-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../Object.html" title="Object (class)">Object</a></span></tt>) <strong>with_hooks</strong>(scenario, skip_hooks = false) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-106
-107
-108
-109
-110
-111
-112</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime.rb', line 106</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_with_hooks'>with_hooks</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span><span class='op'>=</span><span class='kw'>false</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_around'>around</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_before_and_after'>before_and_after</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='comma'>,</span> <span class='id identifier rubyid_skip_hooks'>skip_hooks</span><span class='rparen'>)</span> <span class='kw'>do</span>
-      <span class='kw'>yield</span> <span class='id identifier rubyid_scenario'>scenario</span>
-    <span class='kw'>end</span>
-  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -1811,9 +1348,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:33 2014 by 
+  Generated on Thu Dec 18 18:35:42 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.6 (ruby-2.1.2).
 </div>
 
   </body>

@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::Formatter::Debug
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (D)</a> &raquo;
@@ -267,15 +267,13 @@
 
 7
 8
-9
-10</pre>
+9</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 7</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='comma'>,</span> <span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='ivar'>@io</span> <span class='op'>=</span> <span class='id identifier rubyid_io'>io</span>
-  <span class='ivar'>@indent</span> <span class='op'>=</span> <span class='int'>0</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -305,19 +303,15 @@
       <pre class="lines">
 
 
+20
 21
-22
-23
-24
-25</pre>
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_method_missing'>method_missing</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
-  <span class='ivar'>@indent</span> <span class='op'>-=</span> <span class='int'>2</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^after</span><span class='regexp_end'>/</span></span>
   <span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='id identifier rubyid_name'>name</span><span class='rparen'>)</span>
-  <span class='ivar'>@indent</span> <span class='op'>+=</span> <span class='int'>2</span> <span class='kw'>if</span> <span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>=~</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^before</span><span class='regexp_end'>/</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -346,13 +340,13 @@
       <pre class="lines">
 
 
+11
 12
 13
-14
-15</pre>
+14</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 12</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 11</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_log'>log</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>return</span> <span class='kw'>unless</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DEBUG</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
@@ -378,12 +372,12 @@
       <pre class="lines">
 
 
-27
-28
-29</pre>
+24
+25
+26</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_print'>print</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>puts</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -430,12 +424,12 @@
       <pre class="lines">
 
 
+16
 17
-18
-19</pre>
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/debug.rb', line 16</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_respond_to?'>respond_to?</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='kw'>true</span>
@@ -450,9 +444,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:34 2014 by 
+  Generated on Thu Dec 18 18:35:43 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.6 (ruby-2.1.2).
 </div>
 
   </body>

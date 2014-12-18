@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::Formatter::GherkinFormatterAdapter
   
-    &mdash; Documentation by YARD 0.8.7.4
+    &mdash; Documentation by YARD 0.8.7.6
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.4</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (G)</a> &raquo;
@@ -526,12 +526,12 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
-148
-149
-150</pre>
+146
+147
+148</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 148</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 146</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_feature'>after_feature</span><span class='lparen'>(</span><span class='id identifier rubyid_feature'>feature</span><span class='rparen'>)</span>
   <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_eof'>eof</span>
@@ -556,12 +556,12 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
-152
-153
-154</pre>
+150
+151
+152</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 152</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 150</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_features'>after_features</span><span class='lparen'>(</span><span class='id identifier rubyid_features'>features</span><span class='rparen'>)</span>
   <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_done'>done</span>
@@ -597,20 +597,18 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+140
 141
 142
 143
-144
-145
-146</pre>
+144</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 141</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_after_step'>after_step</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_step_finish'>step_finish</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span> <span class='op'>-</span> <span class='ivar'>@step_time</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='ivar'>@outline</span> <span class='kw'>and</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:expand</span><span class='rbracket'>]</span> <span class='kw'>and</span> <span class='kw'>not</span> <span class='ivar'>@in_instantiated_scenario</span>
-    <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_append_duration'>append_duration</span><span class='lparen'>(</span><span class='id identifier rubyid_step_finish'>step_finish</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_duration'>duration</span><span class='period'>.</span><span class='id identifier rubyid_tap'>tap</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_duration'>duration</span><span class='op'>|</span> <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_append_duration'>append_duration</span><span class='lparen'>(</span><span class='id identifier rubyid_duration'>duration</span><span class='period'>.</span><span class='id identifier rubyid_nanoseconds'>nanoseconds</span> <span class='op'>/</span> <span class='int'>10</span> <span class='op'>**</span> <span class='float'>9.0</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -667,6 +665,7 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+129
 130
 131
 132
@@ -674,11 +673,10 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 134
 135
 136
-137
-138</pre>
+137</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 130</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 129</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_examples'>before_examples</span><span class='lparen'>(</span><span class='id identifier rubyid_examples'>examples</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:expand</span><span class='rbracket'>]</span>
@@ -819,8 +817,7 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 84
 85
 86
-87
-88</pre>
+87</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 69</span>
@@ -843,7 +840,6 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
     <span class='kw'>end</span>
     <span class='ivar'>@gf</span><span class='period'>.</span><span class='id identifier rubyid_match'>match</span><span class='lparen'>(</span><span class='id identifier rubyid_match'>match</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='ivar'>@step_time</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -865,6 +861,7 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+89
 90
 91
 92
@@ -886,11 +883,10 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 108
 109
 110
-111
-112</pre>
+111</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 90</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 89</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_before_step_result'>before_step_result</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_exception'>exception</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='comma'>,</span> <span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_arguments'>arguments</span> <span class='op'>=</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='period'>.</span><span class='id identifier rubyid_step_arguments'>step_arguments</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='const'>Gherkin</span><span class='op'>::</span><span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Argument</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_offset'>offset</span><span class='comma'>,</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_val'>val</span><span class='rparen'>)</span><span class='rbrace'>}</span>
@@ -935,6 +931,8 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+154
+155
 156
 157
 158
@@ -952,12 +950,10 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 170
 171
 172
-173
-174
-175</pre>
+173</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 156</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 154</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_embed'>embed</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='comma'>,</span> <span class='id identifier rubyid_mime_type'>mime_type</span><span class='comma'>,</span> <span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_file?'>file?</span><span class='lparen'>(</span><span class='id identifier rubyid_file'>file</span><span class='rparen'>)</span>
@@ -999,16 +995,16 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+175
+176
 177
 178
 179
 180
-181
-182
-183</pre>
+181</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 177</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 175</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_puts'>puts</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='rparen'>)</span>
   <span class='kw'>unless</span> <span class='ivar'>@before_steps</span>
@@ -1103,6 +1099,7 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
       <pre class="lines">
 
 
+113
 114
 115
 116
@@ -1116,11 +1113,10 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 124
 125
 126
-127
-128</pre>
+127</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 114</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/formatter/gherkin_formatter_adapter.rb', line 113</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='lparen'>(</span><span class='id identifier rubyid_keyword'>keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_match'>step_match</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_source_indent'>source_indent</span><span class='comma'>,</span> <span class='id identifier rubyid_background'>background</span><span class='comma'>,</span> <span class='id identifier rubyid_file_colon_line'>file_colon_line</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@outline</span> <span class='kw'>and</span> <span class='ivar'>@options</span><span class='lbracket'>[</span><span class='symbol'>:expand</span><span class='rbracket'>]</span> <span class='kw'>and</span> <span class='ivar'>@in_instantiated_scenario</span>
@@ -1147,9 +1143,9 @@ will disappear when Cucumber is based on Gherkin&#39;s model.</p>
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:38 2014 by 
+  Generated on Thu Dec 18 18:35:46 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.6 (ruby-2.1.2).
 </div>
 
   </body>
