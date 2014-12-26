@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::Runtime::SupportCode::StepInvoker
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.5</h3>
+      <h3><img src="../../../images/bubble_32x32.png"></img> Cucumber 1.3.18</h3>
       <div id="menu">
   
     <a href="../../../_index.html">Index (S)</a> &raquo;
@@ -174,28 +174,6 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#multiline_arg-instance_method" title="#multiline_arg (instance method)">- (Object) <strong>multiline_arg</strong>(step, location) </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
       <a href="#step-instance_method" title="#step (instance method)">- (Object) <strong>step</strong>(step) </a>
     
 
@@ -307,51 +285,13 @@
       <pre class="lines">
 
 
-27
-28</pre>
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 26</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_eof'>eof</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="multiline_arg-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>multiline_arg</strong>(step, location) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-30
-31
-32
-33
-34
-35
-36</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 30</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
-  <span class='kw'>if</span> <span class='id identifier rubyid_argument'>argument</span> <span class='op'>=</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_doc_string'>doc_string</span>
-    <span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_doc_string'>doc_string</span><span class='lparen'>(</span><span class='id identifier rubyid_argument'>argument</span><span class='period'>.</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_argument'>argument</span><span class='period'>.</span><span class='id identifier rubyid_content_type'>content_type</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='period'>.</span><span class='id identifier rubyid_on_line'>on_line</span><span class='lparen'>(</span><span class='id identifier rubyid_argument'>argument</span><span class='period'>.</span><span class='id identifier rubyid_line_range'>line_range</span><span class='rparen'>)</span><span class='rparen'>)</span>
-  <span class='kw'>else</span>
-    <span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_rows'>rows</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
-  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -375,15 +315,13 @@
 
 22
 23
-24
-25</pre>
+24</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/runtime/support_code.rb', line 22</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step'>step</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_of_caller'>of_caller</span>
-  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span><span class='rparen'>)</span>
+  <span class='ivar'>@support_code</span><span class='period'>.</span><span class='id identifier rubyid_invoke'>invoke</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='comma'>,</span> <span class='const'>Ast</span><span class='op'>::</span><span class='const'>MultilineArgument</span><span class='period'>.</span><span class='id identifier rubyid_from'>from</span><span class='lparen'>(</span><span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_doc_string'>doc_string</span> <span class='op'>||</span> <span class='id identifier rubyid_step'>step</span><span class='period'>.</span><span class='id identifier rubyid_rows'>rows</span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -423,9 +361,9 @@
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 18 18:45:27 2014 by 
+  Generated on Fri Dec 26 23:49:41 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.2).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>

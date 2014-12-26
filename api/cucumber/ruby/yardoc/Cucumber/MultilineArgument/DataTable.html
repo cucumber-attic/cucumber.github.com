@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::MultilineArgument::DataTable
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.5</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (D)</a> &raquo;
@@ -124,10 +124,10 @@ manipulate the data in different ways.</p>
 
 <p>And a matching StepDefinition:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>I have:</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_data'>data</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_raw'>raw</span>
-<span class='kw'>end</span>
-</code></pre>
+<pre class="ruby"><span class="ruby-constant">Given</span> <span class="ruby-regexp">/I have:/</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">data</span> = <span class="ruby-identifier">table</span>.<span class="ruby-identifier">raw</span>
+<span class="ruby-keyword">end</span>
+</pre>
 
 <p>This will store <code>[[&#39;a&#39;, &#39;b&#39;], [&#39;c&#39;,
 &#39;d&#39;]]</code> in the <code>data</code> variable.</p>
@@ -1914,8 +1914,8 @@ plain text:</p>
 
 <p>Gets converted into the following:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='lbracket'>[</span><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>3</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sum</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>5</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='comma'>,</span> <span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>7</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>9</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>sum</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>16</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span><span class='rbracket'>]</span>
-</code></pre>
+<pre class="ruby">[{<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>, <span class="ruby-string">&#39;b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;3&#39;</span>, <span class="ruby-string">&#39;sum&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;5&#39;</span>}, {<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;7&#39;</span>, <span class="ruby-string">&#39;b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;9&#39;</span>, <span class="ruby-string">&#39;sum&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;16&#39;</span>}]
+</pre>
 
 <p>Use #map_column! to specify how values in a column are converted.</p>
 
@@ -2163,13 +2163,13 @@ true, an error will be raised if the column named <code>column_name</code>
 is not found. If <code>strict</code> is false, no error will be raised.
 Example:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='const'>Given</span> <span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>^an expense report for (.*) with the following posts:$</span><span class='regexp_end'>/</span></span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_table'>table</span><span class='op'>|</span>
-  <span class='id identifier rubyid_posts_table'>posts_table</span><span class='period'>.</span><span class='id identifier rubyid_map_column!'>map_column!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>amount</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_a'>a</span><span class='op'>|</span> <span class='id identifier rubyid_a'>a</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='rbrace'>}</span>
-  <span class='id identifier rubyid_posts_table'>posts_table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_post'>post</span><span class='op'>|</span>
-    <span class='comment'># post[&#39;amount&#39;] is a Fixnum, rather than a String
-</span>  <span class='kw'>end</span>
-<span class='kw'>end</span>
-</code></pre>
+<pre class="ruby"><span class="ruby-constant">Given</span> <span class="ruby-regexp">/^an expense report for (.*) with the following posts:$/</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">table</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">posts_table</span>.<span class="ruby-identifier">map_column!</span>(<span class="ruby-string">&#39;amount&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">a</span>.<span class="ruby-identifier">to_i</span> }
+  <span class="ruby-identifier">posts_table</span>.<span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">post</span><span class="ruby-operator">|</span>
+    <span class="ruby-comment"># post[&#39;amount&#39;] is a Fixnum, rather than a String</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
 
 
   </div>
@@ -2270,25 +2270,25 @@ The values of <code>mappings</code> are desired names for the columns.</p>
 <p>A StepDefinition receiving this table can then map the columns with both
 Regexp and String:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='regexp_beg'>/</span><span class='tstring_content'>phone( number)?</span><span class='regexp_end'>/i</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:phone</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Address</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='symbol'>:address</span><span class='rparen'>)</span>
-<span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span>
-<span class='comment'># =&gt; [{:phone =&gt; &#39;123456&#39;, :address =&gt; &#39;xyz&#39;}, {:phone =&gt; &#39;345678&#39;, :address =&gt; &#39;abc&#39;}]
-</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">table</span>.<span class="ruby-identifier">map_headers!</span>(<span class="ruby-regexp">/phone( number)?/</span> =<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">phone</span>, <span class="ruby-string">&#39;Address&#39;</span> =<span class="ruby-operator">&gt;</span> :<span class="ruby-identifier">address</span>)
+<span class="ruby-identifier">table</span>.<span class="ruby-identifier">hashes</span>
+<span class="ruby-comment"># =&gt; [{:phone =&gt; &#39;123456&#39;, :address =&gt; &#39;xyz&#39;}, {:phone =&gt; &#39;345678&#39;, :address =&gt; &#39;abc&#39;}]</span>
+</pre>
 
 <p>You may also pass in a block if you wish to convert all of the headers:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='op'>|</span> <span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span>
-<span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-<span class='comment'># =&gt; [&#39;phone number&#39;, &#39;address&#39;]
-</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">table</span>.<span class="ruby-identifier">map_headers!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">header</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">downcase</span> }
+<span class="ruby-identifier">table</span>.<span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">keys</span>
+<span class="ruby-comment"># =&gt; [&#39;phone number&#39;, &#39;address&#39;]</span>
+</pre>
 
 <p>When a block is passed in along with a hash then the mappings in the hash
 take precendence:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_map_headers!'>map_headers!</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Address</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>ADDRESS</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_header'>header</span><span class='op'>|</span> <span class='id identifier rubyid_header'>header</span><span class='period'>.</span><span class='id identifier rubyid_downcase'>downcase</span> <span class='rbrace'>}</span>
-<span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_hashes'>hashes</span><span class='period'>.</span><span class='id identifier rubyid_keys'>keys</span>
-<span class='comment'># =&gt; [&#39;phone number&#39;, &#39;ADDRESS&#39;]
-</span></code></pre>
+<pre class="ruby"><span class="ruby-identifier">table</span>.<span class="ruby-identifier">map_headers!</span>(<span class="ruby-string">&#39;Address&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;ADDRESS&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">header</span><span class="ruby-operator">|</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">downcase</span> }
+<span class="ruby-identifier">table</span>.<span class="ruby-identifier">hashes</span>.<span class="ruby-identifier">keys</span>
+<span class="ruby-comment"># =&gt; [&#39;phone number&#39;, &#39;ADDRESS&#39;]</span>
+</pre>
 
 
   </div>
@@ -2340,11 +2340,11 @@ used especially for argument transforms.</p>
 
 <p>Example:</p>
 
-<pre class="code ruby"><code class="ruby">| column_1_name | column_2_name |
-| x             | y             |
+<pre class="ruby"><span class="ruby-operator">|</span> <span class="ruby-identifier">column_1_name</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">column_2_name</span> <span class="ruby-operator">|</span>
+<span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>             <span class="ruby-operator">|</span> <span class="ruby-identifier">y</span>             <span class="ruby-operator">|</span>
 
-table.match(/table:column_1_name,column_2_name/) #=&gt; non-nil
-</code></pre>
+<span class="ruby-identifier">table</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/table:column_1_name,column_2_name/</span>) <span class="ruby-comment">#=&gt; non-nil</span>
+</pre>
 
 <p>Note: must use &#39;table:&#39; prefix on match</p>
 
@@ -2488,8 +2488,8 @@ the second column is used as values</p>
 
 <p>Gets converted into the following:</p>
 
-<pre class="code ruby"><code class="ruby"><span class='lbrace'>{</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>a</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>2</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>b</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>3</span><span class='tstring_end'>&#39;</span></span><span class='rbrace'>}</span>
-</code></pre>
+<pre class="ruby">{<span class="ruby-string">&#39;a&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;2&#39;</span>, <span class="ruby-string">&#39;b&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;3&#39;</span>}
+</pre>
 
 <p>The table must be exactly two columns wide</p>
 
@@ -2843,9 +2843,9 @@ the second column is used as values</p>
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 18 18:45:28 2014 by 
+  Generated on Mon Dec 22 20:22:52 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.2).
+  0.8.7.4 (ruby-2.0.0).
 </div>
 
   </body>

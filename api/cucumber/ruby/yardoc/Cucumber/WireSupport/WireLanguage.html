@@ -6,7 +6,7 @@
 <title>
   Class: Cucumber::WireSupport::WireLanguage
   
-    &mdash; Documentation by YARD 0.8.7.6
+    &mdash; Documentation by YARD 0.8.7.4
   
 </title>
 
@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.5</h3>
+      <h3><img src="../../images/bubble_32x32.png"></img> Cucumber 1.3.18</h3>
       <div id="menu">
   
     <a href="../../_index.html">Index (W)</a> &raquo;
@@ -111,7 +111,7 @@
 <h2>Overview</h2><div class="docstring">
   <div class="discussion">
     
-<p>The wire-protocol (language independent) implementation of the programming
+<p>The wire-protocol (lanugage independent) implementation of the programming
 language API.</p>
 
 
@@ -120,17 +120,7 @@ language API.</p>
 <div class="tags">
   
 
-</div><h2>Defined Under Namespace</h2>
-<p class="children">
-  
-    
-  
-    
-      <strong class="classes">Classes:</strong> <span class='object_link'><a href="WireLanguage/MultilineArgClassName.html" title="Cucumber::WireSupport::WireLanguage::MultilineArgClassName (class)">MultilineArgClassName</a></span>
-    
-  
-</p>
-
+</div>
 
 
 
@@ -148,7 +138,7 @@ language API.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#begin_scenario-instance_method" title="#begin_scenario (instance method)">- (Object) <strong>begin_scenario</strong>(scenario) </a>
+      <a href="#alias_adverbs-instance_method" title="#alias_adverbs (instance method)">- (Object) <strong>alias_adverbs</strong>(adverbs) </a>
     
 
     
@@ -170,29 +160,7 @@ language API.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#end_scenario-instance_method" title="#end_scenario (instance method)">- (Object) <strong>end_scenario</strong> </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'></div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="#initialize-instance_method" title="#initialize (instance method)">- (WireLanguage) <strong>initialize</strong>(_ = nil) </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (WireLanguage) <strong>initialize</strong>(runtime) </a>
     
 
     
@@ -240,7 +208,7 @@ language API.</p>
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#snippet_text-instance_method" title="#snippet_text (instance method)">- (Object) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg, snippet_type) </a>
+      <a href="#snippet_text-instance_method" title="#snippet_text (instance method)">- (Object) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class, snippet_type) </a>
     
 
     
@@ -294,14 +262,14 @@ language API.</p>
   
   
   <h3 class="inherited">Methods included from <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html" title="Cucumber::LanguageSupport::LanguageMethods (module)">LanguageSupport::LanguageMethods</a></span></h3>
-  <p class="inherited"><span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#add_hook-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#add_hook (method)">#add_hook</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#add_transform-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#add_transform (method)">#add_transform</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#after_configuration-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#after_configuration (method)">#after_configuration</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#available_step_definition-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#available_step_definition (method)">#available_step_definition</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#clear_hooks-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#clear_hooks (method)">#clear_hooks</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#execute_transforms-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#execute_transforms (method)">#execute_transforms</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#hooks_for-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#hooks_for (method)">#hooks_for</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#invoked_step_definition-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#invoked_step_definition (method)">#invoked_step_definition</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#unmatched_step_definitions-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#unmatched_step_definitions (method)">#unmatched_step_definitions</a></span></p>
+  <p class="inherited"><span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#add_hook-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#add_hook (method)">#add_hook</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#add_transform-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#add_transform (method)">#add_transform</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#after-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#after (method)">#after</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#after_configuration-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#after_configuration (method)">#after_configuration</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#around-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#around (method)">#around</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#available_step_definition-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#available_step_definition (method)">#available_step_definition</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#before-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#before (method)">#before</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#clear_hooks-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#clear_hooks (method)">#clear_hooks</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#execute_after_step-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#execute_after_step (method)">#execute_after_step</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#execute_transforms-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#execute_transforms (method)">#execute_transforms</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#hooks_for-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#hooks_for (method)">#hooks_for</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#invoked_step_definition-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#invoked_step_definition (method)">#invoked_step_definition</a></span>, <span class='object_link'><a href="../LanguageSupport/LanguageMethods.html#unmatched_step_definitions-instance_method" title="Cucumber::LanguageSupport::LanguageMethods#unmatched_step_definitions (method)">#unmatched_step_definitions</a></span></p>
 <div id="constructor_details" class="method_details_list">
   <h2>Constructor Details</h2>
   
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    - (<tt><span class='object_link'><a href="" title="Cucumber::WireSupport::WireLanguage (class)">WireLanguage</a></span></tt>) <strong>initialize</strong>(_ = nil) 
+    - (<tt><span class='object_link'><a href="" title="Cucumber::WireSupport::WireLanguage (class)">WireLanguage</a></span></tt>) <strong>initialize</strong>(runtime) 
   
 
   
@@ -331,7 +299,7 @@ language API.</p>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 17</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid__'>_</span><span class='op'>=</span><span class='kw'>nil</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_runtime'>runtime</span><span class='rparen'>)</span>
   <span class='ivar'>@connections</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -347,41 +315,9 @@ language API.</p>
 
     
       <div class="method_details first">
-  <h3 class="signature first" id="begin_scenario-instance_method">
+  <h3 class="signature first" id="alias_adverbs-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>begin_scenario</strong>(scenario) 
-  
-
-  
-
-  
-</h3><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-37
-38
-39
-40</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 37</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_begin_scenario'>begin_scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span>
-  <span class='ivar'>@connections</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_begin_scenario'>begin_scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
-  <span class='ivar'>@current_scenario</span> <span class='op'>=</span> <span class='id identifier rubyid_scenario'>scenario</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="end_scenario-instance_method">
-  
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>end_scenario</strong> 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>alias_adverbs</strong>(adverbs) 
   
 
   
@@ -393,19 +329,13 @@ language API.</p>
       <pre class="lines">
 
 
-42
-43
-44
-45
-46</pre>
+21
+22</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 42</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 21</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_end_scenario'>end_scenario</span>
-  <span class='id identifier rubyid_scenario'>scenario</span> <span class='op'>=</span> <span class='ivar'>@current_scenario</span>
-  <span class='ivar'>@connections</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_end_scenario'>end_scenario</span><span class='lparen'>(</span><span class='id identifier rubyid_scenario'>scenario</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
-  <span class='ivar'>@current_scenario</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_alias_adverbs'>alias_adverbs</span><span class='lparen'>(</span><span class='id identifier rubyid_adverbs'>adverbs</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -427,13 +357,13 @@ language API.</p>
       <pre class="lines">
 
 
-21
-22
-23
-24</pre>
+24
+25
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 24</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_load_code_file'>load_code_file</span><span class='lparen'>(</span><span class='id identifier rubyid_wire_file'>wire_file</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_config'>config</span> <span class='op'>=</span> <span class='const'>Configuration</span><span class='period'>.</span><span class='id identifier rubyid_from_file'>from_file</span><span class='lparen'>(</span><span class='id identifier rubyid_wire_file'>wire_file</span><span class='rparen'>)</span>
@@ -447,7 +377,7 @@ language API.</p>
       <div class="method_details ">
   <h3 class="signature " id="snippet_text-instance_method">
   
-    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg, snippet_type) 
+    - (<tt><span class='object_link'><a href="../../Object.html" title="Object (class)">Object</a></span></tt>) <strong>snippet_text</strong>(code_keyword, step_name, multiline_arg_class, snippet_type) 
   
 
   
@@ -459,19 +389,19 @@ language API.</p>
       <pre class="lines">
 
 
-26
-27
-28
 29
 30
-31</pre>
+31
+32
+33
+34</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 26</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 29</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='comma'>,</span> <span class='id identifier rubyid_snippet_type'>snippet_type</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='comma'>,</span> <span class='id identifier rubyid_snippet_type'>snippet_type</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_snippets'>snippets</span> <span class='op'>=</span> <span class='ivar'>@connections</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_remote'>remote</span><span class='op'>|</span>
-    <span class='id identifier rubyid_remote'>remote</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='const'>MultilineArgClassName</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_multiline_arg'>multiline_arg</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_remote'>remote</span><span class='period'>.</span><span class='id identifier rubyid_snippet_text'>snippet_text</span><span class='lparen'>(</span><span class='id identifier rubyid_code_keyword'>code_keyword</span><span class='comma'>,</span> <span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_multiline_arg_class'>multiline_arg_class</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='rparen'>)</span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_snippets'>snippets</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
@@ -495,12 +425,12 @@ language API.</p>
       <pre class="lines">
 
 
-33
-34
-35</pre>
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_language.rb', line 36</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_step_matches'>step_matches</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_formatted_step_name'>formatted_step_name</span><span class='rparen'>)</span>
   <span class='ivar'>@connections</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span><span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span> <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_step_matches'>step_matches</span><span class='lparen'>(</span><span class='id identifier rubyid_step_name'>step_name</span><span class='comma'>,</span> <span class='id identifier rubyid_formatted_step_name'>formatted_step_name</span><span class='rparen'>)</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_flatten'>flatten</span>
@@ -515,9 +445,9 @@ language API.</p>
 </div>
     
     <div id="footer">
-  Generated on Thu Dec 18 18:45:27 2014 by 
+  Generated on Fri Dec 26 23:49:42 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.6 (ruby-2.1.2).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>
