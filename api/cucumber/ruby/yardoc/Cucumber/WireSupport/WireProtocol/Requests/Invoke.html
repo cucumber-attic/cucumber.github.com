@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../../../../images/bubble_32x32.png"></img> Cucumber 1.3.18</h3>
       <div id="menu">
   
     <a href="../../../../_index.html">Index (I)</a> &raquo;
@@ -288,22 +288,22 @@
       <pre class="lines">
 
 
+76
+77
 78
 79
 80
 81
 82
-83
-84
-85</pre>
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_protocol/requests.rb', line 78</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_protocol/requests.rb', line 76</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handle_diff'>handle_diff</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='rparen'>)</span>
   <span class='kw'>begin</span>
     <span class='id identifier rubyid_handle_diff!'>handle_diff!</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='rparen'>)</span>
-  <span class='kw'>rescue</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>MultilineArgument</span><span class='op'>::</span><span class='const'>DataTable</span><span class='op'>::</span><span class='const'>Different</span>
+  <span class='kw'>rescue</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Table</span><span class='op'>::</span><span class='const'>Different</span>
     <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_diff_failed'>diff_failed</span>
   <span class='kw'>end</span>
   <span class='ivar'>@connection</span><span class='period'>.</span><span class='id identifier rubyid_diff_ok'>diff_ok</span>
@@ -332,18 +332,14 @@
 71
 72
 73
-74
-75
-76</pre>
+74</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/wire_support/wire_protocol/requests.rb', line 70</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_handle_diff!'>handle_diff!</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='rparen'>)</span>
-  <span class='comment'># TODO: figure out if / how we could get a location for a table from the wire (or make a null location)
-</span>  <span class='id identifier rubyid_location'>location</span> <span class='op'>=</span> <span class='const'>Core</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>Location</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='comma'>,</span> <span class='kw'>__LINE__</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table1'>table1</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_table2'>table2</span> <span class='op'>=</span> <span class='id identifier rubyid_table'>table</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_location'>location</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table1'>table1</span> <span class='op'>=</span> <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_table2'>table2</span> <span class='op'>=</span> <span class='const'>Ast</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_tables'>tables</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_table1'>table1</span><span class='period'>.</span><span class='id identifier rubyid_diff!'>diff!</span><span class='lparen'>(</span><span class='id identifier rubyid_table2'>table2</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -408,9 +404,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:37 2014 by 
+  Generated on Fri Dec 26 23:49:43 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>

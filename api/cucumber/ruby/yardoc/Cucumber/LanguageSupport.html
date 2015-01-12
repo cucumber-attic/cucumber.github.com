@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.18</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (L)</a> &raquo;
@@ -98,25 +98,24 @@
 While Cucumber itself is written in Ruby, any programming language can be
 supported by implementing this API.</p>
 
-<p>For the sake of illustration we&#39;ll consider an imaginary language
-called _why. _why files have the .why extension, so we need to put support
-for this language in the <code>Cucumber::WhySupport::WhyLanguage</code>.
-This class must be defined in a file called
-<code>cucumber/why_support/why_language.rb</code> and be available on
-Ruby&#39;s <code>$LOAD_PATH</code>:</p>
+<p>For the sake of illustration we'll consider an imaginary language called
+_why. _why files have the .why extension, so we need to put support for
+this language in the <tt>Cucumber::WhySupport::WhyLanguage</tt>. This class
+must be defined in a file called
+<tt>cucumber/why_support/why_language.rb</tt> and be available on Ruby's
+<tt>$LOAD_PATH</tt>:</p>
 
-<pre class="ruby"><span class="ruby-keyword">module</span> <span class="ruby-constant">Cucumber</span>
-  <span class="ruby-keyword">module</span> <span class="ruby-constant">WhySupport</span>
-    <span class="ruby-keyword">class</span> <span class="ruby-constant">WhyLanguage</span>
+<pre class="code ruby"><code class="ruby"><span class='kw'>module</span> <span class='const'>Cucumber</span>
+  <span class='kw'>module</span> <span class='const'>WhySupport</span>
+    <span class='kw'>class</span> <span class='const'>WhyLanguage</span>
 
-      <span class="ruby-comment"># Uses whatever available language bridge to load</span>
-      <span class="ruby-comment"># +why_file+ and returns an Array of StepDefinition.</span>
-      <span class="ruby-keyword">def</span> <span class="ruby-identifier">load_code_file</span>(<span class="ruby-identifier">why_file</span>)
-      <span class="ruby-keyword">end</span>
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span>
-</pre>
+      <span class='comment'># Uses whatever available language bridge to load
+</span>      <span class='comment'># +why_file+ and returns an Array of StepDefinition.
+</span>      <span class='kw'>def</span> <span class='id identifier rubyid_load_code_file'>load_code_file</span><span class='lparen'>(</span><span class='id identifier rubyid_why_file'>why_file</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>end</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></code></pre>
 
 <p>Each language implementation manages its own hooks, and must execute them
 at appropriate times.</p>
@@ -149,9 +148,9 @@ at appropriate times.</p>
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:32 2014 by 
+  Generated on Fri Dec 26 23:49:37 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>

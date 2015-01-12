@@ -33,7 +33,7 @@
     </script>
     
     <div id="header">
-      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 2.0.0.beta.3</h3>
+      <h3><img src="../images/bubble_32x32.png"></img> Cucumber 1.3.18</h3>
       <div id="menu">
   
     <a href="../_index.html">Index (C)</a> &raquo;
@@ -516,7 +516,7 @@
       <pre class="code"><span class="info file"># File 'lib/autotest/cucumber_mixin.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_make_cucumber_cmd'>make_cucumber_cmd</span><span class='lparen'>(</span><span class='id identifier rubyid_features_to_run'>features_to_run</span><span class='comma'>,</span> <span class='id identifier rubyid_dirty_features_filename'>dirty_features_filename</span><span class='rparen'>)</span>
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
 
   <span class='id identifier rubyid_profile_loader'>profile_loader</span> <span class='op'>=</span> <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Cli</span><span class='op'>::</span><span class='const'>ProfileLoader</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
@@ -529,18 +529,18 @@
   <span class='kw'>else</span>
     <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='qwords_beg'>%w{</span><span class='tstring_content'>--format</span><span class='words_sep'>}</span> <span class='op'>&lt;&lt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='symbol'>:all</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>progress</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pretty</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
   <span class='kw'>end</span>
-  <span class='comment'># No --color option as some IDEs (Netbeans) don&#39;t output them very well ([31m1 failed step[0m)
+  <span class='comment'># No --color option as some IDEs (Netbeans) don't output them very well ([31m1 failed step[0m)
 </span>  <span class='id identifier rubyid_args'>args</span> <span class='op'>+=</span> <span class='qwords_beg'>%w{</span><span class='tstring_content'>--format</span><span class='words_sep'> </span><span class='tstring_content'>rerun</span><span class='words_sep'> </span><span class='tstring_content'>--out</span><span class='words_sep'>}</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_dirty_features_filename'>dirty_features_filename</span>
   <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='lparen'>(</span><span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='symbol'>:all</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span> <span class='op'>:</span> <span class='id identifier rubyid_features_to_run'>features_to_run</span><span class='rparen'>)</span>
 
   <span class='comment'># Unless I do this, all the steps turn up undefined during the rerun...
 </span>  <span class='kw'>unless</span> <span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='symbol'>:all</span>
-    <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/step_definitions</span><span class='tstring_end'>&#39;</span></span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>features/support</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_args'>args</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>features/step_definitions</span><span class='tstring_end'>'</span></span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>features/support</span><span class='tstring_end'>'</span></span>
   <span class='kw'>end</span>
 
-  <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'> </span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_args'>args</span> <span class='op'>=</span> <span class='id identifier rubyid_args'>args</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'> </span><span class='tstring_end'>'</span></span><span class='rparen'>)</span>
 
-  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>RUBY_BINARY</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>BINARY</span><span class='embexpr_end'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>return</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>RUBY_BINARY</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>BINARY</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_args'>args</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -750,7 +750,7 @@
 
 <span class='kw'>def</span> <span class='id identifier rubyid_run_features'>run_features</span>
   <span class='id identifier rubyid_hook'>hook</span> <span class='symbol'>:run_features</span>
-  <span class='const'>Tempfile</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>autotest-cucumber</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dirty_features_file'>dirty_features_file</span><span class='op'>|</span>
+  <span class='const'>Tempfile</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>autotest-cucumber</span><span class='tstring_end'>'</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_dirty_features_file'>dirty_features_file</span><span class='op'>|</span>
     <span class='id identifier rubyid_cmd'>cmd</span> <span class='op'>=</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_make_cucumber_cmd'>make_cucumber_cmd</span><span class='lparen'>(</span><span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_features_to_run'>features_to_run</span><span class='comma'>,</span> <span class='id identifier rubyid_dirty_features_file'>dirty_features_file</span><span class='period'>.</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
     <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_cmd'>cmd</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
     <span class='id identifier rubyid_puts'>puts</span> <span class='id identifier rubyid_cmd'>cmd</span> <span class='kw'>unless</span> <span class='gvar'>$q</span>
@@ -759,7 +759,7 @@
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_results'>results</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_line'>line</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='kw'>begin</span>
-      <span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>| </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cmd'>cmd</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>r</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
+      <span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>| </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_cmd'>cmd</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>r</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_f'>f</span><span class='op'>|</span>
         <span class='kw'>until</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_eof?'>eof?</span> <span class='kw'>do</span>
           <span class='id identifier rubyid_c'>c</span> <span class='op'>=</span> <span class='id identifier rubyid_f'>f</span><span class='period'>.</span><span class='id identifier rubyid_getc'>getc</span> <span class='kw'>or</span> <span class='kw'>break</span>
           <span class='kw'>if</span> <span class='const'>RUBY_VERSION</span> <span class='op'>&gt;=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>1.9</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>then</span>
@@ -782,7 +782,7 @@
       <span class='gvar'>$stdout</span><span class='period'>.</span><span class='id identifier rubyid_sync'>sync</span> <span class='op'>=</span> <span class='id identifier rubyid_old_sync'>old_sync</span>
     <span class='kw'>end</span>
     <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>=</span> <span class='id identifier rubyid_dirty_features_file'>dirty_features_file</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span><span class='period'>.</span><span class='id identifier rubyid_strip'>strip</span>
-    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_tainted'>tainted</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span>
+    <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_tainted'>tainted</span> <span class='op'>=</span> <span class='kw'>true</span> <span class='kw'>unless</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_features_to_run'>features_to_run</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_end'>'</span></span>
   <span class='kw'>end</span>
   <span class='id identifier rubyid_hook'>hook</span> <span class='symbol'>:ran_features</span>
 <span class='kw'>end</span></pre>
@@ -796,9 +796,9 @@
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:32 2014 by 
+  Generated on Fri Dec 26 23:49:37 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.8.7.4 (ruby-2.0.0).
+  0.8.7.4 (ruby-1.9.3).
 </div>
 
   </body>

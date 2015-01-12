@@ -140,7 +140,7 @@ manipulate the data in different ways.</p>
 
 </div><div id="subclasses">
   <h2>Direct Known Subclasses</h2>
-  <p class="children"><span class='object_link'><a href="../Reports/Legacy/Ast/MultilineArg/DataTable.html" title="Cucumber::Reports::Legacy::Ast::MultilineArg::DataTable (class)">Reports::Legacy::Ast::MultilineArg::DataTable</a></span></p>
+  <p class="children"><span class='object_link'><a href="../Formatter/LegacyApi/Ast/MultilineArg/DataTable.html" title="Cucumber::Formatter::LegacyApi::Ast::MultilineArg::DataTable (class)">Formatter::LegacyApi::Ast::MultilineArg::DataTable</a></span></p>
 </div>
 <h2>Defined Under Namespace</h2>
 <p class="children">
@@ -1465,14 +1465,14 @@ and pass them to your Step Definitions.</p>
       <pre class="lines">
 
 
+455
 456
 457
 458
-459
-460</pre>
+459</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 456</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 455</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_columns'>columns</span> <span class='comment'>#:nodoc:
 </span>  <span class='ivar'>@columns</span> <span class='op'>||=</span> <span class='id identifier rubyid_cell_matrix'>cell_matrix</span><span class='period'>.</span><span class='id identifier rubyid_transpose'>transpose</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cell_row'>cell_row</span><span class='op'>|</span>
@@ -1499,12 +1499,12 @@ and pass them to your Step Definitions.</p>
       <pre class="lines">
 
 
+451
 452
-453
-454</pre>
+453</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 452</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 451</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_description_for_visitors'>description_for_visitors</span>
   <span class='symbol'>:legacy_table</span>
@@ -2084,12 +2084,12 @@ plain text:</p>
       <pre class="lines">
 
 
+447
 448
-449
-450</pre>
+449</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 448</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 447</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_location'>location</span>
   <span class='ivar'>@ast_table</span><span class='period'>.</span><span class='id identifier rubyid_location'>location</span>
@@ -2592,12 +2592,12 @@ the second column is used as values</p>
       <pre class="lines">
 
 
+461
 462
-463
-464</pre>
+463</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 462</span>
+      <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 461</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_raw'>raw</span><span class='period'>.</span><span class='id identifier rubyid_to_json'>to_json</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_args'>args</span><span class='rparen'>)</span>
@@ -2649,15 +2649,15 @@ the second column is used as values</p>
 442
 443
 444
-445
-446</pre>
+445</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/cucumber/multiline_argument/data_table.rb', line 429</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_to_s'>to_s</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span> <span class='comment'>#:nodoc:
+</span>  <span class='comment'># TODO: factor out this code so we don&#39;t depend on such a big lump of old cruft
 </span>  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber/formatter/pretty</span><span class='tstring_end'>&#39;</span></span>
-  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber/reports/legacy_formatter</span><span class='tstring_end'>&#39;</span></span>
+  <span class='id identifier rubyid_require'>require</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>cucumber/formatter/legacy_api/adapter</span><span class='tstring_end'>&#39;</span></span>
   <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='symbol'>:color</span> <span class='op'>=&gt;</span> <span class='kw'>true</span><span class='comma'>,</span> <span class='symbol'>:indent</span> <span class='op'>=&gt;</span> <span class='int'>2</span><span class='comma'>,</span> <span class='symbol'>:prefixes</span> <span class='op'>=&gt;</span> <span class='const'>TO_S_PREFIXES</span><span class='rbrace'>}</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_io'>io</span> <span class='op'>=</span> <span class='const'>StringIO</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
 
@@ -2665,9 +2665,7 @@ the second column is used as values</p>
   <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Term</span><span class='op'>::</span><span class='const'>ANSIColor</span><span class='period'>.</span><span class='id identifier rubyid_coloring'>coloring</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:color</span><span class='rbracket'>]</span>
   <span class='id identifier rubyid_formatter'>formatter</span> <span class='op'>=</span> <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Pretty</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_io'>io</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_formatter'>formatter</span><span class='period'>.</span><span class='id identifier rubyid_instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>@indent</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:indent</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-
-  <span class='const'>Reports</span><span class='op'>::</span><span class='const'>Legacy</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>MultilineArg</span><span class='period'>.</span><span class='id identifier rubyid_for'>for</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='const'>Reports</span><span class='op'>::</span><span class='const'>FormatterWrapper</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
-
+  <span class='const'>Formatter</span><span class='op'>::</span><span class='const'>LegacyApi</span><span class='op'>::</span><span class='const'>Ast</span><span class='op'>::</span><span class='const'>MultilineArg</span><span class='period'>.</span><span class='id identifier rubyid_for'>for</span><span class='lparen'>(</span><span class='kw'>self</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_accept'>accept</span><span class='lparen'>(</span><span class='const'>Formatter</span><span class='op'>::</span><span class='const'>Fanout</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='id identifier rubyid_formatter'>formatter</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
   <span class='const'>Cucumber</span><span class='op'>::</span><span class='const'>Term</span><span class='op'>::</span><span class='const'>ANSIColor</span><span class='period'>.</span><span class='id identifier rubyid_coloring'>coloring</span> <span class='op'>=</span> <span class='id identifier rubyid_c'>c</span>
   <span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='id identifier rubyid_rewind'>rewind</span>
   <span class='id identifier rubyid_s'>s</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span> <span class='op'>+</span> <span class='id identifier rubyid_io'>io</span><span class='period'>.</span><span class='id identifier rubyid_read'>read</span> <span class='op'>+</span> <span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='op'>*</span> <span class='lparen'>(</span><span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:indent</span><span class='rbracket'>]</span> <span class='op'>-</span> <span class='int'>2</span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -2845,7 +2843,7 @@ the second column is used as values</p>
 </div>
     
     <div id="footer">
-  Generated on Sun Sep 14 09:47:37 2014 by 
+  Generated on Mon Dec 22 20:22:52 2014 by 
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.4 (ruby-2.0.0).
 </div>
