@@ -1,4 +1,5 @@
 cucumber.api
+cucumber.api.android
 cucumber.api.cli
 cucumber.api.groovy
 cucumber.api.guice
@@ -34,6 +35,7 @@ cucumber.api.java.id
 cucumber.api.java.is
 cucumber.api.java.it
 cucumber.api.java.ja
+cucumber.api.java.kn
 cucumber.api.java.ko
 cucumber.api.java.lt
 cucumber.api.java.lu
@@ -58,6 +60,7 @@ cucumber.api.java.uz
 cucumber.api.java.vi
 cucumber.api.java.zh_cn
 cucumber.api.java.zh_tw
+cucumber.api.java8
 cucumber.api.jruby
 cucumber.api.junit
 cucumber.api.needle
