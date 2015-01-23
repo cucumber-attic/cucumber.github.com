@@ -16,7 +16,7 @@ you are using (if any).
  
 ## Running Cucumber-JVM
 ### Command Line
-TODO
+>java -classpath "cucumber-core-x.x.x.jar;gherkin-x.x.x.jar;cucumber-java-x.x.x.jar;cucumber-jvm-deps-x.x.x.jar" cucumber.api.cli.Main location_of_feature_files/*.feature -f pretty  -f json:output_folder/filename.json -t @specific_tag_to_be_run -g path_to_compiled_classes_with_step_definitions 
 
 ### JUnit
 Create one empty class with the `@RunWith(Cucumber.class)` annotation. 
@@ -53,5 +53,19 @@ TODO
 TODO
 
 ## Options
-
-TODO: Explain all the options
+### Cucumber command line options
+ 
+    -g, --glue PATH                        Where glue code (step definitions and hooks) is loaded from.
+    -f, --format FORMAT[:PATH_OR_URL]      How to format results. Goes to STDOUT unless PATH_OR_URL is specified.
+                                           Built-in FORMAT types: junit, html, pretty, progress, json.
+                                           FORMAT can also be a fully qualified class name.
+    -t, --tags TAG_EXPRESSION              Only run scenarios tagged with tags matching TAG_EXPRESSION.
+    -n, --name REGEXP                      Only run scenarios whose names match REGEXP.
+    -d, --[no-]-dry-run                    Skip execution of glue code.
+    -m, --[no-]-monochrome                 Don't colour terminal output.
+    -s, --[no-]-strict                     Treat undefined and pending steps as errors.
+        --snippets [underscore|camelcase]  Naming convention for generated snippets. Defaults to underscore.
+        --dotcucumber PATH_OR_URL          Where to write out runtime information. PATH_OR_URL can be a file system
+                                           path or a URL.
+    -v, --version                          Print cucumber version.
+    -h, --help                             Shows options that can be used with cucumber cli.
