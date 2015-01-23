@@ -1,3 +1,5 @@
-# cucumber.github.io
+# NO PULL REQUESTS ACCEPTED HERE
 
-This site hosts a few docs that appear under the cukes.info/api URL
+This is an obsolete repository previously used as the cukes.info website source. It's still serving auto-generated API docs but is not meant for human-driven content anymore.
+
+Please head over to https://github.com/cucumber/website to contribute to Cucumber's official website.
